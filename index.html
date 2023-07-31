@@ -40,7 +40,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section
-					data-markdown="README.md"
+					data-markdown="session1/README.md"
 					data-separator="^---"
 					data-separator-vertical="^==="
 					data-separator-notes="^Note:"
@@ -49,17 +49,13 @@
 				</section>
 			</div>
 		</div>
-
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
-		<!-- <script src="plugin/notes/notes.js"></script> -->
-		<!-- <script src="plugin/highlight/highlight.js"></script> -->
-		<!-- <script src="plugin/search/search.js"></script> -->
-		<!-- <script src="plugin/zoom/zoom.js"></script> -->
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
 				slideNumber: "c/t",
@@ -68,13 +64,12 @@
   				height: 768,
 				minScale: 0.001,
                 maxScale: 10,
-				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ 
 					RevealMarkdown,
-					// RevealNotes,
-					// RevealHighlight,
-					// RevealSearch,
-					// RevealZoom
+					RevealNotes,
+					RevealHighlight,
+					RevealSearch,
+					RevealZoom
 				]
 			});
 		</script>

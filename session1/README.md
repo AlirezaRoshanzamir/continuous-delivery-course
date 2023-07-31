@@ -1,4 +1,4 @@
-## Continuous Delivery
+## Continuous Delivery (session #1)
 Reliable Software Releases through Build, Test, and Deployment Automation
 
 <img src="assets/devops-loop.png" style="max-width: 500px"/>
