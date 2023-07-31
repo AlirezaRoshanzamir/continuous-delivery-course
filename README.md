@@ -1,5 +1,5 @@
 # Continuous Delivery Course
-This repository contains the artifacts (presentations, repositories, ...) that are used for the course. Each session's details exist in the corresponding directory.
+This repository contains the artifacts (presentations, examples, ...) that are used for the course. Each session's details exist in the corresponding directory.
 
 ## Installation and usage
 
