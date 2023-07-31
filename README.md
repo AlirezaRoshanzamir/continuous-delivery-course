@@ -29,4 +29,4 @@ Currently, these sessions have been added:
 
 | Number | Topic |
 | ------ | ----- |
-|   1    | Course outline |
+|   1    | [Course outline](session1) |
