@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Continuous Delivery</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+        <style>
+            .reveal section h2 {
+                font-size: 40px;
+            }
+            .reveal section :not(h2) {
+                font-size: 25px;
+            }
+            table, td, th, tr {
+                border: 1px solid lightgray !important;
+            }
+            tr:nth-child(even) {
+                background-color: #eeeeee;
+            }
+            table.books td {
+                vertical-align: middle;
+                padding: 4px;
+            }
+            table.books td img {
+                max-height: 120px;
+                margin: 0;
+            }
+            small, small * {
+                font-size: 20px !important;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-markdown="README.md"
+					data-separator="^---"
+					data-separator-vertical="^==="
+					data-separator-notes="^Note:"
+					data-charset="iso-8859-15"
+					data-auto-animate>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<!-- <script src="plugin/notes/notes.js"></script> -->
+		<!-- <script src="plugin/highlight/highlight.js"></script> -->
+		<!-- <script src="plugin/search/search.js"></script> -->
+		<!-- <script src="plugin/zoom/zoom.js"></script> -->
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: "c/t",
+				pdfMaxPagesPerSlide: 1,
+				width: 1366,
+  				height: 768,
+				minScale: 0.001,
+                maxScale: 10,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ 
+					RevealMarkdown,
+					// RevealNotes,
+					// RevealHighlight,
+					// RevealSearch,
+					// RevealZoom
+				]
+			});
+		</script>
+	</body>
+</html>
