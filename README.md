@@ -4,7 +4,7 @@ This repository contains the artifacts (presentations, examples, ...) that are u
 ## Installation and usage
 
 ### Presentations
-There is a file named `presentation.md`` in each session directory. You can simply open it and see the presentation.
+There is a file named `presentation.md` in each session directory. You can simply open it and see the presentation.
 
 However, if you wish to view the presentation as a slide show, you should use `reveal.js`. Navigate to the `revealjs` directory and install the dependencies:
 
