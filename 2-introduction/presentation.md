@@ -1,4 +1,4 @@
-## Introduction
+## Continuous Delivery: Introduction
 Definition, Ingredients, Impacts, Relation with Other Movements
 
 <img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" style="max-width: 700px"/>

@@ -1,7 +1,7 @@
 # Continuous Delivery Course
 This repository contains the artifacts (presentations, examples, ...) that are used for the course. Each session's details exist in the corresponding directory.
 
-## Installation and usage
+## Installation and Usage
 
 ### Presentations
 There is a file named `presentation.md` in each session directory. You can simply open it and see the presentation.
@@ -24,9 +24,10 @@ $ SESSION=1-outline npm start
 [17:34:07] Running server
 ```
 
-## Current sessions
+## Current Sessions
 Currently, these sessions have been added:
 
 | Number | Topic |
 | ------ | ----- |
-|   1    | [Course outline](session1) |
+|   1    | [Course Outline](1-outline) |
+|   2    | [Introduction](2-introduction) |
