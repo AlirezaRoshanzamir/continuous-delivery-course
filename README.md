@@ -12,10 +12,10 @@ However, if you wish to view the presentation as a slide show, you should use `r
 $ npm install
 ```
 
-And finally, start the server with live-reload support (you can change the session number using the `SESSION` environment variable):
+And finally, start the server with live-reload support (you can change the session directory using the `SESSION` environment variable):
 
 ```console
-$ SESSION=1 npm start
+$ SESSION=1-outline npm start
 ...
 [17:34:07] Starting 'serve'...
 [17:34:07] Starting server...

@@ -10,7 +10,7 @@
   "scripts": {
     "set_session": "",
     "test": "gulp test",
-    "start": ": ${SESSION:=1} && find . -maxdepth 1 -type l -delete && ln -s ../session${SESSION}/* . && gulp serve",
+    "start": ": ${SESSION:=1-introduction} && find . -maxdepth 1 -type l -delete && ln -s ../${SESSION}/* . && gulp serve",
     "build": "gulp build"
   },
   "author": {

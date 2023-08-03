@@ -1,1 +1,1 @@
-../session1/README.md
+../2-introduction/README.md
