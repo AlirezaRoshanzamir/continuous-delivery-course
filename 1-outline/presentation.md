@@ -39,7 +39,7 @@ Mention the deploy vs release and why their order is different in different plac
 ## Auxiliary References
 <table class="books">
     <tr>
-        <td><img src="assets/site-reliability-engineering-book-cover.png"/></td>
+        <td><img src="assets/site-reliability-engineering-book-cover.png" width="145"/></td>
         <td>
             Site Reliability Engineering: How Google Runs Production Systems
             <br/>
@@ -47,7 +47,7 @@ Mention the deploy vs release and why their order is different in different plac
         </td>
     </tr>
     <tr>
-        <td><img src="assets/effective-devops-book-cover.png"/></td>
+        <td><img src="assets/effective-devops-book-cover.png" width="145"/></td>
         <td>
             Effective DevOps
             <br/>
