@@ -129,5 +129,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# node installed modules
+# Node installed modules
 node_modules/
+
+# Symbolic links
+revealjs/assets
+revealjs/README.md
+revealjs/presentation.md

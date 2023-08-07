@@ -31,3 +31,4 @@ Currently, these sessions have been added:
 | ------ | ----- |
 |   1    | [Course Outline](1-outline) |
 |   2    | [Introduction](2-introduction) |
+|   2    | [The problem of delivering software](3-the-problem-of-delivering-software) |

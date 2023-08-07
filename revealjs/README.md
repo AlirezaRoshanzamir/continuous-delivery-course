@@ -1,1 +1,1 @@
-../2-introduction/README.md
+../1-outline/README.md
