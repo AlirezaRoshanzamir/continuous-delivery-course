@@ -205,3 +205,28 @@ A change to your environment is just like a change to your software. It has to g
 
 Testing environments should be treated the same as production 
 environments but the approval process will usually be simpler.
+
+---
+## Summary
+Configuration management is the foundation of everything in CD. It 
+is impossible to do continuous integration, release management, and deployment 
+pipelining without it:
+
+- Could you completely re-create your production system, excluding produc-
+tion data, from scratch from the version-controlled assets that you store?
+- Could you regress to an earlier, known good state of your application?
+- Can you be sure that each deployed environment in production, in staging, 
+and in test is set up in precisely the same way?
+
+If not, then your organization is at risk. In particular, we recommend having 
+a strategy for storing baselines and controlling changes to:
+
+- Your applications' source code, build scripts, tests, documentation, 
+requirements, database scripts, libraries, and configuration files
+- Your development, testing, and operations toolchains
+- All environments used in development, testing, and production
+- The entire application stack associated with your applications-both binaries 
+and configuration
+- The configuration associated with every application in every environment 
+it runs in, across the entire application lifecycle (building, deployment, 
+testing, operation)
