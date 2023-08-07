@@ -3,9 +3,9 @@ Definition, Ingredients, Impacts, Relation with Other Movements
 
 <img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" style="max-width: 700px"/>
 
-<small><strong>Lecturer:</strong>  Alireza Roshanzamir</small>
+<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
-<small><strong>Keywords:</strong>  Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
+<small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
 <small><small>Tir 1402/August 2023</small></small>
 

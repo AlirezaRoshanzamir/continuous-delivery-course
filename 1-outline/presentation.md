@@ -3,9 +3,9 @@ Reliable Software Releases through Build, Test, and Deployment Automation
 
 <img src="assets/devops-loop.png" style="max-width: 500px"/>
 
-<small><strong>Lecturer:</strong>  Alireza Roshanzamir</small>
+<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
-<small><strong>Keywords:</strong>  Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
+<small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
 <small><small>Tir 1402/August 2023</small></small>
 
@@ -89,7 +89,7 @@ Mention the deploy vs release and why their order is different in different plac
             Introduction
             <br/>
             <small>
-                Definition, Before/After CD, Ingredients, Relation with Agile/Lean/DevOps, Performance Impact, Culture Impact
+                Definition, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>
             </small>
         </td>
         <td>45'</td>
@@ -99,7 +99,7 @@ Mention the deploy vs release and why their order is different in different plac
             The Problem of Delivering Software
             <br/>
             <small>
-                Antipatterns, Roadmap, Benefits, Release Candidate, Principles
+                Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
             </small>
         </td>
         <td>30'</td>
@@ -109,7 +109,7 @@ Mention the deploy vs release and why their order is different in different plac
             Configuration Management
             <br/>
             <small>
-                Version Control, Monorepo vs Polyrepo, Repository/Project Structure, Managing Dependencies, Managing Software Configuration, Managing Environments, Managing Assets/Resources, Managing Documentation, Managing Tests, Managing Code Style, Managing Code Generation, Version SSOT, Managing Changelogs
+                Version Control, <span style="color: blue">Monorepo vs Polyrepo</span>, <span style="color: blue">Repository/Project Structure</span>, Managing Dependencies, Managing Software Configuration, Managing Environments, <span style="color: blue">Managing Assets/Resources</span>, <span style="color: blue">Managing Documentation</span>, <span style="color: blue">Managing Tests</span>, <span style="color: blue">Managing Code Style</span>, <span style="color: blue">Managing Code Generation</span>, <span style="color: blue">Version SSOT</span>, <span style="color: blue">Semantic Release</span>, <span style="color: blue">Managing Changelogs</span>
             </small>
         </td>
         <td>90'</td>

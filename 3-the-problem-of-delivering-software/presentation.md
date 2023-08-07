@@ -3,16 +3,11 @@ Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
 
 <img src="assets/wall-of-confusion.png" style="max-width: 550px"/>
 
-<small><strong>Lecturer:</strong>  Alireza Roshanzamir</small>
+<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
-<small><strong>Keywords:</strong>  Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
+<small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
 <small><small>Tir 1402/August 2023</small></small>
-
-<details>
-<summary>Note</summary>
-Mention the deploy vs release and why their order is different in different places (feature toggle, release candidate, library vs application).
-</details>
 
 ---
 ## Release Antipatterns
