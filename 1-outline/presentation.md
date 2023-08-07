@@ -125,10 +125,10 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing [and Documentation] Strategy
+            Testing <span style="color: blue">[and Documentation]</span> Strategy
             <br/>
             <small>
-                Test Categories, Test Levels (Types), Test Doubles, Unit-test Coverage Criteria, Effective Unit-testing, TDD, ATDD, BDD, Doctests, SphinX, Auto Documentation
+                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Unit-test Coverage Criteria</span>, <span style="color: blue">Effective Unit-testing</span>, <span style="color: blue">TDD</span>, <span style="color: blue">ATDD</span>, <span style="color: blue">BDD</span>, <span style="color: blue">Doctests</span>, <span style="color: blue">SphinX</span>, <span style="color: blue">Auto Documentation</span>
             </small>
         </td>
         <td>90'</td>
@@ -154,7 +154,7 @@ Mention the deploy vs release and why their order is different in different plac
             Build and Deployment Scripting
             <br/>
             <small>
-                Build Tools, Principles and Practices, Tips and Tricks, Packaging Tools and Types, Infrastructure as a Code, Terraform, Ansible
+                Build Tools, Principles and Practices, Tips and Tricks, <span style="color: blue">Packaging Tools and Types</span>, <span style="color: blue">Infrastructure as a Code</span>, <span style="color: blue">Terraform</span>, <span style="color: blue">Ansible</span>
             </small>
         </td>
         <td>45'</td>
@@ -164,7 +164,7 @@ Mention the deploy vs release and why their order is different in different plac
             Commit Stage
             <br/>
             <small>
-                Linting, Language/Technology Specific Checks, Unit-testing, Building Documentation, Principles and Practices, Test Suite Principles and Practices, Results
+                <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
             </small>
         </td>
         <td>90'</td>
@@ -190,7 +190,7 @@ Mention the deploy vs release and why their order is different in different plac
             Deploying and Releasing Applications
             <br/>
             <small>
-                Release Strategy, Library vs Application, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Tips and Tricks
+                Release Strategy, <span style="color: blue">Library vs Application</span>, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Tips and Tricks
             </small>
         </td>
         <td>45'</td>
@@ -226,7 +226,7 @@ Mention the deploy vs release and why their order is different in different plac
             Managing Components and Dependencies
             <br/>
             <small>
-                Keeping Application (Trunk) Releasable, Dependency Management, Components, Dependency Graph, Managing Binaries, Dependency Pinning, Artifactories
+                Keeping Application (Trunk) Releasable, Dependency Management, Components, Dependency Graph, Managing Binaries, <span style="color: blue">Dependency Pinning</span>, <span style="color: blue">Artifactories</span>
             </small>
         </td>
         <td>45'</td>
@@ -236,7 +236,7 @@ Mention the deploy vs release and why their order is different in different plac
             Advanced Version Control
             <br/>
             <small>
-                Brief history, Version Control Types, Branching and Merging, Gitflow, Develop on Mainline, Branch for Release, Branch by Feature, Branch by Team
+                Brief history, Version Control Types, Branching and Merging, <span style="color: blue">Gitflow</span>, Develop on Mainline, Branch for Release, Branch by Feature, Branch by Team
             </small>
         </td>
         <td>45'</td>
@@ -246,7 +246,7 @@ Mention the deploy vs release and why their order is different in different plac
             Managing Continuous Delivery
             <br/>
             <small>
-                Maturity Models (Jez Humble Maturity Model, QMM, Google Test Certified Ladder), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
+                Maturity Models (Jez Humble Maturity Model, <span style="color: blue">QMM</span>, <span style="color: blue">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
             </small>
         </td>
         <td>60'</td>
