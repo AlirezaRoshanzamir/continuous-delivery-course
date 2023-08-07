@@ -1,1 +1,1 @@
-../1-outline/README.md
+../4-configuration-management/README.md

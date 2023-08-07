@@ -133,6 +133,6 @@ dist
 node_modules/
 
 # Symbolic links
-revealjs/assets
 revealjs/README.md
+revealjs/assets
 revealjs/presentation.md
