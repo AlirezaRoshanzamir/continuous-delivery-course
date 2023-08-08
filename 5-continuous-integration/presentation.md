@@ -19,7 +19,7 @@ On the other hand, we have seen projects that spend at most a few minutes in a s
 
 Continuous integration requires that every time somebody commits any change, the entire application is built and a comprehensive set of automated tests is run against it. Crucially, if the build or test process fails, the development team stops whatever they are doing and fixes the problem immediately.
 
-Continuous integration was first written about in Kent Beck’s book Extreme Programming Explained (first published in 1999).
+Continuous integration was first written about in Kent Beck's book Extreme Programming Explained (first published in 1999).
 
 
 ---
@@ -37,20 +37,20 @@ Continuous integration depends on teams following a few essential practices.
 
 ------
 ### A Basic Continuous Integration System
-You don’t need a continuous integration software in order to do continuous integration. Once you have your CI tool of choice installed, given the preconditions described above, it should be possible to get started in just a few minutes by telling your tool where to find your source control repository, what script to run in order to compile, if necessary, and run the automated commit tests for your application, and how to tell you if the last set of changes broke the software.
+You don't need a continuous integration software in order to do continuous integration. Once you have your CI tool of choice installed, given the preconditions described above, it should be possible to get started in just a few minutes by telling your tool where to find your source control repository, what script to run in order to compile, if necessary, and run the automated commit tests for your application, and how to tell you if the last set of changes broke the software.
 
-Once you’re ready to check in your latest change:
-1. Check to see if the build is already running. If so, wait for it to finish. If it fails, you’ll need to work with the rest of the team to make it green before you check in.
+Once you're ready to check in your latest change:
+1. Check to see if the build is already running. If so, wait for it to finish. If it fails, you'll need to work with the rest of the team to make it green before you check in.
 2. Once it has finished and the tests have passed, update the code in your development environment from this version in the version control repository to get any updates.
-3. Run the build script and tests on your development machine to make sure that everything still works correctly on your computer, or alternatively use your CI tool’s personal build feature.
+3. Run the build script and tests on your development machine to make sure that everything still works correctly on your computer, or alternatively use your CI tool's personal build feature.
 4. If your local build passes, check your code into version control.
 5. Wait for your CI tool to run the build with your changes.
-6. If it fails, stop what you’re doing and fix the problem immediately on your development machine-go to step 3.
+6. If it fails, stop what you're doing and fix the problem immediately on your development machine-go to step 3.
 7. If the build passes, rejoice and move on to your next task.
 
 ---
 ## Prerequisites
-Continuous integration won’t fix your build process on its own. In fact, it can be very painful if you start doing it midproject. For CI to be effective, the following practices will need to be in place before you start.
+Continuous integration won't fix your build process on its own. In fact, it can be very painful if you start doing it midproject. For CI to be effective, the following practices will need to be in place before you start.
 
 
 ------
@@ -62,7 +62,7 @@ The most important practice for continuous integration to work properly is frequ
 - Helps you to be more disciplined about your refactoring and stick to small changes that preserve behavior
 - Less conflicts
 - Forces you to take regular breaks and stretch your muscles to help avoid carpal tunnel syndrome or RSI
-- Something catastrophic happens you haven’t lost too much work.
+- Something catastrophic happens you haven't lost too much work.
 
 It is impossible to truly do continuous integration while using branches because, by definition, if you are working on a branch, your code is not being integrated with that of other developers
 
@@ -76,24 +76,24 @@ There are three kinds of tests we are interested in running from our continuous 
   - Developers write unit-tests.
 - Component tests
   - Test the behavior of several components of your application (API endpoints, etc.)
-  - Some authors also call them integration tests. It’s going to depend on the "size" that you consider a component in your application (we will talk about different kind of tests in details).
+  - Some authors also call them integration tests. It's going to depend on the "size" that you consider a component in your application (we will talk about different kind of tests in details).
   - Some authors say that component testing is black-box while unit-testing is white-box.
   - Some authors say that component tests are written by developers and testers together.
-  - They don’t always require starting the whole application
+  - They don't always require starting the whole application
   - They may hit the database, the filesystem, or other systems.
 - Acceptance tests
   - Test that the application meets the acceptance criteria decided by the business, including both the functionality provided by the application and its characteristics such as capacity, availability, security, and so on.
   - They run against the whole application in a production-like environment.
-  - Can take a long time to run. It’s not unheard of for an acceptance test suite to take more than a day to run sequentially
+  - Can take a long time to run. It's not unheard of for an acceptance test suite to take more than a day to run sequentially
 
 ------
 ### Keep the Build and Test Process Short
 If it takes too long to build the code and run the unit tests:
 - People will stop doing a full build and running the tests before they check in.
-- The continuous integration process will take so long that multiple commits will have taken place by the time you can run the build again, so you won’t know which check-in broke the build.
+- The continuous integration process will take so long that multiple commits will have taken place by the time you can run the build again, so you won't know which check-in broke the build.
 - People will check in less often because they have to sit around for ages waiting for the software to build and the tests to run.
 
-Ideally, the compile and test process that you run prior to check-in and on your CI server should take no more than a few minutes (90s >> 5min >> 10min).  It’s around the amount of time you can devote to making a cup of tea, a quick chat, checking your email, or stretching your muscles.
+Ideally, the compile and test process that you run prior to check-in and on your CI server should take no more than a few minutes (90s >> 5min >> 10min).  It's around the amount of time you can devote to making a cup of tea, a quick chat, checking your email, or stretching your muscles.
 
 But, it should not contradict comprehensive set of tests. However, at some point you will need to split your test process into multiple stages:
 - Commit stage: Compile the software, run your suite of unit tests that test individual classes making up your application, and create a deployable binary.
@@ -138,7 +138,7 @@ Many development teams used a nightly build. It was a common practice at Microso
 ## Essential Practices
 The objective of our CI system is to ensure that our software is working, in essence, all of the time. In order to ensure that this is the case, here are the practices that we enforce on our teams:
 
-- Don’t Check In on a Broken Build
+- Don't Check In on a Broken Build
 - Always Run All Commit Tests Locally before Committing, or Get Your CI Server to Do It for You
 - Wait for Commit Tests to Pass before Moving On
 - Never Go Home on a Broken Build
@@ -146,7 +146,7 @@ The objective of our CI system is to ensure that our software is working, in ess
 - Time-Box Fixing before Reverting
   
   When the build breaks on check-in, try to fix it for ten minutes, otherwise, revert.
-- Don’t Comment Out Failing Tests
+- Don't Comment Out Failing Tests
 - Take Responsibility for All Breakages That Result from Your Changes
   
   If you commit a change and all the tests you wrote pass, but others break, the build is still broken.

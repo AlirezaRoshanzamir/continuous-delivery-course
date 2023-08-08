@@ -41,7 +41,7 @@ The version control:
 
 Why?
 
-- What constitutes a particular version of your software? How can you reproduce a particular state of the software’s binaries and configuration that existed in the production environment?
+- What constitutes a particular version of your software? How can you reproduce a particular state of the software's binaries and configuration that existed in the production environment?
 - What was done when, by whom, and for what reason? Not only is this useful to know when things go wrong, but it also tells the story of your application.
 
 ------
@@ -60,7 +60,7 @@ Why?
   - Introduce changes incrementally -> Check-in minimum once a day
 - Use Meaningful Commit Messages
   - A message like "fix obsecure bug." makes debugging very hard.
-  - Include a link to the identifier in your project management tool for the feature or bug you’re working on.
+  - Include a link to the identifier in your project management tool for the feature or bug you're working on.
   - Specify a convention and follow it.
   - e.g. "Support specifying server's port number from the CLI using the --port option (see #1247)."
   - Multiparagraph commit message: the first paragraph is a summary and the following paragraphs add more detail.
@@ -71,7 +71,7 @@ Why?
 <summary>Note</summary>
 <ul>
     <li>Mention the preference for using "version control" instead of "source control".</li>
-    <li>If you don’t have absolutely every source artifact of your project in version control, you won’t enjoy any of the benefits that we discuss in this book.</li>
+    <li>If you don't have absolutely every source artifact of your project in version control, you won't enjoy any of the benefits that we discuss in this book.</li>
 </ul>
 </details>
 
@@ -86,7 +86,7 @@ Key issues of dependency management:
   - There is some debate as to whether or not to version-control libraries.
   - Keep copies of your external libraries somewhere locally (such as Maven repository, PyPI, generic Artifactory, etc.)
 - Managing Components:
-  - It's common to have binary dependencies between your pipelines rather than source dependencies. Recompiling dependencies is not only less efficient; it also means you’re creating an artifact that is potentially different from the one that you already tested.
+  - It's common to have binary dependencies between your pipelines rather than source dependencies. Recompiling dependencies is not only less efficient; it also means you're creating an artifact that is potentially different from the one that you already tested.
   - Easy deveopment over multiple components should be considered: It should be relatively easy to make changes in some of them and run a single command that rebuilds the necessary bits in the right order, creates the appropriate binaries, and runs relevant tests.
 
 ---
@@ -124,7 +124,7 @@ There should be a single source of configuration to change, manage, version-cont
 There are a few obvious choices for where to store your application configuration: a database, a version control system, or a directory or registry.
 
 Keep the actual configuration information specific to 
-each of your application’s testing and production environments in a repository separate from your source code. This information generally changes at a different rate to other version-controlled artifacts (you will have to be careful to track which versions of configuration information match with which versions of the application).
+each of your application's testing and production environments in a repository separate from your source code. This information generally changes at a different rate to other version-controlled artifacts (you will have to be careful to track which versions of configuration information match with which versions of the application).
 
 Databases, directories, and registries are convenient places to store configuration since they can be accessed remotely. However, make sure to keep the history of changes to configuration for the purposes of audit and rollback. Either have a system that automatically takes care of this, or treat version control as your system of reference for configuration and have a script that loads the appropriate version into your database or directory on demand.
 
@@ -144,7 +144,7 @@ Databases, directories, and registries are convenient places to store configurat
 
 Keep a catalogue of all the configuration options that each of your applications has, where they are stored, what their lifecycle is, and how they can be changed.
 
-If possible, such information should be generated automatically from each application’s code as part of the build process. But where this is not possible, it should be collected in a wiki or other document management system.
+If possible, such information should be generated automatically from each application's code as part of the build process. But where this is not possible, it should be collected in a wiki or other document management system.
 
 Deploy and runtime: It is important to know what the current configuration of each running application is. Tools such as Nagios, OpenNMS, and HP OpenView may help. Countless hours have been lost by one application having a few configuration options set wrongly and thereby bringing down an entire set of services. 
 
@@ -199,9 +199,9 @@ Essentially, you should treat your environment the same way you treat your code-
 ------
 ### Managing the Change Process
 A production environment should be completely locked down. It 
-should not be possible for anybody to make a change to it without going through your organization’s change management process.
+should not be possible for anybody to make a change to it without going through your organization's change management process.
 
-A change to your environment is just like a change to your software. It has to go through your build, deploy, test, and release process in exactly the same way as a change to the application’s code.
+A change to your environment is just like a change to your software. It has to go through your build, deploy, test, and release process in exactly the same way as a change to the application's code.
 
 Testing environments should be treated the same as production 
 environments but the approval process will usually be simpler.
