@@ -139,3 +139,8 @@ revealjs/presentation.md
 
 # VS Code files
 .vscode
+
+# Python virtual environments
+venv
+.env
+.venv
