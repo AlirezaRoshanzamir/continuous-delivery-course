@@ -136,3 +136,6 @@ node_modules/
 revealjs/README.md
 revealjs/assets
 revealjs/presentation.md
+
+# VS Code files
+.vscode
