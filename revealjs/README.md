@@ -1,1 +1,1 @@
-../4-configuration-management/README.md
+../6-testing-and-documentation-strategy/README.md

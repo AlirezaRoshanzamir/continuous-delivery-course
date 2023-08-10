@@ -1,1 +1,1 @@
-../4-configuration-management/presentation.md
+../6-testing-and-documentation-strategy/presentation.md
