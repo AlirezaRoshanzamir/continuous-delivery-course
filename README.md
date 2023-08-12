@@ -31,4 +31,9 @@ Currently, these sessions have been added:
 | ------ | ----- |
 |   1    | [Course Outline](1-outline) |
 |   2    | [Introduction](2-introduction) |
-|   3    | [The problem of delivering software](3-the-problem-of-delivering-software) |
+|   3    | [The Problem of Delivering Software](3-the-problem-of-delivering-software) |
+|   4    | [Configuration Management](4-configuration-management) |
+|   5    | [Continuous Integration](5-continuous-integration) |
+|   6    | [Testing and Documentation Strategy](6-testing-and-documentation-strategy) |
+|   7    | [Anatomy of the Deployment Pipeline](7-anatomy-of-the-deployment-pipeline) |
+|   8    | [Build and Deployment Scripting](8-build-and-deployment-scripting) |
