@@ -37,3 +37,7 @@ Currently, these sessions have been added:
 |   6    | [Testing and Documentation Strategy](6-testing-and-documentation-strategy) |
 |   7    | [Anatomy of the Deployment Pipeline](7-anatomy-of-the-deployment-pipeline) |
 |   8    | [Build and Deployment Scripting](8-build-and-deployment-scripting) |
+|   9    | [The Commit Stage](9-the-commit-stage) |
+|   10   | [Automated Acceptance Testing](10-automated-acceptance-testing) |
+|   11   | [Testing Nonfunction Requirements](11-testing-nonfunction-requirements) |
+|   12   | [Deploying and Releasing Applications](12-deploying-and-releasing-applications) |
