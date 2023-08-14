@@ -48,3 +48,9 @@ A blend of both approaches is needed.
 It is essential to supply a reasonable level of detail when analyzing NFRs. "As fast as possible" or even "All user interactions will take less than two seconds to respond" are not good NFRs.
 
 Common misuse of performance requirements is as a lazy way to describe the usability of the system. Sometimes, people when they say "Respond in two seconds" mean "I don’t want to sit in front of a computer without any feedback for too long.".
+
+---
+## Summary
+Designing systems to meet their nonfunctional requirements is a complex topic. The crosscutting nature of many NFRs means that it is hard to manage the risks that they pose to any given project. This, in turn, can lead to two paralyzing behaviors:
+- Not paying enough attention to them from the start of the project.
+- At the other extreme, defensive architecture and over-engineering.
