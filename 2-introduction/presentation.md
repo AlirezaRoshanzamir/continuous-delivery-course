@@ -159,7 +159,8 @@ After CI:
 
 ---
 ## CD Patterns Mindmap
-<img src="assets/cd-patterns-mindmap.jpg">
+<img src="assets/cd-patterns-mindmap.jpg" >
+<a href="https://app.zenflowchart.com/mindmap/ZLbSFGkwvQBEEnXBxG5V">Link to the mindmap</a>
 
 ---
 ## Summary
