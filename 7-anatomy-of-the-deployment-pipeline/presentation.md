@@ -238,7 +238,7 @@ Once you know the cycle time for your application, you can work out how best to 
 1. Identify the limiting constraint on your system.
 2. Exploit the constraint. This means ensuring that you should maximize the throughput of that part of the process.
 3. Subordinate all other processes to the constraint. This implies that other resources will not work at 100%.
-4. Elevate the constraint. If your cycle time is still too long (in other words, steps 2 and 3 haven’t helped enough), you need to increase the resources available.
+4. Elevate the constraint. If your cycle time is still too long (in other words, steps 2 and 3 haven't helped enough), you need to increase the resources available.
 5. Rinse and repeat. Find the next constraint on your system and go back to step 1.
 
 <details>
@@ -265,7 +265,7 @@ Some other diagnostics that can warn you of problems:
 - Number of build failures per day
 - Duration of build, including automated tests
 
-Each team’s continuous integration server should generate these reports and visualizations on each check-in, and store the reports in your artifact repository. hese results should be published on an internal website-have a page for each project. Finally, aggregate them together so that they can be monitored across all of the projects in your development program, or even your whole organization.
+Each team's continuous integration server should generate these reports and visualizations on each check-in, and store the reports in your artifact repository. hese results should be published on an internal website-have a page for each project. Finally, aggregate them together so that they can be monitored across all of the projects in your development program, or even your whole organization.
 
 <img src="assets/cyclomatic-complexity-example.png"/>
 

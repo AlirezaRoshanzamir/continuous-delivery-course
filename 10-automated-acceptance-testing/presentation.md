@@ -25,7 +25,7 @@ A unit test aims to show that a single part of the application does what the pro
 ## Why Is Automated Acceptance Testing Essential?
 There has always been a great deal of controversy around automated acceptance tests.
 
-Project managers and customers often think they are too expensive to create and maintain—which indeed, when done badly, they are.
+Project managers and customers often think they are too expensive to create and maintain-which indeed, when done badly, they are.
 
 Many developers believe that unit test suites created through test-driven development are enough to protect against regressions.
 
@@ -43,7 +43,7 @@ Automated acceptance tests should always be layered:
 
 <img src="assets/acceptance-tests-layers.png" height="300px">
 
-Test implementations that refer directly to the application’s API or UI are brittle, and even small changes to the UI will immediately break all the tests referring to the changed UI element. Such tests are often the output of record-and-playback-style test automation products, which is one of the main reasons automated acceptance tests are perceived as expensive.
+Test implementations that refer directly to the application's API or UI are brittle, and even small changes to the UI will immediately break all the tests referring to the changed UI element. Such tests are often the output of record-and-playback-style test automation products, which is one of the main reasons automated acceptance tests are perceived as expensive.
 
 ------
 ### Testing against the GUI
@@ -63,7 +63,7 @@ Start with the identiﬁcation of acceptance criteria by analysts, testers, and 
 ### The Role of Analysts and Testers
 The role of the business analyst is:
 - Represent the customers and users of the system. They work with the customer to identify and prioritize requirements.
-- Work with the developers to ensure that they have a good understanding of the application from the user’s perspective. They guide developers to ensure that stories deliver the business value that they are meant to.
+- Work with the developers to ensure that they have a good understanding of the application from the user's perspective. They guide developers to ensure that stories deliver the business value that they are meant to.
 - Work with testers to ensure that acceptance criteria are speciﬁed properly, and to ensure that functionality developed meets these acceptance criteria and delivers the expected value.
 
 The role of the testers is:
@@ -78,7 +78,7 @@ Not every team has separate individuals who perform these roles 100% of the time
 ### Analysis on Iterative Projects
 1. Initially, the analysts will work closely with testers and the customer to deﬁne acceptance criteria.
 2. Once the acceptance criteria have been deﬁned, the analyst and tester sit with the developers who will do the implementation, along with the customer if available. The tester works with the developers to agree on a collection of automated acceptance tests.
-3. While the requirement is being implemented, the developers will consult with the analyst if they ﬁnd an area that they don’t understand well enough, or if they have discovered a problem or a more efﬁcient approach to solving the problem that the requirement poses.
+3. While the requirement is being implemented, the developers will consult with the analyst if they ﬁnd an area that they don't understand well enough, or if they have discovered a problem or a more efﬁcient approach to solving the problem that the requirement poses.
 4. When the developers believe that they have completed the work (passed associated unit, component, and acceptance tests), they will demonstrate it to the analyst, the tester, and the customer.
 5. Once the analyst and the customer are happy that the requirement has been fulﬁlled, it moves on to testing by the testers.
 
@@ -86,7 +86,7 @@ Not every team has separate individuals who perform these roles 100% of the time
 ### Acceptance Criteria as Executable Speciﬁcations
 Acceptance tests are executable speciﬁcations of the behavior of the software being developed. This is a signiﬁcant realization which has spawned a new approach to automated testing, known as behavior-driven development (BDD).
 
-In BDD, acceptance criteria should be written in the form of the customer’s ex- pectations of the behavior of the application. It should then be possible to take acceptance criteria thus written, and execute them directly against the application to verify that the application meets its speciﬁcations.
+In BDD, acceptance criteria should be written in the form of the customer's ex- pectations of the behavior of the application. It should then be possible to take acceptance criteria thus written, and execute them directly against the application to verify that the application meets its speciﬁcations.
 
 Most speciﬁcations begin to become out-of-date as the application evolves. But, with BDD and deployment pipeline, it's not possible.
 
@@ -262,11 +262,11 @@ There is more to the implementation of acceptance tests than layering:
 Acceptance test suite should be run against every build that passes the commit tests. Later pipeline stages are most commonly
 treated as a matter of human judgment.
 
-For projects of extremely short duration with a small team, maybe four or fewer developers, it may be overkill—you might instead run a few end-to-end tests as part of a single-stage CI process.
+For projects of extremely short duration with a small team, maybe four or fewer developers, it may be overkill-you might instead run a few end-to-end tests as part of a single-stage CI process.
 
 <details>
 <summary>Note</summary>
-For projects of extremely short duration with a small team, maybe four or fewer developers, it may be overkill—you might instead run a few end-to-end tests as part of a single-stage CI process.
+For projects of extremely short duration with a small team, maybe four or fewer developers, it may be overkill-you might instead run a few end-to-end tests as part of a single-stage CI process.
 
 But, it bears repeating that large projects start out as small projects, and by the time a project gets large, it is invariably too late to retro-ﬁt a comprehensive set of automated acceptance tests without a Herculean level of effort.
 

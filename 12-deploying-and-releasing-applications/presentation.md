@@ -11,7 +11,7 @@ Release Strategy, <span style="color: blue">Library vs Application</span>, Deplo
 
 ---
 ## Introduction
-There are differences between releasing software into production and deploying it to testing environments—not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these differences
+There are differences between releasing software into production and deploying it to testing environments-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these differences
 should be encapsulated in a set of conﬁguration ﬁles.
 
 The main difference between deploying and releasing is the ability to roll back. Two extremely powerful techniques that can be used to perform zero-downtime releases and rollbacks on even the largest of production systems are:
@@ -59,7 +59,7 @@ One class of software projects where you must consider other issues is software 
 - Licensing strategy
 - Copyright issues around third-party technologies used
 - Packaging
-- Marketing materials—print, web-based, podcasts, blogs, press releases, conferences, etc.
+- Marketing materials-print, web-based, podcasts, blogs, press releases, conferences, etc.
 - Product documentation
 - Installers
 - Preparing sales and support teams

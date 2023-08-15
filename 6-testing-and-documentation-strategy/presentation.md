@@ -64,7 +64,7 @@ These are often expressed using the form:
   
   A few important characteristics of the new state of the system
 
-Acceptance tests should be run when your system is in a production-like mode. Manual acceptance testing is typically done by putting an application in a user acceptance testing (UAT) environment which is as similar as possible to production both in configuration and in terms of the state of the application—although it might use mock versions of any external services.
+Acceptance tests should be run when your system is in a production-like mode. Manual acceptance testing is typically done by putting an application in a user acceptance testing (UAT) environment which is as similar as possible to production both in configuration and in terms of the state of the application-although it might use mock versions of any external services.
 
 ------
 ### Quadrant TL: Automating Acceptance Tests
@@ -80,7 +80,7 @@ Automated acceptance tests can be costly to maintain. Done badly, they can infli
 
 You can gain 80% coverage with 60% unit test coverage and 20% acceptance test coverage.
 
-A good rule of thumb is to automate once you have repeated the same test a couple of times, and when you are confident that you won’t end up spending a lot of time maintaining the test.
+A good rule of thumb is to automate once you have repeated the same test a couple of times, and when you are confident that you won't end up spending a lot of time maintaining the test.
 
 A good question to ask yourself every now and again is, "How often do my acceptance tests break due to real bugs, and how often due to changes in requirements?"
 
@@ -108,7 +108,7 @@ It is correct to put **User Acceptance Testing (UAT)** and **Alpba\Beta Testing*
 By nonfunctional tests, we mean all the qualities of a system other than its 
 functionality, such as capacity, availability, security, and so forth. The distinction between functional and nonfunctional testing is in some ways bogus, as is the idea that these tests are not business-facing. Many people that "nonfunctional requirements" is a bad name, with alternatives suggested such as cross-functional requirements or system characteristics.
 
-Whatever you call them, nonfunctional acceptance criteria should be specified as part of your application’s requirements in exactly the same way as functional acceptance criteria.
+Whatever you call them, nonfunctional acceptance criteria should be specified as part of your application's requirements in exactly the same way as functional acceptance criteria.
 
 These tests often require considerable resources such as special environments to run on and specialized knowledge to set up and implement, and they often take a long time to run (whether or not they are automated). Therefore, their implementation tends to be **deferred**.
 
@@ -163,7 +163,7 @@ Typical scenarios faced by teams who have decided to automate their tests:
 
 ------
 ### Real-Life Situations and Strategies: New Projects
-In this situation, the important thing is to start writing automated acceptance tests from the very beginning. In order to do this, you’ll need:
+In this situation, the important thing is to start writing automated acceptance tests from the very beginning. In order to do this, you'll need:
 - Choose a technology platform and testing tools.
 - Set up a simple, automated build.
 - Work out stories that follow the INVEST principles (they should be Independent Negotiable, Valuable, Estimable, Small, and Testable), with acceptance criteria.
@@ -188,7 +188,7 @@ After identifying each bug, write a test that captures it, and then proceed to f
 ### Real-Life Situations and Strategies: Legacy Systems
 A legacy system is an old or out-of-date system, technology or software application that continues to be used by an organization.
 
-Create an automated build process if one doesn’t exist, and then create an automated functional test scaffolding around it. Test the code that you change. You will be adding new tests incrementally later for the new behavior that you add. These are essentially smoke tests for your legacy system.
+Create an automated build process if one doesn't exist, and then create an automated functional test scaffolding around it. Test the code that you change. You will be adding new tests incrementally later for the new behavior that you add. These are essentially smoke tests for your legacy system.
 
 A particular problem of legacy systems is that the code is often not too modular and well structured and testable. If you have time, you can test the alternate paths 
 of the story.
@@ -202,11 +202,11 @@ The line between integration testing and component testing is blurry (not least 
 Test harnesses can be quite sophisticated, depending, in particular, on whether 
 the service it doubles up for remembers state or not. If the external system remem-
 bers state, your harness will behave differently according to the requests that you 
-send. The highest-value tests that you can write in this situation are black box tests, in which you consider all the possible responses your external system can give and write a test for each of these responses. Your mock external system needs some way of identifying your request and sending back the appropriate response, or an exception if it gets a request it’s not expecting.
+send. The highest-value tests that you can write in this situation are black box tests, in which you consider all the possible responses your external system can give and write a test for each of these responses. Your mock external system needs some way of identifying your request and sending back the appropriate response, or an exception if it gets a request it's not expecting.
 
 ---
 ## Process
-- Have a single meeting with all of the stakeholders at the beginning of each iteration, or about a week before a story will start development if you’re not using iterations. We get customers, analysts, and testers in a room together and come up with the highest-priority scenarios to test. Tools like Cucumber, JBehave, Concordion, and Twist allow you to write acceptance criteria down in natural language in a text editor and then write code to make these tests executable. Refactorings to the test code also update the test specifications.
+- Have a single meeting with all of the stakeholders at the beginning of each iteration, or about a week before a story will start development if you're not using iterations. We get customers, analysts, and testers in a room together and come up with the highest-priority scenarios to test. Tools like Cucumber, JBehave, Concordion, and Twist allow you to write acceptance criteria down in natural language in a text editor and then write code to make these tests executable. Refactorings to the test code also update the test specifications.
 
 - Use a domain-specific language (DSL) for testing. This allows acceptance criteria to be entered in the DSL. As a minimum, we will ask the customers to write the simplest possible acceptance tests covering the happy paths of these scenarios there and then. Later, after this meeting, people will often add more sets of data to use to improve the coverage of the tests.
 

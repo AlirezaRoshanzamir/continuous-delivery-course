@@ -28,7 +28,7 @@ The day of a software release tends to be tense due to certain antipatterns:
   - Software is initially deployed to a production-like environment (e.g., staging) once most development is finished
   - Releasing into staging is the first time that operations people interact with the new release.
   - Either a production-like environment is expensive enough that access to it is strictly controlled, or it is not in place on time, or nobody bothered to create one.
-  - The development team assembles installers, configuration files, database migrations, and deployment guidelines for deployment personnel—untested in a production or staging setting.
+  - The development team assembles installers, configuration files, database migrations, and deployment guidelines for deployment personnel-untested in a production or staging setting.
   - There is little if any, collaboration between the development team and the people who perform deployments to create this collateral.
   - Thinking it's all about the DevOps team
 

@@ -59,7 +59,7 @@ which is [considered harmful](https://accu.org/journals/overload/14/71/miller_20
 Some other drawbacks:
 - OS specific (it depends on the shell)
 - Whitespace can be signiﬁcant under certain circumstances
-- Doesn’t provide for extensions to the core system
+- Doesn't provide for extensions to the core system
 
 ------
 ### An Overview of Build Tools: Ant
@@ -85,12 +85,12 @@ Maven attempts to remove a large amount of boilerplate found in Ant ﬁles by ha
 <img src="assets/maven-project-structure.webp">
 
 Some shortcomings:
-- If your project doesn’t conform to Maven’s assumptions about structure and lifecycle, it can be hard to make Maven do what you want (this could be considered a feature).
-- To extend it, you need to write code. However, it has plugins for almost everything you’d want to do.
+- If your project doesn't conform to Maven's assumptions about structure and lifecycle, it can be hard to make Maven do what you want (this could be considered a feature).
+- To extend it, you need to write code. However, it has plugins for almost everything you'd want to do.
 
 ------
 ### An Overview of Build Tools: Rake
-The dominant Ruby build tool, Rake, came about as an experiment to see if Make's functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except tasks and dependencies. However, since Rake scripts are plain Ruby, you can use Ruby’s API to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal.
+The dominant Ruby build tool, Rake, came about as an experiment to see if Make's functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except tasks and dependencies. However, since Rake scripts are plain Ruby, you can use Ruby's API to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal.
 
 You can refactor and modularize your builds, and you can use your regular development environment. It is straightforward to debug Rake using the standard Ruby debugger.
 
@@ -104,7 +104,7 @@ The new generation of build tools, such as Buildr, Gradle, and Gantt, have taken
 
 Buildr is built on top of Rake, so everything you can do in Rake you can continue to do in Buildr. However, Buildr is also a drop-in replacement for Maven-it uses the same conventions that Maven does, including ﬁlesystem layout, artifact speciﬁcations, and repositories. It also lets you use Ant tasks (including any custom ones) with zero conﬁguration.
 
-If you’re starting a new Java project, or looking for a replacement for Ant or Maven, we strongly suggest you consider Buildr, or Gradle if you prefer your DSLs in Groovy.
+If you're starting a new Java project, or looking for a replacement for Ant or Maven, we strongly suggest you consider Buildr, or Gradle if you prefer your DSLs in Groovy.
 
 ------
 ### An Overview of Build Tools: Psake
@@ -120,10 +120,10 @@ deployment scripting should apply to whichever technology you use:
   - Use the right tool for the job when automating deployment, not a general-purpose scripting language. For example, for WebSphere Application Server, you can use the Wsadmin tool.
 - Use the Same Scripts to Deploy to Every Environment
   - If your application is complex in terms of its deployment architecture, you will have to make some simpliﬁcations to get it working on developer machines.
-- Use Your Operating System’s Packaging Tools
+- Use Your Operating System's Packaging Tools
   - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other ﬂavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.
   - Commercial middleware servers, for example, often require special tools to perform deployments. In this case, a hybrid approach is necessary.
-  - You can also use platform-speciﬁc packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl’s CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.
+  - You can also use platform-speciﬁc packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl's CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.
 - Ensure the Deployment Process Is Idempotent
   - Leave the target environment in the same (correct) state, regardless of the state it ﬁnds it in when starting a deployment.
   - If you cannot do this, validate the assumptions your deployment process makes about the environment, and fail the deployment if they are not met.
@@ -158,7 +158,7 @@ In addition to the previous mentioned notes, the following should be considered:
 - Deploying and Testing Layers
   - You should always strive to build on foundations that are known to be good. Before we even bother to copy our binary deliverables to the correct place in the ﬁlesystem, we want to know that our environment is ready for us in these layers:
     <img src="assets/deploying-software-layers.png">
-- Testing Your Environment’s Conﬁguration
+- Testing Your Environment's Conﬁguration
   - The objective is to provide a degree of conﬁdence that the layer that has just been deployed is working:
     <img src="assets/deployment-testing-layers.png">
 
@@ -187,7 +187,7 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 - Build In Traceability from Binaries to Version Control
   - Some packages such a JAR files can include metadata.
   - You can use simple MD5 hashing.
-- Don’t Check Binaries into Version Control as Part of Your Build
+- Don't Check Binaries into Version Control as Part of Your Build
   - The rule of thumb is not to check in anything created as part of your build, test, and deploy cycle into source control.
 - Test Targets Should Not Fail the Build
   - Make the failure set a ﬂag but fail the build later, after generating more useful reports or running a more complete set of tests.
