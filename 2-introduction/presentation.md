@@ -59,6 +59,15 @@ A key pattern in CD from continuous integration and test automation:
 <img src="assets/deployment-pipeline-sequence-diagram.png" alt="Took from https://continuousdelivery.com/foundations/test-automation/" width="800px"/>
 
 ---
+## Why?
+Why continuous delivery?
+- Make releases painless low-risk events
+- Reduce time to market
+- Increase software quality and stability
+- Reduce the cost of ongoing software development
+- Increase customer and employee satisfaction
+
+---
 ## Impacts
 The following image is extracted from the book **Accelerate** and represents the culmination of a four-year research project that began in 2013. This study aimed to investigate the crucial capabilities and practices that can accelerate software development and delivery, thereby adding value to companies. To achieve this, the researchers employed rigorous research methods typically associated with academia:
 
@@ -92,6 +101,10 @@ The performance gap between the high and the low performers widens over time:
 
 ---
 ## Impacts - Westrum Organization Culture Model
+The model of how to change culture has changed:
+
+<img src="assets/change-culture.png">
+
 The set of technical practices known as continuous delivery indeed has a significant impact on the organization's culture, leading to a more generative environment:
 
 <img src="assets/accelerate-westrum-model.png" alt="Took from the Accelerate book" width="900px"/>
@@ -124,3 +137,18 @@ Water-Scrum-Fall is a term to describe the reality of the current state of Agile
     <td><img src="assets/scrumfall-2.webp"></img></td>
   </tr>
 </table>
+
+---
+## HP Laserjet Framework
+Before CI:
+<img src="assets/hp-2008.png">
+
+------
+## Continuoued: HP Laserjet Framework
+The CI pipeline:
+<img src="assets/hp-pipeline.png">
+
+------
+## Continuoued: HP Laserjet Framework
+After CI:
+<img src="assets/hp-2008-to-2011.png">
