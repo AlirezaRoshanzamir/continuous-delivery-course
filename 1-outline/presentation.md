@@ -39,7 +39,7 @@ Mention the deploy vs release and why their order is different in different plac
 ## Auxiliary References
 <table class="books">
     <tr>
-        <td><img src="assets/site-reliability-engineering-book-cover.png" width="145"/></td>
+        <td><img src="assets/site-reliability-engineering-book-cover.png" width="140"/></td>
         <td>
             Site Reliability Engineering: How Google Runs Production Systems
             <br/>
@@ -76,6 +76,25 @@ Mention the deploy vs release and why their order is different in different plac
             The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win 
             <br/>
             <small>by Gene Kim, Kevin Behr, George Spafford</small>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="assets/the-phoenix-project-book-cover.png"/></td>
+        <td>
+            The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win 
+            <br/>
+            <small>by Gene Kim, Kevin Behr, George Spafford</small>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="assets/website.jpg" width="140"/></td>
+        <td>
+            <ul>
+                <li><a href="https://minimumcd.org/">Minimum Viable CD</a></li>
+                <li><a href="http://bvajjala.github.io/projects/cd/continuous-delivery-patterns-and-antipatterns">Continuous Delivery Patterns & Antipatterns</a></li>
+                <li><a href="https://www.youtube.com/watch?v=6DeWOrmvhRM">Adopting Continuous Delivery by Jez Humble</a></li>
+                <li><a href="https://www.youtube.com/watch?v=i2DrLsnETk4">14 Step Continuous Delivery Checklist</a></li>
+            </ul>
         </td>
     </tr>
 </table>
