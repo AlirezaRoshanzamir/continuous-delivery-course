@@ -147,3 +147,9 @@ There is no
 - Continuous Improvement
   - The whole team should regularly gather together and hold a retrospective on the delivery process.
   - Deming cycle or [O]PDCA: [Observation], plan, do, study, act.
+
+---
+## Summary
+By adopting the techniques of automated build, test, and deployment, we gain the ability to verify changes, to make the process reproducible across a range of environments, and to largely eliminate the opportunity for errors to creep into production.
+
+We also gain the ability to spend more weekends with our families and friends and to live our lives with less stress, while at the same time being more productive.
