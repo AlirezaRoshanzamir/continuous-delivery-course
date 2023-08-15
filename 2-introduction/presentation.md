@@ -167,3 +167,5 @@ The practices at the heart of continuous delivery help us achieve several import
 - Better products
   - This means we can avoid the 2/3 of features we build that  deliver zero or negative value to our businesses.
 - Happier teams
+
+Continuous delivery is not magic. It's about continuous, daily improvement-the constant discipline of pursuing higher performance by following the heuristic "if it hurts, do it more often, and bring the pain forward".
