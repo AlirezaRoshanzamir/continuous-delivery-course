@@ -114,3 +114,13 @@ In short, they differ in their place of origin, history, aspects covered, and pr
 Agile aims to optimize software development specifically, without considering other parts of the IT value stream. DevOps, on the other hand, recognizes that this approach merely shifts the constraint downstream to Ops, and therefore, it strives to break down walls between development and operations. Lean takes a broader perspective, emphasizing the optimization of the entire value stream:
 
 <img src="assets/lean-agile-devops.png" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar"/>
+
+---
+## Scrumfall (Water-Scrum-Fall)
+Water-Scrum-Fall is a term to describe the reality of the current state of Agile as it exists in many organizations today. But, partial Scrum implementation can have negative consequences.
+<table>
+  <tr>
+    <td><img src="assets/scrumfall-1.png"></img></td>
+    <td><img src="assets/scrumfall-2.webp"></img></td>
+  </tr>
+</table>
