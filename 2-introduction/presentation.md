@@ -158,6 +158,10 @@ After CI:
 <img src="assets/hp-2008-to-2011.png">
 
 ---
+## CD Patterns Mindmap
+<img src="assets/cd-patterns-mindmap.jpg">
+
+---
 ## Summary
 The practices at the heart of continuous delivery help us achieve several important benefits:
 - Low risk releases
