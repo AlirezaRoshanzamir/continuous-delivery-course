@@ -11,7 +11,7 @@ Definition, Ingredients, Impacts, Relation with Other Movements
 
 ---
 ## Definition
-Ability, development practice, discipline, and capability to:
+Contiuous delivery is a ability, development practice, discipline, and capability to:
 
 - Get changes of all types into the hands of users safely and quickly in a sustainable way.
 - The system can be deployed to production or end users at any time, on-demand (at least once a day).
@@ -156,3 +156,14 @@ The CI pipeline:
 ## Continuoued: HP Laserjet Framework
 After CI:
 <img src="assets/hp-2008-to-2011.png">
+
+---
+## Summary
+The practices at the heart of continuous delivery help us achieve several important benefits:
+- Low risk releases
+- Faster time to market
+- Higher quality
+- Lower costs
+- Better products
+  - This means we can avoid the 2/3 of features we build that  deliver zero or negative value to our businesses.
+- Happier teams
