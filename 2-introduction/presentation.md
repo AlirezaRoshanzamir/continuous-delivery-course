@@ -122,6 +122,10 @@ In short, they differ in their place of origin, history, aspects covered, and pr
 - **Continuous Delivery:** _Automated_, _streamlined_ software deployment to ensure a deployable state at all times.<br/>
   _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies
 
+Finally, look at the first principle behind the Agile manifesto:
+
+<img src="assets/cd-in-agile-manifesto.png">
+
 ---
 ## Continued: Relation with Agile, DevOps, Lean
 Agile aims to optimize software development specifically, without considering other parts of the IT value stream. DevOps, on the other hand, recognizes that this approach merely shifts the constraint downstream to Ops, and therefore, it strives to break down walls between development and operations. Lean takes a broader perspective, emphasizing the optimization of the entire value stream:
