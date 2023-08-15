@@ -1,5 +1,5 @@
 ## Continuous Delivery: The Problem of Delivering Software
-Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
+#### Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
 
 <img src="assets/wall-of-confusion.png" style="max-width: 550px"/>
 

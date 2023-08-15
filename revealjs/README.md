@@ -1,1 +1,1 @@
-../6-testing-and-documentation-strategy/README.md
+../3-the-problem-of-delivering-software/README.md

@@ -1,1 +1,1 @@
-../6-testing-and-documentation-strategy/presentation.md
+../3-the-problem-of-delivering-software/presentation.md
