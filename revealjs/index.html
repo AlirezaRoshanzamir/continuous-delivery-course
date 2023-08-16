@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Continuous Delivery</title>
+        <title>Continuous Delivery</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white.css">
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/white.css">
 
         <style>
             .reveal section > :not(section) {
@@ -51,43 +51,43 @@
                 font-size: 20px !important;
             }
         </style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section
-					data-markdown="presentation.md"
-					data-separator="^---$"
-					data-separator-vertical="^------$"
-					data-separator-notes="^\<details\>"
-					data-charset="iso-8859-15"
-					data-auto-animate>
-				</section>
-			</div>
-		</div>
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script>
-			Reveal.initialize({
-				hash: true,
-				slideNumber: "c/t",
-				pdfMaxPagesPerSlide: 1,
-				width: 1366,
-  				height: 768,
-				minScale: 0.001,
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section
+                    data-markdown="presentation.md"
+                    data-separator="^---$"
+                    data-separator-vertical="^------$"
+                    data-separator-notes="^\<details\>"
+                    data-charset="iso-8859-15"
+                    data-auto-animate>
+                </section>
+            </div>
+        </div>
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                slideNumber: "c/t",
+                pdfMaxPagesPerSlide: 1,
+                width: 1366,
+                  height: 768,
+                minScale: 0.001,
                 maxScale: 10,
-				plugins: [ 
-					RevealMarkdown,
-					RevealNotes,
-					RevealHighlight,
-					RevealSearch,
-					RevealZoom
-				]
-			});
-		</script>
-	</body>
+                plugins: [ 
+                    RevealMarkdown,
+                    RevealNotes,
+                    RevealHighlight,
+                    RevealSearch,
+                    RevealZoom
+                ]
+            });
+        </script>
+    </body>
 </html>
