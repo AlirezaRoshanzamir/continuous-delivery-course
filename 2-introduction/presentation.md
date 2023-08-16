@@ -1,5 +1,5 @@
 ## Continuous Delivery: Introduction
-Definition, Ingredients, Impacts, Relation with Other Movements
+Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
 
 <img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" style="max-width: 700px"/>
 
@@ -103,8 +103,10 @@ The performance gap between the high and the low performers widens over time:
 ## Impacts - Westrum Organization Culture Model
 The model of how to change culture has changed:
 
-<img src="assets/change-culture.png">
+<img src="assets/change-culture.png" width="400">
 
+------
+### Continued: Impacts - Westrum Organization Culture Model
 The set of technical practices known as continuous delivery indeed has a significant impact on the organization's culture, leading to a more generative environment:
 
 <img src="assets/accelerate-westrum-model.png" alt="Took from the Accelerate book" width="900px"/>
@@ -122,12 +124,14 @@ In short, they differ in their place of origin, history, aspects covered, and pr
 - **Continuous Delivery:** _Automated_, _streamlined_ software deployment to ensure a deployable state at all times.<br/>
   _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies
 
+------
+### Continued: Relation with Agile, DevOps, Lean
 Finally, look at the first principle behind the Agile manifesto:
 
-<img src="assets/cd-in-agile-manifesto.png">
+<img src="assets/cd-in-agile-manifesto.png" height="200">
 
----
-## Continued: Relation with Agile, DevOps, Lean
+------
+### Continued: Relation with Agile, DevOps, Lean
 Agile aims to optimize software development specifically, without considering other parts of the IT value stream. DevOps, on the other hand, recognizes that this approach merely shifts the constraint downstream to Ops, and therefore, it strives to break down walls between development and operations. Lean takes a broader perspective, emphasizing the optimization of the entire value stream:
 
 <img src="assets/lean-agile-devops.png" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar"/>
@@ -137,30 +141,34 @@ Agile aims to optimize software development specifically, without considering ot
 Water-Scrum-Fall is a term to describe the reality of the current state of Agile as it exists in many organizations today. But, partial Scrum implementation can have negative consequences.
 <table>
   <tr>
-    <td><img src="assets/scrumfall-1.png"></img></td>
-    <td><img src="assets/scrumfall-2.webp"></img></td>
+    <td><img src="assets/scrumfall-1.png" width="500"></img></td>
+    <td><img src="assets/scrumfall-2.webp" width="500"></img></td>
   </tr>
 </table>
 
 ---
-## HP Laserjet Framework
+## HP Laserjet Framework Case Study
 Before CI:
-<img src="assets/hp-2008.png">
+
+<img src="assets/hp-2008.png" width="700">
 
 ------
-## Continuoued: HP Laserjet Framework
+## Continued: HP Laserjet Framework Case Study
 The CI pipeline:
-<img src="assets/hp-pipeline.png">
+
+<img src="assets/hp-pipeline.png" width="700">
 
 ------
-## Continuoued: HP Laserjet Framework
+## Continued: HP Laserjet Framework Case Study
 After CI:
-<img src="assets/hp-2008-to-2011.png">
+
+<img src="assets/hp-2008-to-2011.png" width="700">
 
 ---
 ## CD Patterns Mindmap
-<img src="assets/cd-patterns-mindmap.jpg" >
-<a href="https://app.zenflowchart.com/mindmap/ZLbSFGkwvQBEEnXBxG5V">Link to the mindmap</a>
+<small><a href="https://app.zenflowchart.com/mindmap/ZLbSFGkwvQBEEnXBxG5V">Link to the mindmap</a></small>
+
+<img src="assets/cd-patterns-mindmap.jpg" width="700">
 
 ---
 ## Summary
