@@ -1,7 +1,7 @@
 ## Continuous Delivery: Introduction
-Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
+#### Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
 
-<img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" style="max-width: 700px"/>
+<img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" width="650"/>
 
 <small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
@@ -71,7 +71,7 @@ Why continuous delivery?
 ## Impacts
 The following image is extracted from the book **Accelerate** and represents the culmination of a four-year research project that began in 2013. This study aimed to investigate the crucial capabilities and practices that can accelerate software development and delivery, thereby adding value to companies. To achieve this, the researchers employed rigorous research methods typically associated with academia:
 
-<img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="540px"/>
+<img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
 
 ---
 ## Impacts - Software Delivery Performance

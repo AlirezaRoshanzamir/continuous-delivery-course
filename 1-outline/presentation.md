@@ -1,7 +1,7 @@
 ## Continuous Delivery: Course Outline
-Reliable Software Releases through Build, Test, and Deployment Automation
+#### Reliable Software Releases through Build, Test, and Deployment Automation
 
-<img src="assets/devops-loop.png" style="max-width: 500px"/>
+<img src="assets/devops-loop.png" width="700"/>
 
 <small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
