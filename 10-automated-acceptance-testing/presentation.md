@@ -41,7 +41,7 @@ Acceptance tests are derived from acceptance criteria, so the acceptance criteri
 
 Automated acceptance tests should always be layered:
 
-<img src="assets/acceptance-tests-layers.png" height="300px">
+<img src="assets/acceptance-tests-layers.png" width="500px">
 
 Test implementations that refer directly to the application's API or UI are brittle, and even small changes to the UI will immediately break all the tests referring to the changed UI element. Such tests are often the output of record-and-playback-style test automation products, which is one of the main reasons automated acceptance tests are perceived as expensive.
 
@@ -191,7 +191,7 @@ It is instructive to compare the example acceptance test in JUnit (internal DSL)
 ### The Window Driver Pattern: Decoupling the Tests from the GUI
 When implementing the window driver pattern, you should write the equivalent of a device driver for each part of your GUI:
 
-<img src="assets/window-driver-pattern.png" height="300px">
+<img src="assets/window-driver-pattern.png" width="500px">
 
 Acceptance test without layering:
 

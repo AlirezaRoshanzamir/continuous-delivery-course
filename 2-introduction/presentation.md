@@ -71,7 +71,7 @@ Why continuous delivery?
 ## Impacts
 The following image is extracted from the book **Accelerate** and represents the culmination of a four-year research project that began in 2013. This study aimed to investigate the crucial capabilities and practices that can accelerate software development and delivery, thereby adding value to companies. To achieve this, the researchers employed rigorous research methods typically associated with academia:
 
-<img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" height="540px"/>
+<img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="540px"/>
 
 ---
 ## Impacts - Software Delivery Performance
@@ -128,7 +128,7 @@ In short, they differ in their place of origin, history, aspects covered, and pr
 ### Continued: Relation with Agile, DevOps, Lean
 Finally, look at the first principle behind the Agile manifesto:
 
-<img src="assets/cd-in-agile-manifesto.png" height="200">
+<img src="assets/cd-in-agile-manifesto.png" width="400">
 
 ------
 ### Continued: Relation with Agile, DevOps, Lean
