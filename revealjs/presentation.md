@@ -1,1 +1,0 @@
-../3-the-problem-of-delivering-software/presentation.md

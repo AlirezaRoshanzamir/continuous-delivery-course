@@ -6,22 +6,13 @@ This repository contains the artifacts (presentations, examples, ...) that are u
 ### Presentations
 There is a file named `presentation.md` in each session directory. You can simply open it and see the presentation.
 
-However, if you wish to view the presentation as a slide show, you should use `reveal.js`. Navigate to the `revealjs` directory and install the dependencies:
+However, if you wish to view the presentation as a slide show, you can run the following command with the live-reload support:
 
 ```console
-$ npm install
-```
-
-And finally, start the server with live-reload support (you can change the session directory using the `SESSION` environment variable):
-
-```console
-$ SESSION=1-outline npm start
+$ make run-live SESSION=1-outline
 ...
-[17:34:07] Starting 'serve'...
-[17:34:07] Starting server...
-[17:34:07] Server started http://localhost:8000
-[17:34:07] LiveReload started on port 35729
-[17:34:07] Running server
+[I 230818 02:32:49 server:335] Serving on http://127.0.0.1:8000
+...
 ```
 
 ## Current Sessions
