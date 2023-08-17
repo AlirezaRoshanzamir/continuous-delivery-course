@@ -1,0 +1,19 @@
+name: Package all of the sessions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  package_all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: make package-all
+      - uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/statics/*
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
