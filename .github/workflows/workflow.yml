@@ -1,4 +1,4 @@
-name: Deploy all of the sessions
+name: Package and deploy the course static website to the GitHub Pages
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Generate a static website for each session
+      - name: Generate a static website
         run: make package
       - name: Deploy website to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
