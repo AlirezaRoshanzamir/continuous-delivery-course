@@ -1,4 +1,4 @@
-name: Package all of the sessions
+name: Deploy all of the sessions
 
 on:
   push:
@@ -9,11 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: make package-all
-      - uses: svenstaro/upload-release-action@v2
+      - name: Generate a static website for each session
+        run: make package
+      - name: Deploy website to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/statics/*
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/static_website

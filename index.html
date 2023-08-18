@@ -1,97 +1,24 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <title>Continuous Delivery</title>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js" integrity="sha512-9dFFU5pcR8K4bvw4ng6mLMW5IjslYbA57amHEMtHn3TT9RkKivsDabKffqjUUJ4pCaojAyH05T1OESld199Gcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" integrity="sha512-USp+nLNMZ1hR0Ll/LpYDxIq47Ypcm3KfjIleOnyFrB1N5KfHLXjfPQD1wQlhv7kVHRRgPvNVtendDS72LyHviA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css" integrity="sha512-RoEy1xOWgzryoplQ1g0eNHizP2BRqEq8eLGpRyI6OvM2FvmxpUyiPotvW4rp/I67VN6eFq4DDXQNcFKbNZ5Rrg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <style>
-            .reveal section > :not(section) {
-                font-size: 25px;
-                text-align: left;
-            }
-            .reveal section h2 {
-                font-size: 40px;
-                text-align: center;
-            }
-            .reveal section h3 {
-                font-size: 30px;
-                text-align: center;
-            }
-            .reveal section h4 {
-                font-size: 25px;
-                text-align: center;
-            }
-            img {
-                text-align: center;
-            }
-            .reveal ul {
-                display: block;
-            }
-            table, td, th, tr {
-                border: 1px solid lightgray !important;
-            }
-            tr:nth-child(even) {
-                background-color: #eeeeee;
-            }
-            table td {
-                vertical-align: middle;
-                padding: 4px;
-            }
-            table.books td img {
-                max-height: 120px;
-                margin: 0;
-            }
-            small, small * {
-                font-size: 20px !important;
-            }
-            li.fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
-                display: none;
-            }
-        </style>
+        <title>Continuous Delivery Course</title>
     </head>
     <body>
-        <div class="reveal">
-            <div class="slides">
-                <section
-                    data-markdown="presentation.md"
-                    data-separator="^---$"
-                    data-separator-vertical="^------$"
-                    data-separator-notes="^\<details\>"
-                    data-charset="iso-8859-15"
-                    data-auto-animate>
-                </section>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js" integrity="sha512-OQrqDw7qMufeGwkeHX+IVYOjaMJukqKTnuy3xBAMXE0pOtcFrJRFYlt4eJOLT/XJr7yh6DW8N9RrF2t5Aqsy7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js" integrity="sha512-yov8LabSFTQgFrb/4/hhVYXR2zdZRXiMPj2M/gGPPBBpHdbMDDzKXnOcuiAYsXEsmpKucbl8qadb7Fp3nh5kqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js" integrity="sha512-MZ7Ehjbh2soaeCZJGaw6vBNAa7+eunl0SUmRPNESchLlboH73lHLEeUa6pZJ2Pcui4NcpDFatr6M+VlcmaH1QA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js" integrity="sha512-RCedMo/DOyawQOh4zYtqEHTZAfgrrVQctN3LVCX5kELGsN52TOdwZ8inRY0l9Mo4vtyDFn6oOAgRUilWXgb+wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/search/search.min.js" integrity="sha512-ulzmAOS4jBVY0CuKQsrgalWWJOW01ZJ32llxKraQE+TZhxGGQJxPWlqDJZkWiPm3FPexfHNkxEcYnEjElU+vvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/zoom/zoom.min.js" integrity="sha512-Gras1ky8LoFJWwMTxBWyN2wfHfnJXQlyhHFH3M+m/jHe297DZsrQxg9P6Kxka6waxl4NeeQzietoFlCxL7x10g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <script>
-            Reveal.initialize({
-                hash: true,
-                slideNumber: "c/t",
-                pdfMaxPagesPerSlide: 1,
-                width: 1366,
-                height: 768,
-                minScale: 0.001,
-                maxScale: 10,
-                plugins: [ 
-                    RevealMarkdown,
-                    RevealNotes,
-                    RevealHighlight,
-                    RevealSearch,
-                    RevealZoom
-                ]
-            });
-        </script>
+        <h1>Welcome to the Continuous Delivery Course page</h1>
+        <h2>Slides</h2>
+        <ul>
+            <li><a href="1-outline">Course Outline</a></li>
+            <li><a href="2-introduction">Introduction</a></li>
+            <li><a href="3-the-problem-of-delivering-software">The Problem of Delivering Software</a></li>
+            <li><a href="4-configuration-management">Configuration Management</a></li>
+            <li><a href="5-continuous-integration">Continuous Integration</a></li>
+            <li><a href="6-testing-and-documentation-strategy">Testing and Documentation Strategy</a></li>
+            <li><a href="7-anatomy-of-the-deployment-pipeline">Anatomy of the Deployment Pipeline</a></li>
+            <li><a href="8-build-and-deployment-scripting">Build and Deployment Scripting</a></li>
+            <li><a href="9-the-commit-stage">The Commit Stage</a></li>
+            <li><a href="10-automated-acceptance-testing">Automated Acceptance Testing</a></li>
+            <li><a href="11-testing-nonfunction-requirements">Testing Nonfunction Requirements</a></li>
+            <li><a href="12-deploying-and-releasing-applications">Deploying and Releasing Applications</a></li>
+        </ul>
     </body>
 </html>

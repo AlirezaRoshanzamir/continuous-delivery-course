@@ -9,7 +9,7 @@ There is a file named `presentation.md` in each session directory. You can simpl
 However, if you wish to view the presentation as a slide show, you can run the following command with the live-reload support:
 
 ```console
-$ make run-live SESSION=1-outline
+$ make run-live
 ...
 [I 230818 02:32:49 server:335] Serving on http://127.0.0.1:8000
 ...
