@@ -1,6 +1,9 @@
 # Continuous Delivery Course
 This repository contains the artifacts (presentations, examples, ...) that are used for the course. Each session's details exist in the corresponding directory.
 
+## Demo
+Please refer to the official course page and the presentation slides for each session at https://alirezaroshanzamir.github.io/continuous-delivery-course/.
+
 ## Installation and Usage
 
 ### Presentations
