@@ -83,7 +83,7 @@ Not every team has separate individuals who perform these roles 100% of the time
 5. Once the analyst and the customer are happy that the requirement has been fulﬁlled, it moves on to testing by the testers.
 
 ------
-### Acceptance Criteria as Executable Speciﬁcations
+### Acceptance Criteria as Executable Speciﬁcations (BDD)
 Acceptance tests are executable speciﬁcations of the behavior of the software being developed. This is a signiﬁcant realization which has spawned a new approach to automated testing, known as behavior-driven development (BDD).
 
 In BDD, acceptance criteria should be written in the form of the customer's ex- pectations of the behavior of the application. It should then be possible to take acceptance criteria thus written, and execute them directly against the application to verify that the application meets its speciﬁcations.
