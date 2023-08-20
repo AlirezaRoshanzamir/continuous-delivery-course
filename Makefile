@@ -13,6 +13,7 @@ package: dist/static_website/
 
 package-live: dist/live_website/
 	find . -maxdepth 1 -type d -name "*-*" -exec make package-live-session SESSION={} ";"
+	rm -f dist/live_website/index.html
 	ln -s $$(pwd)/index.html dist/live_website/index.html
 
 package-live-session: dist/live_website/
