@@ -157,10 +157,10 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing <span style="color: blue">[and Documentation]</span> Strategy
+            Testing Strategy
             <br>
             <small>
-                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Unit-test Coverage Criteria</span>, <span style="color: blue">Effective Unit-testing</span>, <span style="color: blue">TDD</span>, <span style="color: blue">ATDD</span>, <span style="color: blue">BDD</span>, <span style="color: blue">Doctests</span>, <span style="color: blue">SphinX</span>, <span style="color: blue">Auto Documentation</span>
+                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
             </small>
         </td>
         <td>90'</td>

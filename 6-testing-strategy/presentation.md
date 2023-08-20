@@ -1,5 +1,5 @@
-## Continuous Delivery: Testing and [Documentation] Strategy
-Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Unit-test Coverage Criteria</span>, <span style="color: blue">Effective Unit-testing</span>, <span style="color: blue">TDD</span>, <span style="color: blue">ATDD</span>, <span style="color: blue">BDD</span>, <span style="color: blue">Doctests</span>, <span style="color: blue">SphinX</span>, <span style="color: blue">Auto Documentation</span>
+## Continuous Delivery: Testing Strategy
+#### Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
 
 <img src="assets/v-model.png" style="max-width: 550px"/>
 
@@ -138,20 +138,72 @@ You can find more information in the following books:
       <small>by Gerard Meszaros</small>
     </td>
   </tr>
-  <tr>
-    <td><img src="assets/tdd-book-cover.png" /></td>
-    <td>
-      Test Driven Development: By Example
-      <br />
-      <small>by Kent Beck</small>
-    </td>
-  </tr>
 </table>
 
 <details>
 <summary>Note</summary>
 Mention the Classical vs Mockist testing and TDD dichotomy.
 </details>
+
+---
+## Test Coverage Criteria (Criteria-Based Testing)
+Test coverage is a metric used in software testing to quantify the degree to which a software system's features, requirements, or code components are exercised by a set of test cases. It aims to provide insight into the quality and thoroughness of testing by assessing the extent to which different aspects of the software have been validated.
+
+Begin by creating a model of the source code or the specific components you intend to test. Afterward, establish coverage criteria that need to be met. Subsequently, formulate comprehensive test plans and develop tests that align with these coverage criteria:
+
+<img src="assets/software-modeling-structures.png">
+
+------
+### Code Coverage Criteria (Code Coverage-Based Testing)
+Code coverage-based unit-testing is a kind of white-box testing which assesses the proportion of code that is executed by the test cases, aiming to ensure comprehensive testing of the software's internal logic and pathways:
+
+<img src="assets/code-line-coverage.png">
+
+<details>
+  <summary>Note:</summary>
+  "Code coverage" differs from "test coverage." The former measures how the code is covered by tests, while the latter is a superset of the former, encompassing various entities such as source code, requirements, and use cases, and assessing how they are covered by tests.
+</details>
+
+------
+### Mutation Testing
+Mutation testing is a kind of software that includes mutating or changing of the particular statements in the source code and assesses that whether the tests can identify the errors or not:
+
+<img src="assets/hypothesis-testing.png">
+
+------
+### Property-Based Testing (Hypothesis Testing)
+Mutation testing is a kind of software that includes mutating or changing of the particular statements in the source code and assesses that whether the tests can identify the errors or not:
+
+<table>
+  <tr>
+    <td><img src="assets/mutation-based-testing.png" width="400"></td>
+    <td><img src="assets/pitest-sample-report.webp" width="700"></td>
+  </tr>
+</table>
+
+---
+## Test-Driven Development (TDD)
+Test-driven development (TDD), is a method of implementing software programming that interlaces unit testing, programming and refactoring on source code:
+
+<table>
+  <tr>
+    <td><img src="assets/tdd-loop.png" width="400"></td>
+    <td><img src="assets/green-bar-patterns.webp" width="500"></td>
+  </tr>
+</table>
+
+You can find more information in the following books:
+
+<table>
+  <tr>
+    <td><img src="assets/tdd-book-cover.png" width="70"/></td>
+    <td>
+      Test Driven Development by Example
+      <br />
+      <small>by Kent Beck</small>
+    </td>
+  </tr>
+</table>
 
 ---
 ## Real-Life Situations and Strategies
