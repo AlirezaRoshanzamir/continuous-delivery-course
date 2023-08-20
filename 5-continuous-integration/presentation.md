@@ -1,7 +1,7 @@
 ## Continuous Delivery: Continuous Integration
-Implementation, Prerequisites, Practices
+#### Implementation, Prerequisites, Practices, <span style="color: blue">Challenges</span>
 
-<img src="assets/ci.png" style="max-width: 550px"/>
+<img src="assets/ci.png" width="800"/>
 
 <small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
@@ -170,6 +170,36 @@ The following practices aren't required, but we have found them useful:
 - Failing the Build for Slow Tests
 - Failing the Build for Warnings and Code Style Breaches
 
+---
+## Challenges
+Tooling is rarely the problem. Always, "why can’t we deliver working changes to the trunk today?", is the roadmap of problems to solve. Many common problems that teams have:
+
+- Code review takes too long / has too many approvers  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Having more than one reviewer on a PR is a process smell for issues with the quality process.
+  - Linting, formatting, type-checking, ... should be automated.
+  - Worst: Code reviews are done solo and comments are sent back to the developer. This adds the most drag.
+  - Less bad: The reviewer and author meet to review and correct issues. There is still a wait time for that meeting, but it is more efficient.
+  - Best: Pair programming builds code review into the flow.
+- Tests are deferred or skipped  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Never push untested changes.
+  - Timelines are irrelevant if we deliver things on time that are broken.
+- The team lacks knowledge on how to write tests for CI  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Learn effective testing and test patterns
+  - People often push back on TDD, but that is most commonly because they never learned how to do it correctly.
+  - It takes time to be good at testing.
+- Individual tasks are too big  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Use Evolutionary coding methods such as:
+    - Keystone Interfaces (aka. Dark Launching)
+    - Branch by Abstraction
+    - Feature Flags
+  - Decompose tasks into hours of work rather than days
+- Stories are too big & lack testable acceptance criteria  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Focus on BDD instead of "story format"
+  - Practice work decomposition techniques
+- The team uses a push system for work  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Exclusively concentrating on individual tasks rather than working towards team objectives is not ideal.
+  - A team works together to deliver the highest priority on the backlog.
+  - Everyone on the team should be invested in everything the team does.
 
 ---
 ## Summary

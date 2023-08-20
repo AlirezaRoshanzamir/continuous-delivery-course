@@ -148,8 +148,9 @@ Mention the deploy vs release and why their order is different in different plac
     <tr>
         <td>
             Continuous Integration
+            <br>
             <small>
-                Implementation, Prerequisites, Practices
+                Implementation, Prerequisites, Practices, <span style="color: blue">Challenges</span>
             </small>
         </td>
         <td>45'</td>
