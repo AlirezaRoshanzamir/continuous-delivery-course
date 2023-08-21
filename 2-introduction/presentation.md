@@ -73,8 +73,8 @@ The following image is extracted from the book **Accelerate** and represents the
 
 <img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
 
----
-## Impacts - Software Delivery Performance
+------
+### Impacts - Software Delivery Performance
 Based on the results of the aforementioned research, the companies have been divided into three clusters:
 
 <table>
@@ -84,8 +84,10 @@ Based on the results of the aforementioned research, the companies have been div
   </tr>
 </table>
 
----
-## Impacts - Software Delivery Performance over Time
+Visit https://dora.dev/quickcheck/ to check your software delivery performance.
+
+------
+### Impacts - Software Delivery Performance over Time
 The performance gap between the high and the low performers widens over time:
 
 <table>
@@ -99,8 +101,8 @@ The performance gap between the high and the low performers widens over time:
   </tr>
 </table>
 
----
-## Impacts - Westrum Organization Culture Model
+------
+### Impacts - Westrum Organization Culture Model
 The model of how to change culture has changed:
 
 <img src="assets/change-culture.png" width="400">

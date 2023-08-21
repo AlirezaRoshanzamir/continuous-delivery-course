@@ -1,5 +1,5 @@
 ## Continuous Delivery: Configuration Management
-#### Version Control, <span style="color: blue">Monorepo vs Polyrepo</span>, <span style="color: blue">Repository/Project Structure</span>, Managing Dependencies, Managing Software Configuration, Managing Environments, <span style="color: blue">Managing Assets/Resources</span>, <span style="color: blue">Managing Documentation</span>, <span style="color: blue">Managing Tests</span>, <span style="color: blue">Managing Code Style</span>, <span style="color: blue">Managing Code Generation</span>, <span style="color: blue">Version SSOT</span>, <span style="color: blue">Semantic Release</span>, <span style="color: blue">Managing Changelogs</span>
+#### Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
 
 <img src="assets/gitops.png" style="border: 1px solid black"/>
 
@@ -52,6 +52,7 @@ Why?
   - Testers should keep their test scripts and procedures in version control.
   - Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.
   - Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).
+  - To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.
 - Check In Regularly to Trunk
   - They become public, instantly available to everybody else on the team.
   - Otherwise, the merges become too complex.
@@ -74,6 +75,10 @@ Why?
     <li>If you don't have absolutely every source artifact of your project in version control, you won't enjoy any of the benefits that we discuss in this book.</li>
 </ul>
 </details>
+
+------
+### Keep Documentation in Version Control
+TODO: Should be completed.
 
 ---
 ## Managing Dependencies

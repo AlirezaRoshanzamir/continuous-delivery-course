@@ -169,6 +169,56 @@ The following practices aren't required, but we have found them useful:
 - Failing a Build for Architectural Breaches
 - Failing the Build for Slow Tests
 - Failing the Build for Warnings and Code Style Breaches
+- Failing the Build for Documents Problems and Inconsistencies
+  - Always use checkable cross-references in the documentation.
+  - If something is not auto-generated, write simple tests for consistency checking.
+
+------
+### Code Style and Static Analysis: Linting
+Linting is a key component to the CI portion of your pipeline: it allows you to identify and flag known issues and coding standard violations, reducing bugs in your code and making it easier to maintain.
+
+Linting is a kind of static analysis (does not execute the code); the name linter comes from the 1978 tool of the same name, created by Bell Labs.
+
+Some types of linting issues or features:
+- Naming Conventions
+- Uninitialized Variables
+- Unreachable Code
+- Security Vulnerabilities
+- Unused Variables and Imports
+- Aliasing Variables
+- Long Function Signatures
+- Deeply Nested Code
+- Inconsistent Ordering in Imports
+- Implicit Type Conversions
+- Duplicated Code
+- Typos
+- Incorrectly Scoped Variables
+- Class Members Order
+- Literals and Initializations Conventions
+- Commented Code
+- Test Names
+- Line Length
+- Docstring Style
+- **Type Checks (for dynamically typed languages)**
+
+------
+### Code Style and Static Analysis: Formatting
+Refers to the consistent and standardized arrangement of code elements to improve its readability and maintainability:
+
+Some common features and aspects of existing formatters:
+- Indention
+- Spacing
+- Length
+- Brace Placement
+- Literals and Initializations
+- Imports Orders
+- Class Members Order
+- Remove Unused Imports
+- Auto Update to Modern Language Idioms
+
+Your code formatter should be consistent with your linters. Also, you should also run the formatters with only-check flags as a linter.
+
+The most significant value of the formatters is removing code-style comments in pull requests and side discussions. Don't spend too much time on the code style rules' details and focus on consistency.
 
 ---
 ## Challenges
