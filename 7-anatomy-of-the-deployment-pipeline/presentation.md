@@ -1,5 +1,5 @@
 ## Anatomy of Deployment Pipeline
-Stages, Practices, Commit Stage, Test Stages, Release and Deployment Stages, Metrics, Adoption
+#### Stages, Practices, Commit Stage, Test Stages, Release and Deployment Stages, Metrics, Adoption
 
 <img src="assets/minimal-deployment-pipeline-overview.png" style="max-width: 550px"/>
 

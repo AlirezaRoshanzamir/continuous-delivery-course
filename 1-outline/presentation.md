@@ -140,7 +140,7 @@ Mention the deploy vs release and why their order is different in different plac
             Configuration Management
             <br>
             <small>
-                Version Control, <span style="color: blue">Monorepo vs Polyrepo</span>, <span style="color: blue">Repository/Project Structure</span>, Managing Dependencies, Managing Software Configuration, Managing Environments, <span style="color: blue">Managing Assets/Resources</span>, <span style="color: blue">Managing Documentation</span>, <span style="color: blue">Managing Tests</span>, <span style="color: blue">Managing Code Style</span>, <span style="color: blue">Managing Code Generation</span>, <span style="color: blue">Version SSOT</span>, <span style="color: blue">Semantic Release</span>, <span style="color: blue">Managing Changelogs</span>
+                Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
             </small>
         </td>
         <td>90'</td>
@@ -157,10 +157,10 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing <span style="color: blue">[and Documentation]</span> Strategy
+            Testing Strategy
             <br>
             <small>
-                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Unit-test Coverage Criteria</span>, <span style="color: blue">Effective Unit-testing</span>, <span style="color: blue">TDD</span>, <span style="color: blue">ATDD</span>, <span style="color: blue">BDD</span>, <span style="color: blue">Doctests</span>, <span style="color: blue">SphinX</span>, <span style="color: blue">Auto Documentation</span>
+                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
             </small>
         </td>
         <td>90'</td>
@@ -186,7 +186,7 @@ Mention the deploy vs release and why their order is different in different plac
             Build and Deployment Scripting
             <br>
             <small>
-                Build Tools, Principles and Practices, Tips and Tricks, <span style="color: blue">Packaging Tools and Types</span>, <span style="color: blue">Infrastructure as a Code</span>, <span style="color: blue">Terraform</span>, <span style="color: blue">Ansible</span>
+                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure (Changelogs, Docs, Tests, Assets, Examples, Dependencies, Version, Pipelines, Linting, Formatting, Type-checking, Code Generation)</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as a Code (Terraform, Ansible)</span>
             </small>
         </td>
         <td>45'</td>
@@ -213,7 +213,7 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing Nonfunction Requirements (Only Introduction)
+            Testing Nonfunctional Requirements (Only Introduction)
         </td>
         <td>15'</td>
     </tr>
@@ -222,7 +222,7 @@ Mention the deploy vs release and why their order is different in different plac
             Deploying and Releasing Applications
             <br>
             <small>
-                Release Strategy, <span style="color: blue">Library vs Application</span>, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Tips and Tricks
+                Release Strategy, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, Tips and Tricks, <span style="color: blue">Semantic Release</span>
             </small>
         </td>
         <td>45'</td>
@@ -258,7 +258,7 @@ Mention the deploy vs release and why their order is different in different plac
             Managing Components and Dependencies
             <br>
             <small>
-                Keeping Application (Trunk) Releasable, Dependency Management, Components, Dependency Graph, Managing Binaries, <span style="color: blue">Dependency Pinning</span>, <span style="color: blue">Artifactories</span>
+                Keeping Application (Trunk) Releasable, Dependencies (<span style="color: blue">Dependency Pinning</span>, <span style="color: blue">Library vs Application</span>), Components, Dependency Graph, Managing Binaries
             </small>
         </td>
         <td>45'</td>

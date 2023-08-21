@@ -1,5 +1,5 @@
 ## Continuous Delivery: Build and Deployment Scripting
-Build Tools, Principles and Practices, Tips and Tricks, <span style="color: blue">Packaging Tools and Types</span>, <span style="color: blue">Infrastructure as a Code</span>, <span style="color: blue">Terraform</span>, <span style="color: blue">Ansible</span>
+#### Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure (Changelogs, Docs, Tests, Assets, Examples, Dependencies, Version, Pipelines, Linting, Formatting, Type-checking, Code Generation)</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as a Code (Terraform, Ansible)</span>
 
 <img src="assets/iaac.png" style="max-width: 550px"/>
 
@@ -110,17 +110,28 @@ If you're starting a new Java project, or looking for a replacement for Ant or M
 ### An Overview of Build Tools: Psake
 Psake is an internal DSL written in PowerShell, which provides task-oriented dependency networks.
 
+------
+### An Overview of Build Tools: Pants
+TODO: Should be completed.
+
+------
+### An Overview of Build Tools: Bazel, Buck, Pants
+TODO: Should be completed.
+
+---
+## Monorepo vs Polyrepo
+TODO: Should be completed.
+
 ---
 ## Principles and Practices
-Some general principles and practices of build and
-deployment scripting should apply to whichever technology you use:
+Some general principles and practices of build and deployment scripting should apply to whichever technology you use:
 - Create a Script for Each Stage in Your Deployment Pipeline
   - Do not have a single script for whole deployment pipeline
 - Use an Appropriate Technology to Deploy Your Application
   - Use the right tool for the job when automating deployment, not a general-purpose scripting language. For example, for WebSphere Application Server, you can use the Wsadmin tool.
 - Use the Same Scripts to Deploy to Every Environment
   - If your application is complex in terms of its deployment architecture, you will have to make some simpliﬁcations to get it working on developer machines.
-- Use Your Operating System's Packaging Tools
+- Use Your Operating System's Packaging Tools [forDeployment]
   - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other ﬂavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.
   - Commercial middleware servers, for example, often require special tools to perform deployments. In this case, a hybrid approach is necessary.
   - You can also use platform-speciﬁc packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl's CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.
@@ -133,22 +144,30 @@ deployment scripting should apply to whichever technology you use:
   - Then, move on to reﬁning these scripts so they can be used in the acceptance test environment to deploy and run the application so that the tests can be run.
 
 ---
-## Project Structure for Applications That Target the JVM
+## Package Managers
+Some language specific and language agnostic package managers:
 
-------
-### Project Layout
+<img src="assets/language-specific-vs-language-agnostic-package-managers.png">
 
-------
-### Project Layout: Managing Source Code
+<details>
+  <summary>Note:</summary>
+  Mention the following clues:
+  <ul>
+    <li>Language agnositc package manager doesn't result language agnostic package</li>
+    <li>Virtual environment and local packages directory</li>
+    <li>Built distribution vs source distribution (you may need different systems for generating built distributions)</li>
+    <li>Use "distribution package" instead of "package" when searching</li>
+    <li>Package dependency inclusion level (wheel, PEX, RPM/Deb, PyInstaller, Conda, Docker)</li>
+    <li>Language Specific vs Language Agnostic Package Managers</li>
+    <li>OS-Dependent vs OS-Independent Package Managers</li>
+    <li>Dependency Pinning (presented in detail in the next sessions)</li>
+    <li>Single Project Multiple Version Support</li>
+  </ul>
+</details>
 
-------
-### Project Layout: Managing Tests
-
-------
-### Project Layout: Managing Build Output
-
-------
-### Project Layout: Managing Libraries
+---
+## Sample Project Structure
+TODO: Should be completed.
 
 ---
 ## Deployment Scripting

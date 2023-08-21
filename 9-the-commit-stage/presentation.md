@@ -1,7 +1,7 @@
 ## Continuous Delivery: The Commit Stage
-<span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
+#### <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
 
-<img src="assets/the-commit-stage.png"/>
+<img src="assets/the-commit-stage.png" width="600"/>
 
 <small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 

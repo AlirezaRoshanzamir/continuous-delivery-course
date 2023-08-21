@@ -1,5 +1,5 @@
 ## Continuous Delivery: Deploying and Releasing Applications
-Release Strategy, <span style="color: blue">Library vs Application</span>, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Tips and Tricks
+#### Release Strategy, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, Tips and Tricks, <span style="color: blue">Semantic Release</span>
 
 <img src="assets/deployed-vs-released.jpg" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
 
@@ -11,8 +11,7 @@ Release Strategy, <span style="color: blue">Library vs Application</span>, Deplo
 
 ---
 ## Introduction
-There are differences between releasing software into production and deploying it to testing environments-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these differences
-should be encapsulated in a set of conﬁguration ﬁles.
+There are differences between releasing software into production and deploying it to testing environments-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these differences should be encapsulated in a set of conﬁguration ﬁles.
 
 The main difference between deploying and releasing is the ability to roll back. Two extremely powerful techniques that can be used to perform zero-downtime releases and rollbacks on even the largest of production systems are:
 - Blue-green deployments
@@ -106,6 +105,10 @@ Environments are often shared between several applications:
 Before you let your application loose on unsuspecting users, you should perform some ﬁnal tests in a staging environment that is very similar to production.
 
 For simple systems without interaction with external systems, you can employ the capacity testing environment for both capacity testing and staging.
+
+---
+### Semantic Versioning
+TODO: Should be completed.
 
 ---
 ## Rolling Back Deployments and Zero-Downtime Releases
@@ -210,6 +213,12 @@ every change you make-and there are less such reasons than you might think-you s
   - The system should perform the checks as it initializes, and if it encounters an error, it should fail to start.
 - Don't Make Changes Directly on the Production Environment
   - Production environments should be completely locked down, so that only your deployment pipeline can make changes to it.
+
+---
+## Semantic Release
+TODO: Should be completed.
+Changelog
+Version SSOT
 
 ---
 ## Summary

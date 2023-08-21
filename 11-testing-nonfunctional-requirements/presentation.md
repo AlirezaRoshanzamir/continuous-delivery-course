@@ -1,5 +1,5 @@
-## Continuous Delivery: Testing Nonfunction Requirements
-Introduction, Managing Nonfunctional Requirements
+## Continuous Delivery: Testing Nonfunctional Requirements
+#### Introduction, Managing Nonfunctional Requirements
 
 <img src="assets/frs-vs-nfrs.png"/>
 
