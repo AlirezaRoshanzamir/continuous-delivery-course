@@ -212,7 +212,7 @@ Mention the deploy vs release and why their order is different in different plac
             Automated Acceptance Testing
             <br>
             <small>
-                Why?, Roles, Application Driver Layer, Implementation Patterns, Performance Practices
+                Introduction, Why?, Process and Roles, <span style="color: blue">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
             </small>
         </td>
         <td>45'</td>

@@ -1,5 +1,5 @@
 ## Continuous Delivery: Automated Acceptance Testing
-#### Why?, Roles, Application Driver Layer, Implementation Patterns, Performance Practices
+#### Introduction, Why?, Process and Roles, <span style="color: blue">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
 
 <img src="assets/user-story-acceptance-criteria-and-test.png"/>
 
@@ -161,8 +161,33 @@ Feature: Placing an order
 These executable speciﬁcations can generally be turned into a document suitable for auditing using a simple, automated process.
 
 ---
-## Doctests
-TODO: Should be completed.
+## Testing and Documentation
+By making assertions, you should validate the outcomes of the code showcased in the documentation's examples. Consequently, the code within the documentation could effectively serve as an automated acceptance test, contributing to the concept of "living documentation".
+
+------
+### Testing and Documentation: Doctest
+Write usage examples for your code that work as documentation and test cases simultaneously:
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Output</th>
+  </tr>
+  <tr class="simple">
+    <td><img src="assets/doctests-docstring.png" width="420"></td>
+    <td><img src="assets/doctests-docstring-output.png" width="420"></td>
+  </tr>
+  <tr>
+    <td><img src="assets/doctests-docs.png" width="420"></td>
+    <td><img src="assets/doctests-docs-output.png" width="420"></td>
+  </tr>
+</table>
+
+------
+### Testing and Documentation: FitNesse
+FitNesse is an open source test framework that allows software testers, developers and customers to collaborate to create test cases on a wiki:
+
+<img src="assets/fitness-output2.png" width="1100">
 
 ---
 ## The Application Driver Layer
@@ -195,7 +220,7 @@ It is instructive to compare the example acceptance test in JUnit (internal DSL)
 ### The Window Driver Pattern: Decoupling the Tests from the GUI
 When implementing the window driver pattern, you should write the equivalent of a device driver for each part of your GUI:
 
-<img src="assets/window-driver-pattern.png" width="500px">
+<img src="assets/window-driver-pattern.png" width="500">
 
 Acceptance test without layering:
 
