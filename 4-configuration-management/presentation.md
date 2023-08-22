@@ -76,7 +76,9 @@ Including the documentation in the version control and source code repository ha
 - Forcing the consistency between the docs and the other entities.
 - Taking advantages of the doctests.
 - Supporting versioning and review mechanism.
-- Using the reStructuredText or Markdown, multiple views such as static website, Latex, PDF, Confluence, Presentation. Hence, you can publish them everywhere and any format you want.
+- Using the reStructuredText or Markdown, multiple views such as HTML, Latex, PDF, Confluence, Presentation can be generated. Hence, you can publish them everywhere and in any format you want.
+
+<img src="assets/living-documentation.png" width="800">
 
 ------
 ### Keep Absolutely Everything in Version Control: Documentation
@@ -93,9 +95,6 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
     <td><img src="assets/click-example.png" width="550"/></td>
   </tr>
 </table>
-
-------
-### Keep Absolutely Everything in Version Control: GitOps
 
 ------
 ### Check In Regularly to Trunk
