@@ -1,5 +1,5 @@
 ## Continuous Delivery: Deploying and Releasing Applications
-#### Release Strategy, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, Tips and Tricks, <span style="color: blue">Semantic Release</span>
+#### Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: blue">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: blue">Semantic Release</span>, Tips and Tricks
 
 <img src="assets/deployed-vs-released.jpg" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
 
@@ -107,8 +107,15 @@ Before you let your application loose on unsuspecting users, you should perform 
 For simple systems without interaction with external systems, you can employ the capacity testing environment for both capacity testing and staging.
 
 ---
-### Semantic Versioning
-TODO: Should be completed.
+## Semantic Versioning (SemVer)
+Semantic Versioning is a versioning scheme for using meaningful version numbers. Specifically, the meaning revolves around how API versions compare in terms of backwards-compatibility:
+
+<img src="assets/semver.png" width="800">
+
+- If you are not sure about your public API, you can use 0.x.y versions.
+- Always read the version from only a single place. Preferrably Git tags or a single file in the repository.
+
+Visit the https://semver.org for more information.
 
 ---
 ## Rolling Back Deployments and Zero-Downtime Releases
@@ -200,6 +207,29 @@ The intuitive objection to continuous deployment is that it is too risky. You ca
 every change you make-and there are less such reasons than you might think-you should behave as if you were going to do so.
 
 ---
+## Semantic Release
+[Semantic Release](https://semantic-release.gitbook.io) automates the whole package release workflow including: determining the next version number, generating the release notes, and publishing the package:
+- Fully automated release
+- Enforce Semantic Versioning specification
+- New features and fixes are immediately available to users
+- Use formalized commit message convention to document changes in the codebase
+- Avoid potential errors associated with manual releases
+
+<img src="assets/kill-all-humans.webp">
+
+------
+### Semantic Release: Steps
+- **Verify Conditions**: Verify all the conditions to proceed with the release.
+- **Get last release**: Obtain the commit corresponding to the last release by analyzing Git tags.
+- **Analyze commits**: Determine the type of release based on the commits added since the last release.
+- **Verify release**: Verify the release conformity.
+- **Generate notes**: Generate release notes for the commits added since the last release.
+- **Create Git tag**: Create a Git tag corresponding to the new release version.
+- **Prepare**: Prepare the release.
+- **Publish**: Publish the release.
+- **Notify**: Notify of new releases or errors.
+
+---
 ## Tips and Tricks
 - The People Who Do the Deployment Should Be Involved in Creating the Deployment Process
 - Log Deployment Activities
@@ -213,12 +243,6 @@ every change you make-and there are less such reasons than you might think-you s
   - The system should perform the checks as it initializes, and if it encounters an error, it should fail to start.
 - Don't Make Changes Directly on the Production Environment
   - Production environments should be completely locked down, so that only your deployment pipeline can make changes to it.
-
----
-## Semantic Release
-TODO: Should be completed.
-Changelog
-Version SSOT
 
 ---
 ## Summary
