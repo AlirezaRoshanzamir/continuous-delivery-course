@@ -31,10 +31,17 @@ Mention the deploy vs release and why their order is different in different plac
                 <li>C++ Developer, <i>Mahsan</i> | <small>2018 - 2020</small></li>
                 <li>Web and Mobile Developer, <i>Resaa</i> | <small>2016 - 2018</small></li>
             </ul>
+            <br>
             Education:
             <ul>
                 <li>M.Sc. in Artificial Intelligence, <i>Sharif University of Technology</i> | <small>2018 - 2020</small></li>
                 <li>B.Sc. in Computer Software Engineering, <i>University of Tehran</i> | <small>2014 - 2018</small></li>
+            </ul>
+            <br>
+            Social:
+            <ul>
+                <li>a.roshanzamir1996@gmail.com</li>
+                <li>alirezaroshanzamir.github.io</li>
             </ul>
         </td>
     </tr>
@@ -143,7 +150,7 @@ Mention the deploy vs release and why their order is different in different plac
                 Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
             </small>
         </td>
-        <td>90'</td>
+        <td>45'</td>
     </tr>
     <tr>
         <td>
@@ -163,7 +170,7 @@ Mention the deploy vs release and why their order is different in different plac
                 Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
             </small>
         </td>
-        <td>90'</td>
+        <td>60'</td>
     </tr>
 </table>
 
@@ -189,7 +196,7 @@ Mention the deploy vs release and why their order is different in different plac
                 Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure (Changelogs, Docs, Tests, Assets, Examples, Dependencies, Version, Pipelines, Linting, Formatting, Type-checking, Code Generation)</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as a Code (Terraform, Ansible)</span>
             </small>
         </td>
-        <td>45'</td>
+        <td>90'</td>
     </tr>
     <tr>
         <td>
@@ -199,7 +206,7 @@ Mention the deploy vs release and why their order is different in different plac
                 <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
             </small>
         </td>
-        <td>90'</td>
+        <td>60'</td>
     </tr>
     <tr>
         <td>
