@@ -147,7 +147,7 @@ Mention the deploy vs release and why their order is different in different plac
             Configuration Management
             <br>
             <small>
-                Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
+                Version Control and Advices, Managing Dependencies, Managing Software Configuration, Managing Environments
             </small>
         </td>
         <td>45'</td>

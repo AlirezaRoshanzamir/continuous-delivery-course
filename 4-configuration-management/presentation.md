@@ -1,5 +1,5 @@
 ## Continuous Delivery: Configuration Management
-#### Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
+#### Version Control and Advices, Managing Dependencies, Managing Software Configuration, Managing Environments
 
 <img src="assets/gitops.png" style="border: 1px solid black"/>
 
@@ -47,38 +47,73 @@ Why?
 ------
 ### Version Control: Advices
 - Keep Absolutely Everything in Version Control
-  - Everything required to re-create your application's binaries and the environments in which they run.
-  - Analysts should store requirements documents.
-  - Testers should keep their test scripts and procedures in version control.
-  - Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.
-  - Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).
-  - To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.
 - Check In Regularly to Trunk
-  - They become public, instantly available to everybody else on the team.
-  - Otherwise, the merges become too complex.
-  - Ovoid branching
-  - Use commit test suit (less than ten minutes)
-  - Introduce changes incrementally -> Check-in minimum once a day
 - Use Meaningful Commit Messages
-  - A message like "fix obsecure bug." makes debugging very hard.
-  - Include a link to the identifier in your project management tool for the feature or bug you're working on.
-  - Specify a convention and follow it.
-  - e.g. "Support specifying server's port number from the CLI using the --port option (see #1247)."
-  - Multiparagraph commit message: the first paragraph is a summary and the following paragraphs add more detail.
-  - Check commit messages automatically.
-  - [Conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/#specification)
+
+Details on the next slides.
 
 <details>
 <summary>Note</summary>
 <ul>
     <li>Mention the preference for using "version control" instead of "source control".</li>
-    <li>If you don't have absolutely every source artifact of your project in version control, you won't enjoy any of the benefits that we discuss in this book.</li>
+    <li>If you don't have absolutely every source artifact of your project in version control, you won't enjoy any of the benefits that we discuss in this course.</li>
 </ul>
 </details>
 
 ------
-### Keep Documentation in Version Control
-TODO: Should be completed.
+### Keep Absolutely Everything in Version Control
+- Everything required to re-create your application's binaries and the environments in which they run. As well as environment infrastructure declarative descriptions and scripts (GitOps: Git is the single source of truth).
+- Analysts should store requirements documents.
+- Testers should keep their test scripts and procedures in version control.
+- Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.
+- Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).
+- To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.
+
+------
+### Keep Absolutely Everything in Version Control: Documentation
+Including the documentation in the version control and source code repository has the following benefits:
+- Auto-generating references section from the code, docstrings, tests, changelogs, swagger APIs, Protobufs, and etc.
+- Forcing the consistency between the docs and the other entities.
+- Taking advantages of the doctests.
+- Supporting versioning and review mechanism.
+- Using the reStructuredText or Markdown, multiple views such as static website, Latex, PDF, Confluence, Presentation. Hence, you can publish them everywhere and any format you want.
+
+------
+### Keep Absolutely Everything in Version Control: Documentation
+For example, consider the Python [Click](https://click.palletsprojects.com/) CLI library:
+
+<table>
+  <tr>
+    <td><img src="assets/click-home-page.png" width="350"/></td>
+    <td><img src="assets/click-api.png" width="550"/></td>
+    <td rowspan="2"><img src="assets/click-repository.png" width="550"/></td>
+  </tr>
+  <tr class="simple">
+    <td><img src="assets/click-pdf.png" width="200"/></td>
+    <td><img src="assets/click-example.png" width="550"/></td>
+  </tr>
+</table>
+
+------
+### Keep Absolutely Everything in Version Control: GitOps
+
+------
+### Check In Regularly to Trunk
+- They become public, instantly available to everybody else on the team.
+- Otherwise, the merges become too complex.
+- Ovoid branching
+- Use commit test suit (less than ten minutes)
+- Introduce changes incrementally -> Check-in minimum once a day
+
+------
+### Use Meaningful Commit Messages
+- A message like "fix obsecure bug." makes debugging very hard.
+- Include a link to the identifier in your project management tool for the feature or bug you're working on.
+- Specify a convention and follow it.
+- e.g. "Support specifying server's port number from the CLI using the --port option (see #1247)."
+- Multiparagraph commit message: the first paragraph is a summary and the following paragraphs add more detail.
+- Check commit messages automatically.
+- [Conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
 
 ---
 ## Managing Dependencies
