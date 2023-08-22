@@ -202,7 +202,7 @@ Mention the deploy vs release and why their order is different in different plac
             Commit Stage
             <br>
             <small>
-                <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
+                Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
             </small>
         </td>
         <td>60'</td>
@@ -212,7 +212,7 @@ Mention the deploy vs release and why their order is different in different plac
             Automated Acceptance Testing
             <br>
             <small>
-                Why?, Roles, Application Driver Layer, Implementation Patterns, Performance Practices
+                Introduction, Why?, Process and Roles, <span style="color: blue">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
             </small>
         </td>
         <td>45'</td>

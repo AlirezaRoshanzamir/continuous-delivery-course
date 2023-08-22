@@ -1,5 +1,5 @@
 ## Continuous Delivery: The Commit Stage
-#### <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
+#### Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
 
 <img src="assets/the-commit-stage.png" width="600"/>
 
@@ -54,7 +54,7 @@ Some principles and practices that make for an effective commit stage:
 
 ---
 ## The Results
-The commit stage inputs are source code, and the outputs are  binaries and reports which need to be stored somewhere for reuse in the later stages of your pipeline, and for your team to be able to get hold of them:
+The commit stage inputs are source code, and the outputs are binaries and reports which need to be stored somewhere for reuse in the later stages of your pipeline, and for your team to be able to get hold of them:
 
 <img src="assets/role-of-artifact-repository.png">
 
