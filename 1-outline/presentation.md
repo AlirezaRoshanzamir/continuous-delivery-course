@@ -31,10 +31,17 @@ Mention the deploy vs release and why their order is different in different plac
                 <li>C++ Developer, <i>Mahsan</i> | <small>2018 - 2020</small></li>
                 <li>Web and Mobile Developer, <i>Resaa</i> | <small>2016 - 2018</small></li>
             </ul>
+            <br>
             Education:
             <ul>
                 <li>M.Sc. in Artificial Intelligence, <i>Sharif University of Technology</i> | <small>2018 - 2020</small></li>
                 <li>B.Sc. in Computer Software Engineering, <i>University of Tehran</i> | <small>2014 - 2018</small></li>
+            </ul>
+            <br>
+            Social:
+            <ul>
+                <li>a.roshanzamir1996@gmail.com</li>
+                <li>alirezaroshanzamir.github.io</li>
             </ul>
         </td>
     </tr>
@@ -106,21 +113,21 @@ Mention the deploy vs release and why their order is different in different plac
                 <li><a href="http://bvajjala.github.io/projects/cd/continuous-delivery-patterns-and-antipatterns">Continuous Delivery Patterns & Antipatterns</a></li>
                 <li><a href="https://www.youtube.com/watch?v=6DeWOrmvhRM">Adopting Continuous Delivery by Jez Humble</a></li>
                 <li><a href="https://www.youtube.com/watch?v=i2DrLsnETk4">14 Step Continuous Delivery Checklist</a></li>
+                <li><a href="https://monorepo.tools">monorepo.tools</a></li>
             </ul>
         </td>
     </tr>
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Foundations
 <table>
     <tr>
-        <td rowspan="5" style="writing-mode: vertical-lr; text-align: center">Foundations</td>
         <td>
             Introduction
             <br>
             <small>
-                Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
+                Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, Deployment Pipeline, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
             </small>
         </td>
         <td>45'</td>
@@ -140,10 +147,10 @@ Mention the deploy vs release and why their order is different in different plac
             Configuration Management
             <br>
             <small>
-                Version Control, Managing Dependencies, Managing Software Configuration, Managing Environments
+                Version Control and Advices, Managing Dependencies, Managing Software Configuration, Managing Environments
             </small>
         </td>
-        <td>90'</td>
+        <td>45'</td>
     </tr>
     <tr>
         <td>
@@ -163,15 +170,14 @@ Mention the deploy vs release and why their order is different in different plac
                 Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
             </small>
         </td>
-        <td>90'</td>
+        <td>60'</td>
     </tr>
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Deplyment Pipeline
 <table>
     <tr>
-        <td rowspan="6" style="writing-mode: vertical-lr; text-align: center">Deployment Pipeline</td>
         <td>
             Anatomy
             <br>
@@ -186,10 +192,10 @@ Mention the deploy vs release and why their order is different in different plac
             Build and Deployment Scripting
             <br>
             <small>
-                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure (Changelogs, Docs, Tests, Assets, Examples, Dependencies, Version, Pipelines, Linting, Formatting, Type-checking, Code Generation)</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as a Code (Terraform, Ansible)</span>
+                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as Code</span>
             </small>
         </td>
-        <td>45'</td>
+        <td>90'</td>
     </tr>
     <tr>
         <td>
@@ -199,7 +205,7 @@ Mention the deploy vs release and why their order is different in different plac
                 <span style="color: blue">Linting</span>, <span style="color: blue">Language/Technology Specific Checks</span>, Unit-testing, <span style="color: blue">Building Documentation</span>, Principles and Practices, Test Suite Principles and Practices, Results
             </small>
         </td>
-        <td>90'</td>
+        <td>60'</td>
     </tr>
     <tr>
         <td>
@@ -213,7 +219,11 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing Nonfunctional Requirements (Only Introduction)
+            Testing Nonfunctional Requirements (Introduction)
+            <br>
+            <small>
+                Introduction, Managing Nonfunctional Requirements
+            </small>
         </td>
         <td>15'</td>
     </tr>
@@ -230,10 +240,9 @@ Mention the deploy vs release and why their order is different in different plac
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Delivery Ecosystem
 <table>
     <tr>
-        <td rowspan="6" style="writing-mode: vertical-lr; text-align: center">Deployment Pipeline</td>
         <td>
             Managing Infrastructure and Environments
             <br>
