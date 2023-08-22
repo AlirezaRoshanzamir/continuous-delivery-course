@@ -1,7 +1,7 @@
 ## Continuous Delivery: Introduction
-#### Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
+#### Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, Deployment Pipeline, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
 
-<img src="assets/continuous-delivery-process.png" alt="Took from https://www.davefarley.net/?p=285" width="650"/>
+<img src="assets/cd-phases.png" width="1100"/>
 
 <small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
 
@@ -11,7 +11,7 @@
 
 ---
 ## Definition
-Contiuous delivery is a ability, development practice, discipline, and capability to:
+Contiuous delivery is an ability, development practice, discipline, and capability to:
 
 - Get changes of all types into the hands of users safely and quickly in a sustainable way.
 - The system can be deployed to production or end users at any time, on-demand (at least once a day).

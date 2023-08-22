@@ -127,7 +127,7 @@ Mention the deploy vs release and why their order is different in different plac
             Introduction
             <br>
             <small>
-                Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, <span style="color: green">Impacts</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
+                Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, Deployment Pipeline, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
             </small>
         </td>
         <td>45'</td>
