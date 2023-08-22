@@ -219,7 +219,11 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Testing Nonfunctional Requirements (Only Introduction)
+            Testing Nonfunctional Requirements (Introduction)
+            <br>
+            <small>
+                Introduction, Managing Nonfunctional Requirements
+            </small>
         </td>
         <td>15'</td>
     </tr>
