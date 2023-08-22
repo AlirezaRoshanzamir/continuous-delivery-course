@@ -119,10 +119,9 @@ Mention the deploy vs release and why their order is different in different plac
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Foundations
 <table>
     <tr>
-        <td rowspan="5" style="writing-mode: vertical-lr; text-align: center">Foundations</td>
         <td>
             Introduction
             <br>
@@ -175,10 +174,9 @@ Mention the deploy vs release and why their order is different in different plac
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Deplyment Pipeline
 <table>
     <tr>
-        <td rowspan="6" style="writing-mode: vertical-lr; text-align: center">Deployment Pipeline</td>
         <td>
             Anatomy
             <br>
@@ -237,10 +235,9 @@ Mention the deploy vs release and why their order is different in different plac
 </table>
 
 ---
-## Table of Contents
+## Table of Contents: Delivery Ecosystem
 <table>
     <tr>
-        <td rowspan="6" style="writing-mode: vertical-lr; text-align: center">Deployment Pipeline</td>
         <td>
             Managing Infrastructure and Environments
             <br>
