@@ -113,6 +113,7 @@ Mention the deploy vs release and why their order is different in different plac
                 <li><a href="http://bvajjala.github.io/projects/cd/continuous-delivery-patterns-and-antipatterns">Continuous Delivery Patterns & Antipatterns</a></li>
                 <li><a href="https://www.youtube.com/watch?v=6DeWOrmvhRM">Adopting Continuous Delivery by Jez Humble</a></li>
                 <li><a href="https://www.youtube.com/watch?v=i2DrLsnETk4">14 Step Continuous Delivery Checklist</a></li>
+                <li><a href="https://monorepo.tools">monorepo.tools</a></li>
             </ul>
         </td>
     </tr>
@@ -191,7 +192,7 @@ Mention the deploy vs release and why their order is different in different plac
             Build and Deployment Scripting
             <br>
             <small>
-                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure (Changelogs, Docs, Tests, Assets, Examples, Dependencies, Version, Pipelines, Linting, Formatting, Type-checking, Code Generation)</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as a Code (Terraform, Ansible)</span>
+                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as Code</span>
             </small>
         </td>
         <td>90'</td>
