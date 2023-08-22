@@ -232,7 +232,7 @@ Mention the deploy vs release and why their order is different in different plac
             Deploying and Releasing Applications
             <br>
             <small>
-                Release Strategy, Deploying, Rolling Back Deployments, Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, Tips and Tricks, <span style="color: blue">Semantic Release</span>
+                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: blue">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: blue">Semantic Release</span>, Tips and Tricks
             </small>
         </td>
         <td>45'</td>
