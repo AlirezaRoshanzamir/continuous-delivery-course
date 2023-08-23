@@ -53,11 +53,25 @@
             small, small * {
                 font-size: 20px !important;
             }
-            li.fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
+            .fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
                 display: none;
             }
             .fragment.complete-fade-out.visible:not(.current-fragment) {
                 display: none;
+            }
+            .fragment.fade-in-with-next:not(.visible), .fragment.fade-in-with-next:not(.visible) + * {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            p:has(.fragment.fade-in-paragraph:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            .fragment.start.visible:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
+                visibility: hidden;
             }
         </style>
     </head>
