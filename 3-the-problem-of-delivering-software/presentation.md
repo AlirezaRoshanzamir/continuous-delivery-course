@@ -16,63 +16,69 @@ The day of a software release tends to be tense due to certain antipatterns:
 - Delayed Production-like Deployment
 - Manual Production Environment Configuration Management
 
-------
-### Release Antipatterns: Manual Software Deployment
-Symptoms:
-- Relying on detailed documentation for intricate step-by-step instructions and potential pitfalls
-- Conducting manual tests to verify proper application functionality
-- Frequently requiring communication with the development team
-- Making frequent adjustments to the release process
-- Managing environments within a cluster that possess varying configurations
-- Dealing with releases taking more than a few minutes
-- Facing unpredictable release outcomes, often leading to rollbacks
-- Finding oneself fatigued and staring at a screen at 2 A.M.
-
-Hence, a shift towards full automation in deployments is advisable.
+<table>
+  <tr>
+    <td><img src="assets/antipattern.png" width="500"></td>
+    <td><img src="assets/emontional-cycle-of-manual-delivery.png" width="600"></td>
+  </tr>
+</table>
 
 ------
 ### Release Antipatterns: Manual Software Deployment
 Symptoms:
-- Software is initially deployed to a production-like environment (e.g., staging) once most development is finished
-- Releasing into staging is the first time that operations people interact with the new release.
-- Either a production-like environment is expensive enough that access to it is strictly controlled, or it is not in place on time, or nobody bothered to create one.
-- The development team assembles installers, configuration files, database migrations, and deployment guidelines for deployment personnel-untested in a production or staging setting.
-- There is little if any, collaboration between the development team and the people who perform deployments to create this collateral.
-- Thinking it's all about the DevOps team
+- Relying on detailed documentation for intricate step-by-step instructions and potential pitfalls  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Conducting manual tests to verify proper application functionality  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Frequently requiring communication with the development team  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Making frequent adjustments to the release process  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Managing environments within a cluster that possess varying configurations  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Dealing with releases taking more than a few minutes  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Facing unpredictable release outcomes, often leading to rollbacks  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Finding oneself fatigued and staring at a screen at 2 A.M.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
-Therefore, the solution involves integrating testing, deployment, and release tasks into the development workflow. These tasks become routine and continuous during development, reducing risks during eventual production release. This approach entails rehearsing the release across multiple increasingly production-like test environments on numerous occasions.
+Hence, a shift towards full automation in deployments is advisable.  <!-- .element: class="fragment fade-in" -->
+
+------
+### Release Antipatterns: Manual Software Deployment
+Symptoms:
+- Software is initially deployed to a production-like environment (e.g., staging) once most development is finished  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Releasing into staging is the first time that operations people interact with the new release.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Either a production-like environment is expensive enough that access to it is strictly controlled, or it is not in place on time, or nobody bothered to create one.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- The development team assembles installers, configuration files, database migrations, and deployment guidelines for deployment personnel-untested in a production or staging setting.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- There is little if any, collaboration between the development team and the people who perform deployments to create this collateral.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Thinking it's all about the DevOps team  <!-- .element: class="fragment fade-in-then-semi-out" -->
+
+Therefore, the solution involves integrating testing, deployment, and release tasks into the development workflow. These tasks become routine and continuous during development, reducing risks during eventual production release. This approach entails rehearsing the release across multiple increasingly production-like test environments on numerous occasions.  <!-- .element: class="fragment fade-in" -->
 
 ------
 ### Release Antipatterns: Manual Production Environment Configuration Management
 Symptoms:
-- Adjustments like altering database connection settings or increasing thread count on an app server are managed manually for production environments.
-- Despite successful staging deployments, production deployment encounters failures.
-- The operations team spends significant time setting up the release environment.
-- Reverting to previous system configurations (OS, app server, web server, RDBMS, etc.) becomes unfeasible.
-- Clustered servers unintentionally run diverse OS versions, third-party infrastructure, libraries, or patches.
-- System configuration involves direct modifications to production systems.
-- Discrepancies in environment configurations across testing, staging, and production.
+- Adjustments like altering database connection settings or increasing thread count on an app server are managed manually for production environments.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Despite successful staging deployments, production deployment encounters failures.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- The operations team spends significant time setting up the release environment.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Reverting to previous system configurations (OS, app server, web server, RDBMS, etc.) becomes unfeasible.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Clustered servers unintentionally run diverse OS versions, third-party infrastructure, libraries, or patches.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- System configuration involves direct modifications to production systems.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Discrepancies in environment configurations across testing, staging, and production.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
-Hence, all aspects of testing, staging, and production environments, especially configurations of third-party components, should be automatically applied from version control.
+Hence, all aspects of testing, staging, and production environments, especially configurations of third-party components, should be automatically applied from version control.  <!-- .element: class="fragment fade-in" -->
 
 ---
 ## Goals
-Our goal is to describe the use of deployment pipelines, combined with high levels of automation of both testing and deployment and comprehensive configuration management to deliver push-button software releases. That is, 
-push-button software releases to any deployment target-development, test, or production.
+Our goal is to describe the use of **deployment pipelines**, combined with **high levels of automation** of both **testing** and **deployment** and **comprehensive configuration management** to deliver **push-button software releases**.
 
-<img src="assets/release-push-button.avif" width="200"/>
+<img src="assets/push-button-to-ship.webp" width="800"/>
 
 ---
 ## Refined Goal
 We want to find ways to deliver **high-quality**, **valuable** software in an **efficient**, **fast**, and **reliable** manner by making releases:
 
 - **Automated**
-  - Not automated -> Not repeatable
-  - Not automated -> Error prone
-  - Not automated -> No review -> No quality
+  - Not automated -> Not repeatable  <!-- .element class="fragment highlight-current-blue" -->
+  - Not automated -> Error prone  <!-- .element class="fragment highlight-current-blue" -->
+  - Not automated -> No review -> No quality  <!-- .element class="fragment highlight-current-blue" -->
 - **Frequent**
-  - Not frequent -> High difference -> High risk -> Hard roll back
-  - Not frequent -> Slower feedback
+  - Not frequent -> High difference -> High risk -> Hard roll back  <!-- .element class="fragment highlight-current-blue" -->
+  - Not frequent -> Slower feedback  <!-- .element class="fragment highlight-current-blue" -->
 
 ---
 ## Criterias
@@ -98,11 +104,22 @@ We want to find ways to deliver **high-quality**, **valuable** software in an **
   - React to feedback means broadcasting information: big, visible dashboards (which need not be electronic) and other notification mechanisms is central to ensuring that feedback is, indeed, fed-back and makes the final step into someone's head.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - It is the responsibility of the whole team to stop what they are doing and decide on a course of action.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
-Does This Process Scale? The techniques and principles that we describe have been proven in real projects in all kinds of organizations, both large and small, in all kinds of situations. Much inspired by the philosophy and ideas of the lean movement which have been applied to huge organizations, and even whole economies.  <!-- .element: class="fragment" -->
+------
+### Does This Process Scale?
+
+<img src="assets/here-we-go-again.jpg">  <!-- .element: class="fragment complete-fade-out" -->
+
+<p class="fragment fade-in">
+  The techniques and principles that we describe have been <strong>proven in real projects</strong> in all kinds of organizations, both <strong>large</strong> and <strong>small</strong> in all kinds of situations. Much inspired by the philosophy and ideas of the <strong>lean movement</strong> which have been applied to <strong>huge organizations</strong> and <strong>even whole economies</strong>.
+  <br>
+  <img src="assets/it-works.jpeg" width="400">
+</p>
 
 ---
 ## Benefits
-Repeatable, reliable, and predictable release process which in turn generates large reductions in cycle time, and hence gets features and bugfixes to users fast. Other benefits include:
+<img src="assets/rubbing-hands-meme.webp" class="fragment complete-fade-out" width="500">
+
+Repeatable, reliable, and predictable release process which in turn generates large reductions in cycle time, and hence gets features and bugfixes to users fast. Other benefits include:  <!-- .element: class="fragment fade-in" -->
 - Empowering Teams  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Pull system: Allowing testers, operations or support personnel to self-service the version of the application they want into the environment of their choice. Often getting a good build requires endless emails being sent, tickets being raised.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Testers can select older versions of an application to verify changes in behavior in newer versions.  <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -122,12 +139,14 @@ Repeatable, reliable, and predictable release process which in turn generates la
   - There should not be a special QA deployment strategy, or a special acceptance test, or production deployment strategy.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Use the same deployment approach whatever the deployment target (as much as possible for developer workstations).  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
+<img src="assets/cd-benefits.png" width="370">
+
 ---
 ## Release Candidate
 Every merge to mainline is a "release candidate".
 - Every Check-in Leads to a Potential Release
-  - Continuous integration and fix the problem as soon as it occurs -> Always working state
-  -  Sufficiently comprehensive and running tests on a sufficiently production-like environment -> Always releasable state
+  - Continuous integration and fix the problem as soon as it occurs -> Always working state  <!-- .element class="fragment highlight-current-blue" -->
+  -  Sufficiently comprehensive and running tests on a sufficiently production-like environment -> Always releasable state  <!-- .element class="fragment highlight-current-blue" -->
 
 <figure style="text-align: center">
   <img src="assets/traditional-release-candidate.png"/>
@@ -164,6 +183,10 @@ These are the things that we can't imagine doing without if we want our delivery
 
 ---
 ## Summary
-By adopting the techniques of automated build, test, and deployment, we gain the ability to verify changes, to make the process reproducible across a range of environments, and to largely eliminate the opportunity for errors to creep into production.
+By adopting the techniques of automated build, test, and deployment, we gain the ability to verify changes, to make the process **reproducible** across a range of environments, and to largely eliminate the opportunity for errors to creep into production.
 
-We also gain the ability to spend more weekends with our families and friends and to live our lives with less stress, while at the same time being more productive.
+<div class="fragment fade-in">
+  We also gain the ability to spend more weekends with <strong>our families</strong> and friends and to live our lives with less stress, while at the same time being more productive.
+  <br>
+  <img src="assets/family-meme.jpg">
+</div>
