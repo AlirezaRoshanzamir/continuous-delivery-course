@@ -59,21 +59,25 @@ Details on the next slides.
 
 ------
 ### Keep Absolutely Everything in Version Control
-- Everything required to re-create your application's binaries and the environments in which they run. As well as environment infrastructure declarative descriptions and scripts (GitOps: Git is the single source of truth).  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Everything required to re-create your application's binaries and the environments in which they run. As well as environment infrastructure declarative descriptions and scripts (GitOps: Git is the single source of truth).
 - Analysts should store requirements documents.  <!-- .element class="fragment fade-in-then-semi-out" -->
 - Testers should keep their test scripts and procedures in version control.  <!-- .element class="fragment fade-in-then-semi-out" -->
 - Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.  <!-- .element class="fragment fade-in-then-semi-out" -->
 - Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).  <!-- .element class="fragment fade-in-then-semi-out" -->
 - To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
+<img src="assets/which-version-i-used-meme.png" width="300">
+
 ------
 ### Keep Absolutely Everything in Version Control: Documentation
-Including the documentation in the version control and source code repository has the following benefits:
-- Auto-generating references section from the code, docstrings, tests, changelogs, swagger APIs, Protobufs, and etc.
-- Forcing the consistency between the docs and the other entities.
-- Taking advantages of the doctests.
-- Supporting versioning and review mechanism.
-- Using the reStructuredText or Markdown, multiple views such as HTML, Latex, PDF, Confluence, Presentation can be generated. Hence, you can publish them everywhere and in any format you want.
+<img src="assets/i-am-documentation-meme.jpg" class="fragment start" width="500">
+
+Including the documentation in the version control and source code repository has the following benefits:  <!-- .element class="fragment fade-in" -->
+- Auto-generating references section from the code, docstrings, tests, changelogs, swagger APIs, Protobufs, and etc.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Forcing the consistency between the docs and the other entities.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Taking advantages of the doctests.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Supporting versioning and review mechanism.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Using the reStructuredText or Markdown, multiple views such as HTML, Latex, PDF, Confluence, Presentation can be generated. Hence, you can publish them everywhere and in any format you want.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 <img src="assets/living-documentation.png" width="800">
 
@@ -95,11 +99,11 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
 
 ------
 ### Check In Regularly to Trunk
-- They become public, instantly available to everybody else on the team.
-- Otherwise, the merges become too complex.
-- Ovoid branching
-- Use commit test suit (less than ten minutes)
-- Introduce changes incrementally -> Check-in minimum once a day
+- They become public, instantly available to everybody else on the team.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Otherwise, the merges become too complex.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Ovoid branching  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Use commit test suit (less than ten minutes)  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Introduce changes incrementally -> Check-in minimum once a day  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ------
 ### Use Meaningful Commit Messages
@@ -173,106 +177,105 @@ There should be a single source of configuration to change, manage, version-cont
   Databases, directories, and registries are convenient places to store configuration since they can be accessed remotely. However, make sure to keep the history of changes to configuration for the purposes of audit and rollback. Either have a system that automatically takes care of this, or treat version control as your system of reference for configuration and have a script that loads the appropriate version into your database or directory on demand.
 </p>
 
-- Accessing Configuration
-  - Storage and access type: File-system, RDBMS, LDAP, REST API, ESCAPE, Apache Zookepeer
-  - Isolate the details of technology using a Facade
-- Modeling Configuration
-  - Set of tuples, JSON, YAML, XML, Protobuf, INI, TOML, gRPC, OpenAPI, and etc.
-  - You may need versioning.
-  - You may consider backward/forward compatibility.
-  - You may consider adding new environments, creating new version of application, promoting a new version of application, relocating database, virtualization, and etc.
-- Testing System Configuration
-  - Ensure that references to external services in your configuration settings are good (connection to databases, message buses, etc.).
-  - Run some smoke tests once your application is installed to make sure it is operating as expected
+------
+### Continued: Managing Application Configuration
+- Accessing Configuration  <!-- .element class="fragment fade-in" -->
+  - Storage and access type: File-system, RDBMS, LDAP, REST API, ESCAPE, Apache Zookepeer  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - Isolate the details of technology using a Facade  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Modeling Configuration  <!-- .element class="fragment fade-in" -->
+  - Set of tuples, JSON, YAML, XML, Protobuf, INI, TOML, gRPC, OpenAPI, and etc.  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - You may need versioning.  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - You may consider backward/forward compatibility.  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - You may consider adding new environments, creating new version of application, promoting a new version of application, relocating database, virtualization, and etc.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Testing System Configuration  <!-- .element class="fragment fade-in" -->
+  - Ensure that references to external services in your configuration settings are good (connection to databases, message buses, etc.).  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - Run some smoke tests once your application is installed to make sure it is operating as expected  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ------
 ### Managing Configuration across Applications
+<p class="fragment fade-in-then-semi-out">
+  <strong>Keep a catalogue</strong> of all the configuration options that each of your applications has, where they are stored, what their lifecycle is, and how they can be changed.
+</p>
 
-Keep a catalogue of all the configuration options that each of your applications has, where they are stored, what their lifecycle is, and how they can be changed.
+<p class="fragment fade-in-then-semi-out">
+  If possible, such information should be <strong>generated automatically</strong> from each application's code as part of the build process. But where this is not possible, it should be collected in a wiki or other document management system.
+</p>
 
-If possible, such information should be generated automatically from each application's code as part of the build process. But where this is not possible, it should be collected in a wiki or other document management system.
-
-Deploy and runtime: It is important to know what the current configuration of each running application is. Tools such as Nagios, OpenNMS, and HP OpenView may help. Countless hours have been lost by one application having a few configuration options set wrongly and thereby bringing down an entire set of services. 
+<p class="fragment fade-in-then-semi-out">
+  Deploy and runtime: It is important to know what the <strong>current configuration of each running application</strong> is. Tools such as Nagios, OpenNMS, and HP OpenView may help. <strong>Countless hours have been lost by one application having a few configuration options set wrongly</strong> and thereby bringing down an entire set of services.
+</p>
 
 ------
 ### Principles of Managing Application Configuration
-- Consider where in your application's lifecycle it makes sense to inject a particular piece of configuration.
-- Keep the available configuration options for your application in the same repository as its source code, but keep the values somewhere else.
-- Configuration should always be performed by automated processes using values taken from your configuration repository.
-- Your configuration system should be able to provide different values to your application (including its packaging, installation, and deployment scripts) based on the application, its version, and the environment it is being deployed into.
-- Use clear naming conventions for your configuration options. Try to imagine someone reading the configuration file without a manual.
-- Ensure that your configuration information is modular and encapsulated.
-- Don't repeat yourself: define the elements of your 
-configuration so that each concept has only one representation in the set of configuration information.
-- Be minimalist: Keep the configuration information as simple and as focused as possible.
-- Avoid overengineering the configuration system.
-- Ensure that you have tests for your configuration that are run at deployment or installation time.
+- Consider where in your application's lifecycle it makes sense to inject a particular piece of configuration.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Keep the available configuration options for your application in the same repository as its source code, but keep the values somewhere else.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Configuration should always be performed by automated processes using values taken from your configuration repository.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Your configuration system should be able to provide different values to your application (including its packaging, installation, and deployment scripts) based on the application, its version, and the environment it is being deployed into.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Use clear naming conventions for your configuration options. Try to imagine someone reading the configuration file without a manual.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Ensure that your configuration information is modular and encapsulated.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Don't repeat yourself: define the elements of your configuration so that each concept has only one representation in the set of configuration information.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Be minimalist: Keep the configuration information as simple and as focused as possible.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Avoid overengineering the configuration system.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Ensure that you have tests for your configuration that are run at deployment or installation time.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ---
 ## Managing Environments
 Make the environments creation a fully automated process:
+- Removes the problem of having random pieces of infrastructure around.  <!-- .element class="fragment fade-in" -->
+- Fixing is harder than recreation.  <!-- .element class="fragment fade-in" -->
+- Be able to create copies of production environments for testing purposes.  <!-- .element class="fragment fade-in" -->
 
-- Removes the problem of having random pieces of infrastructure around.
-- Fixing is harder than recreation.
-- Be able to create copies of production environments for testing purposes.
+The kinds of environment configuration information:  <!-- .element class="fragment fade-in" -->
+- OS: versions, patch levels, and configuration settings.  <!-- .element class="fragment fade-in" -->
+- Additional software packages: versions and configuration.  <!-- .element class="fragment fade-in" -->
+- External services: versions and configuration  <!-- .element class="fragment fade-in" -->
+- Networking topology  <!-- .element class="fragment fade-in" -->
+- Any other data or state  <!-- .element class="fragment fade-in" -->
 
-The kinds of environment configuration information:
-- OS: versions, patch levels, and configuration settings.
-- Additional software packages: versions and configuration.
-- External services: versions and configuration
-- Networking topology
-- Any other data or state
-
+------
+### Continued: Managing Environments
 Two principles:
-- Keep binary files independent from configuration information.
-- Keep all configuration information in one place.
+- Keep binary files independent from configuration information.  <!-- .element class="fragment fade-in" -->
+- Keep all configuration information in one place.  <!-- .element class="fragment fade-in" -->
+
 Hence, creating new environments, upgrading parts of your system, and rolling out new configurations without making your system 
-unavailable becomes a simple, automated process.
+unavailable becomes a simple, automated process.  <!-- .element class="fragment fade-in" -->
 
-Managing third party products:
-- Can we deploy it?
-- Can we version its configuration effectively?
-- How will it fit into our automated deployment strategy?
+Managing third party products:  <!-- .element class="fragment fade-in" -->
+- Can we deploy it?  <!-- .element class="fragment fade-in" -->
+- Can we version its configuration effectively?  <!-- .element class="fragment fade-in" -->
+- How will it fit into our automated deployment strategy?  <!-- .element class="fragment fade-in" -->
 
-Essentially, you should treat your environment the same way you treat your code-changing it incrementally and checking the changes into version control. 
+Essentially, you should treat your environment the same way you treat your code-changing it incrementally and checking the changes into version control.  <!-- .element class="fragment fade-in" -->
 
 ------
 ### Tools to Manage Environments
-<img src="assets/environment-management-tools-responsibilities.png"/>
+<img src="assets/environment-management-tools-responsibilities.png" width="600"/>
 
-<img src="assets/environment-management-tools-comparison.png"/>
+<img src="assets/environment-management-tools-comparison.png" width="900"/>
 
 ------
 ### Managing the Change Process
-A production environment should be completely locked down. It 
-should not be possible for anybody to make a change to it without going through your organization's change management process.
+<img src="assets/fix-production-bug-meme.jpg" class="fragment complete-fade-out" width="500">
 
-A change to your environment is just like a change to your software. It has to go through your build, deploy, test, and release process in exactly the same way as a change to the application's code.
+<p class="fragment fade-in">
+  A production environment should be completely <strong>locked down</strong>. It should <strong>not be possible</strong> for anybody to make a change to it without going through your organization's change management process.
+</p>
 
-Testing environments should be treated the same as production 
-environments but the approval process will usually be simpler.
+A change to your environment is just like a change to your software. It has to go through your build, deploy, test, and release process in exactly the same way as a change to the application's code.  <!-- .element class="fragment fade-in" -->
+
+Testing environments should be treated the same as production environments but the approval process will usually be simpler.  <!-- .element class="fragment fade-in" -->
 
 ---
 ## Summary
-Configuration management is the foundation of everything in CD. It 
-is impossible to do continuous integration, release management, and deployment 
-pipelining without it:
+Configuration management is the **foundation of everything in CD**. It is **impossible** to do continuous integration, release management, and deployment pipelining without it:
+- Could you completely re-create your production system, excluding production data, from scratch from the version-controlled assets that you store?  <!-- .element class="fragment highlight-current-blue" -->
+- Could you regress to an earlier, known good state of your application?  <!-- .element class="fragment highlight-current-blue" -->
+- Can you be sure that each deployed environment in production, in staging, and in test is set up in precisely the same way?  <!-- .element class="fragment highlight-current-blue" -->
 
-- Could you completely re-create your production system, excluding produc-
-tion data, from scratch from the version-controlled assets that you store?
-- Could you regress to an earlier, known good state of your application?
-- Can you be sure that each deployed environment in production, in staging, 
-and in test is set up in precisely the same way?
-
-If not, then your organization is at risk. In particular, we recommend having 
-a strategy for storing baselines and controlling changes to:
-
-- Your applications' source code, build scripts, tests, documentation, 
-requirements, database scripts, libraries, and configuration files
-- Your development, testing, and operations toolchains
-- All environments used in development, testing, and production
-- The entire application stack associated with your applications-both binaries 
-and configuration
-- The configuration associated with every application in every environment 
-it runs in, across the entire application lifecycle (building, deployment, 
-testing, operation)
+If not, then your organization is at risk. In particular, we recommend having a strategy for storing baselines and controlling changes to:  <!-- .element class="fragment fade-in-list" -->
+- Your applications' source code, build scripts, tests, documentation, requirements, database scripts, libraries, and configuration files  <!-- .element class="fragment highlight-current-blue" -->
+- Your development, testing, and operations toolchains  <!-- .element class="fragment highlight-current-blue" -->
+- All environments used in development, testing, and production  <!-- .element class="fragment highlight-current-blue" -->
+- The entire application stack associated with your applications-both binaries and configuration  <!-- .element class="fragment highlight-current-blue" -->
+- The configuration associated with every application in every environment it runs in, across the entire application lifecycle (building, deployment, testing, operation)  <!-- .element class="fragment highlight-current-blue" -->
