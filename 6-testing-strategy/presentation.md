@@ -56,13 +56,12 @@ Although it is correct to include **examples**, **prototypes**, and **simulation
 ### Quadrant TL: Given-When-Then
 For each story or requirement there is a single canonical path through the application in terms of the actions that the user will perform. This is known as the **happy path**. However, any use case will, in all but the simplest of systems, allow for variations in the **initial state**, the **actions to be performed**, and the **final state** of the application. Sometimes, these variations constitute distinct use cases, which are then known as **alternate paths**. In other cases, they should cause error conditions, resulting in what is called **sad paths**. **Equivalence partitioning analysis** and **boundary value analysis** will reduce these combinations to a smaller set of cases that will completely test the requirement in question.
 
+<img src="assets/happy-alternate-sad-path.png" width="200" class="fragment fade-in">
+
 These are often expressed using the form:  <!-- .element class="fragment fade-in-with-next" -->
-- Given
-  - A few important characteristics of the state of the system when testing begins
-- When
-  - The user performs some set of actions
-- Then
-  - A few important characteristics of the new state of the system
+- **Given**: A few important characteristics of the state of the system when testing begins
+- **When**: The user performs some set of actions
+- **Then**: A few important characteristics of the new state of the system
 
 Acceptance tests should be run when your system is in a **production-like mode**. Manual acceptance testing is typically done by putting an application in a user acceptance testing (UAT) environment which is as similar as possible to production both in configuration and in terms of the state of the application-although it might use mock versions of any external services.  <!-- .element class="fragment fade-in-paragraph" -->
 

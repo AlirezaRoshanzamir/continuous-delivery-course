@@ -33,7 +33,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            .reveal ul {
+            .reveal ul, .reveal ol {
                 display: block;
             }
             table, td, th, tr {
@@ -65,6 +65,22 @@
             }
             p:has(.fragment.fade-in-paragraph:not(.visible)) {
                 opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-parent:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent.current-fragment) {
+                opacity: 1;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent.visible:not(.current-fragment)) {
+                opacity: 0.6;
                 transition: opacity 0.4s;
             }
             .fragment.start.visible:not(.current-fragment) {
