@@ -11,12 +11,14 @@
 
 ---
 ## Definition
-Contiuous delivery is an ability, development practice, discipline, and capability to:
+Contiuous delivery is an **ability**, **development practice**, **discipline**, and **capability** to:
 
-- Get changes of all types into the hands of users safely and quickly in a sustainable way.
-- The system can be deployed to production or end users at any time, on-demand (at least once a day).
-- The team prioritizes keeping the software in a deployable state over working on new features.
-- Fast feedback is available to all team members.
+- Get changes of all types into the hands of users safely and quickly in a sustainable way.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- The system can be deployed to production or end users at any time, on-demand (at least once a day).  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- The team prioritizes keeping the software in a deployable state over working on new features.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Fast feedback is available to all team members.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+
+<img src="assets/continuous-delivery-feedbacks.png">
 
 ---
 ## Minimum Viable CD
@@ -40,17 +42,21 @@ For detailed information, visit [Minimum CD](https://minimumcd.org/minimumcd) an
 ## Ingredients
 
 - **Configuration management**
-  - Any new environment reproduced from the same configuration is identical.
-  - Everything is versioned and automated.
+  - Any new environment reproduced from the same configuration is identical.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Everything is versioned and automated.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - **Continuous integration**
-  - Developers integrate all their work into the trunk at least daily.
-  - If it hurts, do it more often and bring the pain forward (XP principle).
-  - A set of automated tests is run both before and after the merge.
-  - If the automated tests fail, the team stops what they are doing.
+  - Developers integrate all their work into the trunk at least daily.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - If it hurts, do it more often and bring the pain forward (XP principle).  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - A set of automated tests is run both before and after the merge.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - If the automated tests fail, the team stops what they are doing.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - **Automated and continuous testing**
-  - Build quality in
-  - Run many different types of tests-both manual and automated-continually throughout the delivery process.
-  - Functional acceptance, usability, exploratory, unit, component, system, and non-functional acceptance (capacity, security, availability) tests.
+  - Build quality in  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Run many different types of tests-both manual and automated-continually throughout the delivery process.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Functional acceptance, usability, exploratory, unit, component, system, and non-functional acceptance (capacity, security, availability) tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+
+------
+### CI Certification Test
+<img src="assets/ci-certification-test.png">
 
 ---
 ## Deployment Pipeline
@@ -61,11 +67,13 @@ A key pattern in CD from continuous integration and test automation:
 ---
 ## Why?
 Why continuous delivery?
-- Make releases painless low-risk events
-- Reduce time to market
-- Increase software quality and stability
-- Reduce the cost of ongoing software development
-- Increase customer and employee satisfaction
+- Make releases painless low-risk events  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Reduce time to market  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Increase software quality and stability  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Reduce the cost of ongoing software development  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Increase customer and employee satisfaction  <!-- .element: class="fragment fade-in-then-semi-out" -->
+
+<img src="assets/idea-to-release.png">
 
 ---
 ## Impacts
@@ -105,7 +113,7 @@ The performance gap between the high and the low performers widens over time:
 ### Impacts - Westrum Organization Culture Model
 The model of how to change culture has changed:
 
-<img src="assets/change-culture.png" width="400">
+<img src="assets/change-culture.png" width="500">
 
 ------
 ### Continued: Impacts - Westrum Organization Culture Model
@@ -115,7 +123,7 @@ The set of technical practices known as continuous delivery indeed has a signifi
 
 ---
 ## Relation with Agile, DevOps, Lean
-In short, they differ in their place of origin, history, aspects covered, and principles. However, there is a significant reciprocal relationship between these movements:
+In short, they differ in their place of **origin**, **history**, **aspects covered**, and **principles**. However, there is a significant **reciprocal relationship** between these movements:
 
 - **Agile:** Flexible, iterative software _development_ approach with short cycles and stakeholder involvement.<br/>
   _Keywords:_ Iterative, XP, Scrum, Kanban, Sprint, Epic, Feature, User Story, Product Owner, Scrum Master, Agile Manifesto
@@ -130,13 +138,13 @@ In short, they differ in their place of origin, history, aspects covered, and pr
 ### Continued: Relation with Agile, DevOps, Lean
 Finally, look at the first principle behind the Agile manifesto:
 
-<img src="assets/cd-in-agile-manifesto.png" width="400">
+<img src="assets/cd-in-agile-manifesto.png" width="600">
 
 ------
 ### Continued: Relation with Agile, DevOps, Lean
-Agile aims to optimize software development specifically, without considering other parts of the IT value stream. DevOps, on the other hand, recognizes that this approach merely shifts the constraint downstream to Ops, and therefore, it strives to break down walls between development and operations. Lean takes a broader perspective, emphasizing the optimization of the entire value stream:
+**Agile** aims to optimize software development specifically, without considering other parts of the IT value stream. **DevOps**, on the other hand, recognizes that this approach merely shifts the constraint downstream to Ops, and therefore, it strives to break down walls between development and operations. **Lean** takes a broader perspective, emphasizing the optimization of the entire value stream:
 
-<img src="assets/lean-agile-devops.png" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar"/>
+<img src="assets/lean-agile-devops.png" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar" width="1100"/>
 
 ---
 ## Scrumfall (Water-Scrum-Fall)
@@ -180,7 +188,9 @@ The practices at the heart of continuous delivery help us achieve several import
 - Higher quality
 - Lower costs
 - Better products
-  - This means we can avoid the 2/3 of features we build that  deliver zero or negative value to our businesses.
+  - This means we can avoid the **2/3 of features** we build that  deliver **zero** or **negative value** to our businesses.
 - Happier teams
 
-Continuous delivery is not magic. It's about continuous, daily improvement-the constant discipline of pursuing higher performance by following the heuristic "if it hurts, do it more often, and bring the pain forward".
+Continuous delivery is not magic. It's about **continuous, daily improvement**: the constant discipline of pursuing higher performance by following the heuristic **"if it hurts, do it more often, and bring the pain forward"**.
+
+<img src="assets/continuous-improvement-meme.jpg" width="220">
