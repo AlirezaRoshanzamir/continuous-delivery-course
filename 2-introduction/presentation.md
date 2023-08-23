@@ -192,3 +192,5 @@ The practices at the heart of continuous delivery help us achieve several import
 - Happier teams
 
 Continuous delivery is not magic. It's about **continuous, daily improvement**: the constant discipline of pursuing higher performance by following the heuristic **"if it hurts, do it more often, and bring the pain forward"**.
+
+<img src="assets/continuous-improvement-meme.jpg" width="220">
