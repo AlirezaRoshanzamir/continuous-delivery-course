@@ -18,7 +18,6 @@ Configuration management is a term that is widely used, often as a synonym for *
 Although version control systems are the most obvious tool in configuration management, the decision to use one (and every team should use one, no matter how small) is just the first step in developing a configuration management strategy.  <!-- .element class="fragment fade-in" -->
 
 You should be able to say "yes" to these questions:  <!-- .element class="fragment fade-in" -->
-
 - Can I exactly reproduce any of my environments, including the version of the operating system, its patch level, the network configuration, the software stack, the applications deployed into it, and their configuration?  <!-- .element class="fragment fade-in-then-semi-out" -->
 - Can I easily make an incremental change to any of these individual items and deploy the change to any, and all, of my environments?  <!-- .element class="fragment fade-in-then-semi-out" -->
 - Can I easily see each change that occurred to a particular environment and trace it back to see exactly what the change was, who made it, and when they made it?  <!-- .element class="fragment fade-in-then-semi-out" -->
@@ -273,7 +272,7 @@ Configuration management is the **foundation of everything in CD**. It is **impo
 - Could you regress to an earlier, known good state of your application?  <!-- .element class="fragment highlight-current-blue" -->
 - Can you be sure that each deployed environment in production, in staging, and in test is set up in precisely the same way?  <!-- .element class="fragment highlight-current-blue" -->
 
-If not, then your organization is at risk. In particular, we recommend having a strategy for storing baselines and controlling changes to:  <!-- .element class="fragment fade-in-list" -->
+If not, then your organization is at risk. In particular, we recommend having a strategy for storing baselines and controlling changes to:  <!-- .element class="fragment fade-in-with-next" -->
 - Your applications' source code, build scripts, tests, documentation, requirements, database scripts, libraries, and configuration files  <!-- .element class="fragment highlight-current-blue" -->
 - Your development, testing, and operations toolchains  <!-- .element class="fragment highlight-current-blue" -->
 - All environments used in development, testing, and production  <!-- .element class="fragment highlight-current-blue" -->
