@@ -11,22 +11,19 @@
 
 ---
 ## Definition
-Configuration management is a term that is widely used, often as a synonym for 
-version control:
+Configuration management is a term that is widely used, often as a synonym for **version control**:
 
 > Configuration management refers to the process by which all artifacts relevant to your project, and the relationships between them, are stored, retrieved, uniquely identified, and modified.
 
-Although version control systems are the most obvious tool in configuration management, the decision to use one (and every team should use one, no matter how small) is just the first step in developing a configuration management strategy.
+Although version control systems are the most obvious tool in configuration management, the decision to use one (and every team should use one, no matter how small) is just the first step in developing a configuration management strategy.  <!-- .element class="fragment fade-in" -->
 
-You should be able to say "yes" to these questions:
+You should be able to say "yes" to these questions:  <!-- .element class="fragment fade-in" -->
 
-- Can I exactly reproduce any of my environments, including the version of the operating system, its patch level, the network configuration, the software 
-stack, the applications deployed into it, and their configuration?
-- Can I easily make an incremental change to any of these individual items and deploy the change to any, and all, of my environments?
-- Can I easily see each change that occurred to a particular environment and trace it back to see exactly what the change was, who made it, and when 
-they made it?
-- Can I satisfy all of the compliance regulations that I am subject to?
-- Is it easy for every member of the team to get the information they need, and to make the changes they need to make? Or does the strategy get in the way of efficient delivery, leading to increased cycle time and reduced feedback?
+- Can I exactly reproduce any of my environments, including the version of the operating system, its patch level, the network configuration, the software stack, the applications deployed into it, and their configuration?  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Can I easily make an incremental change to any of these individual items and deploy the change to any, and all, of my environments?  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Can I easily see each change that occurred to a particular environment and trace it back to see exactly what the change was, who made it, and when they made it?  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Can I satisfy all of the compliance regulations that I am subject to?  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Is it easy for every member of the team to get the information they need, and to make the changes they need to make? Or does the strategy get in the way of efficient delivery, leading to increased cycle time and reduced feedback?  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 <details>
 <summary>Note</summary>
@@ -36,13 +33,13 @@ It doesn't only mean Git or something but almost means Git or something :)
 ---
 ## Version Control
 The version control:
-- Retains, and provides access to, every version of every file that has ever been stored in it.
-- Allows teams that may be distributed across space and time to collaborate.
+- Retains, and provides access to, every version of every file that has ever been stored in it.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Allows teams that may be distributed across space and time to collaborate.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
-Why?
+Why?  <!-- .element class="fragment fade-in" -->
 
-- What constitutes a particular version of your software? How can you reproduce a particular state of the software's binaries and configuration that existed in the production environment?
-- What was done when, by whom, and for what reason? Not only is this useful to know when things go wrong, but it also tells the story of your application.
+- What constitutes a particular version of your software? How can you reproduce a particular state of the software's binaries and configuration that existed in the production environment?  <!-- .element class="fragment fade-in-then-semi-out" -->
+- What was done when, by whom, and for what reason? Not only is this useful to know when things go wrong, but it also tells the story of your application.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ------
 ### Version Control: Advices
@@ -62,12 +59,12 @@ Details on the next slides.
 
 ------
 ### Keep Absolutely Everything in Version Control
-- Everything required to re-create your application's binaries and the environments in which they run. As well as environment infrastructure declarative descriptions and scripts (GitOps: Git is the single source of truth).
-- Analysts should store requirements documents.
-- Testers should keep their test scripts and procedures in version control.
-- Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.
-- Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).
-- To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.
+- Everything required to re-create your application's binaries and the environments in which they run. As well as environment infrastructure declarative descriptions and scripts (GitOps: Git is the single source of truth).  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Analysts should store requirements documents.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Testers should keep their test scripts and procedures in version control.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Project managers should save their release plans, progress charts, and risk logs here. In short, every member of the team should store any document or file related to the project in version control.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Many projects also store binary images of their application servers, compilers, virtual machines, and other parts of their toolchain in version control (not output binaries which rapidly proliferate, there may be two commits for the same version, one for source code and another for the binaries).  <!-- .element class="fragment fade-in-then-semi-out" -->
+- To manage large files, use LFS plugins such as GitLFS. Otherwise, use other types of artifactories, storages, and file servers (such as JFrog, Nexus, Samba, MinIO, ...) and definitely consider versioning.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ------
 ### Keep Absolutely Everything in Version Control: Documentation
@@ -106,13 +103,15 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
 
 ------
 ### Use Meaningful Commit Messages
-- A message like "fix obsecure bug." makes debugging very hard.
-- Include a link to the identifier in your project management tool for the feature or bug you're working on.
-- Specify a convention and follow it.
-- e.g. "Support specifying server's port number from the CLI using the --port option (see #1247)."
-- Multiparagraph commit message: the first paragraph is a summary and the following paragraphs add more detail.
-- Check commit messages automatically.
-- [Conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
+<img src="assets/commit-message-meme.jpg" width="800" class="fragment complete-fade-out" style="border: 1px solid gray">
+
+- A message like "fix obsecure bug." makes debugging very hard.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Include a link to the identifier in your project management tool for the feature or bug you're working on.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Specify a convention and follow it.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- e.g. "Support specifying server's port number from the CLI using the --port option (see #1247)."  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Multiparagraph commit message: the first paragraph is a summary and the following paragraphs add more detail.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Check commit messages automatically.  <!-- .element class="fragment fade-in-then-semi-out" -->
+- <!-- .element class="fragment fade-in-then-semi-out" --> Consider "Conventional Commit Messages" (https://www.conventionalcommits.org).
 
 ---
 ## Managing Dependencies
@@ -120,27 +119,27 @@ External dependencies are:
 - Third-party libraries
 - Components or modules under development of other teams
 
-Key issues of dependency management:
-- Managing External Libraries:
-  - There is some debate as to whether or not to version-control libraries.
-  - Keep copies of your external libraries somewhere locally (such as Maven repository, PyPI, generic Artifactory, etc.)
-- Managing Components:
-  - It's common to have binary dependencies between your pipelines rather than source dependencies. Recompiling dependencies is not only less efficient; it also means you're creating an artifact that is potentially different from the one that you already tested.
-  - Easy deveopment over multiple components should be considered: It should be relatively easy to make changes in some of them and run a single command that rebuilds the necessary bits in the right order, creates the appropriate binaries, and runs relevant tests.
+Key issues of dependency management:  <!-- .element class="fragment fade-in" -->
+- Managing External Libraries:  <!-- .element class="fragment fade-in" -->
+  - There is some debate as to whether or not to version-control libraries.  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - Keep copies of your external libraries somewhere locally (such as Maven repository, PyPI, generic Artifactory, etc.)  <!-- .element class="fragment fade-in-then-semi-out" -->
+- Managing Components:  <!-- .element class="fragment fade-in" -->
+  - It's common to have binary dependencies between your pipelines rather than source dependencies. Recompiling dependencies is not only less efficient; it also means you're creating an artifact that is potentially different from the one that you already tested.  <!-- .element class="fragment fade-in-then-semi-out" -->
+  - Easy deveopment over multiple components should be considered: It should be relatively easy to make changes in some of them and run a single command that rebuilds the necessary bits in the right order, creates the appropriate binaries, and runs relevant tests.  <!-- .element class="fragment fade-in-then-semi-out" -->
 
 ---
 ## Managing Software* Configuration
-Configuration is one of the three key parts that comprise an application, along with its binaries and its data. Configuration information can be used to change the behavior of software at build time, deploy time, and run time.
+**Configuration** is one of the three key parts that comprise an application, along with its **binaries** and its **data**. Configuration information can be used to change the behavior of software at **build time**, **deploy time**, and **run time**.
 
-Treat the configuration of your system in the same way you treat your code. Make it subject to proper management and testing.
+Treat the configuration of your system in the same way you treat your code. Make it subject to proper management and testing.  <!-- .element class="fragment fade-in" -->
 
 ------
 ### Configuration and Flexibility
-  
-  Flexibility is a continuoum: At one end, there is single-purpose software that does one job well but has little or no ability to have its behavior modified. At the other end of the spectrum is a programming language that you can use to write a game, an application server, or a stock control system (ultimate configurability antipattern):
-  - It frequently leads to analysis paralysis
-  - The system becomes so complex to configure that many of the benefits of its flexibility are lost.
-Configuration is not inherently evil. But it needs to be managed carefully and consistently. 
+Flexibility is a **continuoum**: At one end, there is single-purpose software that does one job well but has little or no ability to have its behavior modified. At the other end of the spectrum is a programming language that you can use to write a game, an application server, or a stock control system (**ultimate configurability antipattern**):
+- It frequently leads to analysis paralysis  <!-- .element class="fragment highlight-current-blue" -->
+- The system becomes so complex to configure that many of the benefits of its flexibility are lost.  <!-- .element class="fragment highlight-current-blue" -->
+
+Configuration is not inherently evil. But it needs to be managed carefully and consistently.  <!-- .element class="fragment highlight-current-blue" -->
 
 ------
 ### Types of Configuration
@@ -150,9 +149,11 @@ Configuration information can be injected into your application at several point
 - Deployment time
 - Run time (or startup time)
 
-Generally, its bad practice to inject configuration information at build or packaging time (such as J2EE specification and war files). This follows from the principle that you should be able to deploy the same binaries to every environment so you can ensure that the thing that you release is the same thing that you tested.
+<p class="fragment fade-in">
+  Generally, its <strong>bad practice</strong> to inject configuration information at <strong>build</strong> or <strong>packaging time</strong> (such as J2EE specification and war files). This follows from the principle that <strong>you should be able to deploy the same binaries to every environment</strong> so you can ensure that the thing that you release is the same thing that you tested.
+</p>
 
-There should be a single source of configuration to change, manage, version-control, and override (if necessary). 
+There should be a single source of configuration to change, manage, version-control, and override (if necessary).  <!-- .element class="fragment fade-in" -->
 
 ------
 ### Managing Application Configuration
@@ -160,12 +161,17 @@ There should be a single source of configuration to change, manage, version-cont
 - How do your deployment scripts access it?
 - How does it vary between environments, applications, and versions of applications?
 
-There are a few obvious choices for where to store your application configuration: a database, a version control system, or a directory or registry.
+<p class="fragment fade-in-then-semi-out">
+  There are a few obvious choices for where to store your application configuration: a <strong>database</strong>, a <strong>version control system</strong>, or a <strong>directory</strong> or <strong>registry</strong>.
+</p>
 
-Keep the actual configuration information specific to 
-each of your application's testing and production environments in a repository separate from your source code. This information generally changes at a different rate to other version-controlled artifacts (you will have to be careful to track which versions of configuration information match with which versions of the application).
+<p class="fragment fade-in-then-semi-out">
+  Keep the actual configuration information specific to each of your application's testing and production environments in a repository separate from your source code. This information generally changes at a different rate to other version-controlled artifacts (you will have to be careful to track which versions of configuration information match with which versions of the application).
+</p>
 
-Databases, directories, and registries are convenient places to store configuration since they can be accessed remotely. However, make sure to keep the history of changes to configuration for the purposes of audit and rollback. Either have a system that automatically takes care of this, or treat version control as your system of reference for configuration and have a script that loads the appropriate version into your database or directory on demand.
+<p class="fragment fade-in-then-semi-out">
+  Databases, directories, and registries are convenient places to store configuration since they can be accessed remotely. However, make sure to keep the history of changes to configuration for the purposes of audit and rollback. Either have a system that automatically takes care of this, or treat version control as your system of reference for configuration and have a script that loads the appropriate version into your database or directory on demand.
+</p>
 
 - Accessing Configuration
   - Storage and access type: File-system, RDBMS, LDAP, REST API, ESCAPE, Apache Zookepeer
@@ -178,6 +184,7 @@ Databases, directories, and registries are convenient places to store configurat
 - Testing System Configuration
   - Ensure that references to external services in your configuration settings are good (connection to databases, message buses, etc.).
   - Run some smoke tests once your application is installed to make sure it is operating as expected
+
 ------
 ### Managing Configuration across Applications
 
