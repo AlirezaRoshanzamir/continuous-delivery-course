@@ -59,6 +59,15 @@
             .fragment.complete-fade-out.visible:not(.current-fragment) {
                 display: none;
             }
+            .fragment.fade-in-list:not(.visible), .fragment.fade-in-list:not(.visible) + ul {
+                display: none;
+            }
+            .fragment.start:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
+                visibility: hidden;
+            }
         </style>
     </head>
     <body>
