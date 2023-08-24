@@ -28,9 +28,9 @@ It's essential to identify which nonfunctional requirements are important at the
 
 ---
 ## Managing Nonfunctional Requirements
-NFRs are complex because they usually have a very strong inﬂuence on the architecture of the system.
+NFRs are complex because they usually have a very strong influence on the architecture of the system.
 
-NFRs tend to interact with one another in an unhelpful manner: Very secure systems often  compromise on ease of use; very ﬂexible systems often compromise on performance, and so forth:
+NFRs tend to interact with one another in an unhelpful manner: Very secure systems often  compromise on ease of use; very flexible systems often compromise on performance, and so forth:
 
 <img src="assets/atam.webp">
 

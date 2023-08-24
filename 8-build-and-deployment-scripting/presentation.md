@@ -301,7 +301,7 @@ Some general principles and practices of build and deployment scripting should a
 - Use the Same Scripts to Deploy to Every Environment  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - If your application is complex in terms of its deployment architecture, you will have to make some simplifications to get it working on developer machines.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Use Your Operating System's Packaging Tools [for Deployment]  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other ﬂavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other flavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Commercial middleware servers, for example, often require special tools to perform deployments. In this case, a hybrid approach is necessary.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - You can also use platform-specific packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl's CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Ensure the Deployment Process Is Idempotent  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -510,7 +510,7 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 - Don't Check Binaries into Version Control as Part of Your Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - The rule of thumb is not to check in anything created as part of your build, test, and deploy cycle into source control.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Test Targets Should Not Fail the Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Make the failure set a ﬂag but fail the build later, after generating more useful reports or running a more complete set of tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Make the failure set a flag but fail the build later, after generating more useful reports or running a more complete set of tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Constrain Your Application with Integrated Smoke Tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Make sure the deployed version validates its configuration when it is installed.
 
