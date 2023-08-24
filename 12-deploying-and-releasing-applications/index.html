@@ -71,6 +71,10 @@
                 opacity: 0;
                 transition: opacity 0.4s;
             }
+            :has(> .fragment.fade-in-parent-with-next:not(.visible)), :has(> .fragment.fade-in-parent-with-next:not(.visible)) + * {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
             :has(> .fragment.fade-in-then-semi-out-parent:not(.visible)) {
                 opacity: 0;
                 transition: opacity 0.4s;
@@ -88,6 +92,18 @@
             }
             .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
                 visibility: hidden;
+            }
+            .fragment.start.visible:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
+                visibility: hidden;
+            }
+            .fragment.end:not(.current-fragment) {
+                display: none;
+            }
+            :not(h3):has(~ .fragment.end.current-fragment) {
+                display: none;
             }
         </style>
     </head>
