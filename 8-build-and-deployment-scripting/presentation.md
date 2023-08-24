@@ -3,7 +3,7 @@
 
 <img src="assets/iac.png" width="800"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 

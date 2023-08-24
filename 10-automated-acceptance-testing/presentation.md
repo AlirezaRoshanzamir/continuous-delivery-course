@@ -3,7 +3,9 @@
 
 <img src="assets/user-story-acceptance-criteria-and-test.png"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Time to Read:</strong> 10 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
+
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 

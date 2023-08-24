@@ -3,7 +3,7 @@
 
 <img src="assets/deployed-vs-released.jpg" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
