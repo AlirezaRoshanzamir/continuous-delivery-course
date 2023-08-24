@@ -47,7 +47,7 @@ Mention the _cookie targets_ in Make.
 
 ------
 ### An Overview of Build Tools: Make
-Powerful product-oriented build tool capable of tracking dependencies within a build and building only those **components that are affected by a particular change**.  <!-- .element: class="fragment fade-in-paragraph" -->
+Powerful product-oriented build tool capable of tracking dependencies within a build and building only those **components that are affected by a particular change**.
 
 But, **it's hard to debug** complex Makefiles. A common convention adopted by teams working on large codebases is to create a Makefile for each directory, and have a top-level Makefile that recursively runs the Makefiles in each subdirectory (which is [considered harmful](https://accu.org/journals/overload/14/71/miller_2004/)):  <!-- .element: class="fragment fade-in-parent-with-next" -->
 <table>
@@ -66,7 +66,7 @@ Some other drawbacks:  <!-- .element: class="fragment fade-in-with-next" -->
 
 ------
 ### An Overview of Build Tools: Ant
-The runtime components of Ant are written in Java, but the Ant scripts are an **external DSL** written in **XML**. This combination gives Ant powerful cross-platform capabilities.  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The runtime components of Ant are written in Java, but the Ant scripts are an **external DSL** written in **XML**. This combination gives Ant powerful cross-platform capabilities.
 <img src="assets/ant-example.jpg" width="700">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
@@ -85,7 +85,7 @@ NAnt uses essentially the **same syntax as Ant, with only a few differences**. *
 
 ------
 ### An Overview of Build Tools: Maven
-Maven attempts to **remove a large amount of boilerplate** found in Ant files by having a more complex domain that makes **many assumptions about the way your Java project is laid out**. This principle of favoring **convention over configuration** means that, so long as your **project conforms to the structure dictated by Maven**, it will perform almost any **build**, **deploy**, **test**, and **release** task you can imagine with **a single command**, without having to write more than a few lines of XML:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+Maven attempts to **remove a large amount of boilerplate** found in Ant files by having a more complex domain that makes **many assumptions about the way your Java project is laid out**. This principle of favoring **convention over configuration** means that, so long as your **project conforms to the structure dictated by Maven**, it will perform almost any **build**, **deploy**, **test**, and **release** task you can imagine with **a single command**, without having to write more than a few lines of XML:
 <table>
   <tr>
     <td><img src="assets/pom-example.jpg" width="500"></td>
@@ -99,7 +99,7 @@ Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
 
 ------
 ### An Overview of Build Tools: Rake
-The dominant Ruby build tool, Rake, came about as an experiment to see if **Make**'s functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except **tasks** and **dependencies**. However, since Rake scripts are plain Ruby, you can **use Ruby's API** to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The dominant Ruby build tool, Rake, came about as an experiment to see if **Make**'s functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except **tasks** and **dependencies**. However, since Rake scripts are plain Ruby, you can **use Ruby's API** to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal:
 <table>
   <tr>
     <td><img src="assets/rake-example.png" width="500"></td>
