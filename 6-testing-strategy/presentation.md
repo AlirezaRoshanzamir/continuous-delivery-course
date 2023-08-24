@@ -103,7 +103,9 @@ There are two main and two optional kinds of tests that fall into this category:
 
 ------
 ### Quadrant TR: Business-Facing Tests That Critique the Project
-These manual tests verify that the application will in fact deliver to the users the value they are expecting. This is not just a matter of verifying that the application meets its specifications; it is also about **checking that the specifications are correct**:
+<img src="assets/do-not-automate-everything-meme.webp" class="fragment start" width="500">
+
+These manual tests verify that the application will in fact deliver to the users the value they are expecting. This is not just a matter of verifying that the application meets its specifications; it is also about **checking that the specifications are correct**:  <!-- .element class="fragment fade-in-parent-with-next" -->
 - <!-- .element class="fragment highlight-current-blue" --> Showcases
   - Agile teams perform showcases to users at the end of every iteration to demonstrate the new functionality that they have delivered.
 - <!-- .element class="fragment highlight-current-blue" --> Exploratory testing
