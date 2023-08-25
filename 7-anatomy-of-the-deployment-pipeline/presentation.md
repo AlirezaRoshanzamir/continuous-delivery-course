@@ -3,7 +3,7 @@
 
 <img src="assets/minimal-deployment-pipeline-overview.png" width="700"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 

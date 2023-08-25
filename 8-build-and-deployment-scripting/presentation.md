@@ -3,7 +3,7 @@
 
 <img src="assets/iac.png" width="800"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
@@ -47,7 +47,7 @@ Mention the _cookie targets_ in Make.
 
 ------
 ### An Overview of Build Tools: Make
-Powerful product-oriented build tool capable of tracking dependencies within a build and building only those **components that are affected by a particular change**.  <!-- .element: class="fragment fade-in-paragraph" -->
+Powerful product-oriented build tool capable of tracking dependencies within a build and building only those **components that are affected by a particular change**.
 
 But, **it's hard to debug** complex Makefiles. A common convention adopted by teams working on large codebases is to create a Makefile for each directory, and have a top-level Makefile that recursively runs the Makefiles in each subdirectory (which is [considered harmful](https://accu.org/journals/overload/14/71/miller_2004/)):  <!-- .element: class="fragment fade-in-parent-with-next" -->
 <table>
@@ -66,7 +66,7 @@ Some other drawbacks:  <!-- .element: class="fragment fade-in-with-next" -->
 
 ------
 ### An Overview of Build Tools: Ant
-The runtime components of Ant are written in Java, but the Ant scripts are an **external DSL** written in **XML**. This combination gives Ant powerful cross-platform capabilities.  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The runtime components of Ant are written in Java, but the Ant scripts are an **external DSL** written in **XML**. This combination gives Ant powerful cross-platform capabilities.
 <img src="assets/ant-example.jpg" width="700">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
@@ -85,7 +85,7 @@ NAnt uses essentially the **same syntax as Ant, with only a few differences**. *
 
 ------
 ### An Overview of Build Tools: Maven
-Maven attempts to **remove a large amount of boilerplate** found in Ant files by having a more complex domain that makes **many assumptions about the way your Java project is laid out**. This principle of favoring **convention over configuration** means that, so long as your **project conforms to the structure dictated by Maven**, it will perform almost any **build**, **deploy**, **test**, and **release** task you can imagine with **a single command**, without having to write more than a few lines of XML:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+Maven attempts to **remove a large amount of boilerplate** found in Ant files by having a more complex domain that makes **many assumptions about the way your Java project is laid out**. This principle of favoring **convention over configuration** means that, so long as your **project conforms to the structure dictated by Maven**, it will perform almost any **build**, **deploy**, **test**, and **release** task you can imagine with **a single command**, without having to write more than a few lines of XML:
 <table>
   <tr>
     <td><img src="assets/pom-example.jpg" width="500"></td>
@@ -99,7 +99,7 @@ Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
 
 ------
 ### An Overview of Build Tools: Rake
-The dominant Ruby build tool, Rake, came about as an experiment to see if **Make**'s functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except **tasks** and **dependencies**. However, since Rake scripts are plain Ruby, you can **use Ruby's API** to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The dominant Ruby build tool, Rake, came about as an experiment to see if **Make**'s functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except **tasks** and **dependencies**. However, since Rake scripts are plain Ruby, you can **use Ruby's API** to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal:
 <table>
   <tr>
     <td><img src="assets/rake-example.png" width="500"></td>
@@ -301,7 +301,7 @@ Some general principles and practices of build and deployment scripting should a
 - Use the Same Scripts to Deploy to Every Environment  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - If your application is complex in terms of its deployment architecture, you will have to make some simplifications to get it working on developer machines.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Use Your Operating System's Packaging Tools [for Deployment]  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other ﬂavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other flavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Commercial middleware servers, for example, often require special tools to perform deployments. In this case, a hybrid approach is necessary.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - You can also use platform-specific packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl's CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Ensure the Deployment Process Is Idempotent  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -510,7 +510,7 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 - Don't Check Binaries into Version Control as Part of Your Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - The rule of thumb is not to check in anything created as part of your build, test, and deploy cycle into source control.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Test Targets Should Not Fail the Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Make the failure set a ﬂag but fail the build later, after generating more useful reports or running a more complete set of tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Make the failure set a flag but fail the build later, after generating more useful reports or running a more complete set of tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Constrain Your Application with Integrated Smoke Tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Make sure the deployed version validates its configuration when it is installed.
 

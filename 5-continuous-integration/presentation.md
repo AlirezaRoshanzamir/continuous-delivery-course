@@ -3,7 +3,7 @@
 
 <img src="assets/ci.png" width="700"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
@@ -166,7 +166,6 @@ The following practices aren't required, but we have found them useful:
   - Coding standards
   - Sustainable pace
   - Test-driven development
-  - Shared code ownership
   - Collective code ownership
   - ...
 - Failing a Build for Architectural Breaches  <!-- .element class="fragment fade-in-then-semi-out" -->

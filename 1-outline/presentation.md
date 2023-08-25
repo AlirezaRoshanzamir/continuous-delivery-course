@@ -3,7 +3,7 @@
 
 <img src="assets/devops-loop.png" width="700"/>
 
-<small><strong>Lecturer:</strong> Alireza Roshanzamir</small>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
 
@@ -15,7 +15,7 @@ Mention the deploy vs release and why their order is different in different plac
 </details>
 
 ---
-## Lecturer
+## Created By
 <table>
     <tr>
         <td><img src="assets/avatar.png" width="200" style="border: 1px solid gray; border-radius: 4px"></td>
