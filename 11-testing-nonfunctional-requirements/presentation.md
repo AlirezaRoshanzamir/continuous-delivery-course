@@ -81,9 +81,9 @@ NFRs tend to **interact with one another** in an **unhelpful manner**: Very secu
 
 ------
 ### Analyzing Nonfunctional Requirements
-We sometimes capture NFRs **as regular acceptance criteria for functional stories** where we don't anticipate that a signiﬁcant additional effort will be required to meet them.
+We sometimes capture NFRs **as regular acceptance criteria for functional stories** where we don't anticipate that a significant additional effort will be required to meet them.
 
-This can be **inefficient**. It often makes sense, instead, to create **speciﬁc sets of stories** or **tasks** for nonfunctional requirements as well, especially at the **beginning of a project**.  <!-- .element class="fragment fade-in-paragraph" -->
+This can be **inefficient**. It often makes sense, instead, to create **specific sets of stories** or **tasks** for nonfunctional requirements as well, especially at the **beginning of a project**.  <!-- .element class="fragment fade-in-paragraph" -->
 
 An example of these two common approaches:  <!-- .element class="fragment fade-in-with-next" -->
 - All important interactions with the system should be audited.

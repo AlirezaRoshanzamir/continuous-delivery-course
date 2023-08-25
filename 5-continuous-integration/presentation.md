@@ -166,7 +166,6 @@ The following practices aren't required, but we have found them useful:
   - Coding standards
   - Sustainable pace
   - Test-driven development
-  - Shared code ownership
   - Collective code ownership
   - ...
 - Failing a Build for Architectural Breaches  <!-- .element class="fragment fade-in-then-semi-out" -->
