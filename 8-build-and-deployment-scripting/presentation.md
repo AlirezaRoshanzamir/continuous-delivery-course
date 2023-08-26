@@ -291,6 +291,21 @@ As your workspace grows, the tools have to help you keep it fast, understandable
   </tr>
 </table>
 
+------
+### Monorepo Drawbacks
+- Weak Multiple Languages Support
+  - The best monorepo tool for one programming language is not good for the others.
+  - Most monorepo tools support internal and external plugins.
+  - You should consider Git submodule for multiple languages.
+- VCS Tooling Challenges  <!-- .element class="fragment fade-in" -->
+  - The complexity and size of the codebase, which makes it difficult to understand, search, scale, and maintain.
+  - Microsoft has released a Virtual File System (VFS) for git to help manage the overload.
+- Limitations Around Access Control  <!-- .element class="fragment fade-in" -->
+  - Your company may not want every engineer to have access to the entire codebase.
+  - GitHub and GitLab support CODEOWNERS file to define which team owns subdirectories in the repository.
+- Heavy Build Pipelines  <!-- .element class="fragment fade-in" -->
+  - Many CI tools offer the capability of conditional stages that execute only when changes occur in a particular directory. For instance, SemaphorCI uses "change_in," while Jenkins employs "changeset" to implement this functionality.
+
 ---
 ## Principles and Practices
 Some general principles and practices of build and deployment scripting should apply to **whichever technology you use**:
