@@ -3,6 +3,8 @@
 
 <img src="assets/devops-loop.png" width="700"/>
 
+<small><strong>Time to Read:</strong> 4 Minutes</small>, <small><strong>Time to Present:</strong> 15 Minutes</small>
+
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
@@ -41,8 +43,10 @@ Mention the deploy vs release and why their order is different in different plac
             Social:
             <ul>
                 <li>a.roshanzamir1996@gmail.com</li>
-                <li>alirezaroshanzamir.github.io</li>
+                <li><a href="https://alirezaroshanzamir.github.io" target="_blank">alirezaroshanzamir.github.io</a></li>
             </ul>
+            <br>
+            Please <strong>star</strong> the <a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course">github.com/AlirezaRoshanzamir/continuous-delivery-course</a> repository.
         </td>
     </tr>
 </table>
@@ -124,17 +128,17 @@ Mention the deploy vs release and why their order is different in different plac
 <table>
     <tr>
         <td>
-            Introduction
+            <a href="../2-introduction" target="_blank">Introduction</a>
             <br>
             <small>
-                Definition, <span style="color: blue">Minimum Viable CD</span>, Ingredients, Deployment Pipeline, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: blue">Relation with Other Movements</span>, <span style="color: blue">Scrumfall</span>, Case Studies, <span style="color: blue">CD Patterns Mindmap</span>
+                Definition, <span style="color: brown">Minimum Viable CD</span>, <span style="color: purple">Ingredients</span>, Deployment Pipeline, Why?, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: brown">Relation with Other Movements</span>, <span style="color: brown">Scrumfall</span>, Case Studies, <span style="color: brown">CD Patterns Mindmap</span>
             </small>
         </td>
-        <td>45'</td>
+        <td>60'</td>
     </tr>
     <tr>
         <td>
-            The Problem of Delivering Software
+            <a href="../3-the-problem-of-delivering-software" target="_blank">The Problem of Delivering Software</a>
             <br>
             <small>
                 Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
@@ -144,42 +148,46 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Configuration Management
+            <a href="../4-configuration-management" target="_blank">Configuration Management</a>
             <br>
             <small>
-                Version Control and Advices, Managing Dependencies, Managing Software Configuration, Managing Environments
+                <span style="color: purple">Version Control and Advices</span>, Managing Dependencies, Managing Software Configuration, <span style="color: purple">Managing Environments</span>
+            </small>
+        </td>
+        <td>55'</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="../5-continuous-integration" target="_blank">Continuous Integration</a>
+            <br>
+            <small>
+                Implementation, Prerequisites, Practices, <span style="color: brown">Challenges</span>
             </small>
         </td>
         <td>45'</td>
     </tr>
     <tr>
         <td>
-            Continuous Integration
+            <a href="../6-testing-strategy" target="_blank">Testing Strategy</a>
             <br>
             <small>
-                Implementation, Prerequisites, Practices, <span style="color: blue">Challenges</span>
-            </small>
-        </td>
-        <td>45'</td>
-    </tr>
-    <tr>
-        <td>
-            Testing Strategy
-            <br>
-            <small>
-                Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
+                Test Categories, Test Levels (Types), Test Doubles, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>
             </small>
         </td>
         <td>60'</td>
     </tr>
 </table>
+<br>
+<small>
+Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD book</span>, <span style="color: green">Green: Mostly from the Accelerate book</span>, <span style="color: brown">Brown: From the other references</span>
+</small>
 
 ---
 ## Table of Contents: Deplyment Pipeline
 <table>
     <tr>
         <td>
-            Anatomy
+            <a href="../7-anatomy-of-the-deployment-pipeline" target="_blank">Anatomy</a>
             <br>
             <small>
                 Stages, Practices, Commit Stage, Test Stages, Release and Deployment Stages, Metrics, Adoption
@@ -189,17 +197,17 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Build and Deployment Scripting
+            <a href="../8-build-and-deployment-scripting" target="_blank">Build and Deployment Scripting</a>
             <br>
             <small>
-                Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as Code</span>
+                Build Tools, <span style="color: brown">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: brown">Package Managers</span>, <span style="color: brown">Code Generation</span>, <span style="color: brown">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: brown">Infrastructure as Code</span>
             </small>
         </td>
         <td>90'</td>
     </tr>
     <tr>
         <td>
-            Commit Stage
+            <a href="../9-the-commit-stage" target="_blank">Commit Stage</a>
             <br>
             <small>
                 Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
@@ -209,17 +217,17 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Automated Acceptance Testing
+            <a href="../10-automated-acceptance-testing" target="_blank">Automated Acceptance Testing</a>
             <br>
             <small>
-                Introduction, Why?, Process and Roles, <span style="color: blue">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
+                Introduction, Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
             </small>
         </td>
         <td>45'</td>
     </tr>
     <tr>
         <td>
-            Testing Nonfunctional Requirements (Introduction)
+            <a href="../11-testing-nonfunctional-requirements" target="_blank">Testing Nonfunctional Requirements (Introduction)</a>
             <br>
             <small>
                 Introduction, Managing Nonfunctional Requirements
@@ -229,10 +237,10 @@ Mention the deploy vs release and why their order is different in different plac
     </tr>
     <tr>
         <td>
-            Deploying and Releasing Applications
+            <a href="../12-deploying-and-releasing-applications" target="_blank">Deploying and Releasing Applications</a>
             <br>
             <small>
-                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: blue">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: blue">Semantic Release</span>, Tips and Tricks
+                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
             </small>
         </td>
         <td>45'</td>
@@ -267,7 +275,7 @@ Mention the deploy vs release and why their order is different in different plac
             Managing Components and Dependencies
             <br>
             <small>
-                Keeping Application (Trunk) Releasable, Dependencies (<span style="color: blue">Dependency Pinning</span>, <span style="color: blue">Library vs Application</span>), Components, Dependency Graph, Managing Binaries
+                Keeping Application (Trunk) Releasable, Dependencies (<span style="color: brown">Dependency Pinning</span>, <span style="color: brown">Library vs Application</span>), Components, Dependency Graph, Managing Binaries
             </small>
         </td>
         <td>45'</td>
@@ -277,7 +285,7 @@ Mention the deploy vs release and why their order is different in different plac
             Advanced Version Control
             <br>
             <small>
-                Brief history, Version Control Types, Branching and Merging, <span style="color: blue">Gitflow</span>, Develop on Mainline, Branch for Release, Branch by Feature, Branch by Team
+                Brief history, Version Control Types, Branching and Merging, <span style="color: brown">Gitflow</span>, Develop on Mainline, Branch for Release, Branch by Feature, Branch by Team
             </small>
         </td>
         <td>45'</td>
@@ -287,7 +295,7 @@ Mention the deploy vs release and why their order is different in different plac
             Managing Continuous Delivery
             <br>
             <small>
-                Maturity Models (Jez Humble Maturity Model, <span style="color: blue">QMM</span>, <span style="color: blue">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
+                Maturity Models (Jez Humble Maturity Model, <span style="color: brown">QMM</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
             </small>
         </td>
         <td>60'</td>
