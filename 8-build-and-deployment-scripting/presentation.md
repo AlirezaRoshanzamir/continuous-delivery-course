@@ -1,5 +1,5 @@
 ## Continuous Delivery: Build and Deployment Scripting
-#### Build Tools, <span style="color: blue">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: blue">Package Managers</span>, <span style="color: blue">Code Generation</span>, <span style="color: blue">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: blue">Infrastructure as Code</span>
+#### Build Tools, <span style="color: brown">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: brown">Package Managers</span>, <span style="color: brown">Code Generation</span>, <span style="color: brown">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: brown">Infrastructure as Code</span>
 
 <img src="assets/iac.png" width="800"/>
 

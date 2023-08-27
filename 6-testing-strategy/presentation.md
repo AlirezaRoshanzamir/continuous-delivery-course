@@ -1,5 +1,5 @@
 ## Continuous Delivery: Testing Strategy
-#### Test Categories, Test Levels (Types), Test Doubles, <span style="color: blue">Test Coverage Criteria</span>, <span style="color: blue">TDD</span>
+#### Test Categories, Test Levels (Types), Test Doubles, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>
 
 <img src="assets/v-model.png" style="max-width: 550px"/>
 
