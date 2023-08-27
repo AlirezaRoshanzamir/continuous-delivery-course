@@ -106,6 +106,14 @@
             :not(h3):has(~ .fragment.end.current-fragment) {
                 display: none;
             }
+            :has(> .fragment.highlight-current-blue-parent.current-fragment) {
+                color: dodgerblue;
+                transition: color 0.4s;
+            }
+            :has(> .fragment.semi-fade-out-parent.visible:not(.current-fragment)) {
+                opacity: 0.6;
+                transition: opacity 0.4s;
+            }
         </style>
     </head>
     <body>
@@ -137,6 +145,7 @@
                 height: 768,
                 minScale: 0.001,
                 maxScale: 10,
+                loop: true,
                 plugins: [ 
                     RevealMarkdown,
                     RevealNotes,

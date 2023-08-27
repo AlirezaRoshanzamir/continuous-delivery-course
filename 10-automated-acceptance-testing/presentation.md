@@ -1,5 +1,5 @@
 ## Continuous Delivery: Automated Acceptance Testing
-#### Introduction, Why?, Process and Roles, <span style="color: blue">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
+#### Introduction, Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
 
 <img src="assets/user-story-acceptance-criteria-and-test.png"/>
 
