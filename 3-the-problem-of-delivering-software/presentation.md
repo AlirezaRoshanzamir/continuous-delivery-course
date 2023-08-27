@@ -43,6 +43,8 @@ So, moving towards complete **automated deployments** is recommended.  <!-- .ele
 
 ------
 ### Release Antipatterns: Delayed Production-like Deployment
+<img src="assets/work-in-dev-meme.avif" class="fragment start"/>
+
 Symptoms:
 - Software is initially **deployed to a production-like** environment (e.g., **staging**) once most **development is finished**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - **Releasing to staging** is the first interaction of operations with the new release.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
