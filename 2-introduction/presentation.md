@@ -24,6 +24,8 @@ Contiuous delivery is an **ability**, **development practice**, **discipline**, 
 
 ---
 ## Minimum Viable CD
+<img src="assets/minimum-meme.jpg" class="fragment start">
+
 The **very** minimum activities for CD include (some items can be used interchangeably):
 - Small autonomous teams, Small steps (work in small batches), Fast feedback, Informed decision making  <!-- .element class="fragment highlight-current-blue" -->
 - Version control (source code, tests, [technical] docs, application configuration, build and deployment scripts, etc.)  <!-- .element class="fragment highlight-current-blue" -->
@@ -41,7 +43,9 @@ For detailed information, visit [Minimum CD](https://minimumcd.org/minimumcd) an
 
 ---
 ## Ingredients
+<img src="assets/cd-ingredients-meme.jpg" class="fragment start">
 
+Ingredients:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **Configuration management**
   - Any new environment reproduced from the **same configuration** is **identical**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
   - Everything is **versioned** and **automated**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -67,6 +71,8 @@ A key **pattern** in CD from continuous integration and test automation:
 
 ---
 ## Why?
+<img src="assets/why-meme.png" class="fragment start">
+
 - Make releases **painless** **low-risk** events  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Reduce **time to market**   <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Increase **software quality** and **stability**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -77,7 +83,9 @@ A key **pattern** in CD from continuous integration and test automation:
 
 ---
 ## Impacts
-The following image is extracted from the book **Accelerate** and embodies a **four-year** research project initiated in **2013**. This study sought to explore vital **capabilities** and **practices** that accelerate software **development** and **delivery**, enhancing **company value**. To achieve this, researchers used rigorous **academic research methods**:
+<img src="assets/cd-practices-are-useless-meme.jpg" class="fragment start" style="border: 1px solid lightgray">
+
+The following image is extracted from the book **Accelerate** and embodies a **four-year** research project initiated in **2013**. This study sought to explore vital **capabilities** and **practices** that accelerate software **development** and **delivery**, enhancing **company value**. To achieve this, researchers used rigorous **academic research methods**:  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 <img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
 
@@ -125,13 +133,13 @@ The **continuous delivery** practices significantly impact the organization's cu
 In short, they vary in **origin**, **history**, **covered aspects**, and **principles**. However, there's a notable **mutual relationship** between these movements:
 
 - **Agile:** Flexible, **iterative** software **development** approach with short cycles and stakeholder involvement.<br/>
-  _Keywords:_ Iterative, XP, Scrum, Kanban, Sprint, Epic, Feature, User Story, Product Owner, Scrum Master, Agile Manifesto
+  _Keywords:_ Iterative, XP, Scrum, Kanban, Sprint, Epic, Feature, User Story, Product Owner, Scrum Master, Agile Manifesto  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - **DevOps:** **Practices** bridging **development and operations** for faster, higher-quality software delivery.<br/>
-  _Keywords:_ Wall of Confusion, Collaboration, Automation, Continuous Delivery, Continuously Monitor, Respond to Changes, Feedback Loop, Cultural Transformation
+  _Keywords:_ Wall of Confusion, Collaboration, Automation, Continuous Delivery, Continuously Monitor, Respond to Changes, Feedback Loop, Cultural Transformation  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - **Lean:** **Management practices** aiming to **eliminate waste** and **maximize value** in software development.<br/>
-  _Keywords:_ Waste Reduction, Define Value, Map the Value Stream, Create Flow, Establish Pull, Pursue Perfection, Lean Startup, MVP, Muda, Mura, Muri, Jidoka
+  _Keywords:_ Waste Reduction, Define Value, Map the Value Stream, Create Flow, Establish Pull, Pursue Perfection, Lean Startup, MVP, Muda, Mura, Muri, Jidoka  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - **Continuous Delivery:** **Automated**, **streamlined** software deployment to ensure a **deployable state at all times**.<br/>
-  _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies
+  _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
 ------
 ### Continued: Relation with Agile, DevOps, Lean
@@ -168,7 +176,9 @@ Finally, look at the **first principle** behind the **Agile manifesto**:
 ------
 ## Continued: HP Laserjet Framework Case Study
 **After CI:**
-<img src="assets/hp-2008-to-2011.png" width="700">
+<img src="assets/hp-2008-to-2011.png" width="600">
+
+<img src="assets/continuous-delivery-rework-meme.jpeg" class="fragment fade-in" width="350">
 
 ---
 ## CD Patterns Mindmap
@@ -187,6 +197,5 @@ The practices of continuous delivery bring several important **benefits**:
   - This means we can avoid the **2/3 of features** we build that  deliver **zero** or **negative value** to our businesses.
 - Happier teams
 
-Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**:
-
-<img src="assets/continuous-improvement-meme.jpg" width="220">
+Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+<img src="assets/continuous-improvement-meme.jpg" width="250">
