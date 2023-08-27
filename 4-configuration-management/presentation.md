@@ -19,7 +19,7 @@ Configuration management is often used interchangeably with **version control**:
 
 Although **version control systems are the most obvious tool** in configuration management, the choice to use one (every team should use one, **no matter how small**) is the first step in shaping a configuration management strategy.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-You should **be able to** say **"yes"** to these questions:  <!-- .element class="fragment fade-in-parent-with-next" -->
+You should **be able to** say **"yes"** to these questions:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Can I precisely **recreate** any of my **environments**, including the **OS version**, **patches**, **network setup**, **software stack**, **deployed apps**, and **their settings**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - Can I easily make an **incremental change** to any of these items and **deploy it to any or all of my environments**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - Can I easily **track** **environment changes** and find out **who** made them and **when**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -33,7 +33,9 @@ It doesn't only mean Git or something but almost means Git or something :)
 
 ---
 ## Version Control
-The version control:
+<img src="assets/version-control-meme.jpg" class="fragment start" width="800">
+
+The version control:  <!-- .element class="fragment fade-in-with-next custom" -->
 - **Keeps** and allows **access** to **all versions** of **every stored file**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - Enables **distributed teams** to **collaborate**, across space and time.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 
@@ -122,7 +124,7 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
 - Third-party libraries
 - Components or modules being developed by **other teams**
 
-Key issues of **dependency management**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+Key issues of **dependency management**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Managing **External Libraries**:
   - There's a **debate** about **version-controlling libraries**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
   - Maintain **local copies** of external libraries (e.g., in **Maven repository**, **PyPI**, generic **Artifactory**).  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -203,6 +205,8 @@ Deployment and runtime: Understanding the **current configuration of running app
 
 ---
 ## Managing Environments
+<img src="assets/production-environment-meme.jpeg" class="fragment start">
+
 **Automate environment creation** completely:
 - **Removes** the problem of having **random pieces of infrastructure around**.  <!-- .element class="fragment fade-in-parent custom" -->
 - Fixing is **harder** than recreation.  <!-- .element class="fragment fade-in-parent custom" -->
@@ -224,7 +228,7 @@ The kinds of environment configuration information:  <!-- .element class="fragme
 Hence, creating new environments, upgrading parts of your system, and rolling out new configurations without making your system 
 unavailable becomes a simple, automated process.  -->
 
-Managing **third party** products:  <!-- .element class="fragment fade-in-parent-with-next" -->
+Managing **third party** products:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Can we deploy it?  <!-- .element class="fragment highlight-current-blue" -->
 - Can we version its configuration effectively?  <!-- .element class="fragment highlight-current-blue" -->
 - How will it fit into our automated deployment strategy?  <!-- .element class="fragment highlight-current-blue" -->
