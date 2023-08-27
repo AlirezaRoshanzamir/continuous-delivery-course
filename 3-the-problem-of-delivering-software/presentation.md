@@ -13,7 +13,9 @@
 
 ---
 ## Release Antipatterns
-The day of a software release is often stressful due to specific **antipatterns**:
+<img src="assets/software-release-day-panic-meme.jpeg" class="fragment start" width="450"/>
+
+The day of a software release is often stressful due to specific **antipatterns**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - Manual Software Deployment
 - Delayed Production-like Deployment
 - Manual Production Environment Configuration Management
@@ -41,6 +43,8 @@ So, moving towards complete **automated deployments** is recommended.  <!-- .ele
 
 ------
 ### Release Antipatterns: Delayed Production-like Deployment
+<img src="assets/work-in-dev-meme.avif" class="fragment start"/>
+
 Symptoms:
 - Software is initially **deployed to a production-like** environment (e.g., **staging**) once most **development is finished**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - **Releasing to staging** is the first interaction of operations with the new release.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -72,8 +76,9 @@ Our goal is to explain **deployment pipelines**, along with **high automation** 
 
 ---
 ## Refined Goal
-We want to deliver software that's **high-quality** and **valuable** in an **efficient**, **fast**, and **reliable** manner by making releases:
+<img src="assets/cd-refined-goal-meme.jpeg" class="fragment start"/>
 
+We want to deliver software that's **high-quality** and **valuable** in an **efficient**, **fast**, and **reliable** manner by making releases:  <!-- .element class="fragment fade-in-parent-with-next" -->
 - **Automated**
   - Not automated &rArr; Not repeatable  <!-- .element class="fragment highlight-current-blue" -->
   - Not automated &rArr; Error prone  <!-- .element class="fragment highlight-current-blue" -->
@@ -108,7 +113,7 @@ The techniques and principles that we describe have been **proven in real projec
 ## Benefits
 <img src="assets/rubbing-hands-meme.webp" class="fragment complete-fade-out" width="500">
 
-**Repeatable**, **reliable**, and **predictable release process** significantly reduces **cycle time**, delivering features and fixes to users quickly.  Other benefits are:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+**Repeatable**, **reliable**, and **predictable release process** significantly reduces **cycle time**, delivering features and fixes to users quickly.  Other benefits are:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - Empowering Teams  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - **Pull system**: Testers, operations, or support can **select the application version and environment** they need, **avoiding** endless **emails** and **tickets** for a good build.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Reducing Errors  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -125,7 +130,7 @@ The techniques and principles that we describe have been **proven in real projec
   <!-- - There should not be a special QA deployment strategy, or a special acceptance test, or production deployment strategy.  -->
   - Use the **same deployment method** for all targets, **including developer workstations** whenever feasible.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/cd-benefits.png" width="370">
+<img src="assets/cd-benefits.png" width="450">
 
 ---
 ## Release Candidate
@@ -140,11 +145,13 @@ The techniques and principles that we describe have been **proven in real projec
 
 ---
 ## Principles
+<img src="assets/bring-the-pain-forward-meme.jpeg" class="fragment start">
+
 These are the **essential** elements for an **effective delivery process**:
 - Create a Repeatable, Reliable Process for Releasing Software  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Automate Almost Everything  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Automate **gradually** over time.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - There are some things it is **impossible to automate** (such as **exploratory tests**).  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - There are some things it is **impossible to automate** (such as **exploratory tests**).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Keep Everything in Version Control  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Everything for **building**, **deploying**, **testing**, and **releasing**. This includes **requirements**, **test scripts and cases**, **network and deployment scripts**, **database scripts**, **app stack configurations**, **libraries**, **tools**, and **documentation**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
   - A **new team member** can simply **check out** the project, **run a command**, and **deploy the app** to any environment, even **locally**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -169,5 +176,5 @@ These are the **essential** elements for an **effective delivery process**:
 ## Summary
 Through **automated build**, **test**, and **deployment**, we can confirm changes, ensure the process is **reproducible** across various environments, and greatly **reduce chances of errors** in production.
 
-We also get to spend more **weekends with our families** and **friends**, leading **less stressful lives**, and boosting productivity.  <!-- .element: class="fragment fade-in-parent-with-next" -->
+We also get to spend more **weekends with our families** and **friends**, leading **less stressful lives**, and boosting productivity.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 <img src="assets/family-meme.jpg">
