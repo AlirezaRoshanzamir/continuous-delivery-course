@@ -14,24 +14,26 @@
 W. Edwards Deming:
 > Cease dependence on mass inspection to achieve quality. Improve the process and build quality into the product in the first place.
 
-Testing is a **cross-functional** activity that **involves the whole team**, and should be **done continuously** from the **beginning of the project**. Building quality in means **writing automated tests at multiple levels (unit, component, and acceptance)** and **running them as part of the deployment pipeline**, which is triggered every time a change is made to our application, its configuration, or the environment and software stack that it runs on. Manual testing is also an essential part of building quality in: **Showcases**, **usability testing**, and **exploratory testing** need to be done continuously throughout the project.  <!-- .element class="fragment fade-in-paragraph" -->
+Testing is a **cross-functional** activity for **the entire team**, and should be **done continuously** from the **beginning of the project**.  <!-- .element class="fragment fade-in-paragraph" -->
 
-In our ideal project, testers collaborate with developers and users to write **automated tests from the start of the project**. These tests are written **before developers start work** on the features that they test. These tests do not just test the functional aspects of the system. **Capacity, security, and other nonfunctional requirements** are established early on, and automated test suites are written to enforce them.  <!-- .element class="fragment fade-in-paragraph" -->
+**Building quality in** means **writing automated tests at multiple levels (unit, component, and acceptance)** and running them as part of the **deployment pipeline**.  <!-- .element class="fragment fade-in-paragraph" -->
 
-The design of a testing strategy is primarily a process of identifying and prioritizing project risks and deciding what actions to take to mitigate them.  <!-- .element class="fragment fade-in-paragraph" -->
+**Manual testing** is also an essential part of building quality in: **Showcases**, **usability testing**, and **exploratory testing** need to be done continuously throughout the project.  <!-- .element class="fragment fade-in-paragraph" -->
+
+**Testers**, **developers**, and **users** team up to write automated tests right **at the project's beginning**. Ideally, these tests come **before developers create features**. They cover not just **functional** but also **nonfunctional** aspects like capacity and security.  <!-- .element class="fragment fade-in-paragraph" -->
+
+Designing a testing strategy is about **identifying** and **prioritizing** project **risks** and **choosing actions** to mitigate them.  <!-- .element class="fragment fade-in-paragraph" -->
 
 ---
 ### Types of Tests
-In this diagram, Brian Marick categorized tests according to whether they are **business-facing** or **technology-facing**, and whether they **support the development process** or are **used to critique the project**:
+Brian Marick categorized tests based on whether they're related to **business or technology**, and if they **aid development or critique the project**:
 
 <img src="assets/types-of-tests.webp" width="600"/>
 
-It is also called Agile testing quadrants.
-
-You can find more information in the following book:  <!-- .element class="fragment fade-in-with-next" -->
+It's also known as **Agile testing quadrants**. You can find more information in the following book:  <!-- .element class="fragment fade-in-parent-with-next" -->
 <table>
   <tr>
-    <td><img src="assets/agile-testing-cover-book.png" width="80"/></td>
+    <td><img src="assets/agile-testing-cover-book.png" width="100"/></td>
     <td>
       Agile Testing: A Practical Guide for Testers and Agile Teams
       <br />
@@ -42,19 +44,28 @@ You can find more information in the following book:  <!-- .element class="fragm
 
 ------
 ### Quadrant TL: Business-Facing Tests That Support the Development Process
-Commonly known as **functional** or **acceptance** tests. [F/NF] Acceptance testing ensures that the **acceptance criteria** for a story are met. [F/NF] Acceptance tests should be written, and ideally automated, before development starts on a story. Acceptance tests that concern the functionality of the system are known as functional acceptance tests.
+Called **functional** or **acceptance** tests. **F/NF acceptance** testing ensures that the **acceptance criteria** for a **story** are met. Acceptance tests should be written, and **ideally automated**, **before development starts on a story**. Acceptance tests that concern the functionality of the system are known as **functional acceptance tests**.
 
-For developers, acceptance tests answer the **"How do I know when I am done?"** question. For users, it answers the **"Did I get what I wanted?"** question. So, in an ideal world, customers or users would write acceptance tests, since they define the success criteria for each requirement.  <!-- .element class="fragment fade-in-paragraph" -->
+Acceptance tests answer:  <!-- .element class="fragment fade-in-with-next" -->
+- For **developers**: **"How do I know when I am done?"**
+- For **users**: **"Did I get what I wanted?"**
 
-Using the mordern acceptance test frameworks and DSL, **it is possible for users to write the test scripts**, while developers and testers work together on the code that implements them.  <!-- .element class="fragment fade-in-paragraph" -->
+So, **ideally**, **users would create acceptance tests** as they define the success criteria for each requirement.  <!-- .element class="fragment fade-in-paragraph" -->
 
-Although it is correct to include **examples**, **prototypes**, and **simulations** in this quadrant, they are no longer fully automatic.  <!-- .element class="fragment fade-in-paragraph" -->
+With modern test frameworks and DSL, **users can write tests**, while **developers and testers work on the implementation**.  <!-- .element class="fragment fade-in-paragraph" -->
+
+While including **examples**, **prototypes**, and **simulations** in this quadrant is right, they're not entirely automatic anymore.  <!-- .element class="fragment fade-in-paragraph" -->
 
 <img src="assets/types-of-tests-qtl.png" width="500">
 
 ------
 ### Quadrant TL: Given-When-Then
-For each story or requirement there is a single canonical path through the application in terms of the actions that the user will perform. This is known as the **happy path**. However, any use case will, in all but the simplest of systems, allow for variations in the **initial state**, the **actions to be performed**, and the **final state** of the application. Sometimes, these variations constitute distinct use cases, which are then known as **alternate paths**. In other cases, they should cause error conditions, resulting in what is called **sad paths**. **Equivalence partitioning analysis** and **boundary value analysis** will reduce these combinations to a smaller set of cases that will completely test the requirement in question.
+Each story or requirement has:
+- **Happy Path**: Single **canonical path** through the application in terms of **user actions**.
+- **Alternete Paths**:  Different variations in **initial state**, **actions**, and **final state** that create distinct use cases.
+- **Sad Paths**: Alternete paths that lead to **error conditions**.
+
+**Equivalence partitioning analysis** and **boundary value analysis** reduce cases for comprehensive but minimal testing.
 
 <img src="assets/happy-alternate-sad-path.png" width="200" class="fragment fade-in">
 
