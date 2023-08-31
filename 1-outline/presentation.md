@@ -171,7 +171,7 @@ Mention the deploy vs release and why their order is different in different plac
             <a href="../6-testing-strategy" target="_blank">Testing Strategy</a>
             <br>
             <small>
-                Test Categories, Test Levels (Types), Test Doubles, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>
+                <span style="color: purple">Types of Tests</span>, <span style="color: purple">Test Doubles</span>, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>, Real-Life Situations and Strategies, Integration Testing, Process
             </small>
         </td>
         <td>60'</td>
