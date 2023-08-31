@@ -1,7 +1,7 @@
 ## Continuous Delivery: Testing Strategy
 #### Test Categories, Test Levels (Types), Test Doubles, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>
 
-<img src="assets/v-model.png" style="max-width: 550px"/>
+<img src="assets/v-model.png" style="max-width: 600px"/>
 
 <small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 
@@ -13,7 +13,9 @@
 
 ---
 ### Introduction
-W. Edwards Deming:
+<img src="assets/quality-meaning-meme.jpeg" class="fragment start">
+
+W. Edwards Deming:  <!-- .element class="fragment fade-in-with-next custom" -->
 > Cease dependence on mass inspection to achieve quality. Improve the process and build quality into the product in the first place.
 
 Testing is a **cross-functional** activity for **the entire team**, and should be **done continuously** from the **beginning of the project**.  <!-- .element class="fragment fade-in-paragraph custom" -->
@@ -60,7 +62,9 @@ While including **examples**, **prototypes**, and **simulations** in this quadra
 
 ------
 ### Quadrant TL: Given-When-Then
-Each story/requirement has:
+<img src="assets/given-when-then-meme.jpeg" class="fragment start" width="800">
+
+Each story/requirement has:  <!-- .element class="fragment fade-in-with-next custom" -->
 - **Happy Path**: Single **canonical path** through the application in terms of **user actions**.
 - **Alternete Paths**:  Different variations in **initial state**, **actions**, and **final state** that create distinct use cases.
 - **Sad Paths**: Alternete paths that lead to **error conditions**.
@@ -78,6 +82,8 @@ Run acceptance test like it's in **production**: **system**, **environment**, **
 
 ------
 ### Quadrant TL: Automating Acceptance Tests
+<img src="assets/write-vs-maintain-tests-meme.webp" class="fragment start" width="700">
+
 Automated acceptance tests have valuable benefits:
 - Faster **feedback loop** (developers can run them without testers)  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - **Workload reduction** on **testers**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -179,7 +185,9 @@ Start by **creating a model** of the source code or target components for testin
 
 ------
 ### Code Coverage Criteria (Code Coverage-Based Testing)
-Code coverage-based unit testing is a form of **white-box** testing. It assesses the **portion of executed code by test cases**, aiming for thorough **examination of the software's internal logic and pathways**:
+<img src="assets/tests-folder-meme.jpg" class="fragment start" width="500">
+
+Code coverage-based unit testing is a form of **white-box** testing. It assesses the **portion of executed code by test cases**, aiming for thorough **examination of the software's internal logic and pathways**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 <img src="assets/code-line-coverage.png">
 
 <details>
@@ -189,8 +197,9 @@ Code coverage-based unit testing is a form of **white-box** testing. It assesses
 
 ------
 ### Mutation Testing
-Mutation testing is a software method involving **changing specific statements in the source code**, then evaluating whether the **tests can detect errors**:
+<img src="assets/mutation-testing-meme.jpeg" class="fragment start" width="500">
 
+Mutation testing is a software method involving **changing specific statements in the source code**, then evaluating whether the **tests can detect errors**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 <table>
   <tr>
     <td><img src="assets/mutation-based-testing.png" width="400"></td>
@@ -200,14 +209,16 @@ Mutation testing is a software method involving **changing specific statements i
 
 ------
 ### Property-Based Testing (Hypothesis Testing)
-In **typical testing**, you run code and verify the **result matches your expected outcome**. In **property-based testing**, you create tests to **check that the results satisfy certain properties**.
+<img src="assets/property-based-testing-meme.jpg" class="fragment start" width="500">
 
-Steps:
+In **typical testing**, you run code and verify the **result matches your expected outcome**. In **property-based testing**, you create tests to **check that the results satisfy certain properties**.  <!-- .element class="fragment fade-in-parent custom" -->
+
+Steps:  <!-- .element class="fragment fade-in-with-next custom" -->
 - For all data matching some specification.
 - Perform some operations on the data.
 - Assert something about the result.
 
-<img src="assets/hypothesis-testing.png">
+<img src="assets/hypothesis-testing.png" class="fragment fade-in">
 
 ---
 ## Test-Driven Development (TDD)
@@ -305,7 +316,9 @@ Two main approaches:
 
 ---
 ## Summary
-For high-quality software, **everyone in the project** must share testing duties from the start till the end.
+<img src="assets/quality-responsiblity-meme.jpg" class="fragment start" style="border: 1px solid lightgray">
+
+For high-quality software, **everyone in the project** must share testing duties from the start till the end.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 The **shortest feedback loops** come from **automated tests run on every change**. These tests span all levels, **from unit to acceptance** (both functional and nonfunctional).  <!-- .element class="fragment fade-in-paragraph custom" -->
 
