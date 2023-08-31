@@ -1,5 +1,5 @@
 ## Continuous Delivery: Testing Strategy
-#### Test Categories, Test Levels (Types), Test Doubles, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>
+#### <span style="color: purple">Types of Tests</span>, <span style="color: purple">Test Doubles</span>, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>, Real-Life Situations and Strategies, Integration Testing, Process
 
 <img src="assets/v-model.png" style="max-width: 600px"/>
 
