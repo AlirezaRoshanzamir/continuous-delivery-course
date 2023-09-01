@@ -1,7 +1,7 @@
 ## Anatomy of Deployment Pipeline
 #### A Basic Deployment Pipeline, Practices, The Commit Stage, Test Stages, Release and Deployment Stages, Implementation, Metrics
 
-<img src="assets/minimal-deployment-pipeline-overview.png" width="800"/>
+<img src="assets/minimal-deployment-pipeline-overview.webp" width="800"/>
 
 <small><strong>Time to Read:</strong> 13 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
 
@@ -14,7 +14,7 @@
 ---
 ## What Is a Deployment Pipeline?
 In abstract, a deployment pipeline is an automated process to take software **from version control** to **user access**. This demands teamwork among individuals and **teams**:
-<img src="assets/deployment-pipeline-sequence-diagram.png"/>
+<img src="assets/deployment-pipeline-sequence-diagram.webp"/>
 
 ------
 ### Continued: What Is a Deployment Pipeline?
@@ -24,7 +24,7 @@ Common **minimal** deployment pipeline (**continuous integration pipeline** or *
 - **Manual test stages**: Exploratory tests, UAT, Integration (integration between services) tests.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - **Release stage**: **Delivers the system to users**, either as **packaged software** or by **deploying it into a production** or staging environment.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-<img src="assets/deployment-pipeline-sketch.png">
+<img src="assets/deployment-pipeline-sketch.webp">
 
 <details>
 <summary>Note</summary>
@@ -35,16 +35,16 @@ Mention the origin of the term "Deployment Pipeline" because of the CPU pipeline
 ### A Basic Deployment Pipeline
 A typical deployment pipeline:
 
-<img src="assets/typical-deployment-pipeline.png"/>
+<img src="assets/typical-deployment-pipeline.webp"/>
 
 ------
 ### Continued: A Basic Deployment Pipeline
 **Testers** and **operations** may need to approve deployment to **UAT** or **production**:
-<img src="assets/pipeline-activity.png" width="500"/>
+<img src="assets/pipeline-activity.webp" width="500"/>
 
 ---
 ## Deployment Pipeline Practices
-<img src="assets/practice-meme.jpg" class="fragment start" width="600"/>
+<img src="assets/practice-meme.webp" class="fragment start" width="600"/>
 
 There are some practices you should follow:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Only Build Your Binaries Once  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -64,10 +64,10 @@ There are some practices you should follow:  <!-- .element: class="fragment fade
 
 ------
 ## Deployment Pipeline Practices: Scheduling
-<img src="assets/pipeline-scenarios-meme.jpeg" class="fragment start"/>
+<img src="assets/pipeline-scenarios-meme.webp" class="fragment start"/>
 
 Intelligent scheduling is crucial to implementing a deployment pipeline:  <!-- .element: class="fragment fade-in-with-next custom" -->
-<img src="assets/deployment-pipeline-scheduling-stages.png"/>
+<img src="assets/deployment-pipeline-scheduling-stages.webp"/>
 
 ---
 ## The Commit Stage
@@ -119,7 +119,7 @@ When delivering software incrementally, automated production deployment (**"Cont
 
 To authorize deployment, you need a method. The main needs include **seeing approved release candidates**, having a **button** to choose and deploy **a version** to the **desired environment** (like UAT, capacity, exploratory, staging, production).  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/release-candidates-and-deploy-push-button.png" class="fragment complete-fade-out">
+<img src="assets/release-candidates-and-deploy-push-button.webp" class="fragment complete-fade-out">
 
 Two common test stages are:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Manual Testing
@@ -140,7 +140,7 @@ Releasing should be easy: **select a version**, then **press a button**. **Backi
 
 ------
 ### Automating Deployment and Release
-<img src="assets/deploy-meme.jpeg" class="fragment start" width="400">
+<img src="assets/deploy-meme.webp" class="fragment start" width="400">
 
 Production environments need to be **locked down**, allowing changes only **via automation**. This covers application **deployment**, **configurations**, **software stacks**, **network topology**, and **state** changes.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -191,7 +191,7 @@ Take an **incremental approach** when setting up a deployment pipeline. Typicall
 ### Modeling Your Value Stream and Creating a Walking Skeleton
 Start by mapping the value stream from check-in to release:
 
-<img src="assets/simple-value-stream-map.png" />
+<img src="assets/simple-value-stream-map.webp" />
 
 After creating a value stream map, **model your process** in your **CI** and **release management** tool.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -233,7 +233,7 @@ Incorporate **at least one or two** automated **tests of each type** you need in
 
 ------
 ### Evolving Your Pipeline
-<img src="assets/deployment-pipeline-evolution.jpeg" class="fragment complete-fade-out" width="700">
+<img src="assets/deployment-pipeline-evolution.webp" class="fragment complete-fade-out" width="700">
 
 Two common pipeline extensions: **components** and **branches**. For large apps, use **mini-pipelines** for **each component**, then a **final pipeline** for **assembly**, **[F/NF] acceptance testing**, and **deployment to environments (testing, staging, and production)**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -245,7 +245,7 @@ Keep in mind these three key points:  <!-- .element: class="fragment fade-in-wit
 
 ---
 ## Metrics
-<img src="assets/lean-metrics-meme.jpeg" class="fragment start" width="600">
+<img src="assets/lean-metrics-meme.webp" class="fragment start" width="600">
 
 Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -259,7 +259,7 @@ Other metrics such as "Number of defects" **are not good as primary metrics**.  
 
 ------
 ### Reducing Cycle Time
-<img src="assets/cycling-meme.jpg" class="fragment complete-fade-out">
+<img src="assets/cycling-meme.webp" class="fragment complete-fade-out">
 
 Once you know your application's cycle time, you can find ways to reduce it, applying the **Theory of Constraints**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 1. Identify the system's **limiting constraint**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
@@ -268,7 +268,7 @@ Once you know your application's cycle time, you can find ways to reduce it, app
 4. **Elevate the constraint**. If the cycle time remains too long after steps 2 and 3, **increase available resources**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 5. **Rinse and repeat**. Find **the next constraint** on your system and **go back to step 1**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-<img src="assets/theory-of-constraints.jpg" width="500">
+<img src="assets/theory-of-constraints.webp" width="500">
 
 <details>
 <summary>Note</summary>
@@ -293,13 +293,13 @@ Some other diagnostics that can warn you of problems:
 - Number of **build failures per day**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - **Duration of build**, including automated tests  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-<img src="assets/cyclomatic-complexity-example.png" width="530"/>
+<img src="assets/cyclomatic-complexity-example.webp" width="530"/>
 
 ------
 ### Continued: Other Metrics
 Each team's CI server should produce these **reports and visuals** with **every check-in**, **storing** them in the artifact repository. **Publish** these results on an internal **website**, with a **dedicated page for each project**. Additionally, **aggregate** them for monitoring across all projects in your **development program or organization**:
 
-<img src="assets/cicd-indicators-dashboard.png" width="900"/>
+<img src="assets/cicd-indicators-dashboard.webp" width="900"/>
 
 ---
 ## Summary

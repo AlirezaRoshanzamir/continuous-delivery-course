@@ -1,7 +1,7 @@
 ## Continuous Delivery: Build and Deployment Scripting
 #### Build Tools, <span style="color: brown">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: brown">Package Managers</span>, <span style="color: brown">Code Generation</span>, <span style="color: brown">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: brown">Infrastructure as Code</span>
 
-<img src="assets/iac.png" width="800"/>
+<img src="assets/iac.webp" width="800"/>
 
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
@@ -23,7 +23,7 @@ Deploying software into **testing and production environments** **is rarely** as
 ## An Overview of Build Tools
 All build tools have a common core: They allow you to model a dependency network:
 
-<img src="assets/build-dependency-network.png">
+<img src="assets/build-dependency-network.webp">
 
 ------
 ### Continued: An Overview of Build Tools
@@ -52,8 +52,8 @@ Powerful product-oriented build tool capable of tracking dependencies within a b
 But, **it's hard to debug** complex Makefiles. A common convention adopted by teams working on large codebases is to create a Makefile for each directory, and have a top-level Makefile that recursively runs the Makefiles in each subdirectory (which is [considered harmful](https://accu.org/journals/overload/14/71/miller_2004/)):  <!-- .element: class="fragment fade-in-parent-with-next" -->
 <table>
   <tr>
-    <td><img src="assets/makefile-example.png" width="600"></td>
-    <td><img src="assets/recursive-makefile.png" width="250"></td>
+    <td><img src="assets/makefile-example.webp" width="600"></td>
+    <td><img src="assets/recursive-makefile.webp" width="250"></td>
   </tr>
 </table>
 
@@ -62,12 +62,12 @@ Some other drawbacks:  <!-- .element: class="fragment fade-in-with-next" -->
 - Whitespace can be significant under certain circumstances
 - Doesn't provide for extensions to the core system
 
-<img src="assets/makefile-syntax-meme.jpeg" class="fragment end" width="800">
+<img src="assets/makefile-syntax-meme.webp" class="fragment end" width="800">
 
 ------
 ### An Overview of Build Tools: Ant
 The runtime components of Ant are written in Java, but the Ant scripts are an **external DSL** written in **XML**. This combination gives Ant powerful cross-platform capabilities.
-<img src="assets/ant-example.jpg" width="700">
+<img src="assets/ant-example.webp" width="700">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
 - XML is neither succinct nor pleasant for humans to read.  <!-- .element class="fragment highlight-current-blue" -->
@@ -81,14 +81,14 @@ As a result of these limitations, Ant files tend to be long and poorly factored-
 ### An Overview of Build Tools: NAnt and MSBuild
 NAnt uses essentially the **same syntax as Ant, with only a few differences**. **Microsoft** later introduced its **minor variation on NAnt** and called it MSBuild which is more **tightly integrated into Visual Studio**, understanding how to build Visual Studio solutions and projects and how to manage dependencies.
 
-<img src="assets/msbuild-example.png">
+<img src="assets/msbuild-example.webp">
 
 ------
 ### An Overview of Build Tools: Maven
 Maven attempts to **remove a large amount of boilerplate** found in Ant files by having a more complex domain that makes **many assumptions about the way your Java project is laid out**. This principle of favoring **convention over configuration** means that, so long as your **project conforms to the structure dictated by Maven**, it will perform almost any **build**, **deploy**, **test**, and **release** task you can imagine with **a single command**, without having to write more than a few lines of XML:
 <table>
   <tr>
-    <td><img src="assets/pom-example.jpg" width="500"></td>
+    <td><img src="assets/pom-example.webp" width="500"></td>
     <td><img src="assets/maven-project-structure.webp" width="250"></td>
   </tr>
 </table>
@@ -102,8 +102,8 @@ Some shortcomings:  <!-- .element: class="fragment fade-in-with-next" -->
 The dominant Ruby build tool, Rake, came about as an experiment to see if **Make**'s functionality could be easily reproduced by creating an **internal DSL** in Ruby. Rake has no understanding of anything except **tasks** and **dependencies**. However, since Rake scripts are plain Ruby, you can **use Ruby's API** to carry out whatever tasks you want. You have all the native power of a general-purpose programming language at your disposal:
 <table>
   <tr>
-    <td><img src="assets/rake-example.png" width="500"></td>
-    <td><img src="assets/rake-dependency-example.png" width="500"></td>
+    <td><img src="assets/rake-example.webp" width="500"></td>
+    <td><img src="assets/rake-dependency-example.webp" width="500"></td>
   </tr>
 </table>
 
@@ -120,7 +120,7 @@ The new generation of build tools, such as Buildr, Gradle, and Gantt, have taken
 Buildr is built on **top of Rake**, so everything you can do in Rake you can continue to do in Buildr. However, Buildr is also a drop-in **replacement** for Maven-it **uses the same conventions that Maven does**, including **filesystem layout**, **artifact specifications**, and **repositories**. It also lets you **use Ant tasks** (including any custom ones) with zero configuration.  <!-- .element: class="fragment fade-in-paragraph" -->
 
 Gradle was designed for **multi-project builds**, which can grow to be large. It operates based on a series of build **tasks** that can run **serially** or in **parallel**. Incremental builds are supported:  <!-- .element: class="fragment fade-in-parent-with-next" -->
-<img src="assets/gradle-example.png" style="border: 1px solid lightgray">
+<img src="assets/gradle-example.webp" style="border: 1px solid lightgray">
 
 If you're starting **a new Java project**, or looking for **a replacement for Ant or Maven**, we strongly suggest you consider **Gradle**, or Buildr with **DSLs in Groovy**.  <!-- .element: class="fragment fade-in-paragraph" -->
 
@@ -128,7 +128,7 @@ If you're starting **a new Java project**, or looking for **a replacement for An
 ### An Overview of Build Tools: Psake
 Psake is an **internal DSL** written in **PowerShell**, which provides **task-oriented** dependency networks:
 
-<img src="assets/psake-example.png">
+<img src="assets/psake-example.webp">
 
 ------
 ### An Overview of Build Tools: Bazel (Google), Buck (Facebook), Pants (Twitter)
@@ -166,7 +166,7 @@ A monorepo is a single repository containing multiple distinct projects, with we
 ### Monorepo != Monolith
 A good monorepo is the opposite of monolithic:
 
-<img src="assets/monorepo-vs-monolith.png">
+<img src="assets/monorepo-vs-monolith.webp">
 
 ------
 ### Polyrepo
@@ -205,7 +205,7 @@ It is **more than code & tools**. A monorepo changes your **organization** and t
 ### Monorepo Tools
 As your workspace grows, the tools have to help you keep it fast, understandable and manageable:
 
-<img src="assets/monorepo-tools.png" style="border: 1px solid gray; border-radius: 10" width="1120">
+<img src="assets/monorepo-tools.webp" style="border: 1px solid gray; border-radius: 10" width="1120">
 
 ------
 ### Monorepo Tools Features: Fast
@@ -256,7 +256,7 @@ As your workspace grows, the tools have to help you keep it fast, understandable
     <td>
       Dependency graph visualization
       <br>
-      <img src="assets/monorepo-dependency-graph-visualization.png" width="700"/>
+      <img src="assets/monorepo-dependency-graph-visualization.webp" width="700"/>
     </td>
   </tr>
 </table>
@@ -329,16 +329,16 @@ Some general principles and practices of build and deployment scripting should a
 
 ---
 ## Package Managers
-<img src="assets/start-packaging-meme.jpg" class="fragment start">
+<img src="assets/start-packaging-meme.webp" class="fragment start">
 
 A package manager or package-management system is a collection of software tools that automates the process of **installing**, **upgrading**, **configuring**, and **removing** computer programs for a computer in a consistent manner.  <!-- .element: class="fragment fade-in-parent-with-next" -->
-<img src="assets/package-management.png" width="900">
+<img src="assets/package-management.webp" width="900">
 
 ------
 ### Language Specific and Language Agnostic Package Managers
 Some language specific and language agnostic package managers:
 
-<img src="assets/language-specific-vs-language-agnostic-package-managers.png" width="1100">
+<img src="assets/language-specific-vs-language-agnostic-package-managers.webp" width="1100">
 
 Language agnositc package manager doesn't result language agnostic package
 
@@ -347,8 +347,8 @@ Language agnositc package manager doesn't result language agnostic package
 
 <table>
   <tr>
-    <td><img src="assets/sdist-and-bdist-pypi-page.png" width="700"></td>
-    <td><img src="assets/wheel-filename.png" width="700"></td>
+    <td><img src="assets/sdist-and-bdist-pypi-page.webp" width="700"></td>
+    <td><img src="assets/wheel-filename.webp" width="700"></td>
   </tr>
 </table>
 
@@ -363,14 +363,14 @@ You may need different systems for generating built distributions.
       <img src="assets/packaging-for-python-libraries.webp" width="700">
     </td>
     <td>
-      <img src="assets/packaging-for-python-applications.png">
+      <img src="assets/packaging-for-python-applications.webp">
     </td>
   </tr>
   <tr class="simple">
     <td colspan="2">
       Python Package Management Options and Comparison
       <br>
-      <img src="assets/python-package-management-options-and-comparison.png">
+      <img src="assets/python-package-management-options-and-comparison.webp">
     </td>
   </tr>
 </table>
@@ -383,7 +383,7 @@ You may need different systems for generating built distributions.
     <td><img src="assets/virtual-environment.webp" width="750"></td>
   </tr>
   <tr class="simple">
-    <td><img src="assets/local-packages-directory.png"></td>
+    <td><img src="assets/local-packages-directory.webp"></td>
   </tr>
 </table>
 
@@ -402,8 +402,8 @@ You may need different systems for generating built distributions.
 
 <table>
   <tr>
-    <td><img src="assets/java-maven-repository.png"></td>
-    <td><img src="assets/java-maven-repository-target.png"></td>
+    <td><img src="assets/java-maven-repository.webp"></td>
+    <td><img src="assets/java-maven-repository-target.webp"></td>
   </tr>
 </table>
 
@@ -493,9 +493,9 @@ Changes to testing and production environments should **only be made through an 
 
 In addition to the previous mentioned notes, the following should be considered:  <!-- .element: class="fragment fade-in-with-next" -->
 - **Deploying and Testing Layers**: You should strive to build on good known foundations. Before we even bother to copy our binary deliverables to the correct place in the filesystem, we want to know that our environment is ready for us in these layers:
-    <img src="assets/deploying-software-layers.png" width="300">
+    <img src="assets/deploying-software-layers.webp" width="300">
 - **Testing Your Environment's Configuration**: Provide a degree of confidence that the deployed layer is working:
-    <img src="assets/deployment-testing-layers.png" width="850">
+    <img src="assets/deployment-testing-layers.webp" width="850">
 
 <details>
 <summary>Note</summary>
@@ -531,7 +531,7 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 
 ---
 ## Infrastructure as Code (IaC)
-<img src="assets/infrastructure-as-code-meme.jpg" class="fragment start">
+<img src="assets/infrastructure-as-code-meme.webp" class="fragment start">
 
 Infrastructure as Code is the **managing** and **provisioning** of infrastructure through **code instead of through manual processes**.  <!-- .element: class="fragment insides-fade-in-then-out" -->
 
@@ -556,13 +556,13 @@ Ansible is **agentless**, which means the nodes it manages do not require any so
 <table>
   <tr>
     <td>
-      <img src="assets/ansible-usage.png" width="700">
+      <img src="assets/ansible-usage.webp" width="700">
     </td>
     <td>
-      <img src="assets/ansible-playbook-schema.png" width="700">
+      <img src="assets/ansible-playbook-schema.webp" width="700">
     </td>
     <td>
-      <img src="assets/ansible-playbook-example.png" width="700">
+      <img src="assets/ansible-playbook-example.webp" width="700">
     </td>
   </tr>
 </table>
@@ -575,8 +575,8 @@ Terraform is an **agentless** infrastructure as code tool that enables you to sa
 
 <table>
   <tr>
-    <td><img src="assets/terraform-architecture.jpg"></td>
-    <td><img src="assets/terraform-file.png" width="400"></td>
+    <td><img src="assets/terraform-architecture.webp"></td>
+    <td><img src="assets/terraform-file.webp" width="400"></td>
   </tr>
 </table>
 

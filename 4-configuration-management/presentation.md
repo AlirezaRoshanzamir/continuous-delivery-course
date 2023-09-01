@@ -1,7 +1,7 @@
 ## Continuous Delivery: Configuration Management
 #### <span style="color: purple">Version Control and Advices</span>, Managing Dependencies, Managing Software Configuration, <span style="color: purple">Managing Environments</span>
 
-<img src="assets/gitops.png" style="border: 1px solid black"/>
+<img src="assets/gitops.webp" style="border: 1px solid black"/>
 
 <small>**Time to Read:** 12 Minutes</small>, <small>**Time to Present:** 55 Minutes</small>
 
@@ -33,7 +33,7 @@ It doesn't only mean Git or something but almost means Git or something :)
 
 ---
 ## Version Control
-<img src="assets/version-control-meme.jpg" class="fragment start" width="800">
+<img src="assets/version-control-meme.webp" class="fragment start" width="800">
 
 The version control:  <!-- .element class="fragment fade-in-with-next custom" -->
 - **Keeps** and allows **access** to **all versions** of **every stored file**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -67,11 +67,11 @@ Why?  <!-- .element class="fragment fade-in" -->
 - Many projects also save **binary images** of app servers, **compilers**, VMs, and **toolchain** in version control (**excluding output binaries** that **multiply quickly**, **two commits** might exist for the same version, one for source code and one for binaries).  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - For handling **big files**, utilize **LFS plugins** like GitLFS. Otherwise, rely on **artifactories**, **storage**, and **file servers** (like JFrog, Nexus, Samba, MinIO, ...), and remember versioning.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/which-version-i-used-meme.png" width="350">
+<img src="assets/which-version-i-used-meme.webp" width="350">
 
 ------
 ### Keep Absolutely Everything in Version Control: Documentation
-<img src="assets/i-am-documentation-meme.jpg" class="fragment start" width="600">
+<img src="assets/i-am-documentation-meme.webp" class="fragment start" width="600">
 
 Having **documentation in version control** and the source code repository offers these advantages:  <!-- .element class="fragment fade-in-parent custom" -->
 - **Auto-generating** **references** section from the **code**, **docstrings**, **tests**, **changelogs**, **Swagger APIs**, **Protobufs**, etc.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -80,7 +80,7 @@ Having **documentation in version control** and the source code repository offer
 - Supporting **versioning** and **review mechanism**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - With **reStructuredText** or **Markdown**, you can create various views like **HTML**, **Latex**, **PDF**, **Confluence**, **Presentation**. This lets you **publish** them **anywhere** and in any **desired format**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/living-documentation.png" width="800">
+<img src="assets/living-documentation.webp" width="800">
 
 ------
 ### Keep Absolutely Everything in Version Control: Documentation
@@ -88,13 +88,13 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
 
 <table>
   <tr>
-    <td><img src="assets/click-home-page.png" width="350"/></td>
-    <td><img src="assets/click-api.png" width="550"/></td>
-    <td rowspan="2"><img src="assets/click-repository.png" width="550"/></td>
+    <td><img src="assets/click-home-page.webp" width="350"/></td>
+    <td><img src="assets/click-api.webp" width="550"/></td>
+    <td rowspan="2"><img src="assets/click-repository.webp" width="550"/></td>
   </tr>
   <tr class="simple">
-    <td><img src="assets/click-pdf.png" width="200"/></td>
-    <td><img src="assets/click-example.png" width="550"/></td>
+    <td><img src="assets/click-pdf.webp" width="200"/></td>
+    <td><img src="assets/click-example.webp" width="550"/></td>
   </tr>
 </table>
 
@@ -108,7 +108,7 @@ For example, consider the Python [Click](https://click.palletsprojects.com/) CLI
 
 ------
 ### Use Meaningful Commit Messages
-<img src="assets/commit-message-meme.jpg" width="800" class="fragment complete-fade-out" style="border: 1px solid gray">
+<img src="assets/commit-message-meme.webp" width="800" class="fragment complete-fade-out" style="border: 1px solid gray">
 
 - A message like **"fixed obscure bug"** **complicates debugging**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 - Add a **link** to the **feature or bug's identifier** in your **project management tool**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -205,7 +205,7 @@ Deployment and runtime: Understanding the **current configuration of running app
 
 ---
 ## Managing Environments
-<img src="assets/production-environment-meme.jpeg" class="fragment start">
+<img src="assets/production-environment-meme.webp" class="fragment start">
 
 **Automate environment creation** completely:
 - **Removes** the problem of having **random pieces of infrastructure around**.  <!-- .element class="fragment fade-in-parent custom" -->
@@ -237,13 +237,13 @@ Managing **third party** products:  <!-- .element class="fragment fade-in-parent
 
 ------
 ### Tools to Manage Environments
-<img src="assets/environment-management-tools-responsibilities.png" width="600"/>
+<img src="assets/environment-management-tools-responsibilities.webp" width="600"/>
 
-<img src="assets/environment-management-tools-comparison.png" width="900"/>
+<img src="assets/environment-management-tools-comparison.webp" width="900"/>
 
 ------
 ### Managing the Change Process
-<img src="assets/fix-production-bug-meme.jpg" class="fragment complete-fade-out" width="500">
+<img src="assets/fix-production-bug-meme.webp" class="fragment complete-fade-out" width="500">
 
 A production environment must be **locked down**. **No** changes allowed **without** following your **change management process**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 

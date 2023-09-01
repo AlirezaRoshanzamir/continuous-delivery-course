@@ -1,7 +1,7 @@
 ## Continuous Delivery: The Commit Stage
 #### Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
 
-<img src="assets/the-commit-stage.png" width="600"/>
+<img src="assets/the-commit-stage.webp" width="600"/>
 
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
@@ -23,7 +23,7 @@ The **binaries** and **reports** are then stored into your central **artifact re
 
 For **developers**, the commit stage is the **most important feedback cycle** in the development process.  <!-- .element: class="fragment fade-in-paragraph" -->
 
-<img src="assets/the-commit-stage.png" width="350"/>
+<img src="assets/the-commit-stage.webp" width="350"/>
 
 <details>
 <summary>Note</summary>
@@ -57,15 +57,15 @@ Some principles and practices that make for an effective commit stage:
 <img src="assets/manage-all-the-binaries-meme.webp" class="fragment start">
 
 The commit stage inputs are **source code**, and the outputs are **binaries** and **reports** which need to be **stored somewhere** for reuse in the later stages of your pipeline, and for your team to be able to get hold of them:  <!-- .element: class="fragment fade-in-parent-with-next" -->
-<img src="assets/role-of-artifact-repository.png">
+<img src="assets/role-of-artifact-repository.webp">
 
 ---
 ## Commit Test Suite Principles and Practices
-<img src="assets/tests-everywhere-meme.jpeg" class="fragment start">
+<img src="assets/tests-everywhere-meme.webp" class="fragment start">
 
 Some important principles and practices governing the design of a commit test suite. Here, we only talk about unit-tests while it's recommended to include some acceptance and end-to-end tests in the commit stage test suit:  <!-- .element: class="fragment fade-in-with-next" -->
 - The vast majority of your commit tests should be comprised of unit tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  <img src="assets/test-automation-pyramid.png" width="800">
+  <img src="assets/test-automation-pyramid.webp" width="800">
 - Should be very fast to execute  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Should cover a large proportion of the codebase (around 80% is a good rule of thumb)  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Avoid the User Interface  <!-- .element: class="fragment insides-fade-in-then-out" -->

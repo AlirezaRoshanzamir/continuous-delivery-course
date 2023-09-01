@@ -1,7 +1,7 @@
 ## Continuous Delivery: Introduction
 #### Definition, <span style="color: brown">Minimum Viable CD</span>, <span style="color: purple">Ingredients</span>, Deployment Pipeline, Why?, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: brown">Relation with Other Movements</span>, <span style="color: brown">Scrumfall</span>, Case Studies, <span style="color: brown">CD Patterns Mindmap</span>
 
-<img src="assets/cd-phases.png" width="1100"/>
+<img src="assets/cd-phases.webp" width="1100"/>
 
 <small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
 
@@ -20,11 +20,11 @@ Contiuous delivery is an **ability**, **development practice**, **discipline**, 
 - The team focuses on **maintaining deployable software** rather than **developing new features**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - **Fast feedback** is available to **all team members**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/continuous-delivery-feedbacks.png">
+<img src="assets/continuous-delivery-feedbacks.webp">
 
 ---
 ## Minimum Viable CD
-<img src="assets/minimum-meme.jpg" class="fragment start">
+<img src="assets/minimum-meme.webp" class="fragment start">
 
 The **very** minimum activities for CD include (some items can be used interchangeably):
 - Small autonomous teams, Small steps (work in small batches), Fast feedback, Informed decision making  <!-- .element class="fragment highlight-current-blue" -->
@@ -43,7 +43,7 @@ For detailed information, visit [Minimum CD](https://minimumcd.org/minimumcd) an
 
 ---
 ## Ingredients
-<img src="assets/cd-ingredients-meme.jpg" class="fragment start">
+<img src="assets/cd-ingredients-meme.webp" class="fragment start">
 
 Ingredients:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **Configuration management**
@@ -61,17 +61,17 @@ Ingredients:  <!-- .element: class="fragment fade-in-with-next custom" -->
 
 ------
 ### CI Certification Test
-<img src="assets/ci-certification-test.png">
+<img src="assets/ci-certification-test.webp">
 
 ---
 ## Deployment Pipeline
 A key **pattern** in CD from continuous integration and test automation:
 
-<img src="assets/deployment-pipeline-sequence-diagram.png" alt="Took from https://continuousdelivery.com/foundations/test-automation/" width="800px"/>
+<img src="assets/deployment-pipeline-sequence-diagram.webp" alt="Took from https://continuousdelivery.com/foundations/test-automation/" width="800px"/>
 
 ---
 ## Why?
-<img src="assets/why-meme.png" class="fragment start">
+<img src="assets/why-meme.webp" class="fragment start">
 
 - Make releases **painless** **low-risk** events  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Reduce **time to market**   <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -79,23 +79,23 @@ A key **pattern** in CD from continuous integration and test automation:
 - Reduce the **cost** of ongoing software development  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Increase **customer** and **employee satisfaction**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/idea-to-release.png">
+<img src="assets/idea-to-release.webp">
 
 ---
 ## Impacts
-<img src="assets/cd-practices-are-useless-meme.jpg" class="fragment start" style="border: 1px solid lightgray">
+<img src="assets/cd-practices-are-useless-meme.webp" class="fragment start" style="border: 1px solid lightgray">
 
 The following image is extracted from the book **Accelerate** and embodies a **four-year** research project initiated in **2013**. This study sought to explore vital **capabilities** and **practices** that accelerate software **development** and **delivery**, enhancing **company value**. To achieve this, researchers used rigorous **academic research methods**:  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/accelerate-overall-research-program.png" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
+<img src="assets/accelerate-overall-research-program.webp" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
 
 ------
 ### Impacts - Software Delivery Performance
 Based on the results of the mentioned research, companies are categorized into **three clusters**:
 <table>
   <tr>
-    <td><img src="assets/accelerate-software-delivery-performance-for-2017.png" alt="Took from the Accelerate book"/></td>
-    <td><img src="assets/accelerate-new-work-vs-unplanned-work.png" alt="Took from the Accelerate book"/></td>
+    <td><img src="assets/accelerate-software-delivery-performance-for-2017.webp" alt="Took from the Accelerate book"/></td>
+    <td><img src="assets/accelerate-new-work-vs-unplanned-work.webp" alt="Took from the Accelerate book"/></td>
   </tr>
 </table>
 
@@ -107,12 +107,12 @@ The **performance gap** between high and low performers **increases over time**:
 
 <table>
   <tr>
-    <td><img src="assets/accelerate-change-lead-rate.png" alt="Took from the Accelerate book" width="400px"/></td>
-    <td><img src="assets/accelerate-change-failure-rate.png" alt="Took from the Accelerate book" width="400px"/></td>
+    <td><img src="assets/accelerate-change-lead-rate.webp" alt="Took from the Accelerate book" width="400px"/></td>
+    <td><img src="assets/accelerate-change-failure-rate.webp" alt="Took from the Accelerate book" width="400px"/></td>
   </tr>
   <tr>
-    <td><img src="assets/accelerate-deploy-frequency.png" alt="Took from the Accelerate book" width="400px"/></td>
-    <td><img src="assets/accelerate-mttr.png" alt="Took from the Accelerate book" width="400px"/></td>
+    <td><img src="assets/accelerate-deploy-frequency.webp" alt="Took from the Accelerate book" width="400px"/></td>
+    <td><img src="assets/accelerate-mttr.webp" alt="Took from the Accelerate book" width="400px"/></td>
   </tr>
 </table>
 
@@ -120,13 +120,13 @@ The **performance gap** between high and low performers **increases over time**:
 ### Impacts - Westrum Organization Culture Model
 The model of **how to change culture** has changed:
 
-<img src="assets/change-culture.png" width="500">
+<img src="assets/change-culture.webp" width="500">
 
 ------
 ### Continued: Impacts - Westrum Organization Culture Model
 The **continuous delivery** practices significantly impact the organization's culture, fostering a more **generative environment**.
 
-<img src="assets/accelerate-westrum-model.png" alt="Took from the Accelerate book" width="900px"/>
+<img src="assets/accelerate-westrum-model.webp" alt="Took from the Accelerate book" width="900px"/>
 
 ---
 ## Relation with Agile, DevOps, Lean
@@ -145,20 +145,20 @@ In short, they vary in **origin**, **history**, **covered aspects**, and **princ
 ### Continued: Relation with Agile, DevOps, Lean
 Finally, look at the **first principle** behind the **Agile manifesto**:
 
-<img src="assets/cd-in-agile-manifesto.png" width="600">
+<img src="assets/cd-in-agile-manifesto.webp" width="600">
 
 ------
 ### Continued: Relation with Agile, DevOps, Lean
 **Agile** optimizes **software development**, but doesn't address the full IT **value stream**. In contrast, **DevOps** breaks down **Dev and Ops barriers** for holistic optimization. **Lean** has a broader view, focusing on **entire value stream** improvement:
 
-<img src="assets/lean-agile-devops.png" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar" width="1100"/>
+<img src="assets/lean-agile-devops.webp" alt="Took from https://www.linkedin.com/pulse/how-lean-agile-devops-related-each-other-umesh-kumar" width="1100"/>
 
 ---
 ## Scrumfall (Water-Scrum-Fall)
 **Water-Scrum-Fall** describes how Agile is often used now. But, **partial Scrum implementation** can cause issues:
 <table>
   <tr>
-    <td><img src="assets/scrumfall-1.png" width="500"></img></td>
+    <td><img src="assets/scrumfall-1.webp" width="500"></img></td>
     <td><img src="assets/scrumfall-2.webp" width="500"></img></td>
   </tr>
 </table>
@@ -166,25 +166,25 @@ Finally, look at the **first principle** behind the **Agile manifesto**:
 ---
 ## HP Laserjet Framework Case Study
 **Before CI:**
-<img src="assets/hp-2008.png" width="700">
+<img src="assets/hp-2008.webp" width="700">
 
 ------
 ## Continued: HP Laserjet Framework Case Study
 **The CI pipeline:**
-<img src="assets/hp-pipeline.png" width="700">
+<img src="assets/hp-pipeline.webp" width="700">
 
 ------
 ## Continued: HP Laserjet Framework Case Study
 **After CI:**
-<img src="assets/hp-2008-to-2011.png" width="600">
+<img src="assets/hp-2008-to-2011.webp" width="600">
 
-<img src="assets/continuous-delivery-rework-meme.jpeg" class="fragment fade-in" width="350">
+<img src="assets/continuous-delivery-rework-meme.webp" class="fragment fade-in" width="350">
 
 ---
 ## CD Patterns Mindmap
 <small><a href="https://app.zenflowchart.com/mindmap/ZLbSFGkwvQBEEnXBxG5V">Link to the mindmap</a></small>
 
-<img src="assets/cd-patterns-mindmap.jpg" width="700">
+<img src="assets/cd-patterns-mindmap.webp" width="700">
 
 ---
 ## Summary
@@ -198,4 +198,4 @@ The practices of continuous delivery bring several important **benefits**:
 - Happier teams
 
 Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/continuous-improvement-meme.jpg" width="250">
+<img src="assets/continuous-improvement-meme.webp" width="250">

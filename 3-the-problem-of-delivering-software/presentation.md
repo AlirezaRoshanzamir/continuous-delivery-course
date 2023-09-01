@@ -1,7 +1,7 @@
 ## Continuous Delivery: The Problem of Delivering Software
 #### Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principles
 
-<img src="assets/wall-of-confusion.png" style="max-width: 550px"/>
+<img src="assets/wall-of-confusion.webp" style="max-width: 550px"/>
 
 <small>**Time to Read:** 8 Minutes</small>, <small>**Time to Present:** 30 Minutes</small>
 
@@ -13,7 +13,7 @@
 
 ---
 ## Release Antipatterns
-<img src="assets/software-release-day-panic-meme.jpeg" class="fragment start" width="450"/>
+<img src="assets/software-release-day-panic-meme.webp" class="fragment start" width="450"/>
 
 The day of a software release is often stressful due to specific **antipatterns**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - Manual Software Deployment
@@ -22,8 +22,8 @@ The day of a software release is often stressful due to specific **antipatterns*
 
 <table>
   <tr>
-    <td><img src="assets/antipattern.png" width="500"></td>
-    <td><img src="assets/emontional-cycle-of-manual-delivery.png" width="600"></td>
+    <td><img src="assets/antipattern.webp" width="500"></td>
+    <td><img src="assets/emontional-cycle-of-manual-delivery.webp" width="600"></td>
   </tr>
 </table>
 
@@ -76,7 +76,7 @@ Our goal is to explain **deployment pipelines**, along with **high automation** 
 
 ---
 ## Refined Goal
-<img src="assets/cd-refined-goal-meme.jpeg" class="fragment start"/>
+<img src="assets/cd-refined-goal-meme.webp" class="fragment start"/>
 
 We want to deliver software that's **high-quality** and **valuable** in an **efficient**, **fast**, and **reliable** manner by making releases:  <!-- .element class="fragment fade-in-parent-with-next" -->
 - **Automated**
@@ -104,10 +104,10 @@ We want to deliver software that's **high-quality** and **valuable** in an **eff
 ------
 ### Does This Process Scale?
 
-<img src="assets/here-we-go-again.jpg">  <!-- .element: class="fragment complete-fade-out" -->
+<img src="assets/here-we-go-again.webp">  <!-- .element: class="fragment complete-fade-out" -->
 
 The techniques and principles that we describe have been **proven in real projects** in all kinds of organizations, both **large** and **small** in all kinds of situations. Much inspired by the philosophy and ideas of the **lean movement** which have been applied to **huge organizations** and **even whole economies**.  <!-- .element: class="fragment fade-in-parent-with-next" -->
-<img src="assets/it-works.jpeg" width="400">
+<img src="assets/it-works.webp" width="400">
 
 ---
 ## Benefits
@@ -130,7 +130,7 @@ The techniques and principles that we describe have been **proven in real projec
   <!-- - There should not be a special QA deployment strategy, or a special acceptance test, or production deployment strategy.  -->
   - Use the **same deployment method** for all targets, **including developer workstations** whenever feasible.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 
-<img src="assets/cd-benefits.png" width="450">
+<img src="assets/cd-benefits.webp" width="450">
 
 ---
 ## Release Candidate
@@ -139,13 +139,13 @@ The techniques and principles that we describe have been **proven in real projec
 -  Comprehensive tests in a production-like environment &rArr; Always releasable state  <!-- .element class="fragment highlight-current-blue" -->
 
 <figure style="text-align: center">
-  <img src="assets/traditional-release-candidate.png" width="650"/>
+  <img src="assets/traditional-release-candidate.webp" width="650"/>
   <figcaption>Traditional release candidate</figcaption>
 </figure>
 
 ---
 ## Principles
-<img src="assets/bring-the-pain-forward-meme.jpeg" class="fragment start">
+<img src="assets/bring-the-pain-forward-meme.webp" class="fragment start">
 
 These are the **essential** elements for an **effective delivery process**:
 - Create a Repeatable, Reliable Process for Releasing Software  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -177,4 +177,4 @@ These are the **essential** elements for an **effective delivery process**:
 Through **automated build**, **test**, and **deployment**, we can confirm changes, ensure the process is **reproducible** across various environments, and greatly **reduce chances of errors** in production.
 
 We also get to spend more **weekends with our families** and **friends**, leading **less stressful lives**, and boosting productivity.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/family-meme.jpg">
+<img src="assets/family-meme.webp">
