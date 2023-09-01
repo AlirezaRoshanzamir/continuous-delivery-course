@@ -40,11 +40,13 @@ A typical deployment pipeline:
 ------
 ### Continued: A Basic Deployment Pipeline
 **Testers** and **operations** may need to approve deployment to **UAT** or **production**:
-<img src="assets/pipeline-activity.png"/>
+<img src="assets/pipeline-activity.png" width="500"/>
 
 ---
 ## Deployment Pipeline Practices
-There are some practices you should follow:
+<img src="assets/practice-meme.jpg" class="fragment start" width="600"/>
+
+There are some practices you should follow:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Only Build Your Binaries Once  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Keep the deployment pipeline efficient.  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Build upon foundations known to be sound.  <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -62,7 +64,9 @@ There are some practices you should follow:
 
 ------
 ## Deployment Pipeline Practices: Scheduling
-Intelligent scheduling is crucial to implementing a deployment pipeline:
+<img src="assets/pipeline-scenarios-meme.jpeg" class="fragment start"/>
+
+Intelligent scheduling is crucial to implementing a deployment pipeline:  <!-- .element: class="fragment fade-in-with-next custom" -->
 <img src="assets/deployment-pipeline-scheduling-stages.png"/>
 
 ---
@@ -136,7 +140,9 @@ Releasing should be easy: **select a version**, then **press a button**. **Backi
 
 ------
 ### Automating Deployment and Release
-Production environments need to be **locked down**, allowing changes only **via automation**. This covers application **deployment**, **configurations**, **software stacks**, **network topology**, and **state** changes.
+<img src="assets/deploy-meme.jpeg" class="fragment start" width="400">
+
+Production environments need to be **locked down**, allowing changes only **via automation**. This covers application **deployment**, **configurations**, **software stacks**, **network topology**, and **state** changes.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 Once you've deployed a complex system for the **fiftieth** or **hundredth time without issues**, it becomes **less of a notable event**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -227,7 +233,7 @@ Incorporate **at least one or two** automated **tests of each type** you need in
 
 ------
 ### Evolving Your Pipeline
-<img src="assets/i-am-building-a-pipeline-meme.jpg" class="fragment complete-fade-out">
+<img src="assets/deployment-pipeline-evolution.jpeg" class="fragment complete-fade-out" width="700">
 
 Two common pipeline extensions: **components** and **branches**. For large apps, use **mini-pipelines** for **each component**, then a **final pipeline** for **assembly**, **[F/NF] acceptance testing**, and **deployment to environments (testing, staging, and production)**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -239,7 +245,9 @@ Keep in mind these three key points:  <!-- .element: class="fragment fade-in-wit
 
 ---
 ## Metrics
-Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.
+<img src="assets/lean-metrics-meme.jpeg" class="fragment start" width="600">
+
+Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 In software delivery, the key global metric is **cycle time**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 <img src="assets/cycle-time-lead-time.webp" width="700">
@@ -253,7 +261,7 @@ Other metrics such as "Number of defects" **are not good as primary metrics**.  
 ### Reducing Cycle Time
 <img src="assets/cycling-meme.jpg" class="fragment complete-fade-out">
 
-Once you know your application's cycle time, you can find ways to reduce it, applying the **Theory of Constraints**:  <!-- .element: class="fragment fade-in-with-next custom" -->
+Once you know your application's cycle time, you can find ways to reduce it, applying the **Theory of Constraints**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 1. Identify the system's **limiting constraint**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 2. **Maximize** the **throughput of the constraint**, exploiting it fully.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 3. **Subordinate all other** processes to the constraint. This implies that **other resources will not work at 100%**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
