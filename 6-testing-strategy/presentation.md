@@ -82,7 +82,7 @@ Run acceptance test like it's in **production**: **system**, **environment**, **
 
 ------
 ### Quadrant TL: Automating Acceptance Tests
-<img src="assets/write-vs-maintain-tests-meme.webp" class="fragment start" width="700">
+<img src="assets/write-vs-maintain-tests-meme.jpeg" class="fragment start" width="700">
 
 Automated acceptance tests have valuable benefits:
 - Faster **feedback loop** (developers can run them without testers)  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
