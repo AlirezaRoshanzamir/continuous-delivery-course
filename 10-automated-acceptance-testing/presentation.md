@@ -1,7 +1,7 @@
 ## Continuous Delivery: Automated Acceptance Testing
 #### Introduction, Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
 
-<img src="assets/user-story-acceptance-criteria-and-test.png"/>
+<img src="assets/user-story-acceptance-criteria-and-test.webp"/>
 
 <small><strong>Time to Read:</strong> 10 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 
@@ -21,11 +21,11 @@ An individual acceptance test is intended to verify that the **acceptance criter
 
 A **unit test** aims to show that a **single part of the application does what the programmer intends** it to; this is by no means the same as asserting that a **user has what they need**.  <!-- .element: class="fragment fade-in-paragraph" -->
 
-<img src="assets/acceptance-test-stage.png">
+<img src="assets/acceptance-test-stage.webp">
 
 ---
 ## Why Is Automated Acceptance Testing Essential?
-<img src="assets/why-meme.jpg" class="fragment start">
+<img src="assets/why-meme.webp" class="fragment start">
 
 There has always been a **great deal of controversy** around automated acceptance tests.  <!-- .element: class="fragment fade-in-paragraph" -->
 
@@ -55,7 +55,7 @@ Acceptance tests are derived from **acceptance criteria**, so the acceptance cri
 ### How to Create Maintainable Acceptance Test Suites: Layering
 Automated acceptance tests should always be layered:
 
-<img src="assets/acceptance-tests-layers.png" width="600">
+<img src="assets/acceptance-tests-layers.webp" width="600">
 
 Test implementations that **refer directly** to the **application's API** or **UI** are **brittle**, and even **small changes to the UI** will immediately **break all the tests** referring to the changed UI element. Such tests are often the output of **record-and-playback-style test** automation products, which is one of the main reasons automated acceptance tests are perceived as expensive.
 
@@ -97,7 +97,7 @@ Not every team has **separate individuals** who perform **these roles 100% of th
 4. When the **developers** believe that they have **completed the work** (passed associated **unit**, **component**, and **acceptance tests**), they will **demonstrate** it to the **analyst**, the **tester**, and the **customer**.  <!-- .element class="fragment fade-in-then-semi-out-parent" -->
 5. Once the **analyst** and the **customer** are happy that the **requirement has been fulfilled**, it **moves on to testing by the testers**.  <!-- .element class="fragment fade-in-then-semi-out-parent" -->
 
-<img src="assets/roles.png">
+<img src="assets/roles.webp">
 
 ------
 ### Acceptance Criteria as Executable Specifications (BDD)
@@ -178,7 +178,7 @@ These executable specifications can generally be **turned into a document** suit
 ## Testing and Documentation
 In addition to using BDD and employing human-readable executable specifications within the documentation, you can include the **tests as illustrative examples in the documents**. By **making assertions**, you should validate the outcomes of the code showcased in the documentation's examples. Consequently, the **code within the documentation** could effectively serve as an **automated acceptance test**, contributing to the concept of **"living documentation"**:
 
-<img src="assets/living-documentation.png">
+<img src="assets/living-documentation.webp">
 
 ------
 ### Testing and Documentation: Doctest
@@ -190,12 +190,12 @@ Write **usage examples** for your code that work as **documentation** and **test
     <th>Output</th>
   </tr>
   <tr class="simple">
-    <td><img src="assets/doctests-docstring.png" width="420"></td>
-    <td><img src="assets/doctests-docstring-output.png" width="420"></td>
+    <td><img src="assets/doctests-docstring.webp" width="420"></td>
+    <td><img src="assets/doctests-docstring-output.webp" width="420"></td>
   </tr>
   <tr>
-    <td><img src="assets/doctests-docs.png" width="420"></td>
-    <td><img src="assets/doctests-docs-output.png" width="420"></td>
+    <td><img src="assets/doctests-docs.webp" width="420"></td>
+    <td><img src="assets/doctests-docs-output.webp" width="420"></td>
   </tr>
 </table>
 
@@ -203,7 +203,7 @@ Write **usage examples** for your code that work as **documentation** and **test
 ### Testing and Documentation: FitNesse
 FitNesse is an **open source test framework** that allows software testers, developers and customers to collaborate to create test cases on a **wiki**:
 
-<img src="assets/fitness-output2.png" width="1100">
+<img src="assets/fitness-output2.webp" width="1100">
 
 ---
 ## The Application Driver Layer
@@ -234,7 +234,7 @@ It is instructive to compare the example acceptance test in **JUnit (internal DS
 ### The Window Driver Pattern: Decoupling the Tests from the GUI
 When implementing the window driver pattern, you should write the equivalent of a device driver for each part of your GUI:
 
-<img src="assets/window-driver-pattern.png" width="500">
+<img src="assets/window-driver-pattern.webp" width="500">
 
 ------
 ### Continued: The Window Driver Pattern: Decoupling the Tests from the GUI
@@ -297,7 +297,7 @@ There is more to the implementation of acceptance tests than layering:
   - <!-- .element: class="fragment fade-in-then-semi-out" --> Build small suites of tests around each integration point, intended to run in an environment that does have real connections to these external systems.
   - Have one component of our system to represent all interactions with an external system (a gateway or adapter). It also helps to implement other patterns such as circuit breaker.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
-<img src="assets/external-system-test-doubles.png" class="fragment fade-in">
+<img src="assets/external-system-test-doubles.webp" class="fragment fade-in">
 
 ---
 ## The Acceptance Test Stage

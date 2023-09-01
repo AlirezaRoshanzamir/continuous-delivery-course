@@ -1,7 +1,7 @@
 ## Continuous Delivery: Testing Strategy
 #### <span style="color: purple">Types of Tests</span>, <span style="color: purple">Test Doubles</span>, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>, Real-Life Situations and Strategies, Integration Testing, Process
 
-<img src="assets/v-model.png" style="max-width: 600px"/>
+<img src="assets/v-model.webp" style="max-width: 600px"/>
 
 <small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 
@@ -13,7 +13,7 @@
 
 ---
 ### Introduction
-<img src="assets/quality-meaning-meme.jpeg" class="fragment start">
+<img src="assets/quality-meaning-meme.webp" class="fragment start">
 
 W. Edwards Deming:  <!-- .element class="fragment fade-in-with-next custom" -->
 > Cease dependence on mass inspection to achieve quality. Improve the process and build quality into the product in the first place.
@@ -37,7 +37,7 @@ Brian Marick categorized tests based on whether they're related to **business or
 It's also known as **Agile testing quadrants**. You can find more information in the following book:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 <table>
   <tr>
-    <td><img src="assets/agile-testing-cover-book.png" width="100"/></td>
+    <td><img src="assets/agile-testing-cover-book.webp" width="100"/></td>
     <td>
       Agile Testing: A Practical Guide for Testers and Agile Teams
       <br />
@@ -58,18 +58,18 @@ Ideally, with modern test frameworks and DSL, **users can write acceptance tests
 
 While including **examples**, **prototypes**, and **simulations** in this quadrant is right, they're **not entirely automatic** anymore.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/types-of-tests-qtl.png" width="500">
+<img src="assets/types-of-tests-qtl.webp" width="500">
 
 ------
 ### Quadrant TL: Given-When-Then
-<img src="assets/given-when-then-meme.jpeg" class="fragment start" width="800">
+<img src="assets/given-when-then-meme.webp" class="fragment start" width="800">
 
 Each story/requirement has:  <!-- .element class="fragment fade-in-with-next custom" -->
 - **Happy Path**: Single **canonical path** through the application in terms of **user actions**.
 - **Alternete Paths**:  Different variations in **initial state**, **actions**, and **final state** that create distinct use cases.
 - **Sad Paths**: Alternete paths that lead to **error conditions**.
 
-<img src="assets/happy-alternate-sad-path.png" width="200">
+<img src="assets/happy-alternate-sad-path.webp" width="200">
 
 These are often expressed using the form:  <!-- .element class="fragment fade-in-with-next custom" -->
 - **Given**: A few important characteristics of the state of the system when testing begins.
@@ -82,7 +82,7 @@ Run acceptance test like it's in **production**: **system**, **environment**, **
 
 ------
 ### Quadrant TL: Automating Acceptance Tests
-<img src="assets/write-vs-maintain-tests-meme.jpeg" class="fragment start" width="700">
+<img src="assets/write-vs-maintain-tests-meme.webp" class="fragment start" width="700">
 
 Automated acceptance tests have valuable benefits:
 - Faster **feedback loop** (developers can run them without testers)  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
@@ -116,7 +116,7 @@ Each **story/requirement** needs at least **one automated happy path acceptance 
 - <!-- .element class="fragment highlight-current-blue" --> [Deployment tests]
   - Performed when deploying your app to check if the deployment worked.
 
-<img src="assets/types-of-tests-qbl.png" width="500">
+<img src="assets/types-of-tests-qbl.webp" width="500">
 
 ------
 ### Quadrant TR: Business-Facing Tests That Critique the Project
@@ -131,7 +131,7 @@ Manual tests confirm the app **delivers expected value to users**. It's not only
   - Check **how easily** users achieve goals in your software. It's the **ultimate test** that your app **brings value to users**. **"Beta release"** or **"Canary Releasing"** can assist in this.
 - It is correct to put **User Acceptance Testing (UAT)** and **Alpha/Beta Testing** in this quadrant.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-<img src="assets/types-of-tests-qtr.png" width="500">
+<img src="assets/types-of-tests-qtr.webp" width="500">
 
 ------
 ### Quadrant BR: Technology-Facing Tests That Critique the Project
@@ -143,11 +143,11 @@ These tests can require **significant resources** like unique environments and s
 
 We suggest **set up basic nonfunctional tests early** in any project, even if it's simple or inconsequential.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/types-of-tests-qbr.png" width="500">
+<img src="assets/types-of-tests-qbr.webp" width="500">
 
 ---
 ## Test Doubles
-<img src="assets/test-doubles-meme.png" class="fragment complete-fade-out" width="600">
+<img src="assets/test-doubles-meme.webp" class="fragment complete-fade-out" width="600">
 
 Automated testing often includes **substituting a system part** with a **simulated version** during runtime:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - **Dummy**: Never actually used.
@@ -155,14 +155,14 @@ Automated testing often includes **substituting a system part** with a **simulat
 - **Spy**: Record some information. Some resources, tell that it can also provide canned answers.
 - **Mock**: Preprogrammed with expectations and the responses.
 - **Fake**: Simulate different test objects through a different implementation (usage of in-memory database for testing).
-<img src="assets/test-doubles.png" width="500"/>
+<img src="assets/test-doubles.webp" width="500"/>
 
 [Mocks are not stubs](https://martinfowler.com/articles/mocksArentStubs.html): Stub uses state verification while the mock uses behavior verification.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 You can find more information in the following books:  <!-- .element class="fragment fade-in-with-next custom" -->
 <table>
   <tr>
-    <td><img src="assets/xunit-test-patterns-book-cover.png" width="70"/></td>
+    <td><img src="assets/xunit-test-patterns-book-cover.webp" width="70"/></td>
     <td>
       XUnit Test Patterns: Refactoring Test Code
       <br />
@@ -181,14 +181,14 @@ Mention the Classical vs Mockist testing and TDD dichotomy.
 Test coverage is a **metric** used in software testing to gauge how extensively a software system's **features**, **requirements**, or **code components** are tested by a set of **test cases**. It aims to **provide insight** into testing's **quality**.
 
 Start by **creating a model** of the source code or target components for testing. Next, **define coverage criteria** to be met. Then, create thorough **test plans** and **develop tests** aligned with these coverage criteria:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/software-modeling-structures.png">
+<img src="assets/software-modeling-structures.webp">
 
 ------
 ### Code Coverage Criteria (Code Coverage-Based Testing)
-<img src="assets/tests-folder-meme.jpg" class="fragment start" width="500">
+<img src="assets/tests-folder-meme.webp" class="fragment start" width="500">
 
 Code coverage-based unit testing is a form of **white-box** testing. It assesses the **portion of executed code by test cases**, aiming for thorough **examination of the software's internal logic and pathways**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/code-line-coverage.png">
+<img src="assets/code-line-coverage.webp">
 
 <details>
   <summary>Note:</summary>
@@ -197,19 +197,19 @@ Code coverage-based unit testing is a form of **white-box** testing. It assesses
 
 ------
 ### Mutation Testing
-<img src="assets/mutation-testing-meme.jpeg" class="fragment start" width="500">
+<img src="assets/mutation-testing-meme.webp" class="fragment start" width="500">
 
 Mutation testing is a software method involving **changing specific statements in the source code**, then evaluating whether the **tests can detect errors**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 <table>
   <tr>
-    <td><img src="assets/mutation-based-testing.png" width="400"></td>
+    <td><img src="assets/mutation-based-testing.webp" width="400"></td>
     <td><img src="assets/pitest-sample-report.webp" width="700"></td>
   </tr>
 </table>
 
 ------
 ### Property-Based Testing (Hypothesis Testing)
-<img src="assets/property-based-testing-meme.jpg" class="fragment start" width="500">
+<img src="assets/property-based-testing-meme.webp" class="fragment start" width="500">
 
 In **typical testing**, you run code and verify the **result matches your expected outcome**. In **property-based testing**, you create tests to **check that the results satisfy certain properties**.  <!-- .element class="fragment fade-in-parent custom" -->
 
@@ -218,7 +218,7 @@ Steps:  <!-- .element class="fragment fade-in-with-next custom" -->
 - Perform some operations on the data.
 - Assert something about the result.
 
-<img src="assets/hypothesis-testing.png" class="fragment fade-in">
+<img src="assets/hypothesis-testing.webp" class="fragment fade-in">
 
 ---
 ## Test-Driven Development (TDD)
@@ -226,7 +226,7 @@ Test-driven development (TDD) is a **software programming approach** that interl
 
 <table>
   <tr>
-    <td><img src="assets/tdd-loop.png" width="400"></td>
+    <td><img src="assets/tdd-loop.webp" width="400"></td>
     <td><img src="assets/green-bar-patterns.webp" width="500"></td>
   </tr>
 </table>
@@ -234,7 +234,7 @@ Test-driven development (TDD) is a **software programming approach** that interl
 You can find more information in the following books:  <!-- .element class="fragment fade-in-with-next custom" -->
 <table>
   <tr>
-    <td><img src="assets/tdd-book-cover.png" width="70"/></td>
+    <td><img src="assets/tdd-book-cover.webp" width="70"/></td>
     <td>
       Test Driven Development by Example
       <br />
@@ -253,7 +253,7 @@ Typical scenarios faced by teams deciding for test automation:
 
 ------
 ### Real-Life Situations and Strategies: New Projects
-<img src="assets/new-project-friends-meme.jpeg" class="fragment complete-fade-out" width="600">
+<img src="assets/new-project-friends-meme.webp" class="fragment complete-fade-out" width="600">
 
 In this case, the key is to begin writing automated acceptance tests right **from the start**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -294,7 +294,7 @@ Remember to focus on writing automated tests where they **add value**.  <!-- .el
 
 Test harnesses complexity depends on whether the **doubled-up service retains state**. If the external system **remembers state**, harness behavior changes **based on sent requests**. Here, **black box tests are highly valuable**. Cover all **potential responses**, each with **its own test**. The **mock external system** should **identify requests** and provide the **suitable response** or an **exception for unexpected ones**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/integration-testing.jpg">
+<img src="assets/integration-testing.webp">
 
 ---
 ## Process
@@ -312,11 +312,11 @@ Two main approaches:
 - Having **zero defects**: Whenever a bug is found, it is **immediately fixed**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - Handle defects **like features**: **Prioritize** them **compared to features**. Consider **"critical"**, **"blockers"**, **"medium"**, or **"low"** categories. <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-<img src="assets/hide-defects-memes.jpg" class="fragment fade-in" width="600">
+<img src="assets/hide-defects-memes.webp" class="fragment fade-in" width="600">
 
 ---
 ## Summary
-<img src="assets/quality-responsiblity-meme.jpg" class="fragment start" style="border: 1px solid lightgray">
+<img src="assets/quality-responsiblity-meme.webp" class="fragment start" style="border: 1px solid lightgray">
 
 For high-quality software, **everyone in the project** must share testing duties from the start till the end.  <!-- .element class="fragment fade-in-paragraph custom" -->
 

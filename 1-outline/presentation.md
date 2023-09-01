@@ -1,7 +1,7 @@
 ## Continuous Delivery: Course Outline
 #### Reliable Software Releases through Build, Test, and Deployment Automation
 
-<img src="assets/devops-loop.png" width="700"/>
+<img src="assets/devops-loop.webp" width="700"/>
 
 <small><strong>Time to Read:</strong> 4 Minutes</small>, <small><strong>Time to Present:</strong> 15 Minutes</small>
 
@@ -20,7 +20,7 @@ Mention the deploy vs release and why their order is different in different plac
 ## Created By
 <table>
     <tr>
-        <td><img src="assets/avatar.png" width="200" style="border: 1px solid gray; border-radius: 4px"></td>
+        <td><img src="assets/avatar.webp" width="200" style="border: 1px solid gray; border-radius: 4px"></td>
         <td style="padding: 10px">
             <strong>Alireza Roshanzamir</strong>
             <br>
@@ -55,7 +55,7 @@ Mention the deploy vs release and why their order is different in different plac
 ## Main References
 <table class="books">
     <tr>
-        <td><img src="assets/cd-book-cover.png"/></td>
+        <td><img src="assets/cd-book-cover.webp"/></td>
         <td>
         Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
         <br>
@@ -63,7 +63,7 @@ Mention the deploy vs release and why their order is different in different plac
         </td>
     </tr>
     <tr>
-        <td><img src="assets/accelerate-book-cover.png"/></td>
+        <td><img src="assets/accelerate-book-cover.webp"/></td>
         <td>
             Accelerate: The Science of Lean Software and DevOps: Building and Scaling High-Performing Technology Organizations
             <br>
@@ -76,13 +76,13 @@ Mention the deploy vs release and why their order is different in different plac
 ## Auxiliary References
 <table class="books">
     <tr>
-        <td><img src="assets/site-reliability-engineering-book-cover.png" width="200"/></td>
+        <td><img src="assets/site-reliability-engineering-book-cover.webp" width="200"/></td>
         <td>
             Site Reliability Engineering: How Google Runs Production Systems
             <br>
             <small>by Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy</small>
         </td>
-        <td><img src="assets/effective-devops-book-cover.png" width="200"/></td>
+        <td><img src="assets/effective-devops-book-cover.webp" width="200"/></td>
         <td>
             Effective DevOps
             <br>
@@ -90,13 +90,13 @@ Mention the deploy vs release and why their order is different in different plac
         </td>
     </tr>
     <tr>
-        <td><img src="assets/releaseit-book-cover.png" width="200"/></td>
+        <td><img src="assets/releaseit-book-cover.webp" width="200"/></td>
         <td>
             Release It!: Design and Deploy Production-Ready Software
             <br>
             <small>by Michael T. Nygard</small>
         </td>
-        <td><img src="assets/devops-handbook-book-cover.png" width="200"/></td>
+        <td><img src="assets/devops-handbook-book-cover.webp" width="200"/></td>
         <td>
             The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations
             <br>
@@ -104,13 +104,13 @@ Mention the deploy vs release and why their order is different in different plac
         </td>
     </tr>
     <tr>
-        <td><img src="assets/the-phoenix-project-book-cover.png" width="200"/></td>
+        <td><img src="assets/the-phoenix-project-book-cover.webp" width="200"/></td>
         <td>
             The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win 
             <br>
             <small>by Gene Kim, Kevin Behr, George Spafford</small>
         </td>
-        <td><img src="assets/website.jpg" width="200"/></td>
+        <td><img src="assets/website.webp" width="200"/></td>
         <td>
             <ul>
                 <li><a href="https://minimumcd.org/">Minimum Viable CD</a></li>

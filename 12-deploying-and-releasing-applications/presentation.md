@@ -1,7 +1,7 @@
 ## Continuous Delivery: Deploying and Releasing Applications
 #### Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
 
-<img src="assets/deployed-vs-released.jpg" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
+<img src="assets/deployed-vs-released.webp" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
 
 <small><strong>Time to Read:</strong> 10 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 
@@ -13,7 +13,7 @@
 
 ---
 ## Introduction
-<img src="assets/release-day-meme.jpg" class="fragment start">
+<img src="assets/release-day-meme.webp" class="fragment start">
 
 There are differences between **releasing software into production** and **deploying it to testing environments**-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these **differences should be encapsulated in a set of configuration files**.  <!-- .element: class="fragment fade-in-paragraph" -->
 
@@ -91,14 +91,14 @@ In general, a production-like environment has the following characteristics:  <!
 
 ------
 ### Modeling Your Release Process and Promoting Builds
-<img src="assets/promoting-build-meme.jpeg" class="fragment start">
+<img src="assets/promoting-build-meme.webp" class="fragment start">
 
 Promoting builds between environments requires to consider the following concerns:  <!-- .element class="fragment fade-in-with-next" -->
 - What stages a build has to go through in order to be released (for example, integration testing, QA acceptance testing, user acceptance testing, staging, production)  <!-- .element class="fragment highlight-current-blue" -->
 - What the required gates or approval are  <!-- .element class="fragment highlight-current-blue" -->
 - For each gate, who has the authority to approve a build passing through that gate  <!-- .element class="fragment highlight-current-blue" -->
 
-<img src="assets/release-process-diagram.png">
+<img src="assets/release-process-diagram.webp">
 
 ------
 ### Orchestration
@@ -116,7 +116,7 @@ For **simple systems** **without interaction** with **external systems**, you ca
 ## Semantic Versioning (SemVer)
 Semantic Versioning is a **versioning scheme** for using **meaningful version numbers**. Specifically, the meaning revolves around how API versions compare in terms of **backwards-compatibility**:
 
-<img src="assets/semver.png" width="800">
+<img src="assets/semver.webp" width="800">
 
 - If you are not sure about your public API, you can use **0.x.y** versions.
 - Always read the version from **only a single place**. Preferrably **Git tags** or a **single file** in the repository.
@@ -125,7 +125,7 @@ Visit the https://semver.org for more information.
 
 ---
 ## Rolling Back Deployments and Zero-Downtime Releases
-<img src="assets/rollback-quick-fix-meme.jpg" class="fragment start">
+<img src="assets/rollback-quick-fix-meme.webp" class="fragment start">
 
 It is essential to be able to **roll back** a deployment in case it goes **wrong**.  <!-- .element class="fragment fade-in-paragraph" -->
 
@@ -157,7 +157,7 @@ We talk about database later.  <!-- .element class="fragment fade-in" -->
 ### Blue-Green Deployments
 Have two **identical versions** of your production environment, which we'll call **blue** and **green**:
 
-<img src="assets/blue-green-deployment.png" width="700">
+<img src="assets/blue-green-deployment.webp" width="700">
 
 It is usually **not possible** to switch over directly from the **green database** to the **blue database** because it **takes time** to **migrate the data** from one release to the next **if there are schema changes**.  <!-- .element class="fragment fade-in" -->
 
@@ -181,7 +181,7 @@ You can use your **staging** and **production** environments **as** your **blue*
 If you have an **extremely large production environment**, it's **impossible** to create a **meaningful capacity testing** environment.  <!-- .element class="fragment fade-in-paragraph" -->
 
 Canary releasing is defined as **rolling out a new version** of an application to a **subset of the production servers** to get fast feedback:  <!-- .element class="fragment fade-in-parent-with-next" -->
-<img src="assets/canary-releasing.jpg" width="700">
+<img src="assets/canary-releasing.webp" width="700">
 
 ------
 ### Continued: Canary Releasing
@@ -221,7 +221,7 @@ The **intuitive objection** to continuous deployment is that it is too **risky**
 
 ---
 ## Semantic Release
-<img src="assets/semantic-release-meme.jpeg" class="fragment start">
+<img src="assets/semantic-release-meme.webp" class="fragment start">
 
 [Semantic Release](https://semantic-release.gitbook.io) **automates the whole package release workflow** including: determining the **next version number**, generating the **release notes**, and **publishing the package**:  <!-- .element class="fragment fade-in-parent-with-next" -->
 - Fully automated release  <!-- .element class="fragment highlight-current-blue" -->

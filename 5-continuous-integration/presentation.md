@@ -1,7 +1,7 @@
 ## Continuous Delivery: Continuous Integration
 #### Implementation, Prerequisites, Practices, <span style="color: brown">Challenges</span>
 
-<img src="assets/ci.png" width="700"/>
+<img src="assets/ci.webp" width="700"/>
 
 <small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 40 Minutes</small>
 
@@ -13,7 +13,7 @@
 
 ---
 ## Introduction
-<img src="assets/continuous-integration-spiderman-meme.jpg" class="fragment complete-fade-out" width="700">
+<img src="assets/continuous-integration-spiderman-meme.webp" class="fragment complete-fade-out" width="700">
 
 Common feature of many software projects is that for long periods of time during the development process the **application is not in a working state.**  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -23,7 +23,7 @@ On the other hand, we have seen projects that spend at most **a few minutes** in
 
 Continuous integration means that **whenever someone makes a change**, the whole app is **built** and **tested automatically**. **If it fails**, the **team stops and fixes it immediately**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/broken-build-meme.jpg" class="fragment fade-in" width="370">
+<img src="assets/broken-build-meme.webp" class="fragment fade-in" width="370">
 
 Continuous integration was first mentioned in **Kent Beck**'s book "**Extreme Programming** Explained" (1999).  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -71,7 +71,7 @@ Continuous integration is **impossible** when **using branches** since, by defin
 
 ------
 ### Create a Comprehensive Automated Test Suite
-<img src="assets/when-to-stop-testing-meme.jpg" class="fragment complete-fade-out" width="600">
+<img src="assets/when-to-stop-testing-meme.webp" class="fragment complete-fade-out" width="600">
 
 There are three kinds of tests we are interested in running from our continuous integration build:  <!-- .element class="fragment fade-in-with-next" -->
 - Unit tests
@@ -116,11 +116,11 @@ Continuous integration software's core function is to **poll** your version cont
 
 <table class="fragment fade-in">
   <tr>
-    <td><img src="assets/jenkins-pipeline-default.png" width="550"/></td>
-    <td><img src="assets/jenkins-pipeline-blueocean.png" width="400"/></td>
+    <td><img src="assets/jenkins-pipeline-default.webp" width="550"/></td>
+    <td><img src="assets/jenkins-pipeline-blueocean.webp" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="assets/gitlab-pipeline.png" width="450"/></td>
+    <td><img src="assets/gitlab-pipeline.webp" width="450"/></td>
     <td><img src="assets/github-actions-pipeline.webp" width="700"/></td>
   </tr>
 </table>
@@ -129,13 +129,13 @@ Continuous integration software's core function is to **poll** your version cont
 ### Bells and Whistles
 **Visibility** is a **key advantage of using a CI server**. Many CI servers offer a **widget for your desktop** to display build status.
 
-<img src="assets/state-led.jpg" width="400"/>
+<img src="assets/state-led.webp" width="400"/>
 
 ------
 ### Predecessors to Continuous Integration
 Several teams used a **nightly build**, a common practice at **Microsoft** for many years. Those who **broke it** had to **stay** and **monitor** **subsequent builds** until the next break.
 
-<img src="assets/nightly-build-meme.png" width="400">
+<img src="assets/nightly-build-meme.webp" width="400">
 
 ---
 ## Essential Practices
@@ -172,7 +172,7 @@ The following practices aren't required, yet they're useful:
 
 ------
 ### Code Style and Static Analysis: Linting
-<img src="assets/linter-is-coming-meme.jpg" class="fragment complete-fade-out" width="400">
+<img src="assets/linter-is-coming-meme.webp" class="fragment complete-fade-out" width="400">
 
 Linting is vital in your CI pipeline. It helps spot **known issues** and **coding standard violations**, thus **reducing bugs** and enhancing code maintainability.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -214,7 +214,7 @@ Some types of linting issues or features:  <!-- .element class="fragment fade-in
 
 ------
 ### Code Style and Static Analysis: Formatting
-<img src="assets/our-repo-meme.jpg" class="fragment complete-fade-out" width="700">
+<img src="assets/our-repo-meme.webp" class="fragment complete-fade-out" width="700">
 
 Refers to **arranging code elements** consistently to enhance **readability** and **maintainability**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -235,7 +235,7 @@ Formatters are essential for **removing code-style comments** in **reviews**. Fo
 
 ---
 ## Challenges
-<img src="assets/pr-rejection-meme.jpeg" class="fragment start">
+<img src="assets/pr-rejection-meme.webp" class="fragment start">
 
 **Tooling usually isn't the problem**. The question **"Why can't we deliver working changes to the trunk today?"** points to the issues to address. Common team challenges include:
 - Code review takes too long / has too many approvers  <!-- .element: class="fragment insides-fade-in-then-out" -->

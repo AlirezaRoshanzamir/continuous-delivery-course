@@ -1,7 +1,7 @@
 ## Continuous Delivery: Testing Nonfunctional Requirements
 #### Introduction, Managing Nonfunctional Requirements
 
-<img src="assets/frs-vs-nfrs.png" width="600"/>
+<img src="assets/frs-vs-nfrs.webp" width="600"/>
 
 <small><strong>Time to Read:</strong> 5 Minutes</small>, <small><strong>Time to Present:</strong> 15 Minutes</small>
 
@@ -35,7 +35,7 @@ NFRs are **complex** because they usually have a very **strong influence** on th
         <td>
             <small>Nonfunctional requirements applies to architectural views:</small>
             <br>
-            <img src="assets/viewpoints-and-perspectives.png" width="400">
+            <img src="assets/viewpoints-and-perspectives.webp" width="400">
         </td>
     </tr>
 </table>
@@ -97,7 +97,7 @@ Common **misuse** of performance requirements is as a **lazy way to describe the
 
 ---
 ## Summary
-<img src="assets/dont-put-nfrs-behind.png" class="fragment start">
+<img src="assets/dont-put-nfrs-behind.webp" class="fragment start">
 
 Designing systems to meet their nonfunctional requirements is a complex topic. The crosscutting nature of many NFRs means that it is **hard to manage the risks** that they pose to any given project. This, in turn, can **lead to two paralyzing behaviors**:  <!-- .element: class="fragment fade-in-with-next" -->
 - Not paying enough attention to them from the start of the project.  <!-- .element class="fragment highlight-current-blue" -->
