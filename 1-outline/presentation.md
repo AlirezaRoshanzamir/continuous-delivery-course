@@ -190,7 +190,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../7-anatomy-of-the-deployment-pipeline" target="_blank">Anatomy</a>
             <br>
             <small>
-                Stages, Practices, Commit Stage, Test Stages, Release and Deployment Stages, Metrics, Adoption
+                A Basic Deployment Pipeline, Practices, The Commit Stage, Test Stages, Release and Deployment Stages, Implementation, Metrics
             </small>
         </td>
         <td>45'</td>
