@@ -23,8 +23,9 @@ As your project becomes more complex with **multiple components** or **unusual p
 
 ---
 ## An Overview of Build Tools
-Build tools have a common core: **modeling dependencies**:
+<img src="assets/modern-software-development-meme.jpeg" class="fragment start">
 
+Build tools have a common core: **modeling dependencies**:  <!-- .element class="fragment fade-in-with-next custom" -->
 <img src="assets/build-dependency-network.webp">
 
 ------
@@ -86,11 +87,13 @@ Ant files can become very long and disorganized due to these limitations, someti
 
 ------
 ### An Overview of Build Tools: Maven
-Maven simplifies Ant files by **assuming certain Java project layouts**. By favoring **"convention over configuration"**, it can handle various tasks like **build**, **deploy**, **test**, and **release** with just **one command**, often needing minimal XML configuration:
+<img src="assets/maven-meme.jpg" class="fragment start">
+
+Maven simplifies Ant files by **assuming certain Java project layouts**. By favoring **"convention over configuration"**, it can handle various tasks like **build**, **deploy**, **test**, and **release** with just **one command**, often needing minimal XML configuration:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 <table>
   <tr>
-    <td><img src="assets/pom-example.webp" width="500"></td>
-    <td><img src="assets/maven-project-structure.webp" width="250"></td>
+    <td><img src="assets/pom-example.webp" width="570"></td>
+    <td><img src="assets/maven-project-structure.webp" width="320"></td>
   </tr>
 </table>
 
