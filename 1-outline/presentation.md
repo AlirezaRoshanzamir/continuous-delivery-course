@@ -164,7 +164,7 @@ Mention the deploy vs release and why their order is different in different plac
                 Implementation, Prerequisites, Practices, <span style="color: brown">Challenges</span>
             </small>
         </td>
-        <td>45'</td>
+        <td>40'</td>
     </tr>
     <tr>
         <td>
@@ -174,7 +174,7 @@ Mention the deploy vs release and why their order is different in different plac
                 <span style="color: purple">Types of Tests</span>, <span style="color: purple">Test Doubles</span>, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>, Real-Life Situations and Strategies, Integration Testing, Process
             </small>
         </td>
-        <td>60'</td>
+        <td>50'</td>
     </tr>
 </table>
 <br>
