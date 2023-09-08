@@ -3,7 +3,7 @@
 
 <img src="assets/iac.webp" width="750"/>
 
-<small><strong>Time to Read:</strong> 16 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
+<small><strong>Time to Read:</strong> 16 Minutes</small>, <small><strong>Time to Present:</strong> 90 Minutes</small>
 
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
@@ -68,8 +68,8 @@ Some other drawbacks:  <!-- .element: class="fragment fade-in-with-next custom" 
 
 ------
 ### An Overview of Build Tools: Ant
-Ant's runtime components are in Java, while its scripts are an **external DSL in XML**. This mix provides Ant with robust **cross-platform** capabilities:
-<img src="assets/ant-example.webp" width="700">
+Ant's core is in Java, while its scripts are an **external DSL in XML**. This mix provides Ant with robust **cross-platform** capabilities:
+<img src="assets/ant-example.webp" width="750">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **XML** is **not concise** or **enjoyable** for humans to read.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
@@ -100,15 +100,15 @@ Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
 
 ------
 ### An Overview of Build Tools: Rake
-Rake, the **main Ruby build tool**, was created as an experiment to **mimic Make**'s functionality with an **internal DSL** in Ruby. Rake primarily handles **tasks** and **dependencies**. However, since Rake scripts are standard Ruby code, you can use Ruby's API to perform various tasks, leveraging the versatility of a **general-purpose programming language**:
+Rake, the **main Ruby build tool**, started as an experiment to **mimic Make** using an **internal Ruby DSL**. It handles **tasks** and **dependencies**. Since the scripts are standard Ruby code, you can use it's versatility as a **general-purpose programming language**:
 <table>
   <tr>
-    <td><img src="assets/rake-example.webp" width="500"></td>
-    <td><img src="assets/rake-dependency-example.webp" width="500"></td>
+    <td><img src="assets/rake-example.webp" width="700"></td>
+    <td><img src="assets/rake-dependency-example.webp" width="700"></td>
   </tr>
 </table>
 
-You can **refactor** and **modularize** builds in your regular development environment. Debugging Rake is easy with the **standard Ruby debugger**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+You can **refactor** and **modularize** builds in your regular development environment. Debugging is easy with the **standard Ruby debugger**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 Some disadvantages:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - You need to ensure a suitable runtime is available on your platform
@@ -118,12 +118,12 @@ Some disadvantages:  <!-- .element: class="fragment fade-in-with-next custom" --
 ### An Overview of Build Tools: Buildr, Gradle
 New-gen build tools like Buildr, Gradle, and Gantt use **real programming languages** for build scripts.
 
-Buildr is **based on Rake**, so anything you can do in Rake, you can do in Buildr. Moreover, Buildr seamlessly **replaces Maven**, sharing the **same conventions like filesystem layout**, **artifact specs**, and **repositories**. You can also **use Ant tasks**, including custom ones, with no setup needed.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+Buildr is **based on Rake**, so anything you can do in Rake, you can do in Buildr. Moreover, Buildr seamlessly **replaces Maven**, sharing the **same conventions like filesystem layout**, **artifact specs**, and **repositories**. You can also **use Ant tasks**, with no setup needed.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-Gradle was designed for **multi-project builds**, which can grow to be large. It operates based on a series of build **tasks** that can run **serially** or in **parallel**. Incremental builds are supported:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/gradle-example.webp" style="border: 1px solid lightgray">
+Gradle was designed for **multi-project builds**, often **large in scale**. It relies on a series of build **tasks** that can run **serially** or in **parallel**. It also supports incremental builds:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+<img src="assets/gradle-example.webp" style="border: 1px solid lightgray" width="550">
 
-If you're starting **a new Java project**, or looking for **a replacement for Ant or Maven**, we strongly suggest you consider **Gradle**, or Buildr with **DSLs in Groovy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+If you're starting **a new Java project** or seeking an **alternative to Ant or Maven**, consider **Gradle** or Buildr with **DSLs in Groovy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 ------
 ### An Overview of Build Tools: Psake
@@ -133,9 +133,12 @@ Psake is an **internal DSL** written in **PowerShell**, which provides **task-or
 
 ------
 ### An Overview of Build Tools: Bazel (Google), Buck (Facebook), Pants (Twitter)
-Three of the most popular **Monorepo tools** and **declarative build systems**. Three common concepts are:
+Three of the most popular **Monorepo tools** and **declarative build systems**.
+
+Common concepts are:
 - **Goals and Commands:** build, test, lint, check, fmt, export, run, audit, clean, coverage, ...
-- **Rules, Targets, and BUILD files:** cc_library, python_source, java_source, docker_image, java_library, protobuf_source, ...
+- **Rules, Targets:** cc_library, python_source, java_source, docker_image, java_library, protobuf_source, ...
+- **BUILD files**
 
 ```console
 $ ./pants test ::
@@ -155,11 +158,11 @@ python_test(
 )
 ```
 
-They support **multiple programming languages**, **incremental builds**, **heavy and distributed caching**, **parallelization**, **code generation**, **dependency management and visualization**.
+They support **multiple programming languages**, **incremental builds**, **heavy and distributed caching**, **parallelization**, **code generation**, **dependency management and visualization**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 ---
 ## Monorepo (Reference: <a href="https://monorepo.tools/">monorepo.tools</a>)
-A monorepo is a single repository containing multiple distinct projects, with well-defined relationships:
+A monorepo is a **single repository** containing **multiple distinct projects**, with **well-defined relationships**:
 
 <img src="assets/monorepo-polyrepo.svg" width="550">
 
@@ -171,7 +174,7 @@ A good monorepo is the opposite of monolithic:
 
 ------
 ### Polyrepo
-A polyrepo is the current standard way of developing applications: a repo for each team, application, or project. And it's common that each repo has a single build artifact, and simple build pipeline:
+A polyrepo is the current standard way of developing applications: **one repo per team, app, or project**. Typically, each repo has a **single build artifact** and a **simple build pipeline**.
 
 <img src="assets/polyrepo-practice.svg" width="650">
 
@@ -185,9 +188,9 @@ The industry has moved to the polyrepo way of doing things for one big reason: *
 ------
 ### Polyrepo Drawbacks
 - <!-- .element class="fragment highlight-current-blue" --> Cumbersome code sharing
-  - To share code across repositories, you'd likely create a repository for the shared code (CI, tooling, dependency, versioning, ...).
+  - To share code across repos, you'd likely create a repo for shared code (CI, tools, dependencies, versioning, etc.).
 - <!-- .element class="fragment highlight-current-blue" --> Significant code duplication
-  - No one wants to go through the hassle of setting up a shared repo, so teams just write their own implementations of common services and components in each repo.
+  - Teams avoid the trouble of setting up a shared repo, creating their own versions of common services and components in each repo.
 - Costly cross-repo changes to shared libraries and consumers  <!-- .element class="fragment highlight-current-blue" -->
 - <!-- .element class="fragment highlight-current-blue" --> Inconsistent tooling
   - Each project uses its own set of commands for running tests, building, serving, linting, deploying, and so forth.
@@ -200,17 +203,16 @@ The industry has moved to the polyrepo way of doing things for one big reason: *
 - <!-- .element class="fragment highlight-current-blue" --> Developer mobility
   - Developers can confidently contribute to other teams' applications and verify that their changes are safe.
 
-It is **more than code & tools**. A monorepo changes your **organization** and the **way you think about code**. By adding **consistency**, **lowering the friction in creating new projects** and performing **large scale refactorings**, by facilitating **code sharing** and **cross-team collaboration**, it'll allow your organization to work more **efficiently**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+It is **more than code & tools**. It changes your **organization** and the **way you think about code**. By adding **consistency**, **lowering the friction in creating new projects** and performing **large scale refactorings**, by facilitating **code sharing** and **cross-team collaboration**, it enhances your organization's **efficiency**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 ------
 ### Monorepo Tools
-As your workspace grows, the tools have to help you keep it fast, understandable and manageable:
+As your **workspace grows**, the tools have to help you keep it **fast**, **understandable** and **manageable**:
 
-<img src="assets/monorepo-tools.webp" style="border: 1px solid gray; border-radius: 10" width="1120">
+<img src="assets/monorepo-tools.webp" style="border: 1px solid gray; border-radius: 10" width="1150">
 
 ------
 ### Monorepo Tools Features: Fast
-
 <table>
   <tr>
     <td>
@@ -294,54 +296,54 @@ As your workspace grows, the tools have to help you keep it fast, understandable
 
 ------
 ### Monorepo Drawbacks
-- Weak Multiple Languages Support
-  - The best monorepo tool for one programming language is not good for the others.
-  - Most monorepo tools support internal and external plugins.
-  - You should consider Git submodule for multiple languages.
-- VCS Tooling Challenges  <!-- .element class="fragment fade-in" -->
-  - The complexity and size of the codebase, which makes it difficult to understand, search, scale, and maintain.
-  - Microsoft has released a Virtual File System (VFS) for git to help manage the overload.
-- Limitations Around Access Control  <!-- .element class="fragment fade-in" -->
-  - Your company may not want every engineer to have access to the entire codebase.
-  - GitHub and GitLab support CODEOWNERS file to define which team owns subdirectories in the repository.
-- Heavy Build Pipelines  <!-- .element class="fragment fade-in" -->
-  - Many CI tools offer the capability of conditional stages that execute only when changes occur in a particular directory. For instance, SemaphorCI uses "change_in," while Jenkins employs "changeset" to implement this functionality.
+- Weak Multiple Languages Support  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - The ideal monorepo tool for one programming language may not be suitable for others.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - But, most monorepo tools support internal and external plugins.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Git submodules can be an option for managing multiple languages in a monorepo.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- VCS Tooling Challenges  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - The complexity and size of the codebase, which makes it difficult to understand, search, scale, and maintain.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Microsoft has released a Virtual File System (VFS) for Git to help manage the overload.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Limitations Around Access Control  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Your company may not want every engineer to have access to the entire codebase.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - GitHub and GitLab support CODEOWNERS file to define which team owns subdirectories in the repository.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+- Heavy Build Pipelines  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - Many CI tools offer conditional stages based on directory changes, like SemaphoreCI's "change_in" and Jenkins' "changeset."  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
 ---
 ## Principles and Practices
-Some general principles and practices of build and deployment scripting should apply to **whichever technology you use**:
+Key build and deployment scripting principles apply universally, **regardless of the technology used**:
 - Create a Script for Each Stage in Your Deployment Pipeline  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Do not have a single script for whole deployment pipeline  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Do not have a single script for whole deployment pipeline.
 - Use an Appropriate Technology to Deploy Your Application  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Use the right tool for the job when automating deployment, not a general-purpose scripting language. For example, for WebSphere Application Server, you can use the Wsadmin tool.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Use the right tool for automation, like Wsadmin for WebSphere Application Server, instead of a general-purpose scripting language.
 - Use the Same Scripts to Deploy to Every Environment  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - If your application is complex in terms of its deployment architecture, you will have to make some simplifications to get it working on developer machines.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Complex deployment architectures may require simplifications for developer machines to work.
 - Use Your Operating System's Packaging Tools [for Deployment]  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - For example, Debian and Ubuntu both use the Debian package system; RedHat, SuSE, and many other flavors of Linux use the RedHat package system; Windows users can use the Microsoft Installer system, and so forth.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - Commercial middleware servers, for example, often require special tools to perform deployments. In this case, a hybrid approach is necessary.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - You can also use platform-specific packaging systems, such as Ruby Gems, Python Eggs/Wheels, Perl's CPAN, and so on, to distribute your application, but they are designed by and for developers, not system administrators.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Debian and Ubuntu use the Debian package system, while RedHat, SuSE, and other Linux flavors use the RedHat package system. Windows users can use the Microsoft Installer system.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Commercial middleware servers may require special tools for deployments,  leading to the use of a hybrid approach.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - You can use platform-specific packaging systems like Ruby Gems, Python Eggs/Wheels, Perl's CPAN, etc., for distribution, but these are developer-centric, not for system administrators.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Ensure the Deployment Process Is Idempotent  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Leave the target environment in the same (correct) state, regardless of the state it finds it in when starting a deployment.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - If you cannot do this, validate the assumptions your deployment process makes about the environment, and fail the deployment if they are not met.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - Tools such as Puppet analyzes the configuration of the target environment and makes only the necessary changes to bring it in sync with the declarative specification of the desired state of the environment  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Leave the target environment in the same (correct) state, regardless of its initial state during deployment.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Otherwise, verify your deployment assumptions about the environment and stop the deployment if they're not met.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Tools like Puppet analyze the target environment's configuration and make necessary changes to sync it with the specified desired state in a declarative manner.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Evolve Your Deployment System Incrementally  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - You don't have to have completed all of the steps at once. The first time you write a script to deploy the application in a local development environment and share it with the team, you have saved lots of work for individual developers.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - Then, move on to refining these scripts so they can be used in the acceptance test environment to deploy and run the application so that the tests can be run.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - You don't have to complete all steps at once. Creating a deployment script for the local development environment and sharing it with the team can save a lot of individual developer effort.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Then, refine these scripts for the acceptance test environment, allowing deployment and test execution.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
 ---
 ## Package Managers
 <img src="assets/start-packaging-meme.webp" class="fragment start">
 
-A package manager or package-management system is a collection of software tools that automates the process of **installing**, **upgrading**, **configuring**, and **removing** computer programs for a computer in a consistent manner.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
-<img src="assets/package-management.webp" width="900">
+A package manager or package-management system is a set of tools that automates the **installation**, **upgrading**, **configuration**, and **removal** of computer programs for a computer consistently:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+<img src="assets/package-management.webp" width="1000">
 
 ------
 ### Language Specific and Language Agnostic Package Managers
-Some language specific and language agnostic package managers:
+Some **language specific** and **language agnostic package managers**:
 
 <img src="assets/language-specific-vs-language-agnostic-package-managers.webp" width="1100">
 
-Language agnositc package manager doesn't result language agnostic package
+Language agnositc package manager doesn't result language agnostic package.
 
 ------
 ### Source Distribution (sdist) vs Built Distribution (bdist)
@@ -353,7 +355,7 @@ Language agnositc package manager doesn't result language agnostic package
   </tr>
 </table>
 
-You may need different systems for generating built distributions.
+You may need **different systems** for generating **built distributions**.
 
 ------
 ### Levels of Package Dependency Inclusion
@@ -490,13 +492,13 @@ You may need different systems for generating built distributions.
 
 ---
 ## Deployment Scripting
-Changes to testing and production environments should **only be made through an automated process**.
+Changes to **testing** and **production environments** should **only be made through an automated process**.
 
-In addition to the previous mentioned notes, the following should be considered:  <!-- .element: class="fragment fade-in-with-next custom" -->
-- **Deploying and Testing Layers**: You should strive to build on good known foundations. Before we even bother to copy our binary deliverables to the correct place in the filesystem, we want to know that our environment is ready for us in these layers:
-    <img src="assets/deploying-software-layers.webp" width="300">
+Along with the previous notes, also consider the following:  <!-- .element: class="fragment fade-in-with-next custom" -->
+- **Deploying and Testing Layers**: It's essential to build on good known foundations. Before copying binaries to the filesystem, ensure the environment is prepared in these layers:
+    <img src="assets/deploying-software-layers.webp" width="330">
 - **Testing Your Environment's Configuration**: Provide a degree of confidence that the deployed layer is working:
-    <img src="assets/deployment-testing-layers.webp" width="850">
+    <img src="assets/deployment-testing-layers.webp" width="960">
 
 <details>
 <summary>Note</summary>
@@ -507,11 +509,11 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 ## Tips and Tricks
 - Always Use Relative Paths  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Absolute paths create a tight dependency between the configuration of a specific machine and your build process.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - Try to minimize absolute paths by making all of the paths in your system relative to one or more well-defined root paths-the deployment root, the configuration root, and so on-and overriding just these roots.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Minimize absolute paths by using relative paths in your system, relying on defined root paths like deployment and configuration roots, and overriding them as needed.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Eliminate Manual Steps  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - <!-- .element: class="fragment fade-in-then-semi-out" --> For many organizations, a "build script" is a printed document with a series of instructions like:
 
-    ```
+    ```text
     ...
     STEP 14. Copy all the dlls from the CDROM directory E:\web_server\dlls\ into   the   new
     virtual directory
@@ -526,7 +528,7 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 - Don't Check Binaries into Version Control as Part of Your Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - The rule of thumb is not to check in anything created as part of your build, test, and deploy cycle into source control.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Test Targets Should Not Fail the Build  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Make the failure set a flag but fail the build later, after generating more useful reports or running a more complete set of tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - Flag failures and postpone build failure until after generating reports or running more tests.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Constrain Your Application with Integrated Smoke Tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Make sure the deployed version validates its configuration when it is installed.
 
@@ -534,13 +536,13 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 ## Infrastructure as Code (IaC)
 <img src="assets/infrastructure-as-code-meme.webp" class="fragment start">
 
-Infrastructure as Code is the **managing** and **provisioning** of infrastructure through **code instead of through manual processes**.  <!-- .element: class="fragment insides-fade-in-then-out" -->
+Infrastructure as Code is the **managing** and **provisioning** of infrastructure through **code instead of through manual processes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 IaC aids configuration management and helps you to **avoid undocumented**, **ad-hoc configuration changes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 There are 2 ways to approach IaC:  <!-- .element: class="fragment fade-in-with-next custom" -->
-- **Declarative**: Keeps a list of the current state of your system objects, which makes taking down the infrastructure simpler to manage and will automatically provision the desired infrastructure.
-- **Imperative**: Defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order.
+- **Declarative**: **Keeps a list of the system objects' current state**, simplifying infrastructure management and enabling **automatic provisioning** of the desired infrastructure.
+- **Imperative**: Specifies the **necessary commands** for achieving the desired configuration, requiring them to be executed in the **correct order**.
 
 These are a few popular choices:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Chef
@@ -583,12 +585,12 @@ Terraform is an **agentless** infrastructure as code tool that enables you to sa
 
 ---
 ## Summary
-Grow your automated build and deployment capabilities **step by step**, working through the deployment pipeline by iteratively identifying and then **automating the most painful steps**.
+Improve automated build and deployment **step by step**. Identify and **automate the most painful steps** in the deployment pipeline iteratively.
 
 Involve **both operations and developers** in the creation of the mechanisms.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-We use the term "script" in quite a **broad sense**. Generally, by this we mean **all the automation** that helps us **build**, **test**, **deploy**, and **release** our software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+We **broadly** use the term "script" for **all automation** that aids in **building**, **testing**, **deploying**, and **releasing** our software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-Scripts are **first-class** parts of your system. They should be **version-controlled**, **maintained**, **tested**, and **refactored**, and be the **only mechanism that you use to deploy** your software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+Scripts are **first-class** components, **version-controlled**, **maintained**, **tested**, **refactored**, and the **only deployment method** of software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 Spend some time, think about the **goals** you want to achieve, and **design** your build and deployment process to attain them.  <!-- .element: class="fragment fade-in-paragraph custom" -->
