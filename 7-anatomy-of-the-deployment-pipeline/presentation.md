@@ -3,7 +3,7 @@
 
 <img src="assets/minimal-deployment-pipeline-overview.webp" width="800"/>
 
-<small><strong>Time to Read:</strong> 13 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
+<small><strong>Time to Read:</strong> 13 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 
