@@ -213,7 +213,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
             </small>
         </td>
-        <td>60'</td>
+        <td>20'</td>
     </tr>
     <tr>
         <td>
