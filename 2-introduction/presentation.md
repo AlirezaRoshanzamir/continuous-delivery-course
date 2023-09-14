@@ -4,12 +4,12 @@
 <img src="assets/cd-phases.webp" width="1100"/>
 
 <small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small>Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Definition
@@ -166,16 +166,19 @@ Finally, look at the **first principle** behind the **Agile manifesto**:
 ---
 ## HP Laserjet Framework Case Study
 **Before CI:**
+
 <img src="assets/hp-2008.webp" width="700">
 
 ------
 ## Continued: HP Laserjet Framework Case Study
 **The CI pipeline:**
+
 <img src="assets/hp-pipeline.webp" width="700">
 
 ------
 ## Continued: HP Laserjet Framework Case Study
 **After CI:**
+
 <img src="assets/hp-2008-to-2011.webp" width="600">
 
 <img src="assets/continuous-delivery-rework-meme.webp" class="fragment fade-in" width="350">
@@ -198,4 +201,5 @@ The practices of continuous delivery bring several important **benefits**:
 - Happier teams
 
 Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/continuous-improvement-meme.webp" width="250">

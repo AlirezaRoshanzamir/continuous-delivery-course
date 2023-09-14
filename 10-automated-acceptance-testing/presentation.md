@@ -3,7 +3,7 @@
 
 <img src="assets/user-story-acceptance-criteria-and-test.webp"/>
 
-<small><strong>Time to Read:</strong> 10 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
+<small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -21,7 +21,7 @@ Each **acceptance test** aims to confirm if a **story or requirement's acceptanc
 
 Unit tests check if **a specific app part** works as intended **by the programmer**, which **isn't** the same as ensuring **user needs** are met.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/acceptance-test-stage.webp">
+<img src="assets/acceptance-test-stage.webp" width="550">
 
 ---
 ## Why Is Automated Acceptance Testing Essential?
@@ -117,7 +117,9 @@ Examples (from [here](https://capgemini.github.io/agile/invest-in-user-stories/)
 
 ------
 ### How to Create Maintainable Acceptance Test Suites: Layering
-Automated acceptance tests should be layered:
+<img src="assets/layering-meme.jpg" class="fragment start">
+
+Automated acceptance tests should be layered:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 
 <img src="assets/acceptance-tests-layers.webp" width="450">
 
@@ -348,9 +350,11 @@ public void shouldDeductPaymentFromAccountBalance() {
 
 ---
 ## Implementing Acceptance Tests
-There is more to the implementation of acceptance tests than layering:
+<img src="assets/following-course-advice-meme.jpeg" class="fragment start">
+
+There is more to the implementation of acceptance tests than layering:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Putting the application in a particular state, performing several actions on it, and verifying the results.  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - An atomic test creates all it needs to execute and then tidies up behind itself, leaving no trace except a record of whether it passed or failed (e.g. create a new account at the start of every test).  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - An atomic test sets up and cleans up everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Otherwise, write defensive tests (check everything at the start) and use differential assertions.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 - Prevent privilaged access or backdoors for tests.  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Handle asynchrony and timeouts in order to avoid flakiness.  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -360,8 +364,8 @@ There is more to the implementation of acceptance tests than layering:
 - Test doubles are often required in order to allow any integration with external systems to be simulated.  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Your acceptance testing should be focused on providing a controllable environment (we don't have this limit in UAT).  <!-- .element: class="fragment fade-in-then-semi-out" -->
   - Create test doubles that represent the connection to all external systems that our system interacts with.  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - <!-- .element: class="fragment fade-in-then-semi-out" --> Build small suites of tests around each integration point, intended to run in an environment that does have real connections to these external systems.
-  - Have one component of our system to represent all interactions with an external system (a gateway or adapter). It also helps to implement other patterns such as circuit breaker.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - <!-- .element: class="fragment fade-in-then-semi-out" --> Make small test sets for each integration point in an environment with real external system connections.
+  - Use a component (e.g., gateway) for external interactions, assisting in implementing patterns like the circuit breaker.  <!-- .element: class="fragment fade-in-then-semi-out" -->
 
 <img src="assets/external-system-test-doubles.webp" class="fragment fade-in">
 
@@ -381,7 +385,9 @@ Tips for the acceptance test stage:  <!-- .element: class="fragment fade-in-with
 
 ---
 ## Acceptance Test Performance
-Ultimately it is more important to have a **comprehensive automated test suite than one that runs in ten minutes**.
+<img src="assets/slow-acceptance-test-meme.gif" class="fragment start">
+
+Ultimately it is more important to have a **comprehensive automated test suite than one that runs in ten minutes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 But, the **longer** it takes to **discover a problem** after it's introduced, the **harder** it is to **identify and fix its source**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - Refactor and Improve Common Tasks and Initial States  <!-- .element class="fragment highlight-current-blue" -->

@@ -4,17 +4,12 @@
 <img src="assets/devops-loop.webp" width="700"/>
 
 <small><strong>Time to Read:</strong> 4 Minutes</small>, <small><strong>Time to Present:</strong> 15 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small>Tir 1402/August 2023</small></small>
-
-<details>
-<summary>Note</summary>
-Mention the deploy vs release and why their order is different in different places (feature toggle, release candidate, library vs application, multiple release and versioning and one deployment).
-</details>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Created By
@@ -223,7 +218,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Introduction, Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
             </small>
         </td>
-        <td>45'</td>
+        <td>50'</td>
     </tr>
     <tr>
         <td>

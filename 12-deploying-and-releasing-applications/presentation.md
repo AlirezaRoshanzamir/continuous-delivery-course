@@ -181,6 +181,7 @@ You can use your **staging** and **production** environments **as** your **blue*
 If you have an **extremely large production environment**, it's **impossible** to create a **meaningful capacity testing** environment.  <!-- .element class="fragment fade-in-paragraph" -->
 
 Canary releasing is defined as **rolling out a new version** of an application to a **subset of the production servers** to get fast feedback:  <!-- .element class="fragment fade-in-parent-with-next" -->
+
 <img src="assets/canary-releasing.webp" width="700">
 
 ------

@@ -3,13 +3,13 @@
 
 <img src="assets/wall-of-confusion.webp" style="max-width: 550px"/>
 
-<small>**Time to Read:** 8 Minutes</small>, <small>**Time to Present:** 30 Minutes</small>
-
-<small>**Created By:** Alireza Roshanzamir</small>
-
-<small>**Keywords:** Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small>Tir 1402/August 2023</small></small>
+<small><strong>Time to Read:</strong> 8 Minutes</small>, <small><strong>Time to Present:</strong> 30 Minutes</small>
+<br>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
+<br>
+<small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Release Antipatterns
@@ -103,10 +103,10 @@ We want to deliver software that's **high-quality** and **valuable** in an **eff
 
 ------
 ### Does This Process Scale?
-
 <img src="assets/here-we-go-again.webp">  <!-- .element: class="fragment complete-fade-out" -->
 
 The techniques and principles that we describe have been **proven in real projects** in all kinds of organizations, both **large** and **small** in all kinds of situations. Much inspired by the philosophy and ideas of the **lean movement** which have been applied to **huge organizations** and **even whole economies**.  <!-- .element: class="fragment fade-in-parent-with-next" -->
+
 <img src="assets/it-works.webp" width="400">
 
 ---
@@ -177,4 +177,5 @@ These are the **essential** elements for an **effective delivery process**:
 Through **automated build**, **test**, and **deployment**, we can confirm changes, ensure the process is **reproducible** across various environments, and greatly **reduce chances of errors** in production.
 
 We also get to spend more **weekends with our families** and **friends**, leading **less stressful lives**, and boosting productivity.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/family-meme.webp">

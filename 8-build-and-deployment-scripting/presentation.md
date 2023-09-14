@@ -4,12 +4,12 @@
 <img src="assets/iac.webp" width="750"/>
 
 <small><strong>Time to Read:</strong> 16 Minutes</small>, <small><strong>Time to Present:</strong> 90 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Introduction
@@ -26,6 +26,7 @@ As your project becomes more complex with **multiple components** or **unusual p
 <img src="assets/modern-software-development-meme.jpeg" class="fragment start">
 
 Build tools have a common core: **modeling dependencies**:  <!-- .element class="fragment fade-in-with-next custom" -->
+
 <img src="assets/build-dependency-network.webp">
 
 ------
@@ -70,6 +71,7 @@ Some other drawbacks:  <!-- .element: class="fragment fade-in-with-next custom" 
 ------
 ### An Overview of Build Tools: Ant
 Ant's core is in Java, while its scripts are an **external DSL in XML**. This mix provides Ant with robust **cross-platform** capabilities:
+
 <img src="assets/ant-example.webp" width="750">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
@@ -83,6 +85,7 @@ Ant files can become very long and disorganized due to these limitations, someti
 ------
 ### An Overview of Build Tools: NAnt and MSBuild
 **NAnt** and **Ant** have a **similar syntax**, with only a few differences. **Microsoft** later introduced a variant called **MSBuild**, tightly **integrated into Visual Studio**, specializing in building **solutions**, handling dependencies, and managing projects:
+
 <img src="assets/msbuild-example.webp">
 
 ------
@@ -124,6 +127,7 @@ New-gen build tools like Buildr, Gradle, and Gantt use **real programming langua
 Buildr is **based on Rake**, so anything you can do in Rake, you can do in Buildr. Moreover, Buildr seamlessly **replaces Maven**, sharing the **same conventions like filesystem layout**, **artifact specs**, and **repositories**. You can also **use Ant tasks**, with no setup needed.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 Gradle was designed for **multi-project builds**, often **large in scale**. It relies on a series of build **tasks** that can run **serially** or in **parallel**. It also supports incremental builds:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/gradle-example.webp" style="border: 1px solid lightgray" width="550">
 
 If you're starting **a new Java project** or seeking an **alternative to Ant or Maven**, consider **Gradle** or Buildr with **DSLs in Groovy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
@@ -338,6 +342,7 @@ Key build and deployment scripting principles apply universally, **regardless of
 <img src="assets/start-packaging-meme.webp" class="fragment start">
 
 A package manager or package-management system is a set of tools that automates the **installation**, **upgrading**, **configuration**, and **removal** of computer programs for a computer consistently:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/package-management.webp" width="1000">
 
 ------
@@ -345,8 +350,6 @@ A package manager or package-management system is a set of tools that automates 
 Some **language specific** and **language agnostic package managers**:
 
 <img src="assets/language-specific-vs-language-agnostic-package-managers.webp" width="1100">
-
-Language agnositc package manager doesn't result language agnostic package.
 
 ------
 ### Source Distribution (sdist) vs Built Distribution (bdist)
@@ -394,7 +397,7 @@ You may need **different systems** for generating **built distributions**.
 </table>
 
 <details>
-  <summary>Note:</summary>
+  <summary>Note</summary>
   Mention the following clues:
   <ul>
     <li>Use "distribution package" instead of "package" when searching</li>
@@ -456,7 +459,7 @@ You may need **different systems** for generating **built distributions**.
 </pre>
 
 <details>
-  <summary>Note:</summary>
+  <summary>Note</summary>
   <ul>
     <li>Put things together that change together.</li>
   </ul>
@@ -499,8 +502,10 @@ Changes to **testing** and **production environments** should **only be made thr
 
 Along with the previous notes, also consider the following:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **Deploying and Testing Layers**: It's essential to build on good known foundations. Before copying binaries to the filesystem, ensure the environment is prepared in these layers:
+
     <img src="assets/deploying-software-layers.webp" width="330">
 - **Testing Your Environment's Configuration**: Provide a degree of confidence that the deployed layer is working:
+
     <img src="assets/deployment-testing-layers.webp" width="960">
 
 <details>
