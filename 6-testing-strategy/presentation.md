@@ -4,12 +4,12 @@
 <img src="assets/v-model.webp" style="max-width: 600px"/>
 
 <small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ### Introduction
@@ -93,7 +93,7 @@ Automated acceptance tests have valuable benefits:
 
 Automated acceptance tests can be **costly to maintain**. If done poorly, they can **burden your team**. We mainly cover the **happy path** and **some key parts** to balance costs.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-You can gain **80% coverage**: **60% from unit tests**, **20% from acceptance tests**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+Achieving **80% regression testing coverage (for each unit, component, and acceptance)** is comprehensive. But relying solely on 60% unit tests and 20% acceptance tests may not be enough.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 A handy guideline is to **automate** after **repeating the same test a couple of times** and being sure **maintenance won't be excessive**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -155,7 +155,8 @@ Automated testing often includes **substituting a system part** with a **simulat
 - **Spy**: Record some information. Some resources, tell that it can also provide canned answers.
 - **Mock**: Preprogrammed with expectations and the responses.
 - **Fake**: Simulate different test objects through a different implementation (usage of in-memory database for testing).
-<img src="assets/test-doubles.webp" width="500"/>
+
+<img src="assets/test-doubles.webp" width="500" class="fragment fade-in"/>
 
 [Mocks are not stubs](https://martinfowler.com/articles/mocksArentStubs.html): Stub uses state verification while the mock uses behavior verification.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -181,6 +182,7 @@ Mention the Classical vs Mockist testing and TDD dichotomy.
 Test coverage is a **metric** used in software testing to gauge how extensively a software system's **features**, **requirements**, or **code components** are tested by a set of **test cases**. It aims to **provide insight** into testing's **quality**.
 
 Start by **creating a model** of the source code or target components for testing. Next, **define coverage criteria** to be met. Then, create thorough **test plans** and **develop tests** aligned with these coverage criteria:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/software-modeling-structures.webp">
 
 ------
@@ -188,10 +190,11 @@ Start by **creating a model** of the source code or target components for testin
 <img src="assets/tests-folder-meme.webp" class="fragment start" width="500">
 
 Code coverage-based unit testing is a form of **white-box** testing. It assesses the **portion of executed code by test cases**, aiming for thorough **examination of the software's internal logic and pathways**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/code-line-coverage.webp">
 
 <details>
-  <summary>Note:</summary>
+  <summary>Note</summary>
   "Code coverage" differs from "test coverage." The former measures how the code is covered by tests, while the latter is a superset of the former, encompassing various entities such as source code, requirements, and use cases, and assessing how they are covered by tests.
 </details>
 

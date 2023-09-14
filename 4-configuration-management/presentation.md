@@ -3,13 +3,13 @@
 
 <img src="assets/gitops.webp" style="border: 1px solid black"/>
 
-<small>**Time to Read:** 12 Minutes</small>, <small>**Time to Present:** 55 Minutes</small>
-
-<small>**Created By:** Alireza Roshanzamir</small>
-
-<small>**Keywords:** Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small>Tir 1402/August 2023</small></small>
+<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 55 Minutes</small>
+<br>
+<small><strong>Created By:</strong> Alireza Roshanzamir</small>
+<br>
+<small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Definition

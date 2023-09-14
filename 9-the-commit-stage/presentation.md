@@ -1,15 +1,15 @@
 ## Continuous Delivery: The Commit Stage
 #### Principles and Practices, The Results, Commit Test Suite Principles and Practices
 
-<img src="assets/the-commit-stage.webp" width="600"/>
+<img src="assets/the-commit-stage.webp" width="500"/>
 
 <small><strong>Time to Read:</strong> 5 Minutes</small>, <small><strong>Time to Present:</strong> 20 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Introduction
@@ -60,6 +60,7 @@ Some principles and practices that make for an effective commit stage:
 <img src="assets/manage-all-the-binaries-meme.webp" class="fragment start">
 
 The commit stage takes in **source code** and produces **binaries** and **reports** that should be **stored** for **later use in the pipeline** and for your **team to access**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/role-of-artifact-repository.webp">
 
 ---

@@ -4,16 +4,17 @@
 <img src="assets/minimal-deployment-pipeline-overview.webp" width="800"/>
 
 <small><strong>Time to Read:</strong> 13 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## What Is a Deployment Pipeline?
 In abstract, a deployment pipeline is an automated process to take software **from version control** to **user access**. This demands teamwork among individuals and **teams**:
+
 <img src="assets/deployment-pipeline-sequence-diagram.webp"/>
 
 ------
@@ -40,6 +41,7 @@ A typical deployment pipeline:
 ------
 ### Continued: A Basic Deployment Pipeline
 **Testers** and **operations** may need to approve deployment to **UAT** or **production**:
+
 <img src="assets/pipeline-activity.webp" width="500"/>
 
 ---
@@ -67,6 +69,7 @@ There are some practices you should follow:  <!-- .element: class="fragment fade
 <img src="assets/pipeline-scenarios-meme.webp" class="fragment start"/>
 
 Intelligent scheduling is crucial to implementing a deployment pipeline:  <!-- .element: class="fragment fade-in-with-next custom" -->
+
 <img src="assets/deployment-pipeline-scheduling-stages.webp"/>
 
 ---
@@ -250,6 +253,7 @@ Keep in mind these three key points:  <!-- .element: class="fragment fade-in-wit
 Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 In software delivery, the key global metric is **cycle time**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+
 <img src="assets/cycle-time-lead-time.webp" width="700">
 
 - It's the time from **deciding to implement a feature** to its **release for users**.  <!-- .element: class="fragment fade-in-parent custom" -->

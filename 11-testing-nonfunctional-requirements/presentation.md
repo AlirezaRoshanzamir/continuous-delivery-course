@@ -43,7 +43,7 @@ NFRs are **complex** because they usually have a very **strong influence** on th
 NFRs tend to **interact with one another** in an **unhelpful manner**: Very secure systems often compromise on ease of use; very flexible systems often compromise on performance, and so forth.  <!-- .element class="fragment fade-in-paragraph" -->
 
 <details>
-    <summary>Note:</summary>
+    <summary>Note</summary>
     Perspectives:
     <ul>
         <li>
