@@ -247,13 +247,13 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
 <table>
     <tr>
         <td>
-            Managing Infrastructure and Environments
+            <a href="../13-managing-infrastructure-and-environments" target="_blank">Managing Infrastructure and Environments</a>
             <br>
             <small>
-                Operation Team Needs, Modeling and Managing Infrastructure, Provisioning and Configuration, Monitoring
+                Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications
             </small>
         </td>
-        <td>30'</td>
+        <td>50'</td>
     </tr>
     <tr>
         <td>
