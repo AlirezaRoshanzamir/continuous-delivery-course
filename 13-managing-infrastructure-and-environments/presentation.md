@@ -405,7 +405,28 @@ Red means at least one of the following is true:
 - A critical state is not fully operational (for example, "accepting requests" is false where it should be true).
 
 ------
-### Behavior-Driven Monitoring
+### Behavior-Driven Monitoring [Infrastructure]
+Operations personnel can write automated tests to verify the behavior of their infrastructure
+
+You can start by writing the test, verifying that it fails, and then defining a Puppet manifest (or whatever your configuration management tool of choice is) that puts your infrastructure into the expected state. You then run the test to verify that the configuration worked correctly and your infrastructure behaves as expected.
+
+Example (can be run by [Cucumber Nagios](https://auxesis.github.io/cucumber-nagios/)):
+
+<pre class="gherkin"><code style="font-size: 17px; line-height: normal;" data-trim data-noescape>Feature: google.com
+  It should be up
+  And I should be able to search for things
+
+  Scenario: Searching for things
+    When I go to "http://www.google.com.au/"
+    And I fill in "q" with "wikipedia"
+    And I press "Google Search"
+    Then I should see "www.wikipedia.org"
+</code></pre>
+
+<img src="assets/cucumber-nagios.png">
 
 ---
 ## Summary
+If you are evaluating third-party products for use in your enterprise system, making sure that they ﬁt into your automated conﬁguration management strategy should be very high on your list or priorities.
+
+Make sure that you have an infrastructure management strategy in place right from the beginning of your project, and engage stakeholders from the development and operations teams at that stage.
