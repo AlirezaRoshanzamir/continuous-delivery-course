@@ -35,3 +35,4 @@ Currently, these sessions have been added:
 |   10   | [Automated Acceptance Testing](10-automated-acceptance-testing) |
 |   11   | [Testing Nonfunctional Requirements](11-testing-nonfunctional-requirements) |
 |   12   | [Deploying and Releasing Applications](12-deploying-and-releasing-applications) |
+|   13   | [Managing Infrastructure and Environments](13-managing-infrastructure-and-environments)
