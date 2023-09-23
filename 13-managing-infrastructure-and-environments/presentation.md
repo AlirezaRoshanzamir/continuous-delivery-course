@@ -1,9 +1,9 @@
 ## Continuous Delivery: Managing Infrastructure and Environments
-#### ...
+#### Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications
 
 <img src="assets/cloud-architecture-layers.png" alt="https://www.researchgate.net/publication/263297688_Middleware_and_Methods_for_Customizable_SaaS"/>
 
-<small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
+<small><strong>Time to Read:</strong> 14 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -72,7 +72,7 @@ measure of the length of time prior to a disaster for which data loss is accepta
   - Development team and operations team should sit down at the beginning of every project and decide how deployment of the application will be performed.
 
 ---
-### Modeling and Managing Infrastructure
+## Modeling and Managing Infrastructure
 Everything in this session can be broadly considered a branch of configuration management.
 
 Types of servers, divided up by level of abstraction:
