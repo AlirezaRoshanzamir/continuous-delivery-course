@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Continuous Delivery</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"/>
+
+        <style>
+            .reveal section > :not(section) {
+                font-size: 25px;
+                text-align: left;
+            }
+            .reveal section h2 {
+                font-size: 40px;
+                text-align: center;
+            }
+            .reveal section h3 {
+                font-size: 30px;
+                text-align: center;
+            }
+            .reveal section h4 {
+                font-size: 25px;
+                text-align: center;
+            }
+            .reveal img {
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .reveal ul, .reveal ol {
+                display: block;
+            }
+            table, td, th, tr {
+                border: 1px solid lightgray !important;
+            }
+            tr:not(.simple):nth-child(even) {
+                background-color: #eeeeee;
+            }
+            table td {
+                vertical-align: middle;
+                padding: 4px;
+            }
+            table.books td img {
+                max-height: 120px;
+                margin: 0;
+            }
+            small, small * {
+                font-size: 20px !important;
+            }
+            .fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
+                display: none;
+            }
+            .fragment.complete-fade-out.visible:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.fade-in-with-next:not(.visible), .fragment.fade-in-with-next:not(.visible) + * {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            p:has(.fragment.fade-in-paragraph:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-parent:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-parent-with-next:not(.visible)), :has(> .fragment.fade-in-parent-with-next:not(.visible)) + * {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent:not(.visible)) {
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent.current-fragment) {
+                opacity: 1;
+                transition: opacity 0.4s;
+            }
+            :has(> .fragment.fade-in-then-semi-out-parent.visible:not(.current-fragment)) {
+                opacity: 0.6;
+                transition: opacity 0.4s;
+            }
+            .fragment.start.visible:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
+                visibility: hidden;
+            }
+            .fragment.start.visible:not(.current-fragment) {
+                display: none;
+            }
+            .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
+                visibility: hidden;
+            }
+            .fragment.end:not(.current-fragment) {
+                display: none;
+            }
+            :not(h3):has(~ .fragment.end.current-fragment) {
+                display: none;
+            }
+            :has(> .fragment.highlight-current-blue-parent.current-fragment) {
+                color: dodgerblue;
+                transition: color 0.4s;
+            }
+            :has(> .fragment.semi-fade-out-parent.visible:not(.current-fragment)) {
+                opacity: 0.6;
+                transition: opacity 0.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section
+                    data-markdown="presentation.md"
+                    data-separator="^---$"
+                    data-separator-vertical="^------$"
+                    data-separator-notes="^\<details\>"
+                    data-charset="iso-8859-15"
+                    data-auto-animate>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/search/search.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/zoom/zoom.js"></script>
+
+        <script>
+            Reveal.initialize({
+                hash: true,
+                slideNumber: "c/t",
+                pdfMaxPagesPerSlide: 1,
+                width: 1366,
+                height: 768,
+                minScale: 0.001,
+                maxScale: 10,
+                loop: true,
+                plugins: [ 
+                    RevealMarkdown,
+                    RevealNotes,
+                    RevealHighlight,
+                    RevealSearch,
+                    RevealZoom
+                ]
+            });
+        </script>
+    </body>
+</html>
