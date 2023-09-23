@@ -36,3 +36,4 @@ Currently, these sessions have been added:
 |   11   | [Testing Nonfunctional Requirements](11-testing-nonfunctional-requirements) |
 |   12   | [Deploying and Releasing Applications](12-deploying-and-releasing-applications) |
 |   13   | [Managing Infrastructure and Environments](13-managing-infrastructure-and-environments)
+|   14   | [Managing Data](14-managing-data)

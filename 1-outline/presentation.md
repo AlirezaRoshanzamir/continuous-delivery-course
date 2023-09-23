@@ -257,10 +257,10 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     </tr>
     <tr>
         <td>
-            Managing Data
+            <a href="../14-managing-data" target="_blank">Managing Data</a>
             <br>
             <small>
-                Database Scripting, Incremental Change, Rolling Back Databases and Zero-Downtime Releases, Managing Test Data
+                Database Scripting, Incremental Change, Rolling Back Databases and Zero-Downtime Releases, Managing Test Data, Data Management and the Deployment Pipeline
             </small>
         </td>
         <td>45'</td>
