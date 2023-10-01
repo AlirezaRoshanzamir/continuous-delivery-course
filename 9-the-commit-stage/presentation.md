@@ -35,7 +35,9 @@ Mention the preflight, pretested, pull-request, merge request builds.
 
 ---
 ## Principles and Practices
-Some principles and practices that make for an effective commit stage:
+<img src="assets/commit-stage-first-rule-meme.jpeg" class="fragment start">
+
+Some principles and practices that make for an effective commit stage:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Provide Fast, Useful Feedback  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Provide a concise summary of **why things failed**, like a list of failed tests, compile errors, or other issues.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
   - **Do not fail fast** (if possible) and present aggregated report for this stage.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
@@ -67,7 +69,7 @@ The commit stage takes in **source code** and produces **binaries** and **report
 ## Commit Test Suite Principles and Practices
 <img src="assets/tests-everywhere-meme.webp" class="fragment start">
 
-Some important principles and practices governing the design of a commit test suite. Here, we only talk about unit-tests while it's recommended to include some acceptance and end-to-end tests in the commit stage test suit:  <!-- .element: class="fragment fade-in-with-next custom" -->
+Commit test suite design principles, **emphasizing unit tests** (while suggesting adding **acceptance** and **end-to-end** tests to the commit stage test suite):  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - The vast majority of your commit tests should be comprised of unit tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
   <img src="assets/test-automation-pyramid.webp" width="800">
 - Should be very fast to execute  <!-- .element: class="fragment insides-fade-in-then-out" -->
