@@ -25,7 +25,7 @@ Unit tests check if **a specific app part** works as intended **by the programme
 
 ---
 ## Why Is Automated Acceptance Testing Essential?
-<img src="assets/why-meme.webp" class="fragment start">
+<img src="assets/why-meme.webp" class="fragment start" width="800">
 
 Automated acceptance tests have **long been a subject of controversy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
@@ -55,8 +55,7 @@ Acceptance tests come from **acceptance criteria**, so your criteria must consid
 
 ------
 ### Continued: How to Create Maintainable Acceptance Test Suites: INVEST
-Examples (from [here](https://capgemini.github.io/agile/invest-in-user-stories/) and [here](https://www.towerhousestudio.com/blog/how-to-evaluate-your-user-stories-using-the-invest-criteria)):
-- User Story:
+- User Story (from [here](https://capgemini.github.io/agile/invest-in-user-stories/) and [here](https://www.towerhousestudio.com/blog/how-to-evaluate-your-user-stories-using-the-invest-criteria)):
   <table style="font-size: 17px">
     <tr>
       <th>Bad</th>
@@ -64,31 +63,31 @@ Examples (from [here](https://capgemini.github.io/agile/invest-in-user-stories/)
     </tr>
     <tr>
       <td>
-        As a customer, I want the website to have a new layout and design so that it looks more modern.
+        <strong>As a customer</strong>, I want the website to have a <strong>new layout and design</strong> so that it <strong>looks more modern</strong>.
         <details>
           <summary>Why?</summary>
-          This User Story is not independent as it requires changes to be made to the entire website. It is also not easily estimable as it is too broad and could require significant effort to complete.
+          This User Story is <strong>not independent</strong> as it requires changes to be made to the entire website. It is also <strong>not easily estimable</strong> as it is <strong>too broad</strong> and could require significant effort to complete.
         </details>
       </td>
       <td>
-        As a customer, I want to search for products by category so that I can find the products I am looking for more easily.
+        <strong>As a customer</strong>, I want to <strong>search for products by category</strong> so that I can <strong>find the products I am looking for more easily</strong>.
       </td>
     </tr>
     <tr>
       <td>
-        As a salesperson, I want to view all of the company's financial information so that I can make better business decisions.
+        <strong>As a salesperson</strong>, I want to <strong>view all of the company's financial information</strong> so that I can <strong>make better business decisions</strong>.
         <details>
           <summary>Why?</summary>
-          This User Story is not negotiable as it requests access to sensitive information. It is also not easily testable as it requires access to sensitive financial information.
+          This User Story is <strong>not negotiable</strong> as it <strong>requests access to sensitive information</strong>. It is also <strong>not easily testable</strong> as it <strong>requires access to sensitive financial information</strong>.
         </details>
       </td>
       <td>
-        As a salesperson, I want to view a list of my customers so that I can keep track of my customer relationships.
+        <strong>As a salesperson</strong>, I want to <strong>view a list of my customers</strong> so that I can <strong>keep track of my customer relationships</strong>.
       </td>
     </tr>
     <tr>
       <td>
-        As an XYZ customer ordering using the website, I want to be able to use the One-click Payment option, so that I can skip the payment pages and complete my order faster.
+        <strong>As an XYZ customer ordering</strong> using the website, I want to be able to <strong>use the One-click Payment option</strong>, so that I can <strong>skip the payment pages and complete my order faster</strong>.
         <details>
           <summary>Why?</summary>
           <strong>Type of Customers</strong>: Is this feature available to all new and existing customers?<br>
@@ -100,11 +99,11 @@ Examples (from [here](https://capgemini.github.io/agile/invest-in-user-stories/)
         </details>
       </td>
       <td>
-        As an EXISTING ONE-CLICK PAYMENT XYZ CUSTOMER ordering from the <strong>WEB</strong> using a <strong>DESKTOP OR LAPTOP</strong>, I want to be able to CLICK ON THE ONE-CLICK PAYMENT OPTION so that I can skip the payment pages and complete my order faster.
+        <strong>As an EXISTING ONE-CLICK PAYMENT XYZ CUSTOMER ordering</strong> from the <strong>WEB</strong> using a <strong>DESKTOP OR LAPTOP</strong>, I want to be able to <strong>CLICK ON THE ONE-CLICK PAYMENT OPTION</strong> so that I can <strong>skip the payment pages and complete my order faster</strong>.
       </td>
     </tr>
   </table>
-
+<hr>
 
 - <!-- .element: class="fragment fade-in" --> Acceptance Criteria:
   **Given**: An EXISTING ONE-CLICK PAYMENT WEB XYZ Customer, **When**: The Customer orders through the website and clicks on Checkout using a desktop or a laptop, **Then**: The Customer must be presented with a One-click Payment button.
@@ -354,8 +353,8 @@ public void shouldDeductPaymentFromAccountBalance() {
 
 There is more to the implementation of acceptance tests than layering:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Putting the application in a particular state, performing several actions on it, and verifying the results.  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - An atomic test sets up and cleans up everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-then-semi-out" -->
-  - Otherwise, write defensive tests (check everything at the start) and use differential assertions.  <!-- .element: class="fragment fade-in-then-semi-out" -->
+  - An **atomic** test **sets up** and **cleans up** everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-parent-then-semi-out" -->
+  - Otherwise, write **defensive tests** (check everything at the start) and use **differential assertions**.  <!-- .element: class="fragment fade-in-parent-then-semi-out" -->
 - Prevent privilaged access or backdoors for tests.  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Handle asynchrony and timeouts in order to avoid flakiness.  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Has the test failed, or are we just waiting for the results to arrive?  <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -401,3 +400,5 @@ But, the **longer** it takes to **discover a problem** after it's introduced, th
 Automated acceptance tests are typically **more complex** than unit tests. They require more maintenance and are **likely to be broken more often**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 The use of automated acceptance testing will **pay for itself** many times over; **we have never regretted their use**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+
+<img src="assets/skipping-acceptance-tests-meme.jpeg" class="fragment fade-in">
