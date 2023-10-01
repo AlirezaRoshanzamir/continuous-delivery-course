@@ -4,12 +4,12 @@
 <img src="assets/frs-vs-nfrs.webp" width="600"/>
 
 <small><strong>Time to Read:</strong> 5 Minutes</small>, <small><strong>Time to Present:</strong> 15 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Introduction
