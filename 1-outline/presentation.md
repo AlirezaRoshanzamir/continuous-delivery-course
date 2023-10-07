@@ -231,10 +231,10 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../12-deploying-and-releasing-applications" target="_blank">Deploying and Releasing Applications</a>
             <br>
             <small>
-                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
+                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, <span style="color: purple">Rolling Back Deployments and Zero-Downtime Releases</span>, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
             </small>
         </td>
-        <td>45'</td>
+        <td>60'</td>
     </tr>
 </table>
 

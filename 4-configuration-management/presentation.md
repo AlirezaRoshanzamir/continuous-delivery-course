@@ -258,7 +258,7 @@ A production environment must be **locked down**. **No** changes allowed **witho
 - Could you **go back** to a previous, **known good state** of your application?  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - Are you confident **each deployed environment** (production, staging, test) is set up **the same way**?  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-**If not**, your project is **at risk**. It's **crucial** to have a strategy for storing baselines and **controlling changes to**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+**If not**, your project is **at risk**. It's **crucial** to have a strategy for storing baselines and **controlling changes to**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - App **source code**, **build scripts**, **tests**, **docs**, **requirements**, **DB scripts**, **libraries**, **config files**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 - Your **development**, **testing**, and **operations** **toolchains**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 <!-- - All environments used in development, testing, and production -->

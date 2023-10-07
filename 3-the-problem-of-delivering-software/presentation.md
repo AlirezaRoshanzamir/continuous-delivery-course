@@ -78,7 +78,7 @@ Our goal is to explain **deployment pipelines**, along with **high automation** 
 ## Refined Goal
 <img src="assets/cd-refined-goal-meme.webp" class="fragment start"/>
 
-We want to deliver software that's **high-quality** and **valuable** in an **efficient**, **fast**, and **reliable** manner by making releases:  <!-- .element class="fragment fade-in-parent-with-next" -->
+We want to deliver software that's **high-quality** and **valuable** in an **efficient**, **fast**, and **reliable** manner by making releases:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - **Automated**
   - Not automated &rArr; Not repeatable  <!-- .element class="fragment highlight-current-blue" -->
   - Not automated &rArr; Error prone  <!-- .element class="fragment highlight-current-blue" -->
@@ -105,7 +105,7 @@ We want to deliver software that's **high-quality** and **valuable** in an **eff
 ### Does This Process Scale?
 <img src="assets/here-we-go-again.webp">  <!-- .element: class="fragment complete-fade-out" -->
 
-The techniques and principles that we describe have been **proven in real projects** in all kinds of organizations, both **large** and **small** in all kinds of situations. Much inspired by the philosophy and ideas of the **lean movement** which have been applied to **huge organizations** and **even whole economies**.  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The techniques and principles that we describe have been **proven in real projects** in all kinds of organizations, both **large** and **small** in all kinds of situations. Much inspired by the philosophy and ideas of the **lean movement** which have been applied to **huge organizations** and **even whole economies**.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 
 <img src="assets/it-works.webp" width="400">
 
