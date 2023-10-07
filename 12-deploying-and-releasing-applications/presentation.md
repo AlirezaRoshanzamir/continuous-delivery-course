@@ -284,7 +284,7 @@ The **typical concern** with continuous deployment is that it can be **risky**. 
 
 ---
 ## Summary
-In the **later pipeline stages**, the focus is on **deploying into testing and production environments**. Your implementation should **allow deploying any version** that **passed automated tests** into any environment with a **push of a button** and the **right credentials**.
+In the **later pipeline stages**, the focus is on **deploying into testing/production environments**. Your implementation should **allow deploying any version** that **passed automated tests** into any environment with a **push of a button** and the **right credentials**.
 
 Your team should have visibility into **what**'s deployed **where** and the **included changes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
