@@ -33,7 +33,7 @@ Currently, these sessions have been added:
 |   8    | [Build and Deployment Scripting](8-build-and-deployment-scripting) |
 |   9    | [The Commit Stage](9-the-commit-stage) |
 |   10   | [Automated Acceptance Testing](10-automated-acceptance-testing) |
-|   11   | [Testing Nonfunctional Requirements](11-testing-nonfunctional-requirements) |
+|   11   | [Managing Nonfunctional Requirements](11-managing-nonfunctional-requirements) |
 |   12   | [Deploying and Releasing Applications](12-deploying-and-releasing-applications) |
 |   13   | [Managing Infrastructure and Environments](13-managing-infrastructure-and-environments)
 |   14   | [Managing Data](14-managing-data)

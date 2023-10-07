@@ -195,7 +195,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../8-build-and-deployment-scripting" target="_blank">Build and Deployment Scripting</a>
             <br>
             <small>
-                Build Tools, <span style="color: brown">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: brown">Package Managers</span>, <span style="color: brown">Code Generation</span>, <span style="color: brown">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: brown">Infrastructure as Code</span>
+                <span style="color: purple">Build Tools</span>, <span style="color: brown">Monorepo vs Polyrepo</span>, Principles and Practices, <span style="color: brown">Package Managers</span>, <span style="color: brown">Code Generation</span>, <span style="color: brown">Sample Project Structure</span>, Deployment Scripting, Tips and Tricks, <span style="color: brown">Infrastructure as Code</span>
             </small>
         </td>
         <td>90'</td>
@@ -222,11 +222,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     </tr>
     <tr>
         <td>
-            <a href="../11-testing-nonfunctional-requirements" target="_blank">Testing Nonfunctional Requirements (Introduction)</a>
-            <br>
-            <small>
-                Introduction, Managing Nonfunctional Requirements
-            </small>
+            <a href="../11-managing-nonfunctional-requirements" target="_blank">Managing Nonfunctional Requirements</a>
         </td>
         <td>15'</td>
     </tr>
