@@ -353,8 +353,8 @@ public void shouldDeductPaymentFromAccountBalance() {
 
 There is more to the implementation of acceptance tests than layering:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Putting the application in a particular state, performing several actions on it, and verifying the results.  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - An **atomic** test **sets up** and **cleans up** everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-parent-then-semi-out" -->
-  - Otherwise, write **defensive tests** (check everything at the start) and use **differential assertions**.  <!-- .element: class="fragment fade-in-parent-then-semi-out" -->
+  - An **atomic** test **sets up** and **cleans up** everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - Otherwise, write **defensive tests** (check everything at the start) and use **differential assertions**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
 - Prevent privilaged access or backdoors for tests.  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Handle asynchrony and timeouts in order to avoid flakiness.  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Has the test failed, or are we just waiting for the results to arrive?  <!-- .element: class="fragment fade-in-then-semi-out" -->
