@@ -19,7 +19,7 @@ Modern platforms offer **command-line build options**. Rails uses **Rake**, .NET
 
 As your project becomes more complex with **multiple components** or **unusual packaging** needs, you'll need to delve into build scripting.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-**Deploying software** to testing and production environments **isn't as simple as dropping a binary file**. It involves **configuring** your application, **initializing data**, setting up **infrastructure**, and more, including **mock external systems**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+**Deploying software** to testing/production environments **isn't as simple as dropping a binary file**. It involves **configuring** your application, **initializing data**, setting up **infrastructure**, and more, including **mock external systems**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 ---
 ## An Overview of Build Tools
