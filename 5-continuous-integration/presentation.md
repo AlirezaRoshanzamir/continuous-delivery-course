@@ -100,7 +100,7 @@ If it takes **too long** to **build** and run the **unit tests**:
 
 Ideally, the **pre-check-in** and **CI server** **build** and **test** should last a short time (**90s >> 5min >> 10min**). It's comparable to **making tea**, **chatting**, email, or a **stretch**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-However, this **shouldn't conflict** with **comprehensive tests**. Eventually, you'll need to **divide your testing into multiple stages**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+However, this **shouldn't conflict** with **comprehensive tests**. Eventually, you'll need to **divide your testing into multiple stages**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - **Commit stage**: Compile the software, run unit tests for individual classes, and create a deployable binary.
 - **Acceptance test stage**: Use the **binaries from the commit stage** to run **acceptance**, **integration**, and **performance tests** if available.
 

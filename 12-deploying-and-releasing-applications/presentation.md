@@ -4,20 +4,20 @@
 <img src="assets/deployed-vs-released.webp" alt="Deployment applies in the domain of the team and means the functionality is introduced in Production while Release is business term that defines functionality being available to an end-user."/>
 
 <small><strong>Time to Read:</strong> 10 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
-
+<br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
-
+<br>
 <small><strong>Keywords:</strong> Continuous Delivery, Continuous Integration, DevOps, Build, Test, Release, Deployment, Automation, Version Control, Deployment Pipeline</small>
-
-<small><small> Tir 1402/August 2023</small></small>
+<br><br>
+<small style="color: darkred"><small>Press **"F"** to go fullscreen; some slides may not display properly otherwise.</small></small>
 
 ---
 ## Introduction
 <img src="assets/release-day-meme.webp" class="fragment start">
 
-There are differences between **releasing software into production** and **deploying it to testing environments**-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these **differences should be encapsulated in a set of configuration files**.  <!-- .element: class="fragment fade-in-paragraph" -->
+There are differences between **releasing software into production** and **deploying it to testing environments**-not least, in the level of adrenaline in the blood of the person performing the release. However, in technical terms, these **differences should be encapsulated in a set of configuration files**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-The **main difference between deploying and releasing** is the ability to **roll back**. Two extremely powerful techniques that can be used to perform **zero-downtime releases** and **rollbacks** on even the largest of production systems are:  <!-- .element: class="fragment fade-in-parent-with-next" -->
+The **main difference between deploying and releasing** is the ability to **roll back**. Two extremely powerful techniques that can be used to perform **zero-downtime releases** and **rollbacks** on even the largest of production systems are:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
 - Blue-green deployments
 - Canary releasing
 
@@ -110,7 +110,7 @@ Promoting builds between environments requires to consider the following concern
 ### Deployments to Staging Environments
 Before you let your application loose on unsuspecting users, you should perform some **final tests** in a **staging environment** that is **very similar to production**.
 
-For **simple systems** **without interaction** with **external systems**, you can employ the **capacity testing** environment for both capacity testing and staging.  <!-- .element class="fragment fade-in-paragraph" -->
+For **simple systems** **without interaction** with **external systems**, you can employ the **capacity testing** environment for both capacity testing and staging.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ---
 ## Semantic Versioning (SemVer)
@@ -127,15 +127,15 @@ Visit the https://semver.org for more information.
 ## Rolling Back Deployments and Zero-Downtime Releases
 <img src="assets/rollback-quick-fix-meme.webp" class="fragment start">
 
-It is essential to be able to **roll back** a deployment in case it goes **wrong**.  <!-- .element class="fragment fade-in-paragraph" -->
+It is essential to be able to **roll back** a deployment in case it goes **wrong**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-There are several methods of performing a rollback. The more advanced techniques such as **blue-green deployments** and **canary releasing** can also be used to perform **zero-downtime releases** and **rollbacks**.  <!-- .element class="fragment fade-in-paragraph" -->
+There are several methods of performing a rollback. The more advanced techniques such as **blue-green deployments** and **canary releasing** can also be used to perform **zero-downtime releases** and **rollbacks**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-There are two important **constraints**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+There are two important **constraints**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - **Data**: If your release process makes changes to your data, it can be **hard** to roll back.
 - **Other systems**: releases involving more than one system (known as orchestrated releases), the rollback process becomes more **complex**.
 
-Rolling back **principles**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+Rolling back **principles**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Ensure that the state of your production system, including **databases** and **state held on the filesystem**, is **backed up**.
 - **Practice your rollback** plan, including **restoring** from the backup or migrating the database back before every release.
 
@@ -147,7 +147,7 @@ The simplest way to get **back to a good state** is to **redeploy** the previous
 ### Zero-Downtime Releases (Hot Deployment)
 The key to zero-downtime releases is **decoupling the various parts** of the release process so they can happen independently as far as possible. It should be possible to put in place **new versions** of shared resources your applications depend on, such as **databases**, **services**, and **static resources**, **before you upgrade** your applications.
 
-You can use **versioning** for **static resources** and **web-based services**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+You can use **versioning** for **static resources** and **web-based services**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - For example, AWS has a date-based versioning system, with the latest version of the EC2 API available at _http://ec2.amazonaws.com/doc/2009-11-30/AmazonEC2.wsdl_.
 - Put the static resources such as images, Javascript, HTML, and CSS to a new directory-for example, you could put the images for version 2.6.5 of your application under _/static/2.6.5/images_.
 
@@ -172,15 +172,15 @@ Steps:
 
 You can also migrate database independent of the the upgrade process which we describe later.  <!-- .element class="fragment fade-in" -->
 
-If you can only **afford a single production** environment, you can **still** use blue-green deployments. Simply **have two copies** of your application running **side by side** on the **same environment** (but **isolated** to each other).  <!-- .element class="fragment fade-in-paragraph" -->
+If you can only **afford a single production** environment, you can **still** use blue-green deployments. Simply **have two copies** of your application running **side by side** on the **same environment** (but **isolated** to each other).  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-You can use your **staging** and **production** environments **as** your **blue** and **green** environments (called **shadow domain releasing**, **shadow environment releasing**, or **live-live releasing**).  <!-- .element class="fragment fade-in-paragraph" -->
+You can use your **staging** and **production** environments **as** your **blue** and **green** environments (called **shadow domain releasing**, **shadow environment releasing**, or **live-live releasing**).  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ------
 ### Canary Releasing
-If you have an **extremely large production environment**, it's **impossible** to create a **meaningful capacity testing** environment.  <!-- .element class="fragment fade-in-paragraph" -->
+If you have an **extremely large production environment**, it's **impossible** to create a **meaningful capacity testing** environment.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-Canary releasing is defined as **rolling out a new version** of an application to a **subset of the production servers** to get fast feedback:  <!-- .element class="fragment fade-in-parent-with-next" -->
+Canary releasing is defined as **rolling out a new version** of an application to a **subset of the production servers** to get fast feedback:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 
 <img src="assets/canary-releasing.webp" width="700">
 
@@ -196,11 +196,11 @@ Benefits:  <!-- .element class="fragment fade-in-with-next" -->
 - A/B testing
 - Gradually ramping up the load to check the capacity requirements
 
-Finally, it is important to keep as **few versions** of your application in production as possible-try to limit it to **two**.  <!-- .element class="fragment fade-in-paragraph" -->
+Finally, it is important to keep as **few versions** of your application in production as possible-try to limit it to **two**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ---
 ## Emergency Fixes
-There comes a moment when a **critical defect** is discovered and has to be **fixed as soon as possible**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+There comes a moment when a **critical defect** is discovered and has to be **fixed as soon as possible**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - **Do not**, under any circumstances, **subvert your process** (such as logging directly into production environments and making uncontrolled changes).
   - The change is **not tested properly**, which may **exacerbate** the problem.
   - The environment ends up in an **unknown state** that makes it **impossible to reproduce**.
@@ -216,15 +216,15 @@ Some other considerations:  <!-- .element class="fragment fade-in-with-next" -->
 ## Continuous Deployment
 The **logical extreme** is to **deploy every change** that **passes your automated tests** to production (by making the final step automatic). This technique is known as continuous deployment (**to production**).
 
-It can be combined with **canary releasing** to **reduce risk**.  <!-- .element class="fragment fade-in-paragraph" -->
+It can be combined with **canary releasing** to **reduce risk**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-The **intuitive objection** to continuous deployment is that it is too **risky**. You can't do it without a comprehensive, reliable set of automated tests. If you have good reasons for not releasing every change you make-and there are less such reasons than you might think-you should behave as if you were going to do so.  <!-- .element class="fragment fade-in-paragraph" -->
+The **intuitive objection** to continuous deployment is that it is too **risky**. You can't do it without a comprehensive, reliable set of automated tests. If you have good reasons for not releasing every change you make-and there are less such reasons than you might think-you should behave as if you were going to do so.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ---
 ## Semantic Release
 <img src="assets/semantic-release-meme.webp" class="fragment start">
 
-[Semantic Release](https://semantic-release.gitbook.io) **automates the whole package release workflow** including: determining the **next version number**, generating the **release notes**, and **publishing the package**:  <!-- .element class="fragment fade-in-parent-with-next" -->
+[Semantic Release](https://semantic-release.gitbook.io) **automates the whole package release workflow** including: determining the **next version number**, generating the **release notes**, and **publishing the package**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Fully automated release  <!-- .element class="fragment highlight-current-blue" -->
 - Enforce Semantic Versioning specification  <!-- .element class="fragment highlight-current-blue" -->
 - New features and fixes are immediately available to users  <!-- .element class="fragment highlight-current-blue" -->
@@ -262,6 +262,6 @@ The **intuitive objection** to continuous deployment is that it is too **risky**
 ## Summary
 The **latter stages** of the deployment pipeline are all concerned with **deploying into testing and production environments**. Your implementation should make it **possible to deploy any version** of your application that has made it **past the automated tests** into any of your environments at the **push of a button**, given the correct credentials. It should be possible for everyone on your team to see exactly **what** is deployed **where**, and **what changes** are included in that version.
 
-Nevertheless, for a system of any size and complexity, the **first release into production** will always be a **momentous occasion**. It is vital to have thought about the process and planned for it sufficiently to make it as straightforward as possible.  <!-- .element: class="fragment fade-in-paragraph" -->
+Nevertheless, for a system of any size and complexity, the **first release into production** will always be a **momentous occasion**. It is vital to have thought about the process and planned for it sufficiently to make it as straightforward as possible.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-The most crucial part of release planning is **assembling representatives** from every part of your organization involved in delivery: **build**, **infrastructure**, and **operations teams**, **development teams**, **testers**, **DBAs**, and **support personnel**.  <!-- .element: class="fragment fade-in-paragraph" -->
+The most crucial part of release planning is **assembling representatives** from every part of your organization involved in delivery: **build**, **infrastructure**, and **operations teams**, **development teams**, **testers**, **DBAs**, and **support personnel**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
