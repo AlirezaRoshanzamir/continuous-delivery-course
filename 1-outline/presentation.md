@@ -249,7 +249,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications
             </small>
         </td>
-        <td>50'</td>
+        <td>75'</td>
     </tr>
     <tr>
         <td>
