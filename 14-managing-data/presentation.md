@@ -13,17 +13,17 @@
 
 ---
 ## Introduction
-Data and its management and organization pose a particular set of problems for testing and deployment processes:
-- There is the sheer volume of information that is generally involved. The bytes allocated to encoding the behavior of our application-its source code and configuration information-are usually vastly outweighed by the volume of data recording its state.
-- The lifecycle of application data differs from that of other parts of the system. Application data needs to be preserved—indeed, data usually outlasts the applications that were used to create and access it. Crucially, data needs to be preserved and migrated during new deployments or rollbacks of a system.
+**Data** and its **management** present pose particular problems for testing and deployment:
+- Dealing with the sheer data volume is a significant issue. **Application behavior data (code and configs)** is typically **much smaller** than the **data storing its state**.
+- Application **data's lifecycle** **differs from other system parts**; it must be **preserved** and often **outlasts the applications themselves**. This **preservation** and **migration** are crucial during system **deployments** or **rollbacks**.
 
-In most cases, when we deploy new code, we can erase the previous version and wholly replace it with a new copy. In this way we can be certain of our starting position. While that option is possible for data in a few limited cases, for most real-world systems this approach is impossible.
+Usually, we can **replace old code with new code** for a **fresh start**. However, this is **often impossible for data** in real-world systems.
 
-Once a system has been released into production, the data associated with it will grow, and it will have significant value in its own right. Indeed, arguably it is the most valuable part of your system. This presents problems when we need to modify either the structure or the content.
+After a system enters production, its data **grows** and becomes **highly valuable**, often the **most valuable part**. This poses challenges/risks when altering its structure/content.
 
-As systems grow and evolve, it is inevitable that such modifications will be required, so we must put mechanisms into place that allow changes to be accomplished while minimizing disruption and maximizing the reliability of the application and of the deployment process. The key to this is automating the database migration process. A number of tools now exist that make automating of data migration relatively straightforward, so that it can be scripted as part of your automated deployment process. These tools also allow you to version your database and migrate it from any version to any other.
+Systems need changes as they grow. **Automating database migration** **reduces disruption** and **improves reliability**. Tools simplify this, allowing scripting in automated deployment and supporting **versioning** and **migration** across **database versions**.
 
-The other important area we cover in this chapter is the management of test data. When performing acceptance testing or capacity testing (or even, sometimes, unit testing), the default option for many teams is to take a dump of the production data. This is problematic for many reasons (not least the size of the dataset), and we provide alternative strategies here.
+In this session, we also address **test data management**. Many teams default to using a **production data dump** for acceptance, capacity, or even unit testing, which **has issues**, including **dataset size**. We provide alternative strategies.
 
 ---
 ## Database Scripting
@@ -63,7 +63,7 @@ There are sometimes practical limits to the degree to which you can easily step 
 ### Managing Orchestrated Changes
 In many organizations, it is common to integrate all applications through a single database (we don't recommend it, use SOA instead).
 
-In this case, making a change to a database can have a knock-on effect on other applications that use the database. Test such changes in an orchestrated environment—in other words, in an environment in
+In this case, making a change to a database can have a knock-on effect on other applications that use the database. Test such changes in an orchestrated environment-in other words, in an environment in
 which the database is reasonably production-like, and which hosts versions of the other applications that use it (systems integration testing (SIT) environment).
 
 Finally, you need to ensure that you work with the teams maintaining the other applications to agree on which changes can be made.
