@@ -45,16 +45,20 @@ In this session, we will talk about the following:
 
 ---
 ## Understanding Operation Team
+<img src="assets/operation-team-qos-explain-meme.jpeg" class="fragment start">
+
 Most projects **fail** because of **people problems**, **not technical issues**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 In most **medium to large** companies, **development** and **infrastructure management (operations)** are **separate**, often causing **tension** between these two stakeholder groups (aka **"wall of confusion"**).  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 In **small** organizations, the **development team** typically **handles operations too**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
-**Operations teams** use **QoS metrics** like **mean time between failures** and **mean time to repair** to assess **performance**. They must meet **service-level agreements (SLAs)**. Any **change** poses a **risk** to meeting these goals and complying with regulations.
+**Operations teams** use **QoS metrics** like **mean time between failures** and **mean time to repair** to assess **performance**. They must meet **service-level agreements (SLAs)**. Any **change** poses a **risk** to meeting these goals and complying with regulations.  <!-- .element: class="fragment fade-in-paragraph custom" -->
 
 ------
 ### Operation Team Concerns
+<img src="assets/dev-ops-meme.jpeg" class="fragment start">
+
 Here are some of the most important **high-level** concerns of operations teams:
 - Documentation and Auditing  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Any change to any environment they control is **documented** and **audited**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
@@ -99,7 +103,9 @@ You should **keep everything** you **need** to **create** and **maintain** your 
 
 ------
 ### Controlling Access to Your Infrastructure
-If you have a system that's **not well controlled**, you'll need to figure out how to **regain control**. This involves three steps:
+<img src="assets/access-control-meme.jpeg" class="fragment start">
+
+If you have a system that's **not well controlled**, you'll need to figure out how to **regain control**. This involves three steps:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 - Controlling access to **prevent** anyone from **making a change without approval**.
 - Defining an **automated process** for **making changes** to your infrastructure.
 - **Monitoring** your infrastructure to detect any issues as soon as they occur.
@@ -154,6 +160,8 @@ There are several ways to create **operating system baselines**:
     </tr>
   </table>
 - <!-- .element class="fragment highlight-current-blue" --> Virtualization: We will discuss this later.
+
+<img src="assets/pxe-old-days-memes.webp" class="fragment end" width="500">
 
 ------
 ### Ongoing Management of Servers
@@ -256,87 +264,94 @@ define apt::key(keyid) {
 
 ---
 ## Managing the Configuration of Middleware
-Middleware-whether web servers, messaging systems, or commercial off-the-shelf software (COTS)-can be decomposed into three parts: binaries, configuration, and data.
+**Middleware**-web servers, messaging systems, or commercial off-the-shelf software (COTS)-can be divided into **binaries**, **configuration**, and **data**.
 
-Managing Configuration:
-- Database schemas, web server configuration files, application server configuration information, message queue configuration, and every other aspect of the system that needs to be changed for your system to work should be under version control.
-- If your middleware isn't part of the standard operating system install, the next best thing is to package it up using your operating system's package management system and put it on your organization's internal package server. Then you can use your chosen server management system to manage this middleware using the same model.
+Managing Configuration:  <!-- .element class="fragment fade-in-with-next custom" -->
+- **Database schemas**, **web server configs**, **app server settings**, **message queue configs**, and **any other system components** needing changes should be **version-controlled**.
+- For **database schemas** and **messaging queues**, consider using **code-first** or **class-first** approaches.
+- If your middleware isn't part of the **standard OS packages**, package it using your **OS's package manager** and place it on your **internal package server**. This allows you to manage the middleware with your **server management system consistently**.
 
-Research the Product:
-- When looking for a low-cost, low-energy solution, the obvious starting point is to be absolutely certain that the product in question doesn't have a poorly advertised automated configuration option.
-- Make sure that there isn't a better option before you move on to the other strategies.
-- All we are asking for is the ability to version-control the work that we invest in their product. Our favorite response from one large vendor was, "Oh yes, we are going to build our own version control into the system in the release after next." Even if they had done so, and even if having the feature a year or two later could make any difference to the project we were working on at the time, integrating to a crude, proprietary version control system wouldn't have helped us manage a consistent configuration set.
+Effective **middleware evaluation** and **configuration strategies**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+- Research the Product  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - When seeking a low-cost, low-energy solution, ensure the product has a **strong automated configuration option**.
+  - Make sure that **there isn't a better option** before you move on.
+  - We only want to **version-control** our **work in their product**. One vendor's response was, "We'll add **our version control** in a future release." However, even if they did, it wouldn't have helped with our **immediate** project's configuration **consistency**.
+- Examine How Your Middleware Handles State  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - If your middleware **lacks automated configuration**, try **version-controlling** its **state storage (e.g. state binary files)**:
+    - A simplest method is to **store the binaries in version control** along with **an installation script**.
+    - Consider creating your **installer** or a **package** (like an RPM for RedHat-based Linux) for your specific needs.
+- Look for a Configuration API  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - One approach is to define **your own configuration file** for the system and using custom build tasks to interpret the scripts and use the API for configuration.
+  - The **"invent your own"** configuration files strategy **empowers control**, enabling **version control** and **automation**.
+- Use a Better Technology  <!-- .element: class="fragment insides-fade-in-then-out" -->
+  - **At some point** we would strongly recommend adopting an **alternate technology** which is **more tractable**.
+  - Many organizations **hesitate to switch software platforms** due to the **money already invested (sunk cost fallacy)**. But this ignores the potential benefits of adopting better technology.
 
-Examine How Your Middleware Handles State:
-- If you are certain that your middleware does not support any form of automated configuration, the next step is to see if you can cheat by version-controlling its storage behind its back.
-- If the third-party system stores its state in binary files, consider revision-controlling these binaries:
-  - The simplest option is to store the relevant binaries in version control along with a script that installs them to the relevant environment.
-  - Really go ahead and write your own installer (or a package such as an RPM if you're using a RedHat-derived Linux distribution, for example).
-
-Look for a Configuration API:
-- One strategy is to define your own simple configuration file for the system that you are working with. Create custom build tasks to interpret those scripts and to use the API to configure the system.
-- This strategy of "invent your own" configuration files puts configuration management back into your hands-allowing you to version-control the configuration files and automate their use.
-
-Use a Better Technology
-- At some point we would strongly recommend adopting an alternate technology which is more tractable.
-- Many organizations are wary about changing the software platform that they
-use because they have already spent a great deal of money on it. However, this argument, known as the **sunk cost fallacy**, does not take into account the lost opportunity cost of moving to a superior technology.
+<img src="assets/sunk-cost-fallacy.jpg" class="fragment end" width="600">
 
 ---
 ## Managing Infrastructure Services
-It is extremely common for problems with infrastructure services-such as routers, DNS, and directory services-to break software in production environments that worked perfectly all through the deployment pipeline.
+It's common for **infrastructure services** (like routers and directory services) **issues** to **break software in production** environments.
 
-Michael Nygard wrote an article for InfoQ in which he tells the story of a system which died mysteriously at the same time every day [bhc2vR]. The problem turned out to be a firewall which dropped inactive TCP connections after one hour. As the system was idle at night, when activity started in the morning, the TCP packets from the pooled database connections would be dropped silently by the firewall.
+Michael Nygard shared a story about **mysterious daily shutdowns** caused by a firewall dropping **inactive TCP connections after an hour**. During **idle nights**, the **firewall silently discarded TCP packets** from **pooled database connections**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-Problems like this will happen to you, and when they do, they will be maddeningly difficult to diagnose.
+**Issues like this** can occur, and when they do, they can be **frustratingly hard to diagnose**. These are advices to make this easier:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+- **Network component configurations**, like DNS, DHCP, firewalls, routers, and application services (e.g. SMTP), should be **version-controlled**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- Install a good **network monitoring system** like **Nagios**, OpenNMS, HP Operations Manager, or similar. Monitor **network connectivity** and **all ports used by your application routes**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- Log at **WARNING** when a **network connection times out/unexpectedly closes** and **INFO/DEBUG** when **opening/closing a connection** with **endpoint details**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- During **deployment**, ensure **smoke tests** check **all connections** for **routing or connectivity issues**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- For integration testing, replicate **production's network topology**, using the **same hardware/physical connections**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- For troubleshooting, you can use **forensic tools** like **Wireshark** and **Tcpdump** to inspect packets. For **file** and **socket insights**, rely on **Lsof (Unix)** or **Handle and TCPView (Windows)**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 
-Advices:
-- Every part of your networking infrastructure's configuration, from DNS zone files to DHCP to firewall and router configurations to SMTP and other services your applications rely on, should be version-controlled.
-- Install a good network monitoring system such as Nagios, OpenNMS, HP Operations Manager, or one of their brethren. Make sure that you know when network connectivity is broken, and monitor every port on every route that your application uses.
-- Your applications should log at WARNING level every time a network connection times out or is found to be unexpectedly closed. You should log at INFO or, if the logs are too verbose, DEBUG level every time you close a connection. You should log at DEBUG level every connection that you open, including as much information as possible on the endpoint of the connection.
-- Make sure that your smoke tests check all of the connections at deployment time to flush out any routing or connectivity problems.
-- Make your integration testing environment's network topology as similar as possible to production, including using the same pieces of hardware with the same physical connections between them.
-- When something does go wrong, have forensic tools available. Wireshark and Tcpdump are both fantastically useful tools that make it easy to see packets flying past, and filter them so you can isolate exactly the packets you're looking for. The UNIX tool Lsof and its Windows cousins Handle and TCPView (part of the Sysinternals suite) also come in very handy to see what files and sockets are open on your machine.
-
-Multihomed servers:
-<img src="assets/multihomed-servers.png">
+------
+### Managing Infrastructure Services: Multihomed Systems
+<img src="assets/multihomed-servers.png" width="600">
 
 ---
 ## Virtualization
-In general, virtualization is a technique that adds a layer of abstraction on top of one or more computer resources.
+<img src="assets/virtualization-meme.png" class="fragment start" width="1100">
 
-Platform virtualization means simulating an entire computer system so as to run multiple instances of operating systems simultaneously on a single physical machine. In this configuration, there is a virtual machine monitor (VMM), or hypervisor, which has full control of the physical machine's hardware resources. Guest operating systems run on virtual machines, which are managed by the VMM. Environment
-virtualization involves simulating one or more virtual machines as well as the network connections between them.
+Virtualization, in essence, adds a **layer of abstraction to computer resources**.
 
-Virtualization was originally developed by IBM in the 1960s as an alternative to creating a multitasking time-sharing operating system.
+**Platform virtualization** involves simulating a computer system to run **multiple OS instances** concurrently on **one physical machine**. A **virtual machine monitor** (VMM) or **hypervisor** manages hardware, and **guest OSes** run on VMs managed by it. **Environment virtualization** extends this to **simulate one or more virtual machines** and **network connections** between them.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-In particular, virtualization provides the following benefits:
-- Fast response to changing requirements: Need a new testing environment? A new virtual machine can be provisioned in seconds at no cost, versus days or weeks to obtain a new physical environment.
-- Consolidation: When organizations are relatively immature, each team will often have its own CI servers and testing environments sitting on physical boxes under their desks. Virtualization makes it easy to consolidate CI and testing infrastructure so it can be offered as a service to delivery teams. It is also more efficient in terms of hardware usage.
-- Standardizing hardware: Functional differences between components and subsystems of your application no longer force you to maintain distinct hardware configurations, each with its own specification. Virtualization allows you to standardize on a single hardware configuration for physical environments but run a variety of heterogeneous environments and platforms virtually.
-- Easier-to-maintain baselines: You can maintain a library of baseline images-operating system plus application stacks-or even environments, and push them out to a cluster at the click of a button.
+Virtualization, **developed** by **IBM in the 1960s**, offered an **alternative to multitasking time-sharing operating systems**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-Virtualization also provides the capability to significantly speed up long-running tests. Instead of running them on a single box, you can run them in parallel on a build grid of virtual machines (e.g. from 13 hours to 45 minutes).
+Benefits:  <!-- .element class="fragment fade-in-with-next custom" -->
+- **Fast response to changing requirements**: Need a new testing environment? A **new virtual machine can be provisioned in seconds** at no cost, versus **days or weeks to obtain a new physical environment**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- **Consolidation**: In immature organizations, teams often have separate CI and testing servers on physical machines. Virtualization helps by **unifying infrastructure into a service** for delivery teams, **improving hardware efficiency**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- **Standardizing hardware**: Functional differences between application subsystems **no longer need separate hardware setups**. Virtualization allows using a **single physical configuration** to run **various virtual environments and platforms**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- **Easier-to-maintain baselines**: Keep a library of **baseline images (OS, apps, and even environments)**, deploy them to a cluster with a click.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- **Speed up long-running tests**: Instead of running them on a single machine, run them **parallel on a virtual machine grid** (e.g., from 13 hours to 45 minutes).  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
 
 ------
 ### Managing Virtual Environments
-One of the most important characteristics of VMMs is that a virtual machine image is a single file. Such a file is called a disk image. The useful thing about disk images is that you can copy them and version them (probably not in version control, unless your VCS can handle lots of very large binary files).
+A crucial **feature** of VMMs is that a virtual machine image is a **single file (aka disk image)**. Disk images are valuable because you can **copy** and **version** them, although **storing** them in **version control might be impractical**.
 
-You can then use them as templates, or baselines (known-good versions of your environments, on which the rest of your configuration and deployment can be made):
+You can use them as **templates** or **baselines** (**known-good** versions for configuring and deploying the **rest** of your environments). Run automated process to **configure the OS and install software**. **Save a copy** of each box type in your environment **as a baseline**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 
-<img src="assets/creating-virtual-environments-from-templates.png">
+<table>
+  <tr>
+    <td>
+      <small>Creating virtual environments from templates</small>
+      <img src="assets/creating-virtual-environments-from-templates.png" width="550">
+    </td>
+    <td>
+      <small>Creating VM templates</small>
+      <img src="assets/creating-vm-templates.png" width="420">
+    </td>
+  </tr>
+</table>
 
-You can then run your automated process to configure the operating system and install and configure any software required by your applications. Once again, at this point, save a copy of each type of box in your environment as a baseline:
+Virtualization helps **shift from manual to automated** environment management **gradually**. Create **templates** based on known-good systems **instead of automating from scratch**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/creating-vm-templates.png">
-
-Virtualization provides a valuable way to move incrementally from managing environments manually to an automated approach. Instead of automating your provisioning process from scratch, create templates based on your current known-good systems. Again, you can replace the real environments with the virtual ones to confirm that your templates are good.
-
-Virtualization provides a way to deal with software that your application relies on that cannot be installed or configured in an automated way.
+Virtualization helps with software that your application relies on that **cannot be installed or configured** in an **automated** way.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ---
 ## Cloud Computing
-In cloud computing, **information is stored on the internet** and **accessed** and **managed** through **online software services**.
+<img src="assets/cloud-computing-meme.jpeg" class="fragment start">
+
+In cloud computing, **information is stored on the internet** and **accessed** and **managed** through **online software services**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 Cloud computing's key feature is **scalability**, where **resources** like **CPU**, **memory**, and **storage** can **grow or shrink as needed**, with **costs based on usage**. It **encompasses** both **software services** and the underlying **hardware/software environments**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
@@ -390,31 +405,36 @@ There are many tools that will gather everything described above across your who
 
 ------
 ### Collecting Data: SNMP
+<img src="assets/snmp-not-my-problem-meme.jpg" class="fragment start">
+
 SNMP is the most venerable and ubiquitous standard for monitoring:
 - Managed Devices (physical systems such as servers, switches, firewalls, and so forth)
 - Agents (talk to the individual applications or devices that you want to monitor and manage via SNMP)
 - Network Management System (monitors and controls managed devices)
 
-<img src="assets/snmp-architecture.png">
+<img src="assets/snmp-architecture.png" width="300">
 
 In SNMP, everything is a variable. You monitor systems by watching variables and control them by setting variables. Which variables are available for any given type of SNMP agent, with their descriptions, their types, and whether they can be written to or are read-only, is described in a MIB (Management Information Base), an extensible database format.
 
 Each vendor defines MIBs for the systems it provides SNMP agents for, and the IANA maintains a central registry.
 
-<img src="assets/mib-file-example.jpg">
+<img src="assets/mib-file-example.jpg" width="200">
 
 Most operating systems, most common middleware (Apache, WebLogic, and Oracle, for example), as well as many devices have SNMP built-in.
 
+<img src="assets/snmp-meme.jpg" class="fragment end">
+
 ------
 ### Logging
-Logging also has to form a central part of your monitoring strategy. Logging, which is part of auditability, should be treated as a first-level set of
-requirements, the same as any other nonfunctional requirements.
+<img src="assets/log-well-meme.webp" class="fragment start">
 
-It's important to pay attention to log levels, but be configurable at run time or deploy time to show other levels when debugging is necessary:
+Logging is **essential** in your **monitoring strategy**. Treat it as a **key part of auditability**, just like other **non-functional requirements**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-<img src="assets/log-levels.png">
+Pay attention to **log levels** but ensure **configurability at runtime/deployment** to show different levels when debugging is needed:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 
-The operations team is the main consumer of log files.
+<img src="assets/log-levels.png" width="800">
+
+The operations team is the **main consumer of log files**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ------
 ### Creating Dashboards
