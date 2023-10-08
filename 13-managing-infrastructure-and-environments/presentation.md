@@ -6,7 +6,7 @@
   alt="https://www.researchgate.net/publication/263297688_Middleware_and_Methods_for_Customizable_SaaS" width="500"
 />
 
-<small><strong>Time to Read:</strong> 14 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
+<small><strong>Time to Read:</strong> 18 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -369,58 +369,54 @@ Cloud types:  <!-- .element class="fragment fade-in-with-next custom" -->
 
 ---
 ## Monitoring Infrastructure and Applications
-It is essential to have insight into what is going on in your production environments for three reasons:
-- Businesses can get feedback on their strategies much faster if they have real-time business intelligence, such as how much revenue
-they are generating and where that revenue is coming from.
-- When something goes wrong, the operations team needs to be informed immediately that there is an incident, and have the necessary tools to track down the root cause of the incident and fix it.
-- Historical data is essential for planning purposes. If you don't have detailed data on how your systems behaved when there was an unexpected spike in demand, or when new servers were added, it's impossible to plan evolving your infrastructure to meet your business
-requirements.
+It is essential to **have insight** into **what is going on** in your **production environments** for three reasons:
+- Businesses get **faster feedback on strategies** with real-time business intelligence, including **revenue quantity and sources**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- In case of issues, the operations team must be **immediately alerted about incidents** and equipped with tools to **identify and resolve the root cause**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- **Historical data** is vital for **planning**. Without detailed records of system behavior during **unexpected demand spikes** or **server additions**, planning **infrastructure evolution** becomes **impossible to meet business needs**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
-There are four areas to consider when creating a monitoring strategy:
-- Instrumenting your applications and your infrastructure so you can collect the data you need
-- Storing the data so it can easily be retrieved for analysis
-- Creating dashboards which aggregate the data and present it in a format suitable for operations and for the business
-- Setting up notifications so that people can find out about the events they care about
+Consider these four **monitoring strategy areas**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+- **Instrumenting** your **applications** and **infrastructure** so you can **collect the data** you need.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- **Storing** the data so it can easily be **retrieved for analysis**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- **Creating dashboards** which **aggregate** the data and **present** it in a format **suitable for operations and business**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- **Setting up notifications** so that people can find out about the **events** they care about.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
 
 ------
 ### Collecting Data
-Monitoring data can come from the following sources:
-- Your hardware, via out-of-band management (also known as lights-out management or LOM). Almost all modern server hardware implements the Intelligent Platform Management Interface (IPMI) which lets you monitor voltages, temperatures, system fan speeds, peripheral health, and so forth, as well as perform actions such as power cycling or lighting an identification light on the front panel, even if the box is powered off.
-- The operating system on the servers comprising your infrastructure. All operating systems provide interfaces to get performance information such as memory usage, swap usage, disk space, I/O bandwidth (per disk and NIC), CPU usage, and so forth. It's also useful to monitor the process table to work out the resources each process is consuming. On UNIX, Collectd is the standard way to gather this data. On Windows, it's done using a system called performance counters, which can also be used by other providers of performance data.
-- Your middleware. This can provide information on the usage of resources such as memory, database connection pools, and thread pools, as well as information on the number of connections, response time, and so forth.
-- Your applications. Applications should be written so that they have hooks to monitor things that both operations and business users care about, such as the number of business transactions, their value, conversion rate, and so forth. Applications should also make it easy to analyze user demographics and behavior. They should record the status of connections to external systems that they rely on. Finally, they should be able to report their version number and the versions of their internal components, if applicable.
+Monitoring data can come from the following **sources**:
+- **Hardware** via out-of-band management and Intelligent Platform Management Interface (IPMI):  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - Monitor voltages, temperatures, fan speeds, peripheral health, etc.
+  - Perform actions like power cycling and front panel identification light control.
+- **Operating system** performance monitoring:  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - Track memory usage, swap usage, disk space, I/O bandwidth, CPU usage.
+  - Monitor process resource consumption (UNIX: Collectd, Windows: performance counters).
+- **Middleware** resource utilization:  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - Observe memory, database connection pools, thread pools, connections, response time, etc.
+- **Application** monitoring and reporting:  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - Track business transactions, value, conversion rate, user demographics, and behavior.
+  - Record external system connection status and component versions.
 
-There are many tools that will gather everything described above across your whole data center, store it, produce reports, graphs, and dashboards, and provide notification mechanisms:
-- Zabbix
-- Grafana
-- Prometheus
-- Pro
-- Nagios
-- OpenNMS
-- Flapjack
-- Zenoss
-- IBM Tivoli
-- HP Operations MAnager
-- Splunk
+Numerous tools, such as Zabbix, Grafana, Prometheus, Nagios, OpenNMS, Flapjack, Zenoss, IBM Tivoli, HP Operations Manager, and Splunk, handle **data center info**, **storage**, **reporting**, **graphs**, **dashboards**, and **notifications**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 ------
 ### Collecting Data: SNMP
 <img src="assets/snmp-not-my-problem-meme.jpg" class="fragment start">
 
-SNMP is the most venerable and ubiquitous standard for monitoring:
-- Managed Devices (physical systems such as servers, switches, firewalls, and so forth)
-- Agents (talk to the individual applications or devices that you want to monitor and manage via SNMP)
-- Network Management System (monitors and controls managed devices)
+SNMP is a widely adopted and long-standing **monitoring standard** which has three main components:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+- **Managed Devices** (physical systems such as servers, switches, firewalls, and so forth)
+- **Agents** (talk to the individual applications or devices that you want to monitor and manage via SNMP)
+- **Network Management System** (monitors and controls managed devices)
 
-<img src="assets/snmp-architecture.png" width="300">
+<img src="assets/snmp-architecture.png" width="700">
 
-In SNMP, everything is a variable. You monitor systems by watching variables and control them by setting variables. Which variables are available for any given type of SNMP agent, with their descriptions, their types, and whether they can be written to or are read-only, is described in a MIB (Management Information Base), an extensible database format.
+------
+### Continued: Collecting Data: SNMP
+SNMP relies on **variables**. **Monitoring** involves **observing these variables**, while **control** means **modifying them**. Details about **available variables**, including **descriptions**, **types**, and **read/write status**, are documented in a **MIB (Management Information Base)**, which is an extensible database format.
 
-Each vendor defines MIBs for the systems it provides SNMP agents for, and the IANA maintains a central registry.
+<img src="assets/mib-file-example.jpg">
 
-<img src="assets/mib-file-example.jpg" width="200">
+Each **vendor defines MIBs** for the systems it **provides SNMP agents for**, and the IANA maintains a central registry.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-Most operating systems, most common middleware (Apache, WebLogic, and Oracle, for example), as well as many devices have SNMP built-in.
+Most operating systems, middlewares (Apache, WebLogic, and Oracle, for example), devices have **SNMP built-in**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
 <img src="assets/snmp-meme.jpg" class="fragment end">
 
@@ -438,25 +434,32 @@ The operations team is the **main consumer of log files**.  <!-- .element class=
 
 ------
 ### Creating Dashboards
-It's essential that the operations team has a big visible display where they can see at a high level if there are any incidents
+The operations team needs a **big display** to quickly **check for any incidents at a high level**.
 
-All the open source and commercial tools offer this kind of facility, including the ability to view historical trends and do some kind of reporting:
+Many open source and commercial tools provide this feature, including **historical trend** viewing and **reporting** capabilities:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 
-<img src="assets/nagios-dashboard.png">
+<img src="assets/nagios-dashboard.png" width="500">
 
-There are potentially thousands of things that you could monitor, and it is essential to plan ahead so your operations dashboard isn't drowned in noise. Come up with a list of risks, categorized by probability and impact.
+**Plan ahead** to prevent your operations dashboard from becoming **too noisy**. Create a **list of risks** **categorized** by their **probability** and **impact**.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-In terms of aggregating data, the red-amber-green traffic light aggregation is well understood and commonly used. Green means all of the following are true:
+------
+### Continued: Creating Dashboards
+
+**Red-amber-green traffic light** aggregation is common in data aggregation.
+
+<span style="color: #32cd32">Green</span> means **all** of the following are **true**:
 - All expected events have occurred.
 - No abnormal events have occurred.
 - All metrics are nominal (within two standard deviations for this time period).
 - All states are fully operational.
-Amber means at least one of the following is true:
+
+<span style="color: #efcc00">Amber</span> means **at least one** of the following is **true**:
 - An expected event has not occurred.
 - At least one abnormal event, with a medium severity, has occurred.
 - One or more parameters are above or below the nominal values.
 - A noncritical state is not fully operational (for example, a circuit breaker has cut off a noncritical feature).
-Red means at least one of the following is true:
+
+<span style="color: red">Red</span> means **at least one** of the following is **true**:
 - A required event has not occurred.
 - At least one abnormal event, with a high severity, has occurred.
 - One or more parameters are far above or below the nominal values.
@@ -464,24 +467,28 @@ Red means at least one of the following is true:
 
 ------
 ### Behavior-Driven Monitoring [Infrastructure]
-Operations personnel can write automated tests to verify the behavior of their infrastructure
+**Operations personnel** can write automated tests to verify the **behavior of their infrastructure**.
 
-You can start by writing the test, verifying that it fails, and then defining a Puppet manifest (or whatever your configuration management tool of choice is) that puts your infrastructure into the expected state. You then run the test to verify that the configuration worked correctly and your infrastructure behaves as expected.
+Start by writing the **test**, check for **failure**, **create a configuration manifest** to set the infrastructure, and **test** it for proper behavior.  <!-- .element class="fragment fade-in-paragraph custom" -->
 
-Example (can be run by [Cucumber Nagios](https://auxesis.github.io/cucumber-nagios/)):
+Example (can be run by [Cucumber Nagios](https://auxesis.github.io/cucumber-nagios/)):  <!-- .element class="fragment fade-in-parent-with-next custom" -->
 
-<pre class="gherkin"><code style="font-size: 17px; line-height: normal;" data-trim data-noescape>Feature: google.com
+<table>
+  <tr>
+    <td style="min-width: 550px">
+<pre class="gherkin"><code style="font-size: 16px; line-height: normal" data-trim data-noescape>Feature: google.com
   It should be up
-  And I should be able to search for things
-
+    And I should be able to search for things
   Scenario: Searching for things
     When I go to "http://www.google.com.au/"
-    And I fill in "q" with "wikipedia"
-    And I press "Google Search"
+      And I fill in "q" with "wikipedia"
+      And I press "Google Search"
     Then I should see "www.wikipedia.org"
 </code></pre>
-
-<img src="assets/cucumber-nagios.png">
+    </td>
+    <td style="min-width: 500px"><img src="assets/cucumber-nagios.png"></td>
+  </tr>
+</table>
 
 ---
 ## Summary
