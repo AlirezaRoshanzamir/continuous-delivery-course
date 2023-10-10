@@ -133,6 +133,8 @@
                 ]
             }).then(() => {
                 document.title = "CD | " + document.querySelector("section > h2").textContent.split(":").slice(-1);
+            });
+            window.addEventListener("load", function () {
                 Reveal.layout();
             });
         </script>
