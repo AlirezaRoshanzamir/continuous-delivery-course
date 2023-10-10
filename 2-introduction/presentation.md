@@ -3,7 +3,7 @@
 
 <img src="assets/cd-phases.webp" width="1100"/>
 
-<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
+<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 45 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>

@@ -3,7 +3,7 @@
 
 <img src="assets/v-model.webp" style="max-width: 600px"/>
 
-<small><strong>Time to Read:</strong> 11 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
+<small><strong>Time to Read:</strong> 15 Minutes</small>, <small><strong>Time to Present:</strong> 105 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>

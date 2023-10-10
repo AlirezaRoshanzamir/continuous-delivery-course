@@ -3,7 +3,7 @@
 
 <img src="assets/gitops.webp" style="border: 1px solid black"/>
 
-<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 55 Minutes</small>
+<small><strong>Time to Read:</strong> 15 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -17,14 +17,14 @@ Configuration management is often used interchangeably with **version control**:
 
 > Configuration management involves **storing**, **retrieving**, **uniquely identifying**, and **modifying** all **project-related artifacts** and their **relationships**.
 
-Although **version control systems are the most obvious tool** in configuration management, the choice to use one (every team should use one, **no matter how small**) is the first step in shaping a configuration management strategy.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Although **version control systems are the most obvious tool** in configuration management, the choice to use one (every team should use one, **no matter how small**) is the first step in shaping a configuration management strategy.
 
-You should **be able to** say **"yes"** to these questions:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
-- Can I precisely **recreate** any of my **environments**, including the **OS version**, **patches**, **network setup**, **software stack**, **deployed apps**, and **their settings**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- Can I easily make an **incremental change** to any of these items and **deploy it to any or all of my environments**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- Can I easily **track** **environment changes** and find out **who** made them and **when**?  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+&shy;<!-- .element class="fragment fade-in-with-next custom" -->You should **be able to** say **"yes"** to these questions:
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Can I precisely **recreate** any of my **environments**, including the **OS version**, **patches**, **network setup**, **software stack**, **deployed apps**, and **their settings**?
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Can I easily make an **incremental change** to any of these items and **deploy it to any or all of my environments**?
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Can I easily **track** **environment changes** and find out **who** made them and **when**?
 <!-- - Can I satisfy all of the compliance regulations that I am subject to? !-->
-- Can **everyone** on the team **access** the **necessary information** and **make required changes**? <!-- Or does the strategy get in the way of efficient delivery, leading to increased cycle time and reduced feedback? -->  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Can **everyone** on the team **access** the **necessary information** and **make required changes**? <!-- Or does the strategy get in the way of efficient delivery, leading to increased cycle time and reduced feedback? -->
 
 <details>
 <summary>Note</summary>*
@@ -162,11 +162,11 @@ Normally, it's **not recommended** to inject configuration during **build** or *
 - How do your **deployment scripts** access it?
 - How does it vary between **environments**, **applications**, and **versions of applications**?
 
-There are a few obvious choices for where to **store** your application configuration: a **database**, a **version control system**, or a **directory** or **registry**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->There are a few obvious choices for where to **store** your application configuration: a **database**, a **version control system**, or a **directory** or **registry**.
 
-Keep the actual configuration for **testing** and **production** **separate from source code** in another repository. This data **changes at a different rate** (but, track **matching configuration and app versions**).  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Keep the actual configuration for **testing** and **production** **separate from source code** in another repository. This data **changes at a different rate** (but, track **matching configuration and app versions**).
 
-**Databases**, **directories**, and **registries** are convenient for remote configuration **storage**. However, **track changes** for **audits** and **rollbacks**. For this, use an **automated system** or **version control as your reference, with a script** to load the correct version when needed.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Databases**, **directories**, and **registries** are convenient for remote configuration **storage**. However, **track changes** for **audits** and **rollbacks**. For this, use an **automated system** or **version control as your reference, with a script** to load the correct version when needed.
 
 ------
 ### Continued: Managing Application Configuration
@@ -186,9 +186,9 @@ Keep the actual configuration for **testing** and **production** **separate from
 ### Managing Configuration across Applications
 **Keep a catalogue** of configuration **options** for **each application**, detailing **where they're stored**, their **lifecycle**, and **how they can be changed**.
 
-**If feasible**, such info should be **automatically generated** from the app's code during building. **If not**, put it in a **wiki** or **document system**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**If feasible**, such info should be **automatically generated** from the app's code during building. **If not**, put it in a **wiki** or **document system**.
 
-Deployment and runtime: Understanding the **current configuration of running apps** is crucial. Tools like Nagios, OpenNMS, and HP OpenView can help. **Errors in a few configuration options** of one app can lead to **significant downtime** across services.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Deployment and runtime: Understanding the **current configuration of running apps** is crucial. Tools like Nagios, OpenNMS, and HP OpenView can help. **Errors in a few configuration options** of one app can lead to **significant downtime** across services.
 
 ------
 ### Principles of Managing Application Configuration
@@ -245,11 +245,11 @@ Managing **third party** products:  <!-- .element class="fragment fade-in-parent
 ### Managing the Change Process
 <img src="assets/fix-production-bug-meme.webp" class="fragment complete-fade-out" width="500">
 
-A production environment must be **locked down**. **No** changes allowed **without** following your **change management process**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->A production environment must be **locked down**. **No** changes allowed **without** following your **change management process**.
 
-**Environment changes** are **like software changes**. They **follow** the same **build**, **deploy**, **test**, and **release** process **as code**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Environment changes** are **like software changes**. They **follow** the same **build**, **deploy**, **test**, and **release** process **as code**.
 
-**Testing environments** should be **treated** the same **as production environments**, with a **simpler approval process**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Testing environments** should be **treated** the same **as production environments**, with a **simpler approval process**.
 
 ---
 ## Summary

@@ -129,7 +129,7 @@
                 Definition, <span style="color: brown">Minimum Viable CD</span>, <span style="color: purple">Ingredients</span>, Deployment Pipeline, Why?, <span style="color: green">Impacts (Software Delivery Performance, Culture)</span>, <span style="color: brown">Relation with Other Movements</span>, <span style="color: brown">Scrumfall</span>, Case Studies, <span style="color: brown">CD Patterns Mindmap</span>
             </small>
         </td>
-        <td>60'</td>
+        <td>45'</td>
     </tr>
     <tr>
         <td>
@@ -149,7 +149,7 @@
                 <span style="color: purple">Version Control and Advices</span>, Managing Dependencies, Managing Software Configuration, <span style="color: purple">Managing Environments</span>
             </small>
         </td>
-        <td>55'</td>
+        <td>75'</td>
     </tr>
     <tr>
         <td>
@@ -159,7 +159,7 @@
                 Implementation, Prerequisites, Practices, <span style="color: brown">Challenges</span>
             </small>
         </td>
-        <td>40'</td>
+        <td>60'</td>
     </tr>
     <tr>
         <td>
@@ -169,7 +169,7 @@
                 <span style="color: purple">Types of Tests</span>, <span style="color: purple">Test Doubles</span>, <span style="color: brown">Test Coverage Criteria</span>, <span style="color: brown">TDD</span>, Real-Life Situations and Strategies, Integration Testing, Process
             </small>
         </td>
-        <td>50'</td>
+        <td>105'</td>
     </tr>
 </table>
 <br>

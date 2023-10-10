@@ -3,7 +3,7 @@
 
 <img src="assets/ci.webp" width="700"/>
 
-<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 40 Minutes</small>
+<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
