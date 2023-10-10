@@ -14,15 +14,15 @@
 ## Introduction
 Nonfunctional requirements (NFRs), like other requirements, add **real business value**. But they're different because they often **cross the boundaries** of other requirements, making them **hard** to handle in **analysis** and **implementation**.
 
-**Performance** is about **processing time** for **one transaction**, measured **alone** or **under stress**. In practice, it's often a **catch-all** term.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Performance** is about **processing time** for **one transaction**, measured **alone** or **under stress**. In practice, it's often a **catch-all** term.
 
-**Throughput** is the **transactions per time** a system can handle, always limited by a **some bottleneck** in the system.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Throughput** is the **transactions per time** a system can handle, always limited by a **some bottleneck** in the system.
 
-**Capacity** is the **max throughput** a system can sustain for a **given workload**, while ensuring **acceptable response times** per **request**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Capacity** is the **max throughput** a system can sustain for a **given workload**, while ensuring **acceptable response times** per **request**.
 
-NFRs like **availability**, **capacity**, **security**, and **maintainability** are as vital as functional ones and essential for the system to work.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->NFRs like **availability**, **capacity**, **security**, and **maintainability** are as vital as functional ones and essential for the system to work.
 
-It's essential to identify which NFRs are important **at the beginning of the project**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->It's essential to identify which NFRs are important **at the beginning of the project**.
 
 ---
 ## Managing Nonfunctional Requirements
@@ -39,7 +39,7 @@ NFRs are **complex** because they usually have a very **strong influence** on th
     </tr>
 </table>
 
-NFRs tend to **conflict**: High security may affect ease of use, extreme flexibility can impact performance, and so forth.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->NFRs tend to **conflict**: High security may affect ease of use, extreme flexibility can impact performance, and so forth.
 
 <details>
     <summary>Note</summary>
@@ -83,22 +83,22 @@ NFRs tend to **conflict**: High security may affect ease of use, extreme flexibi
 We often add NFRs **as regular acceptance criteria** for functional stories when we **don't expect much extra effort** to meet them.
 
 
-This can be **inefficient**. It makes sense to create **specific sets of stories or tasks** for NFRs as well, especially at the **project's start**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->This can be **inefficient**. It makes sense to create **specific sets of stories or tasks** for NFRs as well, especially at the **project's start**.
 
 An example of these two approaches:  <!-- .element class="fragment fade-in-with-next custom" -->
 - All important interactions with the system should be audited.
 - Capture requirements from the perspective of an auditor and describe the auditor's requirements for each report they want to see, so, auditing is no longer a crosscutting NFR.
 
-**A blend of both approaches is needed.**  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**A blend of both approaches is needed.**
 
-It's crucial to provide **sufficient detail** when analyzing NFRs. **"As fast as possible"** or **"All user interactions will take less than two seconds to respond"** aren't good NFRs.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->It's crucial to provide **sufficient detail** when analyzing NFRs. **"As fast as possible"** or **"All user interactions will take less than two seconds to respond"** aren't good NFRs.
 
-Common **misuse** of performance requirements is as a **lazy way to describe the usability** of the system. Sometimes, people when they say **"Respond in two seconds"** mean **"I don't want to sit in front of a computer without any feedback for too long."**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Common **misuse** of performance requirements is as a **lazy way to describe the usability** of the system. Sometimes, people when they say **"Respond in two seconds"** mean **"I don't want to sit in front of a computer without any feedback for too long."**.
 
 ---
 ## Summary
 <img src="assets/dont-put-nfrs-behind.webp" class="fragment start" width="700">
 
 Designing systems to meet their NFRs is complex. The crosscutting nature of many NFRs makes it **hard to manage their risks**, which can **lead to two paralyzing behaviors**:  <!-- .element: class="fragment fade-in-with-next custom" -->
-- **Not paying enough** attention to them from the **start of the project**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- At the other extreme, **defensive architecture** and **over-engineering**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Not paying enough** attention to them from the **start of the project**.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->At the other extreme, **defensive architecture** and **over-engineering**.

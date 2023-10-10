@@ -15,10 +15,10 @@
 ## Definition
 Contiuous delivery is an **ability**, **development practice**, **discipline**, and **capability** to:
 
-- Deliver **all kinds of changes** to users **safely**, **quickly**, and **sustainably**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The system can be **used by users** or put into **production** whenever needed (at least **once daily**).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The team focuses on **maintaining deployable software** rather than **developing new features**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- **Fast feedback** is available to **all team members**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Deliver **all kinds of changes** to users **safely**, **quickly**, and **sustainably**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The system can be **used by users** or put into **production** whenever needed (at least **once daily**).
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The team focuses on **maintaining deployable software** rather than **developing new features**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Fast feedback** is available to **all team members**.
 
 <img src="assets/continuous-delivery-feedbacks.webp">
 
@@ -47,17 +47,17 @@ For detailed information, visit [Minimum CD](https://minimumcd.org/minimumcd) an
 
 Ingredients:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **Configuration management**
-  - Any new environment reproduced from the **same configuration** is **identical**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - Everything is **versioned** and **automated**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Any new environment reproduced from the **same configuration** is **identical**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Everything is **versioned** and **automated**.
 - **Continuous integration**
-  - Developers integrate their work **into the trunk daily**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **If it hurts, do it more** often and bring the pain forward (XP principle).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - A set of **automated tests** is run both **before** and **after** the merge.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - If the automated tests **fail**, the **team stops** what they are doing.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Developers integrate their work **into the trunk daily**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**If it hurts, do it more** often and bring the pain forward (XP principle).
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->A set of **automated tests** is run both **before** and **after** the merge.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->If the automated tests **fail**, the **team stops** what they are doing.
 - **Automated and continuous testing**
-  - Build **quality in**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - Run various test types-**manual and automated**-continuously during the delivery process.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Functional acceptance**, **usability**, **exploratory**, **unit**, **component**, **system**, and **non-functional acceptance** (capacity, security, availability) tests.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Build **quality in**
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Run various test types-**manual and automated**-continuously during the delivery process.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Functional acceptance**, **usability**, **exploratory**, **unit**, **component**, **system**, and **non-functional acceptance** (capacity, security, availability) tests.
 
 ------
 ### CI Certification Test
@@ -73,11 +73,11 @@ A key **pattern** in CD from continuous integration and test automation:
 ## Why?
 <img src="assets/why-meme.webp" class="fragment start">
 
-- Make releases **painless** **low-risk** events  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Reduce **time to market**   <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Increase **software quality** and **stability**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Reduce the **cost** of ongoing software development  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Increase **customer** and **employee satisfaction**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Make releases **painless** **low-risk** events
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Reduce **time to market** 
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Increase **software quality** and **stability**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Reduce the **cost** of ongoing software development
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Increase **customer** and **employee satisfaction**
 
 <img src="assets/idea-to-release.webp">
 
@@ -85,7 +85,7 @@ A key **pattern** in CD from continuous integration and test automation:
 ## Impacts
 <img src="assets/cd-practices-are-useless-meme.webp" class="fragment start" style="border: 1px solid lightgray">
 
-The following image is extracted from the book **Accelerate** and embodies a **four-year** research project initiated in **2013**. This study sought to explore vital **capabilities** and **practices** that accelerate software **development** and **delivery**, enhancing **company value**. To achieve this, researchers used rigorous **academic research methods**:  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The following image is extracted from the book **Accelerate** and embodies a **four-year** research project initiated in **2013**. This study sought to explore vital **capabilities** and **practices** that accelerate software **development** and **delivery**, enhancing **company value**. To achieve this, researchers used rigorous **academic research methods**:
 
 <img src="assets/accelerate-overall-research-program.webp" alt="Took from the Accelerate book and https://abinoda.com/book/accelerate" width="1050"/>
 
@@ -132,14 +132,14 @@ The **continuous delivery** practices significantly impact the organization's cu
 ## Relation with Agile, DevOps, Lean
 In short, they vary in **origin**, **history**, **covered aspects**, and **principles**. However, there's a notable **mutual relationship** between these movements:
 
-- **Agile:** Flexible, **iterative** software **development** approach with short cycles and stakeholder involvement.<br/>
-  _Keywords:_ Iterative, XP, Scrum, Kanban, Sprint, Epic, Feature, User Story, Product Owner, Scrum Master, Agile Manifesto  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **DevOps:** **Practices** bridging **development and operations** for faster, higher-quality software delivery.<br/>
-  _Keywords:_ Wall of Confusion, Collaboration, Automation, Continuous Delivery, Continuously Monitor, Respond to Changes, Feedback Loop, Cultural Transformation  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Lean:** **Management practices** aiming to **eliminate waste** and **maximize value** in software development.<br/>
-  _Keywords:_ Waste Reduction, Define Value, Map the Value Stream, Create Flow, Establish Pull, Pursue Perfection, Lean Startup, MVP, Muda, Mura, Muri, Jidoka  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Continuous Delivery:** **Automated**, **streamlined** software deployment to ensure a **deployable state at all times**.<br/>
-  _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Agile:** Flexible, **iterative** software **development** approach with short cycles and stakeholder involvement.<br/>
+  _Keywords:_ Iterative, XP, Scrum, Kanban, Sprint, Epic, Feature, User Story, Product Owner, Scrum Master, Agile Manifesto
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**DevOps:** **Practices** bridging **development and operations** for faster, higher-quality software delivery.<br/>
+  _Keywords:_ Wall of Confusion, Collaboration, Automation, Continuous Delivery, Continuously Monitor, Respond to Changes, Feedback Loop, Cultural Transformation
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Lean:** **Management practices** aiming to **eliminate waste** and **maximize value** in software development.<br/>
+  _Keywords:_ Waste Reduction, Define Value, Map the Value Stream, Create Flow, Establish Pull, Pursue Perfection, Lean Startup, MVP, Muda, Mura, Muri, Jidoka
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Continuous Delivery:** **Automated**, **streamlined** software deployment to ensure a **deployable state at all times**.<br/>
+  _Keywords:_ Automation, Continuous Testing, Deployment Pipeline, Deployment Frequency, Continuous Deployment, Release Management, Version Control, Configuration Management, Canary Deployment, Rollback Strategies
 
 ------
 ### Continued: Relation with Agile, DevOps, Lean
@@ -200,6 +200,6 @@ The practices of continuous delivery bring several important **benefits**:
   - This means we can avoid the **2/3 of features** we build that  deliver **zero** or **negative value** to our businesses.
 - Happier teams
 
-Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Continuous delivery isn't magic. It's about **continuous, daily improvement**: consistently striving for better results by embracing the principle **"if it hurts, do it more often, and bring the pain forward"**.
 
 <img src="assets/continuous-improvement-meme.webp" width="250">

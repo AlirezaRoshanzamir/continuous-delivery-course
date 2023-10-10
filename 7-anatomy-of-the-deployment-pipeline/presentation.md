@@ -20,10 +20,10 @@ In abstract, a deployment pipeline is an automated process to take software **fr
 ------
 ### Continued: What Is a Deployment Pipeline?
 Common **minimal** deployment pipeline (**continuous integration pipeline** or **build pipeline**) includes:
-- **Commit stage(s)**: Compiles, unit-level tests, code analysis. **Five to ten minutes** to run.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Automated acceptance test stages**: Assert that the system works at the functional and nonfunctional level. Executed in parallel to increase their speed. Typically **within an hour or two**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Manual test stages**: Exploratory tests, UAT, Integration (integration between services) tests.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Release stage**: **Delivers the system to users**, either as **packaged software** or by **deploying it into a production** or staging environment.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Commit stage(s)**: Compiles, unit-level tests, code analysis. **Five to ten minutes** to run.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Automated acceptance test stages**: Assert that the system works at the functional and nonfunctional level. Executed in parallel to increase their speed. Typically **within an hour or two**.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Manual test stages**: Exploratory tests, UAT, Integration (integration between services) tests.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Release stage**: **Delivers the system to users**, either as **packaged software** or by **deploying it into a production** or staging environment.
 
 <img src="assets/deployment-pipeline-sketch.webp">
 
@@ -95,32 +95,32 @@ Some code analysis and metrics:  <!-- .element class="fragment fade-in-with-next
 ### Commit Stage Best Practices
 Developers should **await the commit stage** success. If it fails, they should either **quickly fix the problem**, or **revert changes**.
 
-Once passed, developers can move on, but **they should still monitor later stages' progress**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Once passed, developers can move on, but **they should still monitor later stages' progress**.
 
 ---
 ## The Automated Acceptance Test Gate
 **Without production-like acceptance tests**, we can't ensure **meeting customer specs or real-world readiness**. **Most** tests in acceptance stage are functional, but **not all** (similar to commit stage tests).
 
-The **development team** must **respond immediately** to acceptance test **breakages** during regular development.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The **development team** must **respond immediately** to acceptance test **breakages** during regular development.
 
 ------
 ### Automated Acceptance Test Best Practices
 - Consider the environments that your application will encounter in production  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Use a **scaled-down** version of it if it's complex or expensive  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Use a **scaled-down** version of it if it's complex or expensive
 - You can use test doubles for any external infrastructure that you depend on  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - The whole team owns the acceptance tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Acceptance tests **without developer input** often end up **closely tied to the UI**, making them **fragile**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Acceptance tests **without developer input** often end up **closely tied to the UI**, making them **fragile**.
 - Developers must be able to run automated acceptance tests on their development environments  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Acceptance tests should be expressed in the language of the business (Ubiquitous Language)  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Using the **same programming language** for acceptance tests is **fine**, but focus on **business behavior** (**"place order" not "click order button"**, **"confirm fund transfer" not "check fund_table has results"**).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Using the **same programming language** for acceptance tests is **fine**, but focus on **business behavior** (**"place order" not "click order button"**, **"confirm fund transfer" not "check fund_table has results"**).
 - Don't follow a naive process of taking your acceptance criteria and blindly automating every one  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - While acceptance tests are extremely valuable, they can also be **expensive to create and maintain**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->While acceptance tests are extremely valuable, they can also be **expensive to create and maintain**.
 
 ---
 ## Subsequent [Test] Stages
 When delivering software incrementally, automated production deployment (**"Continuous Deployment"**) is possible. Yet, **many systems still require manual testing before release**.
 
-To authorize deployment, you need a method. The main needs include **seeing approved release candidates**, having a **button** to choose and deploy **a version** to the **desired environment** (like UAT, capacity, exploratory, staging, production).  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->To authorize deployment, you need a method. The main needs include **seeing approved release candidates**, having a **button** to choose and deploy **a version** to the **desired environment** (like UAT, capacity, exploratory, staging, production).
 
 <img src="assets/release-candidates-and-deploy-push-button.webp" class="fragment complete-fade-out">
 
@@ -134,22 +134,22 @@ Two common test stages are:  <!-- .element: class="fragment fade-in-with-next cu
 ---
 ## Preparing to Release
 Releasing a production system involves **business risk**. We see the release step as a natural outcome of our deployment pipeline:
-- Create and maintain a **release plan** with **all involved**: developers, testers, operations, infrastructure, and support teams.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Reduce the effect of errors by **automating as much** of the process as you can.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Ensure you can **back out** a release if things don't go as according to plan.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- Plan how to migrate **configuration** and **production data** during **upgrades** and **rollbacks**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Create and maintain a **release plan** with **all involved**: developers, testers, operations, infrastructure, and support teams.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Reduce the effect of errors by **automating as much** of the process as you can.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Ensure you can **back out** a release if things don't go as according to plan.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Plan how to migrate **configuration** and **production data** during **upgrades** and **rollbacks**.
 
-Releasing should be easy: **select a version**, then **press a button**. **Backing out should be equally simple**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Releasing should be easy: **select a version**, then **press a button**. **Backing out should be equally simple**.
 
 ------
 ### Automating Deployment and Release
 <img src="assets/deploy-meme.webp" class="fragment start" width="400">
 
-Production environments need to be **locked down**, allowing changes only **via automation**. This covers application **deployment**, **configurations**, **software stacks**, **network topology**, and **state** changes.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Production environments need to be **locked down**, allowing changes only **via automation**. This covers application **deployment**, **configurations**, **software stacks**, **network topology**, and **state** changes.
 
-Once you've deployed a complex system for the **fiftieth** or **hundredth time without issues**, it becomes **less of a notable event**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Once you've deployed a complex system for the **fiftieth** or **hundredth time without issues**, it becomes **less of a notable event**.
 
-**Even** if you **don't need to release** your software **several times a day**, setting up a deployment pipeline will greatly **boost** your organization's **speed** and **reliability** in delivering software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Even** if you **don't need to release** your software **several times a day**, setting up a deployment pipeline will greatly **boost** your organization's **speed** and **reliability** in delivering software.
 
 ------
 ### Backing Out Changes
@@ -163,32 +163,32 @@ Corresponding solutions:  <!-- .element: class="fragment fade-in-with-next custo
 - **Rehearsing the release** many times a day, proving that our automated deployment system works.
 - **Providing a back-out strategy**.
 
-A good back-out plan involves **keeping the previous app version** during and after the new version's release. Often, the **biggest challenge** with deployment and rollback is **migrating the production data**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->A good back-out plan involves **keeping the previous app version** during and after the new version's release. Often, the **biggest challenge** with deployment and rollback is **migrating the production data**.
 
-The next best option is to **redeploy** the **previous good version** of your appliation from scratch.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The next best option is to **redeploy** the **previous good version** of your appliation from scratch.
 
-**Never** use a **different process for backing out than for deployment**, and **avoid step-by-step** deployments or **rollbacks**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Never** use a **different process for backing out than for deployment**, and **avoid step-by-step** deployments or **rollbacks**.
 
 ------
 ### Building on Success
 Finally, for deploying a release candidate to production, we can say:
-- The code **compiles**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The code does what **developers** intended, validated by **unit tests**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The system operates as expected by **analysts** or **users**, validated by **acceptance tests**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- **Infrastructure configuration and baseline environments** are well-handled as the app is **tested in an analog of production**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The code has the **right components** due to its **deployability**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The **deployment system works** due to its use in **development** and **testing environments** before the candidate moves next.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-- The **version control** has **everything** required to deploy, removing manual steps due to prior deployments.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The code **compiles**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The code does what **developers** intended, validated by **unit tests**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The system operates as expected by **analysts** or **users**, validated by **acceptance tests**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Infrastructure configuration and baseline environments** are well-handled as the app is **tested in an analog of production**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The code has the **right components** due to its **deployability**.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The **deployment system works** due to its use in **development** and **testing environments** before the candidate moves next.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The **version control** has **everything** required to deploy, removing manual steps due to prior deployments.
 
 ---
 ## Implementing a Deployment Pipeline
 Take an **incremental approach** when setting up a deployment pipeline. Typically, the steps are as follows:
-1. Model your **value stream** and create a **walking skeleton**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+1. &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Model your **value stream** and create a **walking skeleton**.
    - Alternatively, begin with the **bare minimum**: Commit, Acceptance, Deploy stages.
-2. **Automate** the **build** and **deployment** process.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-3. Automate **unit tests** and **code analysis**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-4. Automate **acceptance tests**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-5. Automate **releases**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+2. &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Automate** the **build** and **deployment** process.
+3. &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Automate **unit tests** and **code analysis**.
+4. &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Automate **acceptance tests**.
+5. &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Automate **releases**.
 
 ------
 ### Modeling Your Value Stream and Creating a Walking Skeleton
@@ -196,11 +196,11 @@ Start by mapping the value stream from check-in to release:
 
 <img src="assets/simple-value-stream-map.webp" />
 
-After creating a value stream map, **model your process** in your **CI** and **release management** tool.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->After creating a value stream map, **model your process** in your **CI** and **release management** tool.
 
-**Alternatively**, begin with a **bare minimum**: a **commit stage** for building and testing, an **acceptance test stage**, and a third stage for **deploying** to a production-like **demo** environment.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Alternatively**, begin with a **bare minimum**: a **commit stage** for building and testing, an **acceptance test stage**, and a third stage for **deploying** to a production-like **demo** environment.
 
-Initially, use **placeholders** or the **simplest examples**, like a passing test, for some stages. Wait for **manual approval** or **trigger the next stages automatically**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Initially, use **placeholders** or the **simplest examples**, like a passing test, for some stages. Wait for **manual approval** or **trigger the next stages automatically**.
 
 ------
 ### Automating the Build and Deployment Process
@@ -208,16 +208,16 @@ The **build** process:
 - Takes **source code as input** and **generates binary output**.
 - The CI server **monitors code changes** and generates **accessible shared binaries for the team**.
 
-The next step is **automating deployment**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->The next step is **automating deployment**:
 - You need a **machine** for deploying your app.
 - Deployment may involve **packaging**.
 - **Automate the installation and configuration** of your application next.
 - Lastly, create an **automated deployment test** to verify the successful application deployment.
 
-Next, aim for **push-button deployments**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Next, aim for **push-button deployments**:
 - Configure CI server to allow **selecting a build** and **clicking a button** to initiate a process. This process **takes the build's binaries**, **runs the deployment script**, and **performs the deployment test**.
 
-The release process **mirrors the testing environment deployment**, **except for user-installed software**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The release process **mirrors the testing environment deployment**, **except for user-installed software**.
 
 ------
 ### Automating the Unit Tests and Code Analysis
@@ -230,47 +230,47 @@ Next, **enrich** the commit stage.
 ### Automating Acceptance Tests
 The acceptance test phase can utilize the **same deployment script for the testing environment**. **Start the acceptance test framework**, **gather reports**, and **store application logs**. For **GUI apps**, consider using **Vnc2swf** for **screen recording** during tests for debugging.
 
-Acceptance tests have two types: **functional** and **nonfunctional**. Begin testing nonfunctional aspects like capacity and scaling **early in the project** to gauge compliance with requirements. **Initially, combine acceptance and performance tests in a single stage.**  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Acceptance tests have two types: **functional** and **nonfunctional**. Begin testing nonfunctional aspects like capacity and scaling **early in the project** to gauge compliance with requirements. **Initially, combine acceptance and performance tests in a single stage.**
 
-Incorporate **at least one or two** automated **tests of each type** you need into your project's deployment pipeline early on.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Incorporate **at least one or two** automated **tests of each type** you need into your project's deployment pipeline early on.
 
 ------
 ### Evolving Your Pipeline
 <img src="assets/deployment-pipeline-evolution.webp" class="fragment complete-fade-out" width="700">
 
-Two common pipeline extensions: **components** and **branches**. For large apps, use **mini-pipelines** for **each component**, then a **final pipeline** for **assembly**, **[F/NF] acceptance testing**, and **deployment to environments (testing, staging, and production)**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Two common pipeline extensions: **components** and **branches**. For large apps, use **mini-pipelines** for **each component**, then a **final pipeline** for **assembly**, **[F/NF] acceptance testing**, and **deployment to environments (testing, staging, and production)**.
 
 Keep in mind these three key points:  <!-- .element: class="fragment fade-in-with-next custom" -->
-1. You can implement the entire pipeline **gradually**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-2. Your pipeline provides **valuable data** on the **efficiency** of your building, deploying, testing, and releasing.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-3. Your deployment pipeline is a **living system**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+1. &shy;<!-- .element class="fragment highlight-current-blue" -->You can implement the entire pipeline **gradually**.
+2. &shy;<!-- .element class="fragment highlight-current-blue" -->Your pipeline provides **valuable data** on the **efficiency** of your building, deploying, testing, and releasing.
+3. &shy;<!-- .element class="fragment highlight-current-blue" -->Your deployment pipeline is a **living system**
    - Refactor your pipeline just like your applications.
 
 ---
 ## Metrics
 <img src="assets/lean-metrics-meme.webp" class="fragment start" width="600">
 
-Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Following the **lean philosophy**, focus on **optimizing globally, not locally**. **Don't waste** time on a **bottleneck that isn't the true constraint** in your delivery process. Use a **global metric** to gauge the **overall health of the delivery process**.
 
-In software delivery, the key global metric is **cycle time**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->In software delivery, the key global metric is **cycle time**:
 
 <img src="assets/cycle-time-lead-time.webp" width="700">
 
-- It's the time from **deciding to implement a feature** to its **release for users**.  <!-- .element: class="fragment fade-in-parent custom" -->
-- How fast can your organization **deploy a one-line code change**? Is it **repeatable** and **reliable**?  <!-- .element: class="fragment fade-in-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in" -->It's the time from **deciding to implement a feature** to its **release for users**.
+- &shy;<!-- .element class="fragment fade-in" -->How fast can your organization **deploy a one-line code change**? Is it **repeatable** and **reliable**?
 
-Other metrics such as "Number of defects" **are not good as primary metrics**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Other metrics such as "Number of defects" **are not good as primary metrics**.
 
 ------
 ### Reducing Cycle Time
 <img src="assets/cycling-meme.webp" class="fragment complete-fade-out">
 
-Once you know your application's cycle time, you can find ways to reduce it, applying the **Theory of Constraints**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
-1. Identify the system's **limiting constraint**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-2. **Maximize** the **throughput of the constraint**, exploiting it fully.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-3. **Subordinate all other** processes to the constraint. This implies that **other resources will not work at 100%**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-4. **Elevate the constraint**. If the cycle time remains too long after steps 2 and 3, **increase available resources**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-5. **Rinse and repeat**. Find **the next constraint** on your system and **go back to step 1**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Once you know your application's cycle time, you can find ways to reduce it, applying the **Theory of Constraints**:
+1. &shy;<!-- .element class="fragment highlight-current-blue" -->Identify the system's **limiting constraint**.
+2. &shy;<!-- .element class="fragment highlight-current-blue" -->**Maximize** the **throughput of the constraint**, exploiting it fully.
+3. &shy;<!-- .element class="fragment highlight-current-blue" -->**Subordinate all other** processes to the constraint. This implies that **other resources will not work at 100%**.
+4. &shy;<!-- .element class="fragment highlight-current-blue" -->**Elevate the constraint**. If the cycle time remains too long after steps 2 and 3, **increase available resources**.
+5. &shy;<!-- .element class="fragment highlight-current-blue" -->**Rinse and repeat**. Find **the next constraint** on your system and **go back to step 1**.
 
 <img src="assets/theory-of-constraints.webp" width="500">
 
@@ -288,14 +288,14 @@ Give the "Manual Testing" as an example for reducing cycle time:
 ------
 ### Other Metrics
 Some other diagnostics that can warn you of problems:
-- Automated **test coverage**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Codebase properties like **amount of duplication**, **cyclomatic complexity**, efferent and afferent **coupling**, **style issues**, etc.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Number of **defects**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Velocity**, the rate at which your team delivers working, tested, ready for use code  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Number of **commits** to the version control system **per day**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Number of **builds per day**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Number of **build failures per day**  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- **Duration of build**, including automated tests  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Automated **test coverage**
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Codebase properties like **amount of duplication**, **cyclomatic complexity**, efferent and afferent **coupling**, **style issues**, etc.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Number of **defects**
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Velocity**, the rate at which your team delivers working, tested, ready for use code
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Number of **commits** to the version control system **per day**
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Number of **builds per day**
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Number of **build failures per day**
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**Duration of build**, including automated tests
 
 <img src="assets/cyclomatic-complexity-example.webp" width="530"/>
 
@@ -309,8 +309,8 @@ Each team's CI server should produce these **reports and visuals** with **every 
 ## Summary
 The deployment pipeline offers **visibility** into build progress from **check-in to release** for **everyone involved in software delivery**.
 
-Once a deployment pipeline is implemented, it will **reveal release process inefficiencies**. With this information, you can **optimize** your software building and release process.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Once a deployment pipeline is implemented, it will **reveal release process inefficiencies**. With this information, you can **optimize** your software building and release process.
 
-There is **no one-size-fits-all solution** to the complex problem of implementing a deployment pipeline.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->There is **no one-size-fits-all solution** to the complex problem of implementing a deployment pipeline.
 
-For a deployment pipeline to function, you need certain **foundations**: good **configuration management**, **automated scripts** for **building** and **deploying** your app, and **automated tests** to ensure it delivers value to users.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->For a deployment pipeline to function, you need certain **foundations**: good **configuration management**, **automated scripts** for **building** and **deploying** your app, and **automated tests** to ensure it delivers value to users.

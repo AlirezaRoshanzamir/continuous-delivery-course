@@ -15,16 +15,16 @@
 ## Introduction
 The commit stage is the point at which you **start building your deployment pipeline**.
 
-Somebody checks in a **change into mainline (trunk)**. Your CI server detects it, checks out the code, and does various tasks, like:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Somebody checks in a **change into mainline (trunk)**. Your CI server detects it, checks out the code, and does various tasks, like:
 - Compiling (if necessary)
 - Creating binaries
 - Performing any analysis
 - Creating any other artifacts
 
 
-The **binaries** and **reports** are stored in a central **artifact repository** for your delivery team and later pipeline stages.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The **binaries** and **reports** are stored in a central **artifact repository** for your delivery team and later pipeline stages.
 
-For **developers**, the commit stage is the **most important feedback cycle** in the whole process.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->For **developers**, the commit stage is the **most important feedback cycle** in the whole process.
 
 <img src="assets/the-commit-stage.webp" width="350"/>
 
@@ -39,29 +39,29 @@ Mention the preflight, pretested, pull-request, merge request builds.
 
 Some principles and practices that make for an effective commit stage:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Provide Fast, Useful Feedback  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Provide a concise summary of **why things failed**, like a list of failed tests, compile errors, or other issues.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Do not fail fast** (if possible) and present aggregated report for this stage.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Provide a concise summary of **why things failed**, like a list of failed tests, compile errors, or other issues.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Do not fail fast** (if possible) and present aggregated report for this stage.
 - What Should Break the Commit Stage?  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - **Compilation** fails, **tests** break, or an **environmental** problem.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Increasing** number of **warnings**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Decreasing** percentage of **coverages**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Code-style** breaches.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - **Don't fail** the commit test for some reason that hasn't been **agreed upon by the whole team**  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Compilation** fails, **tests** break, or an **environmental** problem.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Increasing** number of **warnings**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Decreasing** percentage of **coverages**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Code-style** breaches.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Don't fail** the commit test for some reason that hasn't been **agreed upon by the whole team**
 - Tend the Commit Stage Carefully  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Give the **same level of respect** to **build** and **test** **scripts** as you would to any other part of your application.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - Many projects effectively **grind to a halt** under the **weight of their build problems**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - Ensure that your scripts are **modular** (maybe task-based) but **avoid environment-specific scripts**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Give the **same level of respect** to **build** and **test** **scripts** as you would to any other part of your application.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Many projects effectively **grind to a halt** under the **weight of their build problems**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Ensure that your scripts are **modular** (maybe task-based) but **avoid environment-specific scripts**.
 - Give Developers Ownership  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - It is a **failure if** we get to the point where **only specialists can maintain** the CI system.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->It is a **failure if** we get to the point where **only specialists can maintain** the CI system.
 - Use a Build Master for Very Large Teams (over 20-30 individuals)  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - It is useful to have **someone to play the role** of a "build master" to encourage and **enforce build discipline**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - The build master role should **rotate** among team members, **possibly weekly**, and **not be permanent**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->It is useful to have **someone to play the role** of a "build master" to encourage and **enforce build discipline**.
+  - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->The build master role should **rotate** among team members, **possibly weekly**, and **not be permanent**.
 
 ---
 ## The Results
 <img src="assets/manage-all-the-binaries-meme.webp" class="fragment start">
 
-The commit stage takes in **source code** and produces **binaries** and **reports** that should be **stored** for **later use in the pipeline** and for your **team to access**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->The commit stage takes in **source code** and produces **binaries** and **reports** that should be **stored** for **later use in the pipeline** and for your **team to access**:
 
 <img src="assets/role-of-artifact-repository.webp">
 
@@ -69,7 +69,7 @@ The commit stage takes in **source code** and produces **binaries** and **report
 ## Commit Test Suite Principles and Practices
 <img src="assets/tests-everywhere-meme.webp" class="fragment start">
 
-Commit test suite design principles, **emphasizing unit tests** (while suggesting adding **acceptance** and **end-to-end** tests to the commit stage test suite):  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Commit test suite design principles, **emphasizing unit tests** (while suggesting adding **acceptance** and **end-to-end** tests to the commit stage test suite):
 - The vast majority of your commit tests should be comprised of unit tests  <!-- .element: class="fragment insides-fade-in-then-out" -->
   <img src="assets/test-automation-pyramid.webp" width="800">
 - Should be very fast to execute  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -103,6 +103,6 @@ Commit test suite design principles, **emphasizing unit tests** (while suggestin
 ## Summary
 <img src="assets/commit-stage-meme.jpeg" class="fragment start">
 
-The commit stage's main aim is to **quickly** spot **common failures** due to changes and notify developers for quick fixes.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The commit stage's main aim is to **quickly** spot **common failures** due to changes and notify developers for quick fixes.
 
-The commit stage in your pipeline should run **every time someone introduces a change** into your **code** or **configuration**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The commit stage in your pipeline should run **every time someone introduces a change** into your **code** or **configuration**.
