@@ -53,9 +53,6 @@
             small, small * {
                 font-size: 20px !important;
             }
-            .fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
-                display: none;
-            }
             .fragment.complete-fade-out.visible:not(.current-fragment) {
                 display: none;
             }
@@ -63,30 +60,6 @@
                 opacity: 0;
                 transition: opacity 0.4s;
             }
-            p:has(.fragment.fade-in-paragraph:not(.visible)) {
-                opacity: 0;
-                transition: opacity 0.4s;
-            }
-            :has(> .fragment.fade-in-parent:not(.visible)) {
-                opacity: 0;
-                transition: opacity 0.4s;
-            }
-            :has(> .fragment.fade-in-parent-with-next:not(.visible)), :has(> .fragment.fade-in-parent-with-next:not(.visible)) + * {
-                opacity: 0;
-                transition: opacity 0.4s;
-            }
-            :has(> .fragment.fade-in-then-semi-out-parent:not(.visible)) {
-                opacity: 0;
-                transition: opacity 0.4s;
-            }
-            :has(> .fragment.fade-in-then-semi-out-parent.current-fragment) {
-                opacity: 1;
-                transition: opacity 0.4s;
-            }
-            :has(> .fragment.fade-in-then-semi-out-parent.visible:not(.current-fragment)) {
-                opacity: 0.6;
-                transition: opacity 0.4s;
-            }
             .fragment.start.visible:not(.current-fragment) {
                 display: none;
             }
@@ -99,19 +72,25 @@
             .fragment.start:not(.visible) ~ *, .fragment.start.current-fragment ~ * {
                 visibility: hidden;
             }
-            .fragment.end:not(.current-fragment) {
-                display: none;
+            @supports selector(:has(*)) {
+                .fragment.insides-fade-in-then-out:not(.current-fragment):not(:has(.current-fragment)) > * {
+                    display: none;
+                }
+                .fragment.end:not(.current-fragment) {
+                    display: none;
+                }
+                :not(h3):has(~ .fragment.end.current-fragment) {
+                    display: none;
+                }
             }
-            :not(h3):has(~ .fragment.end.current-fragment) {
-                display: none;
-            }
-            :has(> .fragment.highlight-current-blue-parent.current-fragment) {
-                color: dodgerblue;
-                transition: color 0.4s;
-            }
-            :has(> .fragment.semi-fade-out-parent.visible:not(.current-fragment)) {
-                opacity: 0.6;
-                transition: opacity 0.4s;
+            @supports not selector(:has(*)) {
+                .fragment.insides-fade-in-then-out:not(.current-fragment) > ul > li.visible:not(.current-fragment),
+                .fragment.insides-fade-in-then-out:not(.current-fragment) > ul > li:not(.visible) {
+                    display: none;
+                }
+                .fragment.end {
+                    display: none;
+                }
             }
         </style>
     </head>
@@ -152,6 +131,8 @@
                     RevealSearch,
                     RevealZoom
                 ]
+            }).then(() => {
+                document.title = "CD | " + document.querySelector("section > h2").textContent.split(":").slice(-1);
             });
         </script>
     </body>

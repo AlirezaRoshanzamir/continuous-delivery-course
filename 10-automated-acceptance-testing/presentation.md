@@ -15,11 +15,11 @@
 ## Introduction
 Automating acceptance tests ensures your application meets  **business acceptance criteria** and **delivers valuable functionality**.
 
-Thet usually run on **every software version** that **passes commit tests**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Thet usually run on **every software version** that **passes commit tests**.
 
-Each **acceptance test** aims to confirm if a **story or requirement's acceptance criteria** are fulfilled.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Each **acceptance test** aims to confirm if a **story or requirement's acceptance criteria** are fulfilled.
 
-Unit tests check if **a specific app part** works as intended **by the programmer**, which **isn't** the same as ensuring **user needs** are met.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Unit tests check if **a specific app part** works as intended **by the programmer**, which **isn't** the same as ensuring **user needs** are met.
 
 <img src="assets/acceptance-test-stage.webp" width="550">
 
@@ -27,15 +27,15 @@ Unit tests check if **a specific app part** works as intended **by the programme
 ## Why Is Automated Acceptance Testing Essential?
 <img src="assets/why-meme.webp" class="fragment start" width="800">
 
-Automated acceptance tests have **long been a subject of controversy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Automated acceptance tests have **long been a subject of controversy**.
 
-**Project managers** and **customers** often think they are **too expensive** to **create** and **maintain**-indeed, when **done badly, they are**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Project managers** and **customers** often think they are **too expensive** to **create** and **maintain**-indeed, when **done badly, they are**.
 
-Developers often think unit tests from **test-driven development** are **enough to prevent regressions**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Developers often think unit tests from **test-driven development** are **enough to prevent regressions**.
 
-But, a **well-maintained automated** acceptance test suite costs **far less** than **manual acceptance and regression testing** or **releasing low-quality software**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->But, a **well-maintained automated** acceptance test suite costs **far less** than **manual acceptance and regression testing** or **releasing low-quality software**.
 
-Some people **in the Agile community** suggest that a mix of **unit** and **component tests** along with **XP practices** suffice, but:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Some people **in the Agile community** suggest that a mix of **unit** and **component tests** along with **XP practices** suffice, but:
 1. **No other type of test** proves that the application, running similarly to production, **delivers the business value** to users.
 2. Unit and component tests **don't test user scenarios**, so they **can't find** defects that **arise as users interact** with the application through a **series of states**.
 
@@ -45,7 +45,7 @@ Some people **in the Agile community** suggest that a mix of **unit** and **comp
 ### How to Create Maintainable Acceptance Test Suites: INVEST
 <img src="assets/write-vs-maintain-tests2-meme.webp" class="fragment start">
 
-Acceptance tests come from **acceptance criteria**, so your criteria must consider automation and follow the **INVEST** principles:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Acceptance tests come from **acceptance criteria**, so your criteria must consider automation and follow the **INVEST** principles:
 - **I**ndependent (of all others)
 - **N**egotiable (not a contract for specific feature)
 - **V**aluable (a vertical slice)
@@ -118,11 +118,11 @@ Acceptance tests come from **acceptance criteria**, so your criteria must consid
 ### How to Create Maintainable Acceptance Test Suites: Layering
 <img src="assets/layering-meme.jpg" class="fragment start">
 
-Automated acceptance tests should be layered:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Automated acceptance tests should be layered:
 
 <img src="assets/acceptance-tests-layers.webp" width="450">
 
-Tests that **directly use** the **application's API** or **UI** are **brittle** and **minor UI changes** can **break all such tests**. They often result from **record-and-playback-style test** automation tools, one of the main reasons automated acceptance tests are perceived as expensive.  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Tests that **directly use** the **application's API** or **UI** are **brittle** and **minor UI changes** can **break all such tests**. They often result from **record-and-playback-style test** automation tools, one of the main reasons automated acceptance tests are perceived as expensive.
 
 <img src="assets/test-record-and-playback-tool.png" width="530" style="border: 1px solid lightgray">
 
@@ -148,21 +148,21 @@ The role of the **business analyst** is:
 - Work with developers to ensure they grasp the application from the user's perspective. Guide developers to ensure that stories deliver the intended business value.  <!-- .element class="fragment highlight-current-blue" -->
 - Work with testers to ensure correct acceptance criteria and functionality alignment, delivering expected value.  <!-- .element class="fragment highlight-current-blue" -->
 
-The role of the **testers** is:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->The role of the **testers** is:
 - Ensure everyone, including the customer, understands the software's current quality and production readiness.  <!-- .element class="fragment highlight-current-blue" -->
 - Working with customers and analysts to define acceptance criteria for stories or requirements.  <!-- .element class="fragment highlight-current-blue" -->
 - Working with developers to write automated acceptance tests.  <!-- .element class="fragment highlight-current-blue" -->
 - Performing manual testing activities such as exploratory testing, manual acceptance testing, and showcases.  <!-- .element class="fragment highlight-current-blue" -->
 
-Not every team has **separate individuals** who perform **these roles 100% of the time**. Sometimes, **developers act as analysts**, or **analysts act as testers**. In **Scrum** teams, **product owners** may do the analyst jobs.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Not every team has **separate individuals** who perform **these roles 100% of the time**. Sometimes, **developers act as analysts**, or **analysts act as testers**. In **Scrum** teams, **product owners** may do the analyst jobs.
 
 ------
 ### Analysis on Iterative Projects
-1. At first, **analysts** collaborate with **testers** and the **customer** to define **acceptance criteria**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-2. Then, just before implementation, the **analyst**, **tester**, and **developers** (plus the customer if available) **meet**. The **analyst** explains the **requirement and criteria**, and the **tester and developers** **create automated tests** for validation.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-3. While **implementing the requirement**, **developers** **consult with the analyst** if they **encounter unclear areas** or **identify issues or better solutions** to address the requirement.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-4. Once **developers** believe they've **finished the work** (including passing **unit**, **component**, and **acceptance tests**), they'll **present** it to the **analyst**, **tester**, and **customer**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-5. Once the **analyst** and the **customer** are happy that the **requirement has been fulfilled**, it **moves on to testing by the testers**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+1. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->At first, **analysts** collaborate with **testers** and the **customer** to define **acceptance criteria**.
+2. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Then, just before implementation, the **analyst**, **tester**, and **developers** (plus the customer if available) **meet**. The **analyst** explains the **requirement and criteria**, and the **tester and developers** **create automated tests** for validation.
+3. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->While **implementing the requirement**, **developers** **consult with the analyst** if they **encounter unclear areas** or **identify issues or better solutions** to address the requirement.
+4. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Once **developers** believe they've **finished the work** (including passing **unit**, **component**, and **acceptance tests**), they'll **present** it to the **analyst**, **tester**, and **customer**.
+5. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Once the **analyst** and the **customer** are happy that the **requirement has been fulfilled**, it **moves on to testing by the testers**.
 
 <img src="assets/roles.webp">
 
@@ -170,9 +170,9 @@ Not every team has **separate individuals** who perform **these roles 100% of th
 ### Acceptance Criteria as Executable Specifications (BDD)
 Acceptance tests act as **executable specs** for the **software's behavior**, lead to **behavior-driven development** in automated testing.
 
-In BDD, **acceptance criteria** are **customer expectations** for **application behavior**, **written** to **execute directly** and **verify compliance with specifications**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->In BDD, **acceptance criteria** are **customer expectations** for **application behavior**, **written** to **execute directly** and **verify compliance with specifications**.
 
-Most **specifications** can **become outdated** as the application evolves, but with BDD and a deployment pipeline, it's not possible.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Most **specifications** can **become outdated** as the application evolves, but with BDD and a deployment pipeline, it's not possible.
 
 ------
 ### Acceptance Criteria as Executable Specifications Example
@@ -276,9 +276,9 @@ FitNesse is an **open source test framework** that allows testers, developers, a
 ## The Application Driver Layer
 The application driver layer is the layer that understands **how to talk to your application-the system under test (SUT)**.
 
-The API for the application driver layer is expressed in a **domain language**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The API for the application driver layer is expressed in a **domain language**.
 
-This is the same acceptance test written using a **JUnit** test:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->This is the same acceptance test written using a **JUnit** test:
 <pre class="java"><code style="font-size: 20px; line-height: normal">public class PlacingAnOrderAcceptanceTest extends DSLTestCase {
     @Test
     public void userOrderShouldDebitAccountCorrectly() {
@@ -295,7 +295,7 @@ This is the same acceptance test written using a **JUnit** test:  <!-- .element 
 }
 </code></pre>
 
-**Comparing** the **JUnit (internal DSL)** and **Cucumber (external DSL)** acceptance tests is useful. Each has **pros** and **cons**, like **text-based**, **alignment with criteria**, **auto-completion**, **IDE support**, and **extra tools**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Comparing** the **JUnit (internal DSL)** and **Cucumber (external DSL)** acceptance tests is useful. Each has **pros** and **cons**, like **text-based**, **alignment with criteria**, **auto-completion**, **IDE support**, and **extra tools**.
 
 ------
 ### The Window Driver Pattern: Decoupling the Tests from the GUI
@@ -353,8 +353,8 @@ public void shouldDeductPaymentFromAccountBalance() {
 
 There is more to the implementation of acceptance tests than layering:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Putting the application in a particular state, performing several actions on it, and verifying the results.  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - An **atomic** test **sets up** and **cleans up** everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
-  - Otherwise, write **defensive tests** (check everything at the start) and use **differential assertions**.  <!-- .element: class="fragment fade-in-then-semi-out-parent custom" -->
+  - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->An **atomic** test **sets up** and **cleans up** everything it needs, leaving only a pass or fail record (e.g., making a new account at the test's beginning).
+  - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Otherwise, write **defensive tests** (check everything at the start) and use **differential assertions**.
 - Prevent privilaged access or backdoors for tests.  <!-- .element: class="fragment insides-fade-in-then-out" -->
 - Handle asynchrony and timeouts in order to avoid flakiness.  <!-- .element: class="fragment insides-fade-in-then-out" -->
   - Has the test failed, or are we just waiting for the results to arrive?  <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -372,7 +372,7 @@ There is more to the implementation of acceptance tests than layering:  <!-- .el
 ## The Acceptance Test Stage
 Run the acceptance test suite against **every build that passes the commit tests**. **Later pipeline stages** are often subject to **human judgment**.
 
-In **very short projects** with a **small team (four or fewer developers)**, using a **few end-to-end tests** in a single-stage CI process may **suffice**. However, remember that **large projects begin as small ones**, and retrofitting a comprehensive set of automated acceptance tests into a large project **later on requires a herculean effort**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->In **very short projects** with a **small team (four or fewer developers)**, using a **few end-to-end tests** in a single-stage CI process may **suffice**. However, remember that **large projects begin as small ones**, and retrofitting a comprehensive set of automated acceptance tests into a large project **later on requires a herculean effort**.
 
 Tips for the acceptance test stage:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - <!-- .element class="fragment highlight-current-blue" --> Keeping Acceptance Tests Green
@@ -386,9 +386,9 @@ Tips for the acceptance test stage:  <!-- .element: class="fragment fade-in-with
 ## Acceptance Test Performance
 <img src="assets/slow-acceptance-test-meme.gif" class="fragment start">
 
-Ultimately it is more important to have a **comprehensive automated test suite than one that runs in ten minutes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Ultimately it is more important to have a **comprehensive automated test suite than one that runs in ten minutes**.
 
-But, the **longer** it takes to **discover a problem** after it's introduced, the **harder** it is to **identify and fix its source**:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->But, the **longer** it takes to **discover a problem** after it's introduced, the **harder** it is to **identify and fix its source**:
 - Refactor and Improve Common Tasks and Initial States  <!-- .element class="fragment highlight-current-blue" -->
 - Share Expensive Resources  <!-- .element class="fragment highlight-current-blue" -->
 - Parallel Testing and Using Compute Grids  <!-- .element class="fragment highlight-current-blue" -->
@@ -397,8 +397,8 @@ But, the **longer** it takes to **discover a problem** after it's introduced, th
 ## Summary
 <img src="assets/not-writing-acceptance-tests-meme.jpeg" class="fragment start" width="500">
 
-Automated acceptance tests are typically **more complex** than unit tests. They require more maintenance and are **likely to be broken more often**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Automated acceptance tests are typically **more complex** than unit tests. They require more maintenance and are **likely to be broken more often**.
 
-The use of automated acceptance testing will **pay for itself** many times over; **we have never regretted their use**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->The use of automated acceptance testing will **pay for itself** many times over; **we have never regretted their use**.
 
 <img src="assets/skipping-acceptance-tests-meme.jpeg" class="fragment fade-in">

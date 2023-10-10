@@ -3,7 +3,7 @@
 
 <img src="assets/ci.webp" width="700"/>
 
-<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 40 Minutes</small>
+<small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -15,17 +15,17 @@
 ## Introduction
 <img src="assets/continuous-integration-spiderman-meme.webp" class="fragment complete-fade-out" width="700">
 
-Common feature of many software projects is that for long periods of time during the development process the **application is not in a working state.**  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Common feature of many software projects is that for long periods of time during the development process the **application is not in a working state.**
 
-No one tries **running app till done**. Developers check in changes, run unit tests, but **no one** tries **starting app in prodoction-like environment**. Doubly true for projects with **long-lived branches** or **deferred acceptance testing**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->No one tries **running app till done**. Developers check in changes, run unit tests, but **no one** tries **starting app in prodoction-like environment**. Doubly true for projects with **long-lived branches** or **deferred acceptance testing**.
 
-On the other hand, we have seen projects that spend at most **a few minutes** in a **state** where their application is **not working with the latest changes**. The **difference is continuous integration**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->On the other hand, we have seen projects that spend at most **a few minutes** in a **state** where their application is **not working with the latest changes**. The **difference is continuous integration**.
 
-Continuous integration means that **whenever someone makes a change**, the whole app is **built** and **tested automatically**. **If it fails**, the **team stops and fixes it immediately**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Continuous integration means that **whenever someone makes a change**, the whole app is **built** and **tested automatically**. **If it fails**, the **team stops and fixes it immediately**.
 
 <img src="assets/broken-build-meme.webp" class="fragment fade-in" width="370">
 
-Continuous integration was first mentioned in **Kent Beck**'s book "**Extreme Programming** Explained" (1999).  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Continuous integration was first mentioned in **Kent Beck**'s book "**Extreme Programming** Explained" (1999).
 
 ---
 ## Implementation
@@ -44,13 +44,13 @@ Continuous integration depends on teams using few essential practices.
 With your **chosen CI tool** (although it's not necessary) and the right conditions, you can begin in a few minutes. Just inform the tool about your **source code repository**, the **build script**, and the **automated commit tests**, and how to **notify you** if changes **break the software**.
 
 Once you're ready to check in your latest change:  <!-- .element class="fragment fade-in" -->
-1. Check **if the build is running**. If so, **wait** for it to finish. **If it fails**, **collaborate** with the team to **make it green before check in**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-2. **After it's done** and the tests pass, **update your code** in the development environment **from this version** in the repository to get any updates.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-3. Run the **build** script and **tests** on your **local machine** to confirm everything works **or** use your **CI tool's personal build** feature.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-4. **If** your local **build passes**, check your code **into version control**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-5. **Wait** for your **CI tool** to run the build with your changes.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-6. **If it fails**, **stop** and **fix** the problem **immediately** on your development machine-**go to step 3**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-7. **If the build passes**, **celebrate** and move on to your **next task**.  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+1. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Check **if the build is running**. If so, **wait** for it to finish. **If it fails**, **collaborate** with the team to **make it green before check in**.
+2. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**After it's done** and the tests pass, **update your code** in the development environment **from this version** in the repository to get any updates.
+3. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Run the **build** script and **tests** on your **local machine** to confirm everything works **or** use your **CI tool's personal build** feature.
+4. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**If** your local **build passes**, check your code **into version control**.
+5. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Wait** for your **CI tool** to run the build with your changes.
+6. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**If it fails**, **stop** and **fix** the problem **immediately** on your development machine-**go to step 3**.
+7. &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**If the build passes**, **celebrate** and move on to your **next task**.
 
 ---
 ## Prerequisites
@@ -59,48 +59,48 @@ Continuous integration **won't fix the build process alone**. It can be **painfu
 ------
 ### Check In Regularly
 The **key practice** for successful continuous integration is **regular check-ins** to trunk. Aim to check in **multiple times a day**:
-- Makes your **changes smaller**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- **Less** likely to **break the build**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- You have a **recent known good** version of the software to **revert** to when you make a mistake  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- Encourages **disciplined refactoring** and promotes **small**, **behavior-preserving changes**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- **Less conflicts**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- Forces regular breaks and **stretching muscles** to prevent **carpal tunnel syndrome** and **RSI**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
-- In case of a **major issue (PC explosion :))** , you **won't lose much work**  <!-- .element class="fragment fade-in-then-semi-out-parent custom" -->
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Makes your **changes smaller**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Less** likely to **break the build**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->You have a **recent known good** version of the software to **revert** to when you make a mistake
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Encourages **disciplined refactoring** and promotes **small**, **behavior-preserving changes**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Less conflicts**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Forces regular breaks and **stretching muscles** to prevent **carpal tunnel syndrome** and **RSI**
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->In case of a **major issue (PC explosion :))** , you **won't lose much work**
 
-Continuous integration is **impossible** when **using branches** since, by definition, working on a **branch means your code isn't integrated** with others.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Continuous integration is **impossible** when **using branches** since, by definition, working on a **branch means your code isn't integrated** with others.
 
 ------
 ### Create a Comprehensive Automated Test Suite
 <img src="assets/when-to-stop-testing-meme.webp" class="fragment complete-fade-out" width="600">
 
-There are three kinds of tests we are interested in running from our continuous integration build:  <!-- .element class="fragment fade-in-with-next" -->
+There are three kinds of tests we are interested in running from our continuous integration build:  <!-- .element class="fragment fade-in-with-next custom" -->
 - Unit tests
-  - Test small parts of your app, like **methods** or **functions**, **in isolation** or **interactions among a few**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - Usually, **don't** involve the **database**, **filesystem**, or **network**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - Run **quickly**. Even for large apps, the entire suite should finish in **under ten minutes**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - Written by **developers**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Test small parts of your app, like **methods** or **functions**, **in isolation** or **interactions among a few**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Usually, **don't** involve the **database**, **filesystem**, or **network**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Run **quickly**. Even for large apps, the entire suite should finish in **under ten minutes**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Written by **developers**.
 - Component tests
-  - Test the behavior of several **integrated components**, like API endpoints.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - **Some** also **call them integration tests**. It depends on your **component size definition**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - **Some** authors say that **component testing is black-box** while **unit-testing is white-box**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - **Some** authors say that **component tests are written by developers and testers** together.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - **Not always necessary** to **start the whole application**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - They **may** hit the **database**, the **filesystem**, or **other systems**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Test the behavior of several **integrated components**, like API endpoints.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->**Some** also **call them integration tests**. It depends on your **component size definition**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->**Some** authors say that **component testing is black-box** while **unit-testing is white-box**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->**Some** authors say that **component tests are written by developers and testers** together.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->**Not always necessary** to **start the whole application**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->They **may** hit the **database**, the **filesystem**, or **other systems**.
 - Acceptance tests
-  - Check if the app meets **business acceptance criteria**, covering **functionality** and **characteristics** like **capacity**, **availability**, **security**, etc.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - Run against the **whole app** in a **production-like environment**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-  - Can be **time-consuming**. They might take **more than a day when run sequentially**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Check if the app meets **business acceptance criteria**, covering **functionality** and **characteristics** like **capacity**, **availability**, **security**, etc.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Run against the **whole app** in a **production-like environment**.
+  - &shy;<!-- .element class="fragment highlight-current-blue" -->Can be **time-consuming**. They might take **more than a day when run sequentially**.
 
 ------
 ### Keep the Build and Test Process Short
 If it takes **too long** to **build** and run the **unit tests**:
-- People **avoid** doing a full **build** and **tests** **before check in**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Causing **multiple commits before the next build**, making it **difficult to find the broken commit**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- People **check in less frequently** due to long waits.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->People **avoid** doing a full **build** and **tests** **before check in**.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Causing **multiple commits before the next build**, making it **difficult to find the broken commit**.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->People **check in less frequently** due to long waits.
 
-Ideally, the **pre-check-in** and **CI server** **build** and **test** should last a short time (**90s >> 5min >> 10min**). It's comparable to **making tea**, **chatting**, email, or a **stretch**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Ideally, the **pre-check-in** and **CI server** **build** and **test** should last a short time (**90s >> 5min >> 10min**). It's comparable to **making tea**, **chatting**, email, or a **stretch**.
 
-However, this **shouldn't conflict** with **comprehensive tests**. Eventually, you'll need to **divide your testing into multiple stages**:  <!-- .element class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->However, this **shouldn't conflict** with **comprehensive tests**. Eventually, you'll need to **divide your testing into multiple stages**:
 - **Commit stage**: Compile the software, run unit tests for individual classes, and create a deployable binary.
 - **Acceptance test stage**: Use the **binaries from the commit stage** to run **acceptance**, **integration**, and **performance tests** if available.
 
@@ -174,11 +174,11 @@ The following practices aren't required, yet they're useful:
 ### Code Style and Static Analysis: Linting
 <img src="assets/linter-is-coming-meme.webp" class="fragment complete-fade-out" width="400">
 
-Linting is vital in your CI pipeline. It helps spot **known issues** and **coding standard violations**, thus **reducing bugs** and enhancing code maintainability.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Linting is vital in your CI pipeline. It helps spot **known issues** and **coding standard violations**, thus **reducing bugs** and enhancing code maintainability.
 
-Linting is a form of **static analysis** (doesn't run code). The name "linter" comes from Bell Labs' 1978 same name tool.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Linting is a form of **static analysis** (doesn't run code). The name "linter" comes from Bell Labs' 1978 same name tool.
 
-Some types of linting issues or features:  <!-- .element class="fragment fade-in-with-next" -->
+Some types of linting issues or features:  <!-- .element class="fragment fade-in-with-next custom" -->
 <table>
   <tr>
     <td>
@@ -216,9 +216,9 @@ Some types of linting issues or features:  <!-- .element class="fragment fade-in
 ### Code Style and Static Analysis: Formatting
 <img src="assets/our-repo-meme.webp" class="fragment complete-fade-out" width="700">
 
-Refers to **arranging code elements** consistently to enhance **readability** and **maintainability**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Refers to **arranging code elements** consistently to enhance **readability** and **maintainability**.
 
-Some common features and aspects of existing formatters:  <!-- .element class="fragment fade-in-with-next" -->
+Some common features and aspects of existing formatters:  <!-- .element class="fragment fade-in-with-next custom" -->
 - Indention
 - Spacing
 - Length
@@ -229,9 +229,9 @@ Some common features and aspects of existing formatters:  <!-- .element class="f
 - Remove Unused Imports
 - Auto Update to Modern Language Idioms
 
-Ensure your code formatter **aligns with your linters**. Additionally, run formatters with **only-check** flags as linters.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Ensure your code formatter **aligns with your linters**. Additionally, run formatters with **only-check** flags as linters.
 
-Formatters are essential for **removing code-style comments** in **reviews**. Focus on **consistency** and **don't spend too much time** on **style details**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Formatters are essential for **removing code-style comments** in **reviews**. Focus on **consistency** and **don't spend too much time** on **style details**.
 
 ---
 ## Challenges
@@ -261,16 +261,16 @@ Formatters are essential for **removing code-style comments** in **reviews**. Fo
   - Focus on BDD instead of "story format"  <!-- .element: class="fragment highlight-current-blue" -->
   - Practice work decomposition techniques  <!-- .element: class="fragment highlight-current-blue" -->
 - The team uses a push system for work  <!-- .element: class="fragment insides-fade-in-then-out" -->
-  - Focusing solely on individual tasks instead of team goals **isn't optimal**.  <!-- .element: class="fragment highlight-current-blue-parent custom" -->
+  - &shy;<!-- .element: class="fragment highlight-current-blue" -->Focusing solely on individual tasks instead of team goals **isn't optimal**.
   - A team works together to deliver the highest priority on the backlog.  <!-- .element: class="fragment highlight-current-blue" -->
   - Everyone on the team should be invested in everything the team does.  <!-- .element: class="fragment highlight-current-blue" -->
 
 ---
 ## Summary
-CI make a step change to the **productivity of software development teams.**  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->CI make a step change to the **productivity of software development teams.**
 
-Implementing continuous integration changes your team's approach significantly. Without CI, **your application is broken until you prove otherwise**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Implementing continuous integration changes your team's approach significantly. Without CI, **your application is broken until you prove otherwise**.
 
-CI creates a tight **feedback loop** to identify issues **early**, when they're **less costly to address**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->CI creates a tight **feedback loop** to identify issues **early**, when they're **less costly to address**.
 
-Implementing CI **enforces** two other practices: good **configuration management** and establishing an **automated build and test process**.  <!-- .element class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Implementing CI **enforces** two other practices: good **configuration management** and establishing an **automated build and test process**.

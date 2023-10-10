@@ -15,11 +15,11 @@
 ## Introduction
 **Scripting building**, **testing**, and **packaging** is essential for large or distributed teams to quickly onboard new members.
 
-Modern platforms offer **command-line build options**. Rails uses **Rake**, .NET relies on **MSBuild**, and Java has **Ant, Maven, Buildr, or Gradle**. C/C++ projects benefit from **CMake** or **SCons**. Just have your CI server run these commands to build and test.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Modern platforms offer **command-line build options**. Rails uses **Rake**, .NET relies on **MSBuild**, and Java has **Ant, Maven, Buildr, or Gradle**. C/C++ projects benefit from **CMake** or **SCons**. Just have your CI server run these commands to build and test.
 
-As your project becomes more complex with **multiple components** or **unusual packaging** needs, you'll need to delve into build scripting.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->As your project becomes more complex with **multiple components** or **unusual packaging** needs, you'll need to delve into build scripting.
 
-**Deploying software** to testing/production environments **isn't as simple as dropping a binary file**. It involves **configuring** your application, **initializing data**, setting up **infrastructure**, and more, including **mock external systems**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->**Deploying software** to testing/production environments **isn't as simple as dropping a binary file**. It involves **configuring** your application, **initializing data**, setting up **infrastructure**, and more, including **mock external systems**.
 
 ---
 ## An Overview of Build Tools
@@ -53,7 +53,7 @@ Mention the _cookie targets_ in Make.
 ### An Overview of Build Tools: Make
 A strong, **product-oriented** build tool that tracks dependencies and **only builds affected components**.
 
-But, **it's hard to debug** complex Makefiles. In larger codebases, teams often create a Makefile for each directory and use a top-level Makefile to run them **recursively**, a practice that's [considered problematic](https://accu.org/journals/overload/14/71/miller_2004/): <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->But, **it's hard to debug** complex Makefiles. In larger codebases, teams often create a Makefile for each directory and use a top-level Makefile to run them **recursively**, a practice that's [considered problematic](https://accu.org/journals/overload/14/71/miller_2004/):
 <table>
   <tr>
     <td><img src="assets/makefile-example.webp" width="600"></td>
@@ -75,12 +75,12 @@ Ant's core is in Java, while its scripts are an **external DSL in XML**. This mi
 <img src="assets/ant-example.webp" width="750">
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
-- **XML** is **not concise** or **enjoyable** for humans to read.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- There are **no real domain concepts** beyond tasks.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- You can't easily respond to questions like **"How many tests ran?"** or **"How long did they take?"**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- Import and macrodef tasks support reuse but may be **confusing for novices**.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->**XML** is **not concise** or **enjoyable** for humans to read.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->There are **no real domain concepts** beyond tasks.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->You can't easily respond to questions like **"How many tests ran?"** or **"How long did they take?"**.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Import and macrodef tasks support reuse but may be **confusing for novices**.
 
-Ant files can become very long and disorganized due to these limitations, sometimes extending to **thousands of lines**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Ant files can become very long and disorganized due to these limitations, sometimes extending to **thousands of lines**.
 
 ------
 ### An Overview of Build Tools: NAnt and MSBuild
@@ -92,7 +92,7 @@ Ant files can become very long and disorganized due to these limitations, someti
 ### An Overview of Build Tools: Maven
 <img src="assets/maven-meme.jpg" class="fragment start">
 
-Maven simplifies Ant files by **assuming certain Java project layouts**. By favoring **"convention over configuration"**, it can handle various tasks like **build**, **deploy**, **test**, and **release** with just **one command**, often needing minimal XML configuration:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Maven simplifies Ant files by **assuming certain Java project layouts**. By favoring **"convention over configuration"**, it can handle various tasks like **build**, **deploy**, **test**, and **release** with just **one command**, often needing minimal XML configuration:
 <table>
   <tr>
     <td><img src="assets/pom-example.webp" width="570"></td>
@@ -101,8 +101,8 @@ Maven simplifies Ant files by **assuming certain Java project layouts**. By favo
 </table>
 
 Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
-- Projects **not following Maven's assumptions** can make achieving desired results **tricky**, **seen as a feature** by some.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
-- To extend it, **coding is necessary**, but it **offers plugins** for nearly every desired functionality.  <!-- .element class="fragment highlight-current-blue-parent custom" -->
+- &shy;<!-- .element class="fragment highlight-current-blue" -->Projects **not following Maven's assumptions** can make achieving desired results **tricky**, **seen as a feature** by some.
+- &shy;<!-- .element class="fragment highlight-current-blue" -->To extend it, **coding is necessary**, but it **offers plugins** for nearly every desired functionality.
 
 ------
 ### An Overview of Build Tools: Rake
@@ -114,7 +114,7 @@ Rake, the **main Ruby build tool**, started as an experiment to **mimic Make** u
   </tr>
 </table>
 
-You can **refactor** and **modularize** builds in your regular development environment. Debugging is easy with the **standard Ruby debugger**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->You can **refactor** and **modularize** builds in your regular development environment. Debugging is easy with the **standard Ruby debugger**.
 
 Some disadvantages:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - You need to ensure a suitable runtime is available on your platform
@@ -124,13 +124,13 @@ Some disadvantages:  <!-- .element: class="fragment fade-in-with-next custom" --
 ### An Overview of Build Tools: Buildr, Gradle
 New-gen build tools like Buildr, Gradle, and Gantt use **real programming languages** for build scripts.
 
-Buildr is **based on Rake**, so anything you can do in Rake, you can do in Buildr. Moreover, Buildr seamlessly **replaces Maven**, sharing the **same conventions like filesystem layout**, **artifact specs**, and **repositories**. You can also **use Ant tasks**, with no setup needed.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Buildr is **based on Rake**, so anything you can do in Rake, you can do in Buildr. Moreover, Buildr seamlessly **replaces Maven**, sharing the **same conventions like filesystem layout**, **artifact specs**, and **repositories**. You can also **use Ant tasks**, with no setup needed.
 
-Gradle was designed for **multi-project builds**, often **large in scale**. It relies on a series of build **tasks** that can run **serially** or in **parallel**. It also supports incremental builds:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Gradle was designed for **multi-project builds**, often **large in scale**. It relies on a series of build **tasks** that can run **serially** or in **parallel**. It also supports incremental builds:
 
 <img src="assets/gradle-example.webp" style="border: 1px solid lightgray" width="550">
 
-If you're starting **a new Java project** or seeking an **alternative to Ant or Maven**, consider **Gradle** or Buildr with **DSLs in Groovy**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->If you're starting **a new Java project** or seeking an **alternative to Ant or Maven**, consider **Gradle** or Buildr with **DSLs in Groovy**.
 
 ------
 ### An Overview of Build Tools: Psake
@@ -165,7 +165,7 @@ python_test(
 )
 ```
 
-They support **multiple programming languages**, **incremental builds**, **heavy and distributed caching**, **parallelization**, **code generation**, **dependency management and visualization**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->They support **multiple programming languages**, **incremental builds**, **heavy and distributed caching**, **parallelization**, **code generation**, **dependency management and visualization**.
 
 ---
 ## Monorepo (Reference: <a href="https://monorepo.tools/">monorepo.tools</a>)
@@ -210,7 +210,7 @@ The industry has moved to the polyrepo way of doing things for one big reason: *
 - <!-- .element class="fragment highlight-current-blue" --> Developer mobility
   - Developers can confidently contribute to other teams' applications and verify that their changes are safe.
 
-It is **more than code & tools**. It changes your **organization** and the **way you think about code**. By adding **consistency**, **lowering the friction in creating new projects** and performing **large scale refactorings**, by facilitating **code sharing** and **cross-team collaboration**, it enhances your organization's **efficiency**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->It is **more than code & tools**. It changes your **organization** and the **way you think about code**. By adding **consistency**, **lowering the friction in creating new projects** and performing **large scale refactorings**, by facilitating **code sharing** and **cross-team collaboration**, it enhances your organization's **efficiency**.
 
 ------
 ### Monorepo Tools
@@ -341,7 +341,7 @@ Key build and deployment scripting principles apply universally, **regardless of
 ## Package Managers
 <img src="assets/start-packaging-meme.webp" class="fragment start">
 
-A package manager or package-management system is a set of tools that automates the **installation**, **upgrading**, **configuration**, and **removal** of computer programs for a computer consistently:  <!-- .element: class="fragment fade-in-parent-with-next custom" -->
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->A package manager or package-management system is a set of tools that automates the **installation**, **upgrading**, **configuration**, and **removal** of computer programs for a computer consistently:
 
 <img src="assets/package-management.webp" width="1000">
 
@@ -544,9 +544,9 @@ Mention the "Smoke-Testing N-Tier Architecture" through simple HTTP requests and
 ## Infrastructure as Code (IaC)
 <img src="assets/infrastructure-as-code-meme.webp" class="fragment start">
 
-Infrastructure as Code is the **managing** and **provisioning** of infrastructure through **code instead of through manual processes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Infrastructure as Code is the **managing** and **provisioning** of infrastructure through **code instead of through manual processes**.
 
-IaC aids configuration management and helps you to **avoid undocumented**, **ad-hoc configuration changes**.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->IaC aids configuration management and helps you to **avoid undocumented**, **ad-hoc configuration changes**.
 
 There are 2 ways to approach IaC:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - **Declarative**: **Keeps a list of the system objects' current state**, simplifying infrastructure management and enabling **automatic provisioning** of the desired infrastructure.
@@ -595,10 +595,10 @@ Terraform is an **agentless** infrastructure as code tool that enables you to sa
 ## Summary
 Improve automated build and deployment **step by step**. Identify and **automate the most painful steps** in the deployment pipeline iteratively.
 
-Involve **both operations and developers** in the creation of the mechanisms.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Involve **both operations and developers** in the creation of the mechanisms.
 
-We **broadly** use the term "script" for **all automation** that aids in **building**, **testing**, **deploying**, and **releasing** our software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->We **broadly** use the term "script" for **all automation** that aids in **building**, **testing**, **deploying**, and **releasing** our software.
 
-Scripts are **first-class** components, **version-controlled**, **maintained**, **tested**, **refactored**, and the **only deployment method** of software.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Scripts are **first-class** components, **version-controlled**, **maintained**, **tested**, **refactored**, and the **only deployment method** of software.
 
-Spend some time, think about the **goals** you want to achieve, and **design** your build and deployment process to attain them.  <!-- .element: class="fragment fade-in-paragraph custom" -->
+&shy;<!-- .element class="fragment fade-in" -->Spend some time, think about the **goals** you want to achieve, and **design** your build and deployment process to attain them.

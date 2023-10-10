@@ -5,11 +5,18 @@
             table#sessions {
                 width: 100%;
             }
-            table#sessions, table#sessions td, table#sessions th {
-                border: 1px solid gray;
+            table#sessions {
                 border-collapse: collapse;
+            }
+            table#sessions td, table#sessions th {
+                border: 1px solid gray;
                 text-align: center;
                 padding: 1px 4px 1px 4px;
+            }
+            table#sessions td.chapter {
+                padding: 8px;
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
             }
         </style>
         <title>Continuous Delivery Course</title>
@@ -40,6 +47,7 @@
         <h2>Sessions</h2>
         <table id="sessions">
             <tr>
+                <th style="border: 0"></th>
                 <th>#</th>
                 <th>Title</th>
                 <th>Video</th>
@@ -48,6 +56,7 @@
                 <th>Markdown Slides</th>
             </tr>
             <tr>
+                <td style="border: 0"></td>
                 <td>1</td>
                 <td>Course Outline</td>
                 <td><a href="https://youtu.be/jsMHaXzXHYA" target="_blank">&#9654;</a></td>
@@ -56,6 +65,7 @@
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/1-outline/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
             <tr>
+                <td rowspan="5" class="chapter">Foundations</th>
                 <td>2</td>
                 <td>Introduction</td>
                 <td><a href="https://youtu.be/_yoyWVLltc8" target="_blank">&#9654;</a></td>
@@ -66,7 +76,7 @@
             <tr>
                 <td>3</td>
                 <td>The Problem of Delivering Software</td>
-                <td><a target="_blank">&#9654;</a></td>
+                <td><a href="https://youtu.be/SB_P6JbENIY" target="_blank">&#9654;</a></td>
                 <td><a href="3-the-problem-of-delivering-software" target="_blank">&#10609;</a></td>
                 <td><a href="3-the-problem-of-delivering-software/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/3-the-problem-of-delivering-software/presentation.md" target="_blank">&#9113;</a></td>
@@ -90,12 +100,13 @@
             <tr>
                 <td>6</td>
                 <td>Testing Strategy</td>
-                <td><a target="_blank">&#9654;</a></td>
+                <td><a href="https://youtu.be/iouhBcVbx9E" target="_blank">&#9654;</a></td>
                 <td><a href="6-testing-strategy" target="_blank">&#10609;</a></td>
                 <td><a href="6-testing-strategy/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/6-testing-strategy/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
             <tr>
+                <td rowspan="6" class="chapter">Deplyment Pipeline</th>
                 <td>7</td>
                 <td>Anatomy of the Deployment Pipeline</td>
                 <td><a target="_blank">&#9654;</a></td>
@@ -144,6 +155,7 @@
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/12-deploying-and-releasing-applications/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
             <tr>
+                <td rowspan="5" class="chapter">Delivery Ecosystem</th>
                 <td>13</td>
                 <td>Managing Infrastructure and Environments</td>
                 <td><a target="_blank">&#9654;</a></td>
@@ -155,9 +167,33 @@
                 <td>14</td>
                 <td>Managing Data</td>
                 <td><a target="_blank">&#9654;</a></td>
-                <td><a href="14-managing-data" target="_blank">&#10609;</a></td>
-                <td><a href="14-managing-data/?print-pdf" target="_blank">&#9113;</a></td>
-                <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/14-managing-data/presentation.md" target="_blank">&#9113;</a></td>
+                <td><a target="_blank">&#10609;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Managing Components and Dependencies</td>
+                <td><a target="_blank">&#9654;</a></td>
+                <td><a target="_blank">&#10609;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Advanced Version Control</td>
+                <td><a target="_blank">&#9654;</a></td>
+                <td><a target="_blank">&#10609;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Managing Continuous Delivery</td>
+                <td><a target="_blank">&#9654;</a></td>
+                <td><a target="_blank">&#10609;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
+                <td><a target="_blank">&#9113;</a></td>
             </tr>
         </table>
         <p>
