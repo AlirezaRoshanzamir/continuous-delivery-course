@@ -27,18 +27,18 @@ In this session, we also address **test data management**. Many teams default to
 
 ---
 ## Database Scripting
-Database initialization and all migrations need to be captured as scripts and checked into version control.
+Database **initialization** and **migrations** need to be stored as **scripts in version control**.
 
-Initializing Databases:
-- Almost every data management system supports the ability to initialize a data store, including schemas and user credentials, from automated scripts.
-- Your script should first create the structure of the database, database instances, schemas, and so on, and then populate the tables in the database with any reference data required for your application to start
+Initializing databases:
+- Most data management systems can initialize data stores, including **schemas** and **user credentials**, from automated scripts.
+- Your script sets up the database **structure**, **instances**, **schemas**, and fills tables with **initial data** for application startup.
 
-When dataset is transient, at its simplest, then, the process for deploying a database afresh is as follows:
-- Erase what was there before.
-- Create the database structure, database instances, schemas, etc.
-- Load the database with data.
+For a basic deployment of a **transient dataset**, the process is as follows:
+- **Erase** what was there before.
+- **Create** the database structure, database instances, schemas, etc.
+- **Load** the database with data.
 
-Otherwise, the existing data that has to be migrated as part of the deployment process.
+**Otherwise**, the existing data that has to be **migrated** as part of the deployment process.
 
 ---
 ## Incremental Change
@@ -46,63 +46,59 @@ Applying CI/CD to the data[base] is important as well.
 
 ------
 ### Versioning Your Database
-The most effective mechanism to migrate data in an automated fashion is to version your database. Simply create a table in your database that contains its version number. Then, every time you make a change to the database, you need to create two scripts:
-- Takes the database from a version x to version x + 1 (a roll-forward script)
-- Takes it from version x + 1 to version x (a roll-back script).
+One effective way to **automate data migration** is by **versioning your database**. Start by creating a table for the database version. Whenever you **make changes**, create two scripts:
+- **Roll-forward (Up)**: Moves the database from version x to x + 1.
+- **Roll-back (Down)**: Revert the database from version x + 1 to x.
 
-At deployment time, you can then use a tool which looks at the version of the database currently deployed and the version of the database required by the version of the application that is being deployed.
+During deployment, use a **tool** to **compare** the **deployed database version** with the **application's required database version**. Then it finds the **necessary scripts** to **migrate** the database from current version to the required one and **run them sequentially**:
 
-The tool will then work out which scripts to run to migrate the database from its current version to the required version, and run them on the database in order.
+<img src="assets/ef-code-based-migration.webp" width="840">
 
-Entity Framework code-based migration:
-<img src="assets/ef-code-based-migration.webp">
-
-There are sometimes practical limits to the degree to which you can easily step databases back and forward. In our experience, the commonest problem that causes difficulty is changing the database schema. If such changes are additive, in that they create new relationships, you are mostly fine. If schema changes are subtractive, problems arise because once you have lost information on how one record is related to another, it is harder to reconstitute that relationship again.
+There are **limits** to **moving databases back and forth**, especially when **changing the schema**. **Additive** changes are usually **okay**, but **subtractive** ones can lead to **difficulties** in **re-establishing lost relationships** between records.
 
 ------
 ### Managing Orchestrated Changes
-In many organizations, it is common to integrate all applications through a single database (we don't recommend it, use SOA instead).
+In many organizations, they **integrate all applications** through a **single database** (although **SOA is recommended instead**).
 
-In this case, making a change to a database can have a knock-on effect on other applications that use the database. Test such changes in an orchestrated environment-in other words, in an environment in
-which the database is reasonably production-like, and which hosts versions of the other applications that use it (systems integration testing (SIT) environment).
+So, **modifying the database** can **affect other applications**. **Test** these changes in an **orchestrated environment** similar to production, including the **other applications** (Systems Integration Testing - SIT environment).
 
-Finally, you need to ensure that you work with the teams maintaining the other applications to agree on which changes can be made.
+Finally, **collaborate** with the **teams maintaining other applications** to agree on permissible changes.
 
-One way to manage incremental change is to make applications work with multiple versions of your database, so that the database can be migrated independently of the applications it depends on (also useful for zero-downtime releases).
+You can handle incremental change by having **applications support multiple database versions**, enabling **application-independent database migration** (also useful for **zero-downtime releases**).
 
 ---
 ## Rolling Back Databases and Zero-Downtime Releases
-Two common requirements which impose extra constraints on a deployment to production:
-- The ability to roll back without losing transactions that have been performed since the upgrade.
-- The necessity to keep the application available according to a demanding SLA, known as hot deployment or zero-downtime releases.
+Two **common requirements** that add **extra constraints** to a production deployment are:
+- The ability to **roll back without losing transactions** performed **since the upgrade**.
+- Ensuring application **availability** according to the **SLA**, called **hot deployment** or **zero-downtime releases**.
 
 ------
 ### Rolling Back without Losing Data
-Your roll-back scripts can usually be designed to preserve any transactions that occur after the upgrade took place.
+Your roll-back scripts can usually be designed to **preserve any transactions** that occur **after the upgrade took place**.
 
-There should be no problem if your roll-back scripts satisfy the following criteria:
-- They involve schema changes that do not lose any data (such as a normalization or denormalization, or moving a column between tables, for example). In this case, you simply run the roll-back scripts.
-- They delete some data that only the new system understands, but it is not critical if this data is lost. In this case, again, simply run the roll-back scripts.
+**No** issues if your rollback scripts meet these criteria:
+- They involve **schema** changes **without data loss** (e.g., normalization, denormalization, or moving a column).
+- If the data deleted is **non-critical** and **understood only by the new system**.
 
-There are some circumstances in which just running the roll-back scripts will not be possible:
-- Rolling back involves adding back in data from temporary tables. In this case, integrity constraints could be violated by the new records that have been added since the upgrade.
-- Rolling back involves deleting data from new transactions that it is unacceptable for the system to lose.
+When rolling back involves the following, **just running the scripts is not enough**:
+- **Adding back** in data from temporary tables, risking **integrity constraint violations** with new **records added since upgrade**.
+- **Deleting** new transactions, which the system **can't afford to lose**.
 
 Solutions:
-- Record and cache transactions that you do not want to lose, and provide a way to replay them
-  - Relatively easy if your application uses an event-driven paradigm.
-  - This approach requires careful design and testing to work, but that can be an acceptable tradeoff if you really need to ensure there is no data loss in the event of a rollback.
-- Using blue-green deployments
-  - "Releasing" simply means switching user requests from the old version to the new version. In case of not supporting hot-backup by your database, you may need to put your application in read-only mode while backing-up.
-  - "Rolling back" means switching them back to the old version. Reapplying transactions to the old database before or after the next upgrade.
-  - Some systems have so much data that such backup and restore operations are simply not possible without incurring unacceptable levels of downtime. In this case, this approach cannot be used.
+- **Store** and **cache** **vital transactions**, enabling **replay** when needed.
+  - Easier with an **event-driven** application.
+  - This method needs **careful design** and testing but can be worth it to prevent data loss during a rollback.
+- **Blue-green deployments**
+  - **Releasing** is switching user requests. **Without databse hot-backup support**, you may need **read-only mode**.
+  - **Rolling back** is reverting to the old version and **reapplying transactions** before or after the next upgrade.
+  - In **data-heavy systems**, backup and restore can't work without causing **too much downtime**, making it infeasible.
 
 ------
 ### Decoupling Application Deployment from Database Migration
-There is a third approach that can be used to manage hot deployments. You do not need to migrate your database for every release of your application:
+A third approach for managing hot deployments is that you **don't** have to **migrate your database with every app release**:
 <img src="assets/decoupling-database-migration-from-application-deployment.png">
 
-This approach can also be useful in circumstances where reverting your database to an earlier version is difficult, where the new version of the database made some significant changes, including changes to the database schema that lost information. As a result, the upgrade would compromise our ability to revert to an earlier version of the software if a problem occurred.
+This method is useful when reverting the database is difficult (such as due to significant schema changes), potentially causing data loss and hampering a return to an earlier software version. We deployed the new app version, ensured it worked with the old database schema, and then implemented the database changes with confidence.
 
 Forward compatibility is also not a generic solution, though for the run-of-the-mill, normal changes it is a useful strategy to adopt. It is the ability of an earlier version of an application to work against the database schema of a later version. It is best to adopt this as the default approach for most changes. That is, most changes should be additive, adding new tables or columns to our database, but not changing existing structures, where possible.
 
