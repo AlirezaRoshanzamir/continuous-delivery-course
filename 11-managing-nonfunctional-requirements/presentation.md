@@ -39,7 +39,29 @@ NFRs are **complex** because they usually have a very **strong influence** on th
     </tr>
 </table>
 
-&shy;<!-- .element class="fragment fade-in" -->NFRs tend to **conflict**: High security may affect ease of use, extreme flexibility can impact performance, and so forth.
+------
+### Continued: Managing Nonfunctional Requirements
+NFRs tend to **conflict**: High security may affect ease of use, extreme flexibility can impact performance, and so forth.
+
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can find more information about the **architectural views and perspectives** in the following references:
+<table>
+  <tr>
+    <td><img src="assets/software-systems-architecture-book-cover-image.jpg" width="100"/></td>
+    <td>
+      Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives
+      <br />
+      <small>by Nick Rozanski, Eoin Woods</small>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="assets/4+1-viewmodel.png" width="100"/></td>
+    <td>
+      Architectural Blueprints-The "4+1" View Model of Software Architecture
+      <br />
+      <small>by Philippe Kruchten</small>
+    </td>
+  </tr>
+</table>
 
 <details>
     <summary>Note</summary>
@@ -81,7 +103,6 @@ NFRs are **complex** because they usually have a very **strong influence** on th
 ------
 ### Analyzing Nonfunctional Requirements
 We often add NFRs **as regular acceptance criteria** for functional stories when we **don't expect much extra effort** to meet them.
-
 
 &shy;<!-- .element class="fragment fade-in" -->This can be **inefficient**. It makes sense to create **specific sets of stories or tasks** for NFRs as well, especially at the **project's start**.
 

@@ -1,5 +1,5 @@
 ## Continuous Delivery: Managing Infrastructure and Environments
-#### Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications
+#### Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, <span style="color: purple">Cloud Computing</span>, <span style="color: purple">Monitoring Infrastructure and Applications</span>
 
 <img
   src="assets/cloud-architecture-layers.png"

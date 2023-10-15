@@ -246,7 +246,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../13-managing-infrastructure-and-environments" target="_blank">Managing Infrastructure and Environments</a>
             <br>
             <small>
-                Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications
+                Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, <span style="color: purple">Cloud Computing</span>, <span style="color: purple">Monitoring Infrastructure and Applications</span>
             </small>
         </td>
         <td>75'</td>
@@ -266,7 +266,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             Managing Components and Dependencies
             <br>
             <small>
-                Keeping Application (Trunk) Releasable, Dependencies (<span style="color: brown">Dependency Pinning</span>, <span style="color: brown">Library vs Application</span>), Components, Dependency Graph, Managing Binaries
+                Keeping Application (Trunk) Releasable, <span style="color: brown">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
             </small>
         </td>
         <td>45'</td>
