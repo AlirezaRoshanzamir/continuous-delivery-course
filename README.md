@@ -38,3 +38,4 @@ Currently, these sessions have been added:
 |   13   | [Managing Infrastructure and Environments](13-managing-infrastructure-and-environments)
 |   14   | [Managing Data](14-managing-data)
 |   15   | [Managing Components and Dependencies](15-managing-components-and-dependencies)
+|   16   | [Advanced Version Control](16-advanced-version-control)
