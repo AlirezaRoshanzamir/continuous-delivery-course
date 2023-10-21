@@ -29,7 +29,7 @@ There are three good reasons to branch your code:
 ---
 ## Brief History
 
-<img src="assets/version-control-systems-history.png">
+<img src="assets/vcs-history.png">
 
 ---
 ## Branching and Merging
@@ -160,7 +160,7 @@ You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.
 Apart from general conservatism, there are three obvious objections to the use of DVCSs in companies:
 - Unlike centralized version control systems, which only store a single version of the repository on the user’s computer, anyone who makes a copy of the local repository of a DVCS has its entire history.
 - Auditing and workflow are more slippery concepts in the realm of DVCS. Centralized version control systems require users to check all their changes into a central repository. DVCSs allow users to send changes to each other, and even to change history in their local repository, without these changes being tracked in the central system.
-- Git actually does allow you to change history. This may well be a red line in corporate environments subject to regulatory regimes, who will have to back up their repository regularly in order to keep a record of everything that has happened. Although, you can disable it on most wrapping source code management applications (GitLab, GitHub, Azure DevOps, etc.).
+- Git actually does allow you to change history. This may well be a red line in corporate environments subject to regulatory regimes, who will have to back up their repository regularly in order to keep a record of everything that has happened. Although, you can disable it on most Version Control Repository Hosting Platforms (GitLab, GitHub, BitBucket, Azure DevOps, etc.).
 
 As soon as you designate a central repository, all of the properties of a centralized version control system are available.
 
