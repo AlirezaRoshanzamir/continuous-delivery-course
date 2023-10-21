@@ -276,7 +276,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             Advanced Version Control
             <br>
             <small>
-                Brief history, Version Control Types, Branching and Merging, <span style="color: brown">Gitflow</span>, Develop on Mainline, Branch for Release, Branch by Feature, Branch by Team
+                <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies</span>
             </small>
         </td>
         <td>45'</td>
