@@ -1,5 +1,5 @@
 ## Continuous Delivery: Managing Components and Dependencies
-#### Keeping Application (Trunk) Releasable, <span style="color: brown">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
+#### Keeping Application (Trunk) Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
 
 <img src="assets/integration-pipeline.png" width="950"/>
 
