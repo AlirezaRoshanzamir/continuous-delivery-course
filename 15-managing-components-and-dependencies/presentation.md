@@ -1,5 +1,5 @@
 ## Continuous Delivery: Managing Components and Dependencies
-#### Keeping Application (Trunk) Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
+#### Keeping Application Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
 
 <img src="assets/integration-pipeline.png" width="950"/>
 
@@ -13,130 +13,123 @@
 
 ---
 ## Introduction
-In CD, you have to keep your application releasable at all times. But what if you are engaged in a major refactoring or adding complex new functionality? Branching in version control might seem to be the solution to this problem. However, we feel strongly that this is the wrong answer.
+In CD, you should maintain a **releasable application** even during **major refactoring** or **adding complex features**. Using **branching** in version control may **appear as a solution**, but we believe it's **not the right answer**.
 
-One of the key techniques for this is componentization of larger applications, so we will treat componentization, including building and managing large projects with multiple components, at length.
+A key technique is **componentization** of larger apps. We'll delve into **building** and **managing** multi-component projects in detail.
 
-Component is a horribly overloaded term in software. When we talk about components, we mean a reasonably large-scale code structure within an application, with a well-defined API, that could potentially be swapped out for another implementation.
+Component is a **loaded** term in software. Here, it means a fairly **large code structure** within an app with a well-defined **API** that can be replaced with **another implementation**.
 
-The antithesis of a component-based (modular) system is a monolithic system with no clear boundaries or separation of concerns between elements responsible for different tasks. Monolithic systems typically have poor encapsulation, and tight coupling between logically independent structures breaks the Law of Demeter.
+Opposite to **component-based (modular)** systems is **monolithic** ones **without clear boundaries**, **lacking encapsulation**, have **tight coupling** between unrelated structures, and **violating the Law of Demeter**.
 
-In Windows, a component is normally packaged as a DLL. In UNIX, it may be packaged as an SO file. In the Java world, it is probably a JAR file.
+In **Windows**, a component is normally packaged as a **DLL**. In **UNIX**, it might be an **SO** file, and in **Java**, it's likely a **JAR** file.
 
-In this chapter, we also describe how to create and manage build systems for component-based applications.
+Many projects are **fine** with **one** version control **repository** and **a basic deployment pipeline**. But some have turned into **unmanageable code messes** because **no one** decided to create **distinct components** when it was feasible.
 
-Many projects are fine with a single version control repository and a simple deployment pipeline. However, many projects have evolved into an unmaintainable morass of code because nobody made the decision to create discrete compo-
-nents when it was cheap to do so.
+Build system **aspects**:
+- Deployment Pipeline
+- Branches
+- Components
 
-By the end of this chapter, we will have covered all three degrees of freedom in a build system: the deployment pipeline, branches, and components. It is not unusual, when working on large systems, to have all three of these dimensions in play at once. In such systems, components form a series of dependencies, which in turn depend on external libraries. Each component may have several release branches. Finding good versions of each of these components that can be assembled into a system which even compiles is an extremely difficult process that can resemble a game of whack-a-mole-we have heard of projects where it takes months. Only once you have done this can you start moving the system through the deployment pipeline.
+**Large systems** often **combine all three**. Components may have **dependencies** and use external libraries, each with **multiple release branches**. Creating a **working system** from these components can be **complex**, but necessary **for the deployment pipeline**.
 
 ---
 ## Keeping Application Releasable
-These processes generally results in weeks or months between releases and prevents the application to always be in a releasable state:
-- Sometimes need to make major architectural changes. During these activities the application is not releasable.
-- Usually, before release, teams will stop developing new functionality and enter a stabilization phase during which only bugfixing takes place. When the application is released, a release branch is created in version control, and new development begins again on trunk.
+These processes results in **weeks or months release gaps**, **prevents** the application to **always be in a releasable state**:
+- **Major architectural changes**: During these activities the application is not releasable.
+- **Before release**: Teams focus on bugfixing, not new features. After release, a branch is made, and new development starts on the main trunk.
 
-One approach is to create branches in version control that are merged when work is complete, so that mainline is always releasable. We believe that this approach is suboptimal, since the application is not being continuously integrated if work happens on branches.
+One approach is creating branches, merged when work's done, to keep mainline releasable. But this **isn't ideal** as **CI isn't happening on branches**.
 
-Instead, we advocate that everybody checks in on mainline. But, how?
-- Hide new functionality until it is finished.
-- Make all changes incrementally as a series of small changes, each of which is releasable.
-- Use branch by abstraction to make large-scale changes to the codebase.
-- Use components to decouple parts of your application that change at different rates.
-
-We'll discuss the first three strategies here and talk about the forth one later.
+Instead, we suggest everyone **checks in on the mainline**. But how?
+- **Hide** new functionality **until completion**.
+- Implement changes gradually in **small**, **releasable** increments.
+- Use **branch by abstraction** for significant codebase alterations.
+- Use **components** to decouple parts of your application that **change at different rates** (we'll discuss later).
 
 ------
 ### Hide New Functionality Until It Is Finished
-One common problem with continuous deployment of applications is that a feature, or a set of features, can take a long time to develop.
+What if a feature (a set of features) takes a long time to develop?
+- **- Branching**: Start development on a new branch and integrate when the functionality is complete to avoid disrupting ongoing system work, which could delay its release.
+- **+ Deploying semi-completed functionalities (with rest of the system)**: Add new features but hide them from users.
 
-It is often tempting to start new development on a branch in version control, and integrate when the functionality is ready, so as not to interrupt the work being done on the rest of a system, which might prevent it being released.
+For example, introducing hotel bookings on a travel website through a **separate URL** (e.g., /hotel), **deploying with rest** of the system, but **controlling user access** using web server settings.
 
-One solution is to put in the new features, but make them inaccessible to users. For example, consider a website that provides travel services. The company running the site wants to offer a new service: hotel bookings. In order to do so, work starts on this new offering as a separate component, reached through a separate URI root /hotel. This component can still be deployed along with the rest of the system if desired-so long as access is not permitted to its entry point (this could be accomplished by a configuration setting in your web server software).
+You can also control access with **configuration settings**. For example, **have two menus**, one with the new feature and one without. Use a setting to **switch** between them via **CLI** or **config (deploy-time or runtime)**. It is also valuable for running automated tests.
 
-An alternative way to ensure that semicompleted components can be shipped while not being accessible to users is to turn access to them on and off by means of configuration settings. For example, in a rich client application, you might have two menus-one with the new feature, and one without. You would use a configuration setting to switch between the two menus. This can be done either through the use of command-line options, or through other deploy-time or runtime configuration. The ability to switch features on and off (or swap them out for alternative implementations) through runtime configuration is also very useful when running automated tests.
-
-Shipping semicompleted functionality along with the rest of your application is a good practice because it means you're always integrating and testing the entire system as it exists at any time. It ensures that the new components being developed are deployable along with the rest of the software from the beginning.
+It is good practice because it allows **CI** and **testing** of the **entire** system, ensuring **new components** can be **deployed alongside existing software** from the beginning.
 
 ------
 ### Make All Changes Incrementally
-The theory behind branching is that developers can move faster if they can make large, high-level changes which break the application and then wire everything back in afterwards. However, in practice, the wiring everything up ends up being the hard part. If other teams are working in
-the meantime, the merge at the end can be hard-and the bigger the change, the harder it will be.
+**Branching** claims that developers can make large, high-level changes, break the application, and reconnect later to work faster. However, **in practice**, **reintegration can be challenging**, especially with **concurrent team work** and **larger changes**.
 
-Even if turning large changes into a series of small, incremental changes is hard work while you're doing it, it means you're solving the problem of keeping the application working as you go along, preventing pain at the end. It also means you can stop at any time if you need to, avoiding the sunk cost involved in getting halfway through a big change and then having to abandon it.
+**Breaking large changes** into **small**, **incremental** ones can be **tough**, but it ensures that the **application works**, prevents future pains, and allows for flexibility to **stop at any point if necessary**, avoiding the sunk cost of abandoning a big change midway.
 
-Analysis plays an important part in being able to make large changes as a series of small changes. The thought process that goes into it is the same thought process used to break a requirement down into smaller tasks.
+**Analysis** is vital for breaking large changes into smaller ones, using a process **like breaking down requirements into smaller tasks**.
 
 ------
 ### Branch by Abstraction
-Sometimes there are changes that are too hard to make in an incremental fashion. At this point, you should consider branching by abstraction.
+Some changes are **too hard to make incrementally**. Therefore, consider **branching by abstraction** as an **alternative to branching**:
+1. Create an **abstraction** over the **part to change**.
+2. Refactor the system to **use this abstraction**.
+3. Develop a **new implementation** separately.
+4. Update the abstraction layer to **delegate to the new implementation**.
+5. **Remove** the **old** implementation.
+6. **Remove** the **abstraction** if **no longer needed**.
 
-This pattern is an alternative to branching when you need to make a large-scale change to an application.
+Branch by abstraction can be **high-level** (changing an entire persistence layer) or **low-level** (swapping classes with the strategy pattern). **Dependency injection** also supports it. The **key** is **finding or creating points** for an abstraction layer.
 
-Instead of branching, an abstraction layer is created over the piece to be changed. A new implementation is then created in parallel with the existing implementation, and then when it is complete, the original implementation and (optionally) the abstraction layer are removed.
+It's ideal for moving from a **messy monolithic to a modular one**. **Pick the part** to separate or rewrite, **manage entry points (facade pattern)**, and **use branch by abstraction** to keep working with the old code while you create a new, modularized version of the same functionality (known as **"sweeping it under the rug"** or **"Potemkin village"**).
 
-Steps:
-1. Create an abstraction over the part of the system that you need to change.
-2. Refactor the rest of the system to use the abstraction layer.
-3. Create a new implementation, which is not part of the production code path until complete.
-4. Update your abstraction layer to delegate to your new implementation.
-5. Remove the old implementation.
-6. Remove the abstraction layer if it is no longer appropriate.
+At times, finding a **good seam** in code is **tough**, and **branching** is the **only option**. Use it **only to prepare for branch by abstraction**.
 
-You can do branch by abstraction at a very high level, such as swapping out an entire persistence layer.You can also do it at a very low level-swapping out a class for another one using the strategy pattern, for example. Dependency injection is another mechanism that enables branch by abstraction. The trick is finding or creating the seams that allow you to insert an abstraction layer.
-
-This is also an excellent pattern to use as part of a strategy for turning a monolithic codebase that uses the ball of mud "pattern" into a more modular, better structured form. Take part of the codebase that you want to separate out as a component or rewrite. Provided you can manage the entry points to this part of the codebase, perhaps using the façade pattern, you can localize the mess and use branch by abstraction to keep the application running with the old code while you create a new, modularized version of the same functionality. This strategy is sometimes known as "sweeping it under the rug" or "Potemkin village".
-
-Nevertheless, sometimes it is just too hard to find a good seam in your codebase, and branching is the only solution. Use the branch to get your codebase to a state where you can then perform branch by abstraction.
-
-Making large-scale changes to your application, whether through branching by abstraction or any other technique, benefits enormously from a comprehensive automated acceptance test suite. Unit and component tests are simply not coarsegrained enough to protect your business functionality when big chunks of your application are being changed.
+For **big changes** (using **any** technique), **rely** on a **full acceptance test** suite. **Unit/component** tests **can't** fully **protect business** functionality during major changes.
 
 ---
 ## Dependencies
-A dependency occurs whenever one piece of software depends upon another in order to build or run.
+A dependency occurs when one software piece **depends** on another to **build** or **run**.
 
-There are two distinctions that will be especially useful in this chapter:
-- The distinction between components and libraries,
-    - Libraries refer to software packages that your team does not control, other than choosing which to use. Libraries are usually updated rarely.
-    - In contrast, components are pieces of software that your application depends upon, but which are also developed by your team, or other teams in your organization. Components are usually updated frequently.
-- And that between build-time and runtime dependencies.
-    - Build-time dependencies must be present when your application is compiled and linked (if necessary).
-    - Runtime dependencies must be present when the application runs, performing its usual function.
+Regarding dependencies, there are **distinctions** between:
+- Components and libraries
+    - Libraries are software packages **your team doesn't control**, **chosen for use** and **updated infrequently**.
+    - Components are software parts your **application relies on**, **made by your team or other teams in your organization**, and **updated more frequently**.
+- Build-time and runtime dependencies
+    - Build-time dependencies are required during application **compilation and linking (if necessary)**.
+    - Runtime dependencies are needed **when the application runs** and performs its regular function.
 
-Managing dependencies can be difficult. We'll start with an overview of the most common dependency problems that occur with libraries at run time.
+**Managing dependencies can be hard**. We'll start with an overview of **common runtime library dependency issues**.
 
 ------
 ### Dependency Hell (DLL Hell)
-Dependency hell occurs when an application depends upon one particular version of something, but is deployed with a different version, or with nothing at all:
-- In older versions of Windows, DLL hell was a common problem with shared libraries (DLLs) lacking versioning, causing overwriting of old versions.
-- The .NET framework introduced assemblies with version numbers and a global assembly cache (GAC) to address DLL hell on Windows.
-- Linux appends integers to .so files and uses soft links to manage library versions, requiring testing or source compilation for compatibility.
-- Static compilation aggregates critical dependencies at compile time but has drawbacks, such as large binaries and OS version coupling.
-- Dynamic languages like Rails ship frameworks and libraries with applications to allow different versions to coexist.
-- Java faces runtime dependency issues due to classloader limitations, which the OSGi framework can resolve, but managing dependencies at build time is crucial.
-- The diamond dependency problem arises when an application depends on two libraries with different versions of the same underlying library, potentially causing runtime issues.
+Dependency hell occurs when an application **depends on one version** but is **deployed** with a **different version or none** at all:
+- In **older Windows**, DLL hell was common due to **shared libraries (DLLs) lacking versioning**, **causing overwrites of old versions**.
+- The **.NET** introduced **versioned assemblies** and a **global assembly cache (GAC)** to address DLL hell on Windows.
+- Linux uses **integers in .so files** and **soft links** for version management, needing **testing** or **source compilation** for **compatibility**.
+- **Static compilation** bundles dependencies at **compile time** but leads to **large binaries** and **OS version coupling**.
+- **Dynamic** languages like Rails **ship frameworks and libraries** with apps to **allow different versions** to coexist.
+- **Java** faces **runtime dependency** issues due to **classloader limits**, addressed by the OSGi framework, but managing dependencies at build time is crucial.
+- The **diamond dependency** issue arises when an app depends on **two libraries** with **different versions of the same underlying library**, potentially causing runtime problems.
 
 ------
 ### Managing Libraries
-There are two ways of managing libraries in software projects:
-- Check them into version control.
-  - Works fine for small projects
+Two ways to manage libraries in software projects:
+- Check them into version control
+  - Suitable for small projects.
   - Traditionally, a lib directory is used for this purpose.
   - Use nunit-2.5.5.dll instead of nunit.dll.
-  - Over time, your checked-in library repository may become large and crufty, and it may become hard to know which of these libraries are still being used by your application.
-  - Manually managing transitive dependencies across projects rapidly becomes painful (while package managers try to solve this problem themselve).
-- Declare them and use a tool like Maven or Ivy to download libraries from Internet repositories or (preferably) your organization's own artifact repository.
-  - <img src="assets/maven-dependency-pom.png" width="400">
-  - Transitively resolving dependencies on other projects (if applicable) and ensuring that there are no inconsistencies in the project dependency graph.
-  - Cache the libraries your project needs on your local machine
-  - Manage your own artifact repository (Nexus, JFrog, etc.).
-    - Makes it much easier to audit your libraries and prevent violations of legal constraints, such as using GPL-licensed libraries in BSD-licensed software.
+  - Over time, the repository may grow large and messy.
+  - Managing transitive dependencies across projects is painful, while package managers aim to address this issue.
+- Declare and use tools like Maven or Ivy to download libraries from the Internet or (preferably) your organization's repository
+  - <img src="assets/maven-dependency-pom.png" width="300">
+  - Transitively resolving dependencies on other projects and avoiding inconsistencies in the project dependency graph.
+  - Local caching.
+  - Try to maintain your own artifact repository (Nexus, JFrog, etc.).
+    - Simplifies library auditing and avoid legal issues, like using GPL-licensed libraries in BSD-licensed software.
 
-Consider build-time, test-time, and runtime dependencies as well as testing, linting, building (app and docs), typing, packaging, running dependencies. You make create different files/subdirectories/sections for them. You may create directories or files that include another dependencies to prevent duplication or for developer convinience.
+**Organize** dependencies into **files/subdirectories/sections** for **build-time**, **test-time**, and **runtime** as well as for **testing**, **linting**, **building (app and docs)**, **development**, **packaging**, and **running** to **avoid duplication** and **improve developer convenience**.
 
 ------
 ### Dependency Pinning (Locking)
-Dependency pinning means fixing a specific version of a library or package in a project to ensure consistency and prevent unexpected updates. This practice can also be used recursively for the project's dependencies, ensuring that the entire dependency tree remains locked to specific versions:
+Dependency pinning means **fixing** a **library's version** to ensure **consistency** and **prevent updates**. This can also be done **recursively** for project dependencies, keeping the **entire tree locked** to specific versions:
 
 <table>
   <tr>
@@ -188,21 +181,22 @@ empty=annotationProcessor</code></pre>
 
 ------
 ### Application vs Library
-When developing a library:
-- Support a range of third-party versions to ensure compatibility in various environments.
-- Enforcing a specific version on clients can lead to conflicts.
-- Pinned dependencies are only used during development for faster dependency resolution (instead of backtracking the dependency graph space).
+When developing a **library**:
+- Support a **range of third-party versions** for **compatibility in various** environments.
+- **Enforcing a specific version** on clients can **lead to conflicts**.
+- **Pinning** is used only during **development** for **faster dependency resolution** (**avoiding backtracking** the graph space).
 
-When developing [and deploying] an application:
-- Pin or lock the versions of the third-party libraries used, specifying exact versions.
-- It enhances reliability and confidence by reducing the risk of unexpected issues.
-- For shared environments with multiple apps, consider isolation if different library versions can't coexist.
+When developing [and deploying] an **application**:
+- **Pin or lock the versions** of the third-party libraries used, specifying exact versions.
+- It **enhances reliability and confidence** by reducing the risk of unexpected issues.
+- For **shared environments with multiple apps**, consider **isolation if different library versions can't coexist**.
 
 ------
 ### Dependency Refactoring
-One really useful feature of dependency managers (Maven, Pants/Pip, etc.) is that it can analyze your project’s dependencies and tell you about both **undeclared dependencies** and **unused declared** dependencies.
+A valuable feature of dependency managers like Maven, Pants/Pip, etc., is their ability to identify **undeclared or unused declared dependencies** in your project.
 
-It is also advised to extract common dependencies (names or only versions) and prevent duplication. If your dependency manager doesn't support it explicitly, you me define dummy project that only includes dependencies and depend your component to it:
+
+**Consolidate common dependencies** (names or only versions) to **avoid duplication**. If your dependency manager lacks direct support, create a **dummy project containing these dependencies** and have your component depend on it:
 
 <table>
   <td>
@@ -476,13 +470,13 @@ Always try to get rid of circular dependencies; but if you find yourself working
 ## Managing Binaries
 In most cases, components should have binary rather than source-level dependencies on one other.
 
-In this section, we’ll discuss the general principles behind the workings of an artifact repository.
+In this section, we'll discuss the general principles behind the workings of an artifact repository.
 
 - How an Artifact Repository Should Work
-  - The most important property of an artifact repository is that it should not contain anything that cannot be reproduced. You should be able to delete your artifact repository without worrying that you won’t be able to regain anything valuable. Ultimately you’ll need to delete them in order to free up space.
+  - The most important property of an artifact repository is that it should not contain anything that cannot be reproduced. You should be able to delete your artifact repository without worrying that you won't be able to regain anything valuable. Ultimately you'll need to delete them in order to free up space.
   - So, your version control system needs to contain everything required to re-create any given binary, including the automated build scripts.
   - The simplest artifact repository is a directory structure on disk. Generally, this directory structure will be on a RAID or a SAN, because while artifacts should be disposable, you should be the one deciding that they can be deleted, not some badly behaved piece of hardware. The most important constraint on this directory structure is that it should enable you to to associate a binary with the version from source control that was used to create it.
-  - If you don’t want to use a shared drive for your artifact repository, you can add a web service to store and retrieve artifacts. However, if you have reached this point, you should consider using one of the many free or commercial products on the market.
+  - If you don't want to use a shared drive for your artifact repository, you can add a web service to store and retrieve artifacts. However, if you have reached this point, you should consider using one of the many free or commercial products on the market.
 
   <table>
     <td>
