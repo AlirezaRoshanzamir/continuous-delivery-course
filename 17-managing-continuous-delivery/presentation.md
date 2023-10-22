@@ -23,9 +23,9 @@ While everybody in the business ultimately has a shared goal, performance (mostl
 
 The deployment pipeline is designed to achieve performance by ensuring the delivery teams get constant feedback on the production-readiness of their application. It is also designed to help teams achieve conformance by making the delivery process transparent.
 
-Using CD practices, even large organizations with complex applications can deliver new versions of their software rapidly and reliably. That means not only that businesses can get a faster return on their investment, but that they can do so with reduced risks and without incurring the opportunity cost of long development cycles—or worse, delivering software that is not ﬁt for purpose.
+Using CD practices, even large organizations with complex applications can deliver new versions of their software rapidly and reliably. That means not only that businesses can get a faster return on their investment, but that they can do so with reduced risks and without incurring the opportunity cost of long development cycles-or worse, delivering software that is not ﬁt for purpose.
 
-To use an analogy with lean manufacturing, software that is not being delivered frequently is like inventory stored up in a warehouse. It has cost you money to manufacture, but is not making you any money—indeed, it is costing you money to store it.
+To use an analogy with lean manufacturing, software that is not being delivered frequently is like inventory stored up in a warehouse. It has cost you money to manufacture, but is not making you any money-indeed, it is costing you money to store it.
 
 ---
 ## Maturity Models
@@ -208,19 +208,19 @@ There are many deliverables from an inception, some of which will vary depending
 - A description of the development lifecycle.
 - A description of the plan to execute this list.
 
-A reasonable maximum project horizon, in our experience, is about three to six months—with a preference for the lower limit. A go/no-go decision should be made following the inception process as to whether the project should go ahead, based on the estimated value of the project, estimated costs, and the predicted risks.
+A reasonable maximum project horizon, in our experience, is about three to six months-with a preference for the lower limit. A go/no-go decision should be made following the inception process as to whether the project should go ahead, based on the estimated value of the project, estimated costs, and the predicted risks.
 
-The most important part of an inception—the bit that ensures that the project has a chance of success—is getting all the stakeholders together face-to-face. That means developers, customers, operations people, and management. The conversations between these people, leading to a shared understanding of the problem to be solved and the way to solve it, are the real deliverables.
+The most important part of an inception-the bit that ensures that the project has a chance of success-is getting all the stakeholders together face-to-face. That means developers, customers, operations people, and management. The conversations between these people, leading to a shared understanding of the problem to be solved and the way to solve it, are the real deliverables.
 
-These deliverables should be written down, but since they are living documents, we expect that each will change throughout the project. To keep track of these changes in a reliable way—so that everyone can easily see what the current picture is—you should commit these documents into a version control system.
+These deliverables should be written down, but since they are living documents, we expect that each will change throughout the project. To keep track of these changes in a reliable way-so that everyone can easily see what the current picture is-you should commit these documents into a version control system.
 
-One word of warning: Every decision you make at this stage of a project is based on speculation, and will change. What you produce is a best guess, based on the small amount of information you have. Expending too much effort at this stage of the project—the stage when you know the least that you will ever know about it—is a mistake. Detailed planning, estimation, or design at this stage of a project are wasted time and money. Broad-based decisions are the only kind of decisions durable at this stage.
+One word of warning: Every decision you make at this stage of a project is based on speculation, and will change. What you produce is a best guess, based on the small amount of information you have. Expending too much effort at this stage of the project-the stage when you know the least that you will ever know about it-is a mistake. Detailed planning, estimation, or design at this stage of a project are wasted time and money. Broad-based decisions are the only kind of decisions durable at this stage.
 
 ------
 ### Initiation
 In this phase, you should establish initial project infrastructure which will typically last one or two weeks:
 - Making sure that the team (analysts and managers, as well as developers) has the hardware and software that they need to begin work
-- Making sure that basic infrastructure is in place—such as an Internet connection, a whiteboard, paper and pens, a printer, food, and drinks
+- Making sure that basic infrastructure is in place-such as an Internet connection, a whiteboard, paper and pens, a printer, food, and drinks
 - Creating email accounts and assigning people permissions to access resources
 - Setting up version control
 - Setting up a basic continuous integration environment
@@ -247,7 +247,7 @@ Basic conditions for an iterative process:
 - Iterations are no longer than two weeks.
 
 There are several reasons for using an iterative process:
-- If you prioritize features with high business value, you may ﬁnd that your software starts being useful long before the end of your project. There are often good reasons not to launch new software the moment that it has useful functionality—but there is no better way to turn worrying over the project’s eventual success into excitement over the new features than a working system that people can use.
+- If you prioritize features with high business value, you may ﬁnd that your software starts being useful long before the end of your project. There are often good reasons not to launch new software the moment that it has useful functionality-but there is no better way to turn worrying over the project’s eventual success into excitement over the new features than a working system that people can use.
 - You get regular feedback from your customer or sponsor on what works and what requirements need clarifying or changing, which in turn means that what you are doing is considerably more likely to be useful. Nobody knows what they really want at the beginning of a project.
 - Things are only really done when the customer signs them off. Having regular showcases where this happens is the only remotely reliable way to track progress.
 - Having your software working at all times (because you have to showcase it) instills discipline in your team that prevents problems such as long integration phases, refactoring exercises that break everything, and experiments that lose focus and go nowhere.
@@ -330,3 +330,201 @@ In terms of the project lifecycle model, the risk management process should begi
 
 ------
 ### How to Do a Risk-Management Exercise
+It is important to discover quickly if there is a project that appears to be doing fine from the outside but is actually going to fail.One of the great benefits of iterative methods is that it is relatively simple to discover if this is the case. If you are doing iterative development, you should be showcasing working software at the end of every iteration from a production-like environment. This is possibly the best demonstration of tangible progress. The rate at which your team produces real working code, good enough for real users to use, and deploys it into a production-like host environment-velocity-doesn’t lie, even if estimates do.
+
+A good starting point to analyze any project is to pose these questions (this list has worked well for us on several projects):
+- How are you tracking progress?
+- How are you preventing defects?
+- How are you discovering defects?
+- How are you tracking defects?
+- How do you know a story is finished?
+- How are you managing your environments?
+- How are you managing configuration, such as test cases, deployment scripts, environment and application configuration, database scripts, and external libraries?
+- How often do you showcase working features?
+- How often do you do retrospectives?
+- How often do you run your automated tests?
+- How are you deploying your software?
+- How are you building your software?
+- How are you ensuring that your release plan is workable and acceptable to the operations team?
+- How are you ensuring that your risk-and-issue log is up-to-date?
+
+---
+## Common Delivery Problems - Symptoms and Causes
+Although almost anything could go wrong with your project, some things are more likely to go wrong than others.
+
+It is usually quite hard to work out what is actually going wrong with your project-all you have is symptoms. When things do go wrong, work out how that could have been spotted early, and ensure that these symptoms are monitored.
+
+Once you have observed the symptoms, you need to discover the root cause. Any given symptom can be a manifestation of a number of possible underlying causes. To do this, we use a technique called “root cause analysis":
+- When confronted with a set of symptoms, simply behave like a small child and repeatedly ask the team, “Why?”
+- It is recommended that you ask “Why?” at least five times.
+
+------
+### Infrequent or Buggy Deployments
+It takes a long time to deploy the build, and the deployment process is brittle.
+
+Symptomps:
+- It takes a long time for bugs to be closed by testers. Note that this symptom may not be exclusively caused by infrequent deployments, but it is one possible root cause.
+- It takes a long time for stories to be tested or signed off by the customer.
+- Testers are finding bugs that developers fixed a long time ago.
+- Nobody trusts the UAT, performance, or CI environments, and people are skeptical as to when a release will be available.
+- Showcases rarely happen.
+- The application can rarely be demonstrated to be working.
+- The team’s velocity (rate of progress) is slower than expected.
+
+Common causes:
+- The deployment process is not automated.
+- There is not enough hardware available.
+- The hardware and operating system’s configuration are not managed correctly.
+- The deployment process depends on systems outside the team’s control.
+- Not enough people understand the build and deployment process.
+- Testers, developers, analysts, and operations personnel are not collaborating sufficiently during development.
+- Developers are not being disciplined about keeping the application working by making small, incremental changes, and so frequently break existing functionality.
+
+------
+### Poor Application Quality
+Delivery teams are failing to implement an effective testing strategy.
+
+Symptoms:
+- Regression bugs keep popping up.
+- The number of defects keeps increasing even when your team spends most of its time fixing them (of course this symptom will only be manifested if you have an effective testing process).
+- Customers complain of a poor-quality product.
+- Developers groan and look horrified whenever a new feature request arrives.
+- Developers complain about the maintainability of the code, but nothing ever gets better.
+- It takes an ever-increasing amount of time to implement new functionality, and the team starts falling behind.
+
+Essential causes:
+- Ineffective collaboration between testers and the rest of the delivery team
+- Poorly implemented or inadequate automated tests
+
+Detailed causes:
+- Testers do not collaborate with developers during development of features.
+- Stories or features are marked as “done” without comprehensive automated tests written, without being signed off by testers, or without being showcased to users from a production-like environment.
+- Defects are routinely entered into a backlog without being fixed on the spot with an automated test to detect regression problems.
+- The developers or testers don’t have sufficient experience developing automated test suites.
+- The team does not understand the most effective types of tests to write for the technology or platform that they are working on.
+- The developers are working without sufficient test coverage, perhaps because their project management doesn’t allow them time to implement automated testing.
+- The system is a prototype that will be discarded (though we have come across a few important production systems that were originally developed as prototypes but were never discarded).
+
+------
+### Poorly Managed Continuous Integration Process
+The build process is not properly managed.
+
+Symptoms:
+- Developers don’t check in often enough (at least once a day).
+- The commit stage is permanently broken.
+- There is a high number of defects.
+- There is a long integration phase before each release.
+
+Common causes:
+- The automated tests take too long to run.
+- The commit stage takes too long to run (less than five minutes is ideal, more than ten minutes is unacceptable).
+- The automated tests fail intermittently, giving false positives.
+- Nobody is empowered to revert check-ins.
+- Not enough people understand, and can make changes to, the CI process.
+
+------
+### Poor Configuration Management
+Environments can’t be commissioned, and applications installed reliably, using an automated process.
+
+Symptoms:
+- Mysterious failures in production environments.
+- New deployments are tense, scary events.
+- Large teams are dedicated to environment configuration and management.
+- Deployments to production often have to be rolled back or patched.
+- Unacceptable downtime of production environment.
+
+Causes:
+- UAT and production environments are different.
+- A poor or badly enforced change management process for making changes
+to production and staging environments.
+- Insufficient collaboration between operations, data management teams,
+and delivery teams.
+- Ineffective monitoring of production and staging environments to detect
+incidents.
+- Insufficient instrumentation and logging built into applications.
+- Insufficient testing of the nonfunctional requirements of applications.
+
+------
+### Compliance and Auditing
+Many large companies are required to comply with legally binding regulations that govern their industry:
+- US health care companies -> HIPPA
+- Systems that deal with credit card information -> PCI DSS Standard
+
+Many such regulatory regimes require audit trails that make it possible to identify, for every change in a production environment, what were the lines of code that it came from, who touched them, and who approved the steps in the process. Such regulations are common in many industries from finance to health care.
+
+Common strategies employed for enforcing these kinds of regulations:
+- Locking down who is able to access “privileged” environments.
+- Creating and maintaining an effective and efficient change management process for making changes to privileged environments.
+- Requiring approvals from management before deployments can be performed.
+- Requiring every process, from building to release, to be documented.
+- Creating authorization barriers to ensure that the people who create the software are not able to deploy it into production environments, as a protection against potential malicious interventions.
+- Requiring every deployment to be audited to see exactly what changes are being made.
+
+Deployment pipeline makes it possible to enforce these strategies fairly easily while enabling an efficient delivery process.
+
+In this section, we present some principles and practices to ensure compliance with such regulatory regimes while maintaining short cycle times.
+
+------
+### Automation over Documentation
+A piece of paper that says you did something in a certain way is no guarantee that you actually did that thing.
+
+Documentation also has a nasty habit of going out of date. The more detailed a document is, the more quickly it is likely to go out of date. When it does so, people don’t usually bother to update it.
+
+Typical Dev and Ops conversation:
+- Operator:
+  - I followed the deployment process you emailed me last month, but it doesn’t work.
+- Developer:
+  - Oh, we changed the way deployment works. You need to copy this new set of files over and set permission x.
+  - Or, That’s strange, let me take a look . . .
+
+Automation solves all of these problems. Automated scripts are the documentation of your processes that must work. By enforcing their use, you ensure both that they are up-to-date and that the process has been performed precisely as you intend.
+
+------
+### Enforcing Traceability
+It is often necessary to be able to trace the history of changes, from what is in production to the source control versions that produced it:
+
+Practices:
+- Only create binaries once, and deploy the same binaries into production that you created in the first stage of your build process. You can ensure that the binaries are the same by taking a hash of them (using MD5 or SHA1, for example), and storing them in a secure database. Many tools will do this for you automatically.
+- Use a fully automated process to take your binaries through the deployment, test, and release process which records who did what when. Again, there are several tools on the market that can help with this.
+
+------
+### Working in Silos
+It is often the case that large organizations have separate departments for different functions and independent teams for development, test, operations, configuration management, architecture, and data management.
+
+We have promoted open and free communication and collaboration between and within teams, however, there are some responsibilities that should clearly belong in one group and not another. In regulated environments, many important activities are subject to review by auditors and security teams, whose job it is to ensure that the organization is not exposed to legal risks or security breaches of any kind.
+
+Some regulatory regimes make such cross-functional teams difficult to establish. If you are in a more siloed organization, the processes and techniques described throughout this book—in particular, implementing a deployment pipeline—help to prevent these silos from making the delivery process inefficient. However, the most important solution is communication between silos from the beginning of a project:
+- Everybody involved in the delivery of a project, including somebody from each of the silos, should meet at the beginning of every project. We’ll call this group of people the release working group, because their job is to keep the release process working. Their task should be to put together a release strategy for the project.
+- The release working group should meet regularly throughout the project. They should run a retrospective on the project since the last time they met, plan how to improve things, and execute the plan. Use the Deming cycle: plan, do, check, act.
+- Even if it has no users yet, the software should be released as often as pos- sible—this means at least every iteration—to a production-like environment. Some teams practice continuous deployment, which means releasing every change that passes all the stages in your pipeline. This is an application of the principle: “If it hurts, do it more frequently.” We can’t stress enough how important this practice is.
+- Project status and dashboard, should be available to everyone involved in the build, deploy, test, and release process, preferably on big monitors that everybody can see.
+
+------
+### Change Management
+In regulated environments, it is often essential for parts of the build, deploy, test, and release process to require approval.
+
+In particular, manual testing environments, staging, and production should always be under strict access control so that changes to them can only be made through the organization’s change management process. This may seem unnecessarily bureaucratic, but in fact research has demonstrated that organizations which do this have lower mean time between failures (MTBF) and mean time to repair (MTTR).
+
+If your organization has a problem meeting its service levels due to uncontrolled changes to testing and production environments, we suggest the following process for managing approvals:
+- Create a Change Advisory Board with representatives from your development team, operations team, security team, change management team, and the business.
+- Decide which environments fall under the purview of the change management process. Ensure that these environments are access-controlled so that changes can only be made through this process.
+- Establish an automated change request management system that can be used to raise a change request and manage approvals. Anyone should be able to see the status of each change request and who has approved it.
+- Any time anybody wants to make a change to an environment, whether deploying a new version of an application, creating a new virtual environment, or making a configuration change, it must be done through a change request.
+- Require a remediation strategy, such as the ability to back out, for every change.
+- Have acceptance criteria for the success of a change. Ideally, create an automated test that now fails but will pass once the change is successful. Put an indicator on your operations management dashboard with the status of the test (see the “Behavior-Driven Monitoring” section on page 323).
+- Have an automated process for applying changes, so that whenever the change is approved, it can be performed by pressing a button (or clicking a link, or whatever).
+
+Three more principles that should be followed when implementing and managing a change approval process:
+- Keep metrics on the system and make them visible. How long does it take for a change to be approved? How many changes are waiting for approval? What proportion of changes are denied?
+- Keep metrics that validate the success of the system and make them visible. What’s the MTBF and MTTR? What is the cycle time for a change? There is a more complete list of metrics defined in the ITIL literature.
+- Hold regular retrospectives on the system, inviting representatives from each of your organization’s units, and work to improve the system based on feedback from these retrospectives.
+
+---
+## Summary
+Good management creates processes enabling efficient delivery of software, while ensuring that risks are managed appropriately and regulatory regimes are complied with.
+
+This chapter is intended to describe an approach to management that deals with both conformance and performance.
+
+Without an iterative, incremental process, you have no objective way to gauge your project’s progress or your application’s fitness for purpose.
+
+we have demonstrated that iterative delivery, combined with an automated process for building, deploying, testing, and releasing software embodied in the deployment pipeline, is not only compatible with the goals of conformance and performance, but is the most effective way of achieving these goals.
