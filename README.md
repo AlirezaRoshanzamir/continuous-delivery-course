@@ -18,9 +18,7 @@ $ make run-live
 ...
 ```
 
-## Current Sessions
-Currently, these sessions have been added:
-
+## Sessions
 | Number | Topic |
 | ------ | ----- |
 |   1    | [Course Outline](1-outline) |
@@ -39,3 +37,4 @@ Currently, these sessions have been added:
 |   14   | [Managing Data](14-managing-data)
 |   15   | [Managing Components and Dependencies](15-managing-components-and-dependencies)
 |   16   | [Advanced Version Control](16-advanced-version-control)
+|   17   | [Managing Continuous Delivery](17-managing-continuous-delivery)
