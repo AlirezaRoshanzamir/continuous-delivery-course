@@ -13,10 +13,30 @@
                 text-align: center;
                 padding: 1px 4px 1px 4px;
             }
-            table#sessions td.chapter {
-                padding: 8px;
-                writing-mode: vertical-lr;
-                transform: rotate(180deg);
+            table#sessions tr.foundation-chapter-header {
+                font-weight: bold;
+                background-color: #c9f0ff;
+            }
+            table#sessions tr.foundation-chapter {
+                background-color: #e5f8ff;
+            }
+            table#sessions tr.deployment-pipeline-chapter-header {
+                font-weight: bold;
+                background-color: #e3ffe6;
+            }
+            table#sessions tr.deployment-pipeline-chapter {
+                background-color: #f0fcf1;
+            }
+            table#sessions tr.delivery-ecosystem-chapter-header {
+                font-weight: bold;
+                background-color: #ffecde;
+            }
+            table#sessions tr.delivery-ecosystem-chapter {
+                background-color: #fcf5f0;
+            }
+            table#sessions td.section {
+                font-size: 12px;
+                max-width: 1000px;
             }
         </style>
         <title>Continuous Delivery Course</title>
@@ -32,7 +52,7 @@
 
         <h2>Created By</h2>
         <strong>Alireza Roshanzamir</strong>, an experienced <strong>software engineer</strong> and
-        <strong></strong>independent consultant</strong>, sharing practical insights to enhance
+        <strong>independent consultant</strong>, sharing practical insights to enhance
         software development understanding.
         <ul>
             <li><a href="mailto:a.roshanzamir1996@gmail.com" target="_blank">a.roshanzamir1996@gmail.com</a></li>
@@ -47,149 +67,167 @@
         <h2>Sessions</h2>
         <table id="sessions">
             <tr>
-                <th style="border: 0"></th>
                 <th>#</th>
                 <th>Title</th>
+                <th>Sections</th>
                 <th>Video</th>
                 <th>Slides</th>
-                <th>Printable Slides</th>
-                <th>Markdown Slides</th>
+                <th>Printable<br>Slides</th>
+                <th>Markdown<br>Slides</th>
             </tr>
             <tr>
-                <td style="border: 0"></td>
                 <td>1</td>
                 <td>Course Outline</td>
+                <td class="section">Created By, Main References, Auxiliary References, Table of Contents</td>
                 <td><a href="https://youtu.be/jsMHaXzXHYA" target="_blank">&#9654;</a></td>
                 <td><a href="1-outline" target="_blank">&#10609;</a></td>
                 <td><a href="1-outline/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/1-outline/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
-                <td rowspan="5" class="chapter">Foundations</th>
+            <tr class="foundation-chapter-header"><td colspan="7">Foundations</td></tr>
+            <tr class="foundation-chapter">
                 <td>2</td>
                 <td>Introduction</td>
+                <td class="section">
+                    Definition, Minimum Viable CD, Ingredients, Deployment Pipeline, Why?, Impacts (Software Delivery Performance, Culture), Relation with Other Movements, Scrumfall, Case Studies, CD Patterns Mindmap
+                </td>
                 <td><a href="https://youtu.be/_yoyWVLltc8" target="_blank">&#9654;</a></td>
                 <td><a href="2-introduction" target="_blank">&#10609;</a></td>
                 <td><a href="2-introduction/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/2-introduction/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="foundation-chapter">
                 <td>3</td>
                 <td>The Problem of Delivering Software</td>
+                <td class="section">Release Antipatterns, Goals, Criterias, Benefits, Release Candidate, Principless</td>
                 <td><a href="https://youtu.be/SB_P6JbENIY" target="_blank">&#9654;</a></td>
                 <td><a href="3-the-problem-of-delivering-software" target="_blank">&#10609;</a></td>
                 <td><a href="3-the-problem-of-delivering-software/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/3-the-problem-of-delivering-software/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="foundation-chapter">
                 <td>4</td>
                 <td>Configuration Management</td>
+                <td class="section">Version Control and Advices, Managing Dependencies, Managing Software Configuration, Managing Environments</td>
                 <td><a href="https://youtu.be/h8QT_CHiNo0" target="_blank">&#9654;</a></td>
                 <td><a href="4-configuration-management" target="_blank">&#10609;</a></td>
                 <td><a href="4-configuration-management/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/4-configuration-management/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="foundation-chapter">
                 <td>5</td>
                 <td>Continuous Integration</td>
+                <td class="section">Implementation, Prerequisites, Practices, Challenges</td>
                 <td><a href="https://youtu.be/Wkw3JbCo1XM" target="_blank">&#9654;</a></td>
                 <td><a href="5-continuous-integration" target="_blank">&#10609;</a></td>
                 <td><a href="5-continuous-integration/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/5-continuous-integration/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="foundation-chapter">
                 <td>6</td>
                 <td>Testing Strategy</td>
+                <td class="section">Types of Tests, Test Doubles, Test Coverage Criteria, TDD, Real-Life Situations and Strategies, Integration Testing, Process</td>
                 <td><a href="https://youtu.be/iouhBcVbx9E" target="_blank">&#9654;</a></td>
                 <td><a href="6-testing-strategy" target="_blank">&#10609;</a></td>
                 <td><a href="6-testing-strategy/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/6-testing-strategy/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
-                <td rowspan="6" class="chapter">Deplyment Pipeline</th>
+            <tr class="deployment-pipeline-chapter-header"><td colspan="7">Deplyment Pipeline</td></tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>7</td>
                 <td>Anatomy of the Deployment Pipeline</td>
+                <td class="section">A Basic Deployment Pipeline, Practices, The Commit Stage, Test Stages, Release and Deployment Stages, Implementation, Metrics</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="7-anatomy-of-the-deployment-pipeline" target="_blank">&#10609;</a></td>
                 <td><a href="7-anatomy-of-the-deployment-pipeline/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/7-anatomy-of-the-deployment-pipeline/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>8</td>
                 <td>Build and Deployment Scripting</td>
+                <td class="section">Build Tools, Monorepo vs Polyrepo, Principles and Practices, Package Managers, Code Generation, Sample Project Structure, Deployment Scripting, Tips and Tricks, Infrastructure as Code</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="8-build-and-deployment-scripting" target="_blank">&#10609;</a></td>
                 <td><a href="8-build-and-deployment-scripting/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/8-build-and-deployment-scripting/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>9</td>
                 <td>The Commit Stage</td>
+                <td class="section">Principles and Practices, The Results, Commit Test Suite Principles and Practices</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="9-the-commit-stage" target="_blank">&#10609;</a></td>
                 <td><a href="9-the-commit-stage/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/9-the-commit-stage/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>10</td>
                 <td>Automated Acceptance Testing</td>
+                <td class="section">Why?, Process and Roles, Testing and Documentation, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="10-automated-acceptance-testing" target="_blank">&#10609;</a></td>
                 <td><a href="10-automated-acceptance-testing/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/10-automated-acceptance-testing/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>11</td>
                 <td>Managing Nonfunctional Requirements</td>
+                <td class="section">Managing Nonfunctional Requirements</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="11-managing-nonfunctional-requirements" target="_blank">&#10609;</a></td>
                 <td><a href="11-managing-nonfunctional-requirements/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/11-managing-nonfunctional-requirements/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="deployment-pipeline-chapter">
                 <td>12</td>
                 <td>Deploying and Releasing Applications</td>
+                <td class="section">Release Strategy, Deploying and Promoting Your Application, Semantic Versioning, Rolling Back Deployments and Zero-Downtime Releases, Emergency Fixes, Continuous Deployment, Semantic Release, Tips and Tricks</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="12-deploying-and-releasing-applications" target="_blank">&#10609;</a></td>
                 <td><a href="12-deploying-and-releasing-applications/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/12-deploying-and-releasing-applications/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
-                <td rowspan="5" class="chapter">Delivery Ecosystem</th>
+            <tr class="delivery-ecosystem-chapter-header"><td colspan="7">Delivery Ecosystem</td></tr>
+            <tr class="delivery-ecosystem-chapter">
                 <td>13</td>
                 <td>Managing Infrastructure and Environments</td>
+                <td class="section">Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, Cloud Computing, Monitoring Infrastructure and Applications</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a href="13-managing-infrastructure-and-environments" target="_blank">&#10609;</a></td>
                 <td><a href="13-managing-infrastructure-and-environments/?print-pdf" target="_blank">&#9113;</a></td>
                 <td><a href="https://github.com/AlirezaRoshanzamir/continuous-delivery-course/blob/main/13-managing-infrastructure-and-environments/presentation.md" target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="delivery-ecosystem-chapter">
                 <td>14</td>
                 <td>Managing Data</td>
+                <td class="section">Database Scripting, Incremental Change, Rolling Back Databases and Zero-Downtime Releases, Managing Test Data, Data Management and the Deployment Pipeline</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a target="_blank">&#10609;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="delivery-ecosystem-chapter">
                 <td>15</td>
                 <td>Managing Components and Dependencies</td>
+                <td class="section">Keeping Application (Trunk) Releasable, Dependencies, Components, Managing Dependency Graph, Managing Binaries</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a target="_blank">&#10609;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="delivery-ecosystem-chapter">
                 <td>16</td>
                 <td>Advanced Version Control</td>
+                <td class="section">Brief history, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, Branching Patterns, Popular Branching Policies</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a target="_blank">&#10609;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
             </tr>
-            <tr>
+            <tr class="delivery-ecosystem-chapter">
                 <td>17</td>
                 <td>Managing Continuous Delivery</td>
+                <td class="section">Maturity Models (Jez Humble Maturity Model, Qualitic Maturity Model, Google Test Certified Ladder), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)</td>
                 <td><a target="_blank">&#9654;</a></td>
                 <td><a target="_blank">&#10609;</a></td>
                 <td><a target="_blank">&#9113;</a></td>
