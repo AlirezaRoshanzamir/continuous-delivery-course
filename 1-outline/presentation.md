@@ -270,7 +270,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             Managing Components and Dependencies
             <br>
             <small>
-                Keeping Application (Trunk) Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
+                Keeping Application Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
             </small>
         </td>
         <td>45'</td>
