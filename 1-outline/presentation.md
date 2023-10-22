@@ -205,7 +205,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../9-the-commit-stage" target="_blank">Commit Stage</a>
             <br>
             <small>
-                Introduction, Principles and Practices, The Results, Commit Test Suite Principles and Practices
+                Principles and Practices, The Results, Commit Test Suite Principles and Practices
             </small>
         </td>
         <td>20'</td>
@@ -215,7 +215,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../10-automated-acceptance-testing" target="_blank">Automated Acceptance Testing</a>
             <br>
             <small>
-                Introduction, Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
+                Why?, Process and Roles, <span style="color: brown">Testing and Documentation</span>, The Application Driver Layer, Implementation, The Acceptance Test Stage, Performance Practices
             </small>
         </td>
         <td>50'</td>
@@ -223,6 +223,10 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     <tr>
         <td>
             <a href="../11-managing-nonfunctional-requirements" target="_blank">Managing Nonfunctional Requirements</a>
+            <br>
+            <small>
+                <span style="color: purple">Managing Nonfunctional Requirements</span>
+            </small>
         </td>
         <td>15'</td>
     </tr>
@@ -231,7 +235,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             <a href="../12-deploying-and-releasing-applications" target="_blank">Deploying and Releasing Applications</a>
             <br>
             <small>
-                Introduction, Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, <span style="color: purple">Rolling Back Deployments and Zero-Downtime Releases</span>, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
+                Release Strategy, Deploying and Promoting Your Application, <span style="color: brown">Semantic Versioning</span>, <span style="color: purple">Rolling Back Deployments and Zero-Downtime Releases</span>, Emergency Fixes, Continuous Deployment, <span style="color: brown">Semantic Release</span>, Tips and Tricks
             </small>
         </td>
         <td>60'</td>
@@ -286,7 +290,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
             Managing Continuous Delivery
             <br>
             <small>
-                Maturity Models (Jez Humble Maturity Model, <span style="color: brown">QMM</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
+                Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
             </small>
         </td>
         <td>60'</td>

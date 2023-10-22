@@ -1,4 +1,5 @@
 ## Continuous Delivery: Managing Nonfunctional Requirements
+#### <span style="color: purple">Managing Nonfunctional Requirements</span>
 
 <img src="assets/frs-vs-nfrs.webp" width="600"/>
 
