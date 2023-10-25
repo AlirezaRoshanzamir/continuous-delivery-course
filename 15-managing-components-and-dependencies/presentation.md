@@ -3,7 +3,7 @@
 
 <img src="assets/integration-pipeline.png" width="950"/>
 
-<small><strong>Time to Read:</strong> ? Minutes</small>, <small><strong>Time to Present:</strong> ? Minutes</small>
+<small><strong>Time to Read:</strong> 16 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -250,81 +250,94 @@ playwright</code></pre>
 
 ---
 ## Components
-Software systems consist of a collection of components. These components may be DLLs, JAR files, OSGi bundles, Perl modules, or something else.
+Software systems include various components. These components **may** be **DLL**s, **JAR**s, **OSGi bundle**s, **Perl module**s, and etc.
 
-Most applications start off as a single component. Some start off as two or three (for example, a client-server application).
+Most apps **begin as a single component**, while **some start as two or three**, like a **client-server app**, for instance.
 
-Unless these relationships are managed effectively, it can compromise the ability to use them as part of a continuous integration system.
+If these relationships **aren't managed** well, it can **compromise** the ability to use **them as part of a CI** system.
 
 ------
 ### How to Divide a Codebase into Components
-A component is reusable, replaceable with something else that implements the same API, independently deployable, and encapsulates some coherent set of behaviors and responsibilities of the system.
+A component is **reusable**, **replaceable** with something else that **implements the same API**, **independently deployable**, and **encapsulates** some **coherent behaviors and responsibilities** of the system.
 
-Lower bound: A component should have a certain level of complexity before it can be considered an independent piece of your application (a single class is not considered a component and deployed independently).
+**Lower bound**: A component should have a **minimum level of complexity** before it can be considered an independent piece of your application (a **class is not a component** and deployed independently).
 
-Upper bound: Our aim in dividing a system into components is to increase our efficiency as a team. There are several reasons why components make the software development process more efficient:
-1. They divide the problem into smaller and more expressive chunks.
-2. Components often represent differences in the rates of change of different parts of the system, and have different lifecycles.
-3. They encourage us to design and maintain software with clear delineation of responsibilities, which in turn limits the impact of change, and makes understanding and changing the codebase easier.
-4. They can provide us with additional degrees of freedom in optimizing our build and deployment process.
+**Upper bound**: We split a system into components to **boost team and software development efficiency**, because components:
+1. Break down the **problem into smaller, clearer parts**.
+2. Reflect **different change rates** and lifecycles in the system parts.
+3. Motivate to design with **clear duties**, **reducing change impacts** and **enhancing code understanding/modification**.
+4. Provide us with additional **degrees of freedom** in **optimizing our build/deployment** process.
 
-A significant feature of most components is that they expose an API of some form: dynamic linking, static linking, a web service, file exchange, message exchange, and so forth.
+Most components have **kind of APIs**: dynamic linking, static linking, web services, file exchange, message exchange, and more. When they treated independent in build/deployment, the interface/behaviour coupling adds complexity.
 
-It is the degree of coupling between components, both in terms of interface and behavior, that adds complexity when they are separated and treated as independent units in a build and deployment process.
+**Reasons** to separate out a component from your codebase:
+1. Part of your codebase needs to be **deployed independently** (for example, a server or a rich client).
+2. You want to turn a **monolithic codebase into a core and plugins**, maybe to replace a system part or allow user extensions.
+3. The component **provides an interface** to another system (for example a framework or a service which provides an API).
+4. It takes **too long to compile and link** the code.
+5. Your codebase is too **large to be worked on by a single team**.
+   - To speed up development with over ten people, consider splitting the system into separate components and teams.
 
-Reasons to separate out a component from your codebase:
-1. Part of your codebase needs to be deployed independently (for example, a server or a rich client).
-2. You want to turn a monolithic codebase into a core and a set of plugins, perhaps to replace some part of your system with an alternative implementation, or to provide user extensibility.
-3. The component provides an interface to another system (for example a framework or a service which provides an API).
-4. It takes too long to compile and link the code.
-5. It takes too long to open the project in the development environment.
-6. Your codebase is too large to be worked on by a single team.
-  - If you need more than ten people to develop at the speed you need to, one very effective way to do this is to divide your system into loosely coupled components, and divide the teams too.
+------
+### Continued: How to Divide a Codebase into Components
+We **discourage assigning teams to components** as **requirements often don't divide along component boundaries**. **Cross-functional** teams, where people **handle features end-to-end**, are more efficient, despite the seem efficiency of one team per component:
+  - **Writing and testing requirements** for **one component is hard** as functions involve multiple components. Grouping teams by components forces them collaborate on features, **increasing communication costs**.
+  - Component-focused teams often create **isolated silos** and **local optimizations**, **forgetting** the **project**'s broader goals.
+  - A key issue with component teams is the **entire app may not function** until the **project ends** due to no integration.
 
-We do not recommend making teams responsible for individual components. This is because in most cases, requirements don't divide along component boundaries. In our experience, cross-functional teams in which people develop features end-to-end are much more effective. Although one team per component may seem more efficient, this is not in fact the case:
-  - It is often hard to write and test requirements for a single component in isolation, since usually implementing a piece of functionality will touch more than one component. If you group teams by component, you thus require two or more teams to collaborate to complete a feature, automatically adding a large and unnecessary communication cost.
-  - People in component-centered teams tend to form silos and optimize locally, losing their ability to judge what is in the best interest of the project as a whole.
-  - One of the more serious dangers of having a team per component is that the application as a whole won't work until the end of the project because nobody has the incentive to integrate the components.
+Split teams to focus on **specific story streams** with a common theme and access necessary components to complete their tasks:
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Organize teams by **functional area** rather than by component.
+  - &shy;<!-- .element: class="fragment complete-fade-out custom" --><img src="assets/component-vs-feature-teams.png" width="700">
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Everybody** has the **right to change** any part of the codebase.
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Rotate** people between teams regularly.
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Ensure that there is good communication between teams.
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Everyone** is responsible for making **all components work together**, not just the integration team.
+- &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Try to move from [Feature Team to Product Team](https://wind4change.com/product-team-feature-team-difference-marty-cagan-inspired-empowered)
+  - &shy;<!-- .element: class="fragment complete-fade-out custom" --><table>
+      <tr>
+        <th>Feature Team</th>
+        <th>Product Team</th>
+      </tr>
+      <tr>
+        <td>
+          - Serve the Business<br>
+          - Deliver features<br>
+          - Not involved in product discovery<br>
+          - Not responsible for impact<br>
+          - "Mercenaries"
+        </td>
+        <td>
+          - Partner with Business to serve Customer<br>
+          - Solve problems<br>
+          - Involved in product discovery<br>
+          - Empowered and responsible for impact<br>
+          - "Missionaries"
+        </td>
+      </tr>
+    </table>
 
-It is better to split teams up so that each team takes on one stream of stories (perhaps all with a common theme), and touches whatever components they need to in order to get their work done:
-- Organize teams by functional area rather than by component.
-  - <img src="assets/component-vs-feature-teams.png">
-- Ensure that everybody has the right to change any part of the codebase.
-- Rotate people between teams regularly.
-- Ensure that there is good communication between teams.
-- Making all the components work together is everybody's responsibility, not just that of the integration team.
-- Try to move from Feature Team to Product Team
-  - <img src="assets/feature-vs-product-team.png">
-
-Two common extreme failings:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->There are **no fixed rules** for component organization, just design principles. Yet, two common **extreme failures** exist:
 - Components everywhere
 - The one component to rule them all
 
-Conway's Law: Organizations which design systems . . . are constrained to produce designs which are copies of the communication structures of these organizations:
-- Open source projects where developers communicate only by email tend to be very modular with few interfaces.
-- A product developed by a small, colocated team will tend to be tightly coupled and not modular.
+------
+### Continued: How to Divide a Codebase into Components
+Conway's Law:
+> Organizations which design systems, are constrained to produce designs which are copies of the communication structures of these organizations.
+- **Open source** projects where developers communicate **only by email** tend to be **very modular with few interfaces**.
+- A product developed by a **small, colocated team** will tend to be **tightly coupled and not modular**.
 
-Be careful of how you set up your development team-it will affect the architecture of your application (the Reverse Convey Maneuver).
+Be careful of your **development team setup** as it **impacts** your application's **architecture** (**Reverse Conway** Maneuver).
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can find more information in the following books and articles:
 <table>
   <tr>
-    <td><img src="assets/mirroring.png" width="100"/></td>
-    <td>
-      Exploring the Duality between Product and Organizational Architectures: A Test of the "Mirroring" Hypothesis
-      <br />
-      <small>by Alan MacCormack, John Rusnak, Carliss Baldwin</small>
-    </td>
-  </tr>
-  <tr>
     <td><img src="assets/clean-architecture-cover-book.jpg" width="100"/></td>
     <td>
-      Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series)
+      Clean Architecture: A Craftsman's Guide to Software Structure and Design
       <br />
-      <small>by by Robert Cecil Martin</small>
+      <small>by Robert Cecil Martin</small>
     </td>
-  </tr>
-  <tr>
     <td><img src="assets/principles-of-package-design-cover-book.jpg" width="100"/></td>
     <td>
       Principles of Package Design: Creating Reusable Software Components
@@ -332,173 +345,184 @@ Be careful of how you set up your development team-it will affect the architectu
       <small>by Matthias Noback</small>
     </td>
   </tr>
+  <tr>
+    <td><img src="assets/mirroring.png" width="100"/></td>
+    <td colspan="3">
+      Exploring the Duality between Product and Organizational Architectures: A Test of the "Mirroring" Hypothesis
+      <br />
+      <small>by Alan MacCormack, John Rusnak, Carliss Baldwin</small>
+    </td>
+  </tr>
 </table>
 
 ------
 ### Pipelining Components
-The simplest approach, and one that scales up to a surprising degree, is to have a single pipeline for your entire application and components. Every time a change is committed, everything is built and tested.
+A **simple** and **weirdly scalable** approach is **one pipeline** for the **entire app** and its components. **All changes** trigger **full build/testing**.
 
-We would recommend building your system as a single entity until the process of getting feedback becomes too slow.
+**Try** to build your system as **one entity** **until feedback becomes too slow**, as **component-based builds add management overhead**.
 
-There is always some additional overhead to the management of a component-based build.
+In **reality**, there are situations where dividing your system into **multiple pipelines is beneficial**:
+- Parts of your application may have **different lifecycles** (e.g. you may need build your OS kernel, but only every few weeks).
+- **Different and [distributed] teams** work on **separate functional areas** of your app over specific components.
+- Components that use **different technologies** or build processes.
+- **Shared components** that are used by several other projects.
+- Components that are relatively stable and **do not change frequently**.
+- If your **app's build is slow**, creating individual component builds can speed up, although it occurs **later than many expect**.
 
-However, realistically there are many circumstances that benefit from splitting your system into several different pipelines:
-- Parts of your application that have a different lifecycle (perhaps you build your own version of an OS kernel as part of your application, but you only need to do this once every few weeks).
-- Functionally separate areas of your application that are worked on by different (perhaps distributed) teams may have components specific to those teams.
-- Components that use different technologies or build processes.
-- Shared components that are used by several other projects.
-- Components that are relatively stable and do not change frequently.
-- It takes too long to build your application, and creating builds for each component will be faster (but beware, the point at which this becomes true is much later than most people think).
+After **binaries** (libraries, executables, etc.) pass through their **mini-release process** (including **publishing to an artifact repository**), they're ready for **integration** into the next build phase.
 
-Once the binaries (libraries, executables, etc.) have passed through their own mini release process (you will need to publish them to an artifact repository), they are ready for promotion to an integration build (more on this in the next section).
-
-In general, the guiding principle should be to minimize the number of builds that you operate.
+In general, the **guiding principle** is to **minimize** the **number of builds** you operate.
 
 ------
 ### The Integration Pipeline
 The integration pipeline:
-1. Takes as its starting point the binary outpu from each of the components.
-2. Create a package (or packages) suitable for deployment by composing the appropriate collections of binaries.
-3. Deploy the resulting application to a production-like environment and run smoke tests against it to give early indication of any basic integration problems (fail fast).
-4. Move on to a conventional acceptance test stage, running whole application acceptance tests in the usual way.
+1. Begins with the **binary output** from **each component**.
+2. Creates **deployable package**(s) by **combining the necessary binaries**.
+3. **Deploys** the app in a **production-like environment**, running **smoke tests** to quickly spot **basic integration issues (fail fast)**.
+4. Proceeds to **conventional acceptance test stage**, running whole application acceptance tests as usual.
 
-<img src="assets/integration-pipeline.png">
+<img src="assets/integration-pipeline.png" width="1000">
 
+------
+### Continued: The Integration Pipeline
 Principles:
-- Fast feedback
-  - Feedback can be compromised by long pipelines, or chains of pipelines. If you find yourself in this situation and you have sufficient hardware, one solution is to trigger downstream pipelines as soon as binaries are created and the unit tests pass.
-- Provide visibility into the status of the build for all interested parties
-  - Backward: Ability to trace back from an integration build to the versions of each component that contributed to it.
-  - Forward: The team working on the components should have visibility into which versions of their component actually ended up in a green integration pipeline (and can thus be considered good for integration). Only these versions of the components are in fact really "green."
+- <!-- .element: class="fragment insides-fade-in-then-out" -->Fast feedback
+  - **Long** or **chained pipelines** can impact feedback.
+  - One solution here is to **trigger downstream** pipelines **as soon as binaries are created and the unit tests pass**.
+- &shy;<!-- .element: class="fragment insides-fade-in-then-out" -->Provide **visibility** into the **status of the build** for **all interested parties**
+  - **Backward**: Ability to trace back from an integration build to the versions of each component that contributed to it.
+  - **Forward**: The team working on the components should be aware of which versions of their component ended up in a green integration pipeline. These are the **truly "green"** versions of the components.
 
-<img src="assets/gitlab-parent-child-pipelines.jpg">
+An example of triggering downstream pipelines in GitLab:  <!-- .element: class="fragment fade-in-with-next" -->
 
-<img src="assets/gitlab-parent-child-pipelines-2.png">
+<table>
+  <tr>
+    <td><img src="assets/gitlab-parent-child-pipelines.jpg" width="490"></td>
+    <td><img src="assets/gitlab-parent-child-pipelines-2.png" width="680"></td>
+  </tr>
+</table>
 
-If several components change between one run of the integration pipeline and the next, it is probable that it will spend much of its time broken:
-- The best and simplest approach: Build every single possible combination of the good versions of your components. It's good when:
+If **several components** change between integration pipeline **runs**, it's probable that it will spend much of its time broken:
+- &shy;<!-- .element: class="fragment insides-fade-in-then-out" -->**Best and simplest approach**: Build **all possible combinations** of good component versions. Suitable when:
   - Your components don't change that often.
-  - you have sufficient computing power on your build grid, you can do this.
-- The next good approach: Build as many versions of your application as you can:
-  - Takes the latest version of every component and assembles your application as frequently as it can.
-  - If this operation is sufficiently fast, you can run a short smoke test suite against each version of your app.
-  - You could then have some manual way to say "Assemble these and create an instance of my integration pipeline with them".
+  - You have sufficient computing power on your build grid.
+- &shy;<!-- .element: class="fragment insides-fade-in-then-out" -->**Next good approach**: Build **as many versions** of your application as you can:
+  - Use the latest version of each component to assemble your app as often as possible.
+  - If this process is quick, run a brief smoke test for each app version.
+  - You could then have some manual way to "Assemble these and create an instance of integration pipeline with them".
 
 ---
 ## Managing Dependency Graphs
-It is vital to version dependencies, including libraries and components.
+**Versioning dependencies** (e.g., libraries and components) is **essential**; otherwise, **reproducing builds becomes impossible**.
 
-Components can have dependencies on other components, including third-party libraries. If you draw a diagram of the dependencies between components, it should be a directed acyclic graph (DAG).
+Components may depend on other components and third-party libraries. When you draw the dependencies, it **should form a directed acyclic graph (DAG)**.
 
-If your graph has cycles you have a pathological dependency problem, which we'll address shortly.
+If your graph has **cycles** you have a **pathological dependency problem**, which we'll address later.
 
 ------
 ### Building Dependency Graphs
-We refer to a component further to the left of the diagram as an "upstream" dependency, and a component further to the right as a "downstream" dependency (CDS pricing library is a third-party):
+In the diagram, **left is "upstream"** and **right is "downstream"** dependency (CDS pricing library is third-party):
 
-<img src="assets/dependency-graph.png">
+<img src="assets/dependency-graph.png" width="700">
 
-Each component could have its own pipeline, triggered by changes in that component's source code or by changes to any upstream dependency. Downstream dependencies will be triggered by this component passing all of its automated tests.
+Each component **may** have **its own pipeline**. When it **changes**, **triggers a recursive rebuild/test** of **itself and all downstream components** respectively. If any **immediate/intermediate upstream fail**, **downstreams are not initiated**.
 
-When an upstream component changes, it triggers a recursive rebuild and test of itself and all downstream components respectively. If any immediate/intermediate upstream fail, downstreams are not initiated.
+Imagine if the **framework and pricing engine change**, requiring a **full graph rebuild**. But, there are **various possibilities**:
+- The **happy path** is that all three **intermediate components pass** with the new framework and CDS pricing library versions.
+- If **settlement engine fails**, **portfolio management app** should**n't** use **new faulty framework**. So, you **may want** it to use **new pricing engine**, built with **new CDS pricing library** and **old green framework**. But, **no such pricing engine version exists**.
 
-When a change is made to the framework and the pricing engine. In this case, the whole graph needs to be rebuilt. But there are several possible outcomes, each with its own considerations:
-- The happy path is that all three intermediate components pass with the new versions of the framework and the CDS pricing library.
-- But what if the settlement engine fails? Clearly the portfolio management application should not build against the new (but broken) version of the framework. However, you might well want the portfolio management application to build with the new version of the pricing engine, which (crucially) should be built against the new version of the CDS pricing library and the old (known good) version of the framework. Of course now you're in trouble, because no such version of the pricing library exists.
-
-The most important constraint on these scenarios is that the portfolio management application should only build against one version of the framework. We particularly don't want to end up with a version of (say) the pricing engine built against one version of the framework, and the settlement engine built against another version. This is the classic "diamond dependency” problem-which is the build-time analogue of the runtime "dependency hell” problem.
+The **key constraint** is the **portfolio app** should use **one framework version**. **Avoid** **pricing engine with one version** and **settlement engine with another**, which causes the **diamond dependency, build-time analgue of the runtime "dependency hell"**:
 
 <img src="assets/dependency-diamond.png">
 
 ------
 ### Pipelining Dependency Graphs
-The key elements of the pipeline are that the team must get feedback as rapidly as possible on any breakages, and that we should obey the rules for building dependencies described above:
+The pipelines should provide rapid feedback on breakages and follow the dependency building rules:
 
-<img src="assets/component-pipeline.png">
+<img src="assets/component-pipeline.png" width="1000">
 
-Features:
-- To increase the speed of feedback, dependent projects are triggered once the commit stage of each project's pipeline is complete.
-- All of the triggers are automatic (with the exception of deployments to the manual testing and production environments)
+- To speed up feedback, dependent projects trigger when the commit stage of each project's pipeline finishes.
+- All triggers are automatic, except for deployments to manual testing and production environments.
 
-It is essential that teams can trace the origins of the components that went into a particular build of the application:
+------
+### Continued: Pipelining Dependency Graphs
+Teams must be able to trace the origins of the components in a particular build of the application:
 
 <table>
-  <td><img src="assets/visualizing-upstream-dependencies.png"></td>
-  <td><img src="assets/visualizing-downstream-dependencies.png"></td>
+  <td>
+    Visualizing upstream dependencies
+    <img src="assets/visualizing-upstream-dependencies.png">
+  </td>
+  <td>
+    Visualizing downstream dependencies
+    <img src="assets/visualizing-downstream-dependencies.png">
+  </td>
 </table>
 
 ------
 ### When Should We Trigger Builds?
-All of the examples discussed above assume that we trigger a new build whenever there is any change to upstream dependencies. This is the right thing to do, but it is not the norm in many teams-rather, they tend to only update their dependencies once their codebase is stable, perhaps at integration time, or when development has reached some other milestone. This behavior emphasizes stability, but at the cost of potential risk of spending a great deal of time integrating.
+The discussed examples assume triggering new builds with any upstream changes, which is good but not common in many teams. They often update dependencies when their codebase is stable, emphasizing stability but risking more integration time later.
 
-It can be seen that there is a tension in the development process where dependencies are involved. On one hand, it is best to keep up with the newest versions of upstream dependencies to make sure that you have the most up-to-date features and bugfixes. On the other hand, there can be a cost to integrating the latest version of every dependency, because you can spend all your time fixing breakages caused by these new versions. Most teams compromise and do a refresh of all their dependencies after every release, when the risks of updating are low.
+Updating dependencies brings tension. Staying updated give you the latest features/fixes, but integrating each new version can be costly due to fixing issues. Many teams compromise by updating all dependencies after a release when the risks are lower.
 
 A key consideration when deciding how often to update dependencies is how much you trust new versions of these dependencies:
-- If you have a few components depending upon a component also developed by your team, you can usually fix breakages caused by API changes very quickly and simply, so integrating often is best. If the components are sufficiently small, it is preferable to have a single build for the whole application-giving the fastest feedback of all.
-- If the upstream dependencies are developed by another team within your own organization, it is probably best if these components are built independently in their own pipeline. You can then decide whether or not to take the latest version of these upstream components each time that they are changed, or stick with a particular version. This decision is based on how frequently they change, and how fast the teams working on them respond to problems.
+- If you have components depending upon a component also developed by your team, fixing API changes is quick and simple, so integrating often is best. For small components, having a single whole application build is best for the fastest feedback.
+- If upstream dependencies are from another team, build them separately in their pipeline. You can choose whether to use the latest version when they update or stick with a specific version based on their update frequency and response to issues.
 
-You need to strike a balance between getting fast feedback on whether your application is going to integrate and having hyperactive builds that continually spam you with breakages that you don't care about.
+Find a balance between quick integration feedback and excessive builds that report irrelevant issues.
 
 ------
 ### Cautious Optimism
-Alex Chaffee suggests adding a new state to the dependency graph: "static," "guarded," or "fluid" for upstream dependencies:
-- Changes in a static upstream dependency do not trigger a new build.
-- Changes in a ﬂuid upstream dependency always trigger a new build. If a change in a "ﬂuid” upstream dependency triggers a build and the build fails, the upstream dependency is marked "guarded,” and the component is pinned to the known-good version of the upstream dependency.
-- A "guarded” upstream dependency behaves like a static one-it doesn't take new changes-but it serves to remind the development team that there is a problem that needs to be resolved with the upstream dependency.
+This model suggests three **"static"**, **"guarded"**, or **"fluid"** states for **upstream dependencies** in dependency graph:
+- **Changes** in **static** upstream dependencies **do not trigger** new builds.
+- **Changes** in **fluid** upstream dependencies **always trigger** new builds. If a **fluid dependency update fails**, it **becomes guarded** and the **component sticks to the known-good version of the upstream dependency**.
+- A **guarded** upstream dependency is **similar to a static** one, not accepting new changes. However, **it signals an issue** that the development team needs to address with the upstream dependency.
 
-<img src="assets/cautious-optimisim-triggering.png">
+<img src="assets/cautious-optimisim-triggering.png" width="900">
 
-Chaffee mentions a strategy called "informed pessimism” as a starting point for any implementation of a dependency tracking algorithm. In this strategy, every trigger is set to "static,” but developers working on downstream dependencies are notified when a new version of their upstream dependency becomes available.
+You can begin with an **"informed pessimism" strategy** where **triggers are set to static**, but **notify developers** of **new upstream dependency versions**.
 
 ------
 ### Circular Dependencies
-Probably the nastiest dependency problem is the circular dependency.
+The **worst dependency problem** is the circular dependency, when **component A depends on component B, and B depends on A**.
 
-The simplest example is that you have a component, A, that depends on another component, B. Unfortunately component B in turn depends on component A.
+You may **never begin** a project **with circular dependencies**-they **tend to creep in later**.
 
-The key point is that you never begin a project with circular dependencies-they tend to creep in later.
+You can manage this issue if necessary, though it's **not recommended**. You need **a version of A to build B**, then **use the new B to build the new A**, forming a **"build ladder"**:
 
-It is possible, but not recommended if you can avoid it, to survive this problem so long as there is a version of component A that you can use to build component B. You can then use the new version of B to build the new version of A. This results in a kind of "build ladder":
+<img src="assets/circular-dependency-build-ladder.png" width="380">
 
-<img src="assets/circular-dependency-build-ladder.png">
-
-No build system supports such a configuration out of the box, so you have to hack your toolchain to support it.
-
-Always try to get rid of circular dependencies; but if you find yourself working in a codebase that has them, don't despair-you can use the build ladder as a temporary workaround until you can eliminate the problem.
+Build systems **don't naturally** handle this, so you'll need to tweak your toolchain. You **should only** use the build ladder as a **temporary fix** until you resolve the issue.
 
 ---
 ## Managing Binaries
-In most cases, components should have binary rather than source-level dependencies on one other.
+Usually, components should have **binary rather than source-level dependencies**.
 
-In this section, we'll discuss the general principles behind the workings of an artifact repository.
+Store **generated build artifacts (binaries, packages, etc.)** in the **artifact repository** for **later [stages] use**:
+- An artifact repository's should only contain **reproducible items**. You should be **able to delete it without losing valuable data**, as you'll need to free up space eventually.
+- So, your **version control** must include **all needed to recreate binaries**.
+- The **simplest** artifact repository is a **directory structure on disk**, ideally on RAID or SAN to prevent unexpected data loss. It should **enable linking a binary to the source control version that created it**.
+- If a shared drive isn't your choice, you can use a **web service for storing and retrieving artifacts**. At this point, consider using available **free or commercial solutions**.
 
-- How an Artifact Repository Should Work
-  - The most important property of an artifact repository is that it should not contain anything that cannot be reproduced. You should be able to delete your artifact repository without worrying that you won't be able to regain anything valuable. Ultimately you'll need to delete them in order to free up space.
-  - So, your version control system needs to contain everything required to re-create any given binary, including the automated build scripts.
-  - The simplest artifact repository is a directory structure on disk. Generally, this directory structure will be on a RAID or a SAN, because while artifacts should be disposable, you should be the one deciding that they can be deleted, not some badly behaved piece of hardware. The most important constraint on this directory structure is that it should enable you to to associate a binary with the version from source control that was used to create it.
-  - If you don't want to use a shared drive for your artifact repository, you can add a web service to store and retrieve artifacts. However, if you have reached this point, you should consider using one of the many free or commercial products on the market.
-
-  <table>
-    <td>
-      <img src="assets/jfrog-repository-types.webp">
-      JFrog
-    </td>
-    <td>
-      <img src="assets/nexus-repository-formats.png" width="700">
-      Nexus
-    </td>
-  </table>
-- How Your Deployment Pipeline Should Interact with the Artifact Repository
-  - Your deployment pipeline implementation needs to do two things: Store artifacts generated by the build process into the artifact repository, and then retrieve them for later use.
+<table>
+  <td>
+    JFrog
+    <img src="assets/jfrog-repository-types.webp" width="500">
+  </td>
+  <td>
+    Nexus
+    <img src="assets/nexus-repository-formats.png" width="700">
+  </td>
+</table>
 
 ---
 ## Summary
-The principle is to ensure that teams get fast feedback on the effect of their changes on the production-readiness of the application:
-- Ensure every change is broken down into small, incremental steps which are checked into mainline.
-- Break your application down into components.
+The principle is to ensure teams get **fast feedback** on the **effect of their changes** on the **production-readiness of the application**:
+- Ensure **every change** is **broken down into small**, **incremental steps** which are checked into mainline.
+- **Break** your application down into **components**.
 
-Until your application gets sufficiently large, there is no need to build your components individually-the simplest thing is to have a single pipeline that builds your whole application at once as the first stage.
+**Until your application becomes large**, you can **use a single pipeline** to **build the entire application** in the initial stage.
 
-If you concentrate on efficient commit builds and fast unit testing, and implement build grids for acceptance testing, your project can grow to a much larger degree that you might think possible. A team of up to **20 people working full-time** for a **couple of years** should **not need to create multiple build pipelines**, although of course they should **still separate their application into components**.
+Emphasizing on **fast commit builds/unit-testing** and **acceptance testing grids** can drive **significant project growth**. A team of up to **20 full-time people** over a **couple of years** need'**nt create multiple pipelines** but should **still separate their app into components**.
 
-Once you exceed these limits, though, the use of components, dependency-based build pipelines, and effective artifact management are the key to efficient delivery and fast feedback.
+Exceeding these limits needs **components**, **dependency-based pipelines**, and **artifact management** for better delivery/feedback.
