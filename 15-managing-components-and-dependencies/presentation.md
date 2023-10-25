@@ -437,16 +437,16 @@ The **key constraint** is the **portfolio app** should use **one framework versi
 
 ------
 ### Pipelining Dependency Graphs
-The pipelines should provide rapid feedback on breakages and follow the dependency building rules:
+The pipelines should provide **rapid feedback on breakages** and **follow the dependency building rules**:
 
 <img src="assets/component-pipeline.png" width="1000">
 
-- To speed up feedback, dependent projects trigger when the commit stage of each project's pipeline finishes.
-- All triggers are automatic, except for deployments to manual testing and production environments.
+- To **speed up** feedback, **dependent projects trigger** when the **commit stage** of each project's pipeline finishes.
+- **All triggers are automatic**, except for deployments to manual testing and production environments.
 
 ------
 ### Continued: Pipelining Dependency Graphs
-Teams must be able to trace the origins of the components in a particular build of the application:
+Teams must be able to **trace the origins** of the components in a particular build of the application:
 
 <table>
   <td>
@@ -461,15 +461,15 @@ Teams must be able to trace the origins of the components in a particular build 
 
 ------
 ### When Should We Trigger Builds?
-The discussed examples assume triggering new builds with any upstream changes, which is good but not common in many teams. They often update dependencies when their codebase is stable, emphasizing stability but risking more integration time later.
+The discussed examples **assume** triggering new builds with **any upstream changes**, which is **good but not common** in many teams. They often **update dependencies** when their **codebase is stable**, emphasizing **stability but risking more integration time later**.
 
-Updating dependencies brings tension. Staying updated give you the latest features/fixes, but integrating each new version can be costly due to fixing issues. Many teams compromise by updating all dependencies after a release when the risks are lower.
+Updating dependencies brings **tension**. Staying **updated** give you the **latest features/fixes**, but **integrating each new version** can be **costly due to fixing issues**. Many teams compromise by updating all dependencies **after a release** when the **risks are lower**.
 
-A key consideration when deciding how often to update dependencies is how much you trust new versions of these dependencies:
-- If you have components depending upon a component also developed by your team, fixing API changes is quick and simple, so integrating often is best. For small components, having a single whole application build is best for the fastest feedback.
-- If upstream dependencies are from another team, build them separately in their pipeline. You can choose whether to use the latest version when they update or stick with a specific version based on their update frequency and response to issues.
+A key consideration when deciding how often to update dependencies is how much you **trust new versions** of these dependencies:
+- If you have components depending upon a component **also developed by your team**, fixing API changes is **quick** and **simple**, so **integrating often is best**. For **small** components, having a **single whole application build** is best for the fastest feedback.
+- If upstream dependencies are from **another team**, build them **separately in their pipeline**. You can **choose whether** to use the latest version when they update or stick with a specific version based on their **update frequency** and **response to issues**.
 
-Find a balance between quick integration feedback and excessive builds that report irrelevant issues.
+Find a **balance** between **quick integration feedback** and **excessive builds** that report irrelevant issues.
 
 ------
 ### Cautious Optimism
