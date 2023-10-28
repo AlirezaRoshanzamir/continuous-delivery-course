@@ -13,18 +13,18 @@
 
 ---
 ## Introduction
-Version control systems (source control, revision control systems) along with maintaining a complete history of every change, also serve another important purpose: They enable teams to work together on separate parts of an application while maintaining a system of record—the definitive codebase of the application.
+Version control systems (aka source control, revision control systems) keep a full history of changes and help teams collaborate on different application parts while preserving the definitive codebase.
 
 The aim of this chapter is to examine how teams can work productively with version control.
 
 There are three good reasons to branch your code:
-- Releasing a new version of your application
-  - Allows developers to continue working on new features without affecting the stable public release
-  - When bugs are found, they are first fixed in the relevant public release branch, and then the changes are applied to the mainline.
-- When you need to spike out a new feature or a refactoring; the spike branch gets thrown away and is never merged
-- Short-lived branch when you need to make a large change to the application that is not possible with any of the methods described before (branch by abstraction, etc.)
+- Releasing a new version of your application.
+  - Lets developers work on new features without impacting the stable public release.
+  - Bugs are fixed in the relevant public release branch first and then applied to the mainline.
+- When you need to spike out a new feature/refactoring; the spike branch gets thrown away and is never merged.
+- Short-lived branch for large changes to the application that can't be done using other methods like branch by abstraction.
   - An extremely rare scenario if your codebase is well structured.
-  - The sole aim of this branch is to get the codebase to a state where further change can be made either incrementally or through branch by abstraction.
+  - The sole purpose is to get the code to a state that make incremental changes or branch by abstraction possible.
 
 ---
 ## Brief History
@@ -33,22 +33,22 @@ There are three good reasons to branch your code:
 
 ---
 ## Branching and Merging
-The ability to create branches, or streams, in a codebase is a first-class feature of every version control system.
+The ability to create branches (or streams) in a codebase is a first-class feature of every VCS.
 
-The main purpose of branches is to facilitate parallel development: the ability to work on two or more work streams at the same time without one affecting the other.
+Branches primarily enable parallel development, allowing simultaneous work on multiple streams without interference.
 
-There are several reasons why teams may choose to branch their code (these categories aren't mutually exclusive):
+Teams have different reasons to make branches in their code, and these categories can overlap:
 - Physical: branching of the system's physical configuration-branches are created for files, components, and subsystems.
 - Functional: branching of the system's functional configuration-branches are created for features, logical changes, both bugfixes and enhancements, and other significant units of deliverable functionality (e.g., patches, releases, and products).
-- Environmental: branching of the system's operating environment-branches are created for various aspects of the build and runtime platforms (compilers, windowing systems, libraries, hardware, operating systems, etc.) and/or for the entire platform.
+- Environmental: branching of the system's operating environment-branches are created for various aspects of the build and runtime platforms (compilers, libraries, hardware, operating systems, etc.) and/or for the entire platform.
 - Organizational: branching of the team's work efforts-branches are created for activities/tasks, subprojects, roles, and groups.
 - Procedural: branching of the team's work behaviors-branches are created to support various policies, processes, and states.
 
 In most cases where you branch, your entire codebase is going to evolve separately in each branch.
 
-Branching and streaming may seem like a great way to solve many problems affecting the process of software development on large teams.
+Branching may seem like a great way to solve many problems affecting the process of software development on large teams.
 
-However, the requirement to merge branches means it's important to think carefully before branching and to make sure you have a sensible process to support it. In particular, you need to define a policy for each branch describing its role in the delivery process and prescribing who is allowed to check into it and under what circumstances. For example, a small team might have a mainline which all developers can check into and a release branch that only the testing team is able to approve changes to. The testing team would then be responsible for merging bugfixes into the release branch. In a larger and more heavily regulated organization, each component or product might have a mainline that developers check into, and integration branches, release branches, and maintenance branches that only operations personnel are authorized to make changes to.
+However, the need to merge branches makes it crucial to plan branch creation carefully and establish a well-defined process. It's essential to have policies for each branch, specifying its role in the development process and who can contribute to it under what circumstances. For instance, a smaller team may have a mainline open to all developers and a release branch controlled by the testing team. In contrast, larger organizations might have mainlines for components or products, along with integration, release, and maintenance branches managed by operations personnel.
 
 ------
 ### Merging
@@ -166,7 +166,7 @@ As soon as you designate a central repository, all of the properties of a centra
 
 ------
 ### Using Distributed Version Control Systems
-The main difference between distributed and centralized version control systems is that when you commit, you are committing to your local copy of the repository—effectively, to your own branch. In order to share your changes with others, there is an additional set of steps you need to perform. To do this, DVCSs have two new operations: pulling changes from a remote repository and pushing changes to it:
+The main difference between distributed and centralized version control systems is that when you commit, you are committing to your local copy of the repository-effectively, to your own branch. In order to share your changes with others, there is an additional set of steps you need to perform. To do this, DVCSs have two new operations: pulling changes from a remote repository and pushing changes to it:
 
 <table>
   <tr>
@@ -302,11 +302,11 @@ This pattern works when you have several small, relatively independent teams wor
 
 From a CI perspective, this strategy has this drawback which the unit of work under this strategy is scoped to a whole branch, not just a particular change.
 
-The Linux kernel development team uses a version of this pattern, keeping logical branches for different parts of the operating system—the scheduler and the networking stack, for example—in independent repositories.
+The Linux kernel development team uses a version of this pattern, keeping logical branches for different parts of the operating system-the scheduler and the networking stack, for example-in independent repositories.
 
 If merges aren’t sufficiently frequent, this pattern suffers from the same drawback as every pattern where the whole team does not check in directly to trunk: True continuous integration is compromised. For this reason, Kniberg recommends that every team merges to trunk whenever a story is completed, and merges from trunk every day.
 
-In practice, this pattern is not dissimilar to branch by feature. Its advantage is that there are fewer branches, so integration happens more frequently—at the team level at least. Its disadvantage is that branches diverge much more rapidly, because a whole team is checking in to each branch.
+In practice, this pattern is not dissimilar to branch by feature. Its advantage is that there are fewer branches, so integration happens more frequently-at the team level at least. Its disadvantage is that branches diverge much more rapidly, because a whole team is checking in to each branch.
 
 ------
 ### Other Branching Patterns
