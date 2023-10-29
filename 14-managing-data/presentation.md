@@ -17,9 +17,9 @@
 - &shy;<!-- .element class="fragment fade-in" -->Dealing with the **sheer data volume** is a significant issue; **behavior data (code and configs)** is **much smaller** than **state data**.
 - &shy;<!-- .element class="fragment fade-in" -->Application **data's lifecycle** **differs from other system parts**; it must be **preserved** and often **outlasts the applications themselves**. This **preservation/migration** are crucial during system **deployments/rollbacks**.
 
-&shy;<!-- .element class="fragment fade-in" -->Usually, we can **replace old code with new code** for a **fresh start**. However, this is **often impossible for data** in real-world systems.
-
 &shy;<!-- .element class="fragment fade-in" -->When a system enters production, its data **grows** and is the **most valuable part**, making structure/content changes **risky**/tricky.
+
+&shy;<!-- .element class="fragment fade-in" -->Usually, we can **replace old code with new code** for a **fresh start**. However, this is **often impossible for data** in real-world systems.
 
 &shy;<!-- .element class="fragment fade-in" -->Systems need changes as they grow. **Automating database migration** **reduces disruption** and **improves reliability**. Tools simplify this, allowing scripting in automated deployment and supporting **versioning** and **migration** across **database versions**.
 
@@ -71,7 +71,9 @@
 
 ------
 ### Managing Orchestrated Changes
-In many organizations, they **integrate all applications** through a **single database** (although **SOA is recommended instead**).
+In many organizations, they **integrate all applications** through a **single database** (although **SOA is recommended instead**):
+
+<img src="assets/shared-database.png" width="500">
 
 &shy;<!-- .element class="fragment fade-in" -->So, **modifying the database** can **affect other applications**. **Test** these changes in an **orchestrated environment** similar to production, including the **other applications** (Systems Integration Testing - SIT environment).
 
@@ -107,8 +109,7 @@ In many organizations, they **integrate all applications** through a **single da
   - This method needs **careful design** and testing but can be worth it to prevent data loss during a rollback.
 - &shy;<!-- .element class="fragment highlight-current-blue" -->**Blue-green deployments**
   - **Releasing** is switching user requests. **Without databse hot-backup support**, you may need **read-only mode**.
-  - **Rolling back** is reverting to the old version and **reapplying transactions** before or after the next upgrade.
-  - In **data-heavy systems**, backup and restore can't work without causing **too much downtime**, making it infeasible.
+  - **Rolling back** is switching back to the old version and **reapplying transactions** before or after the next upgrade.
 
 ------
 ### Decoupling Application Deployment from Database Migration
