@@ -117,14 +117,18 @@ It's ideal for moving from a **messy monolithic to a modular one**. **Pick the p
 ### Dependency Hell (DLL Hell)
 <img src="assets/dependency-hell-meme.jpeg" width="800" class="fragment start">
 
-&shy;<!-- .element class="fragment fade-in-with-next custom" -->Dependency hell occurs when an application **depends on one version** but is **deployed** with a **different version or none** at all:
+&shy;<!-- .element class="fragment fade-in-with-next custom" -->Dependency hell occurs when an application **depends on one version** but is **deployed** with a **different version or none** at all.
+
+&shy;<!-- .element class="fragment fade-in-with-next custom" -->OS-wide dependencies:
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->In **older Windows**, DLL hell was common due to **shared libraries (DLLs) lacking versioning**, **overwriting old versions**.
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The **.NET** introduced **versioned assemblies** and a **global assembly cache (GAC)** to address DLL hell on Windows.
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->Linux uses **integers in .so files** and **soft links** for versioning, needing **testing** or **source compilation** for **compatibility**.
+
+&shy;<!-- .element class="fragment fade-in-with-next custom" -->Some answers to the problem of OS-wide dependencies:
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Static compilation** bundles dependencies at **compile time** but leads to **large binaries** and **OS version coupling**.
-- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Dynamic** languages like Rails **ship frameworks and libraries** with apps to **allow different versions** to coexist.
-- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Java** faces **runtime dependency** issues due to **classloader limits**, addressed by the OSGi framework, but managing dependencies at build time is crucial.
-- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->The **diamond dependency** issue arises when an app depends on **two libraries** with **different versions of the same underlying library**, potentially causing runtime problems.
+- &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Dynamic** languages like Ruby **ship frameworks and libraries** with apps to **allow different versions** to coexist.
+
+&shy;<!-- .element class="fragment fade-in" -->The **diamond dependency** issue arises when an app depends on **two libraries** with **different versions of the same underlying library**, potentially causing runtime problems.
 
 ------
 ### Managing Libraries
