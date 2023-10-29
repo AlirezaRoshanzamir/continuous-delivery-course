@@ -37,92 +37,102 @@ The ability to create branches (or streams) in a codebase is a first-class featu
 
 Branches primarily enable parallel development, allowing simultaneous work on multiple streams without interference.
 
-Teams have different reasons to make branches in their code, and these categories can overlap:
-- Physical: branching of the system's physical configuration-branches are created for files, components, and subsystems.
-- Functional: branching of the system's functional configuration-branches are created for features, logical changes, both bugfixes and enhancements, and other significant units of deliverable functionality (e.g., patches, releases, and products).
-- Environmental: branching of the system's operating environment-branches are created for various aspects of the build and runtime platforms (compilers, libraries, hardware, operating systems, etc.) and/or for the entire platform.
-- Organizational: branching of the team's work efforts-branches are created for activities/tasks, subprojects, roles, and groups.
-- Procedural: branching of the team's work behaviors-branches are created to support various policies, processes, and states.
+Teams create branches for many reasons, which may overlap: Physical, Functional, Environmental, Organizational, and Procedural.
 
 In most cases where you branch, your entire codebase is going to evolve separately in each branch.
 
 Branching may seem like a great way to solve many problems affecting the process of software development on large teams.
 
-However, the need to merge branches makes it crucial to plan branch creation carefully and establish a well-defined process. It's essential to have policies for each branch, specifying its role in the development process and who can contribute to it under what circumstances. For instance, a smaller team may have a mainline open to all developers and a release branch controlled by the testing team. In contrast, larger organizations might have mainlines for components or products, along with integration, release, and maintenance branches managed by operations personnel.
+Merging branches highlights the need of planning and processes for each branch, including policies, roles, and contributor access:
+- A small team may have a mainline open to all developers and a release branch controlled by the testing team.
+- Larger ones might have mainlines for components, plus integration/release/maintenance branches managed by operations.
 
 ------
 ### Merging
-You will reach a point where you need to take the changes you have made in one branch and apply them to another.
-
-Doing this can be very time-consuming, although pretty much every VCS on the market has some functionality to make it easier.
+Merging can be very time-consuming, although pretty much every VCS on the market has some functionality to make it easier.
 
 The real problem arises when two different and conflicting changes have been made in the two branches that you want to merge.
 
-When a long time passes between merges, merge conflicts are often symptoms of conflicting implementations of functionality, leading to rewrites of large chunks of the code in order to harmonize the changes that have occurred in the two branches. So, so conversations to between authors have to happen, perhaps weeks after the code being merged was originally written.
+Long gaps between merges can lead to merge conflicts. Resolving them may require substantial code rewrites and discussions among authors, which may occur weeks after the original code was written.
 
-Semantic conflicts that are not caught by your version control system can be some of the most pernicious.
+Semantic conflicts not detected by version control systems can be especially troublesome.
 
-The longer you leave things before merging the branches, and the more people you have working on them, the more unpleasant your merge is going to be. There are ways of minimizing this pain:
-- Early branching: You could create more branches to reduce the number of changes made to a given branch. For example, you could create a branch every time you start working on a feature. However, this means more work to keep track of all the branches, and you're just delaying the pain of having to do more merges.
-- Deferred branching: You could be parsimonious about creating branches, perhaps creating a branch per release. To minimize the pain of merging, you could merge often, which means the merges will be less unpleasant. However, you have to remember to do it at regular intervals-every day, for example.
+The longer you delay merging and involve more people, the more challenging it becomes.
+
+------
+### Early/Deferred Branching
+Early branching (aka branch early and often):
+  - Create more branches to reduce the number of changes made to a given branch.
+  - For example, create a branch every time you start working on a feature.
+  - However, this means extra work to track all the branches, delaying future merges.
+  - <img src="assets/early-branching.gif">
+
+Deferred branching (aka lazy branching, and late branching):
+  - Be parsimonious about creating branches, perhaps creating a branch per release.
+  - To ease merging, merge frequently. Remember to do it regularly, like daily, for instance.
+  - <img src="assets/deferred-branching.gif">
 
 ------
 ### Branches, Streams, and Continuous Integration
-There is a tension between using branches and continuous integration.
+There is a tension between using branches and CI.
 
-There is a school of thought that any work on a branch is, in the lean sense, waste-inventory that is not being pulled into the finished product.
+Some argue that branch work is waste, in the lean sense, waste-inventory that is not yet used in the final product.
 
-A typical example of poorly controlled branching:
+<table>
+  <tr>
+    <th>Poorly controlled branching</th>
+    <th>More manageable branching</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/poorly-controlled-branching.png" width="700">
+    </td>
+    <td>
+      <img src="assets/release-branching-strategy.png" width="700">
+    </td>
+  </tr>
+</table>
 
-<img src="assets/poorly-controlled-branching.png">
-
-A more manageable branching strategy:
-
-<img src="assets/release-branching-strategy.png">
-
-Things are much, much worse if merges are left until the end of the release. We have seen projects where the integration phase
-began with weeks of trying to resolve merge conflicts and get the application into a state where it could even be run. Only then could the testing phase of the project even get off the ground.
+Things get much worse if merges are postponed until the release's end. In some projects, we've witnessed weeks of conflict resolution and application setup just to begin testing.
 
 ---
 ## Distributed Version Control Systems (DVCS)
-Several powerful open source DVCSs exist, such as Git and Mercurial. In this section, we'll examine what is special about DVCSs and how to use them.
+Several open-source DVCSs, like Git and Mercurial, are available. In this section, we'll explore their unique features and usage.
 
 ------
 ### What Is a Distributed Version Control System?
-In DVCS, each user keeps a self-contained, first-class repository on their computer. There is no need for a privileged "master" repository, although most teams designate one by convention (otherwise it is impossible to do CI):
-- You can start using a DVCS in a few seconds-just install it, and commit your changes into a local repository.
-- You can pull updates individually from other users without them having to check their changes into a central repository.
-- You can push updates to a selected group of users without everyone being forced to take them.
-- Patches can effectively propagate through networks of users, making it much easier to approve or reject individual patches (a practice known as cherry-picking.
-- You can check your changes into source control while you are working offline.
-- You can commit incomplete functionality regularly to your local repository to check point without affecting other users.
-- You can easily modify, reorder, or batch up your commits locally before you send changes to anybody else (this is known as rebasing).
-- It's easy to try out ideas in a local repository without the need to create a branch in a central repository.
-- Due to the ability to batch check-ins locally, the central repository doesn't get hit so often, making DCVSs more scalable.
-- Local proxy repositories are easily established and synchronized, making it easy to provide high availability.
-- Since there are many copies of the full repository, DCVSs are more fault-tolerant, although master repositories should still be backed up.
+In DVCS, each user maintains a standalone repository on their computer, and a conventional central repository is used for CI. It offers:
+- Quick setup: Install it, commit changes locally.
+- Individual updates: Pull changes from others without a central repository.
+- Selective pushes: Share updates with specific users.
+- Efficient patch handling: Propagating patches among users for approval/rejection (aka cherry-picking).
+- Offline work: Commit changes without internet access.
+- Incremental commits: Safely save incomplete work locally without affecting others.
+- Flexible commit management: Rearrange and batching commits (aka rebasing).
+- Easy experimentation: Try ideas without creating a branch in central repos.
+- Scalability: Central repo is less burdened.
+- High availability: Establish and sync local proxy repos.
+- Fault tolerance: Multiple full copies enhance resilience.
 
-If you think that using a DVCS sounds rather like everyone having their own SCCS or RCS, you are right.
+If DVCS feels like everyone having their own SCCS or RCS, that's correct!
 
-This represents a paradigm shift in collaboration. Instead of having to submit their patches to the project owner for committing back to the project’s repository, people can now publish their own version for others to experiment with. This leads to much faster evolution of projects, much more experimentation, and faster delivery of features and bugfixes. If somebody does something clever, other people can and will use it. That means that commit access is no longer a bottleneck to people creating new functionality or fixing bugs.
+------
+### Continued: What Is a Distributed Version Control System?
+It's a paradigm shift. Instead of sending patches to a project owner, people publish their versions for experimentation. This speeds up project evolution and accelerates feature/bugfix delivery. Clever ideas become usable, reducing commit access bottlenecks:
 
-<img src="assets/dvcs-repository-tree.png">
+<img src="assets/dvcs-repository-tree.png" width="900">
 
 ------
 ### A Brief History of Distributed Version Control Systems
-For a number of years, the Linux kernel was developed without the use of source control. Linus Torvalds developed on his own machine and made the source available as tarballs which were rapidly copied to a vast number of systems worldwide. All changes were sent to him as patches, which he could easily apply and back out. As a result, he didn’t need source control-neither for backing up his source code nor to allow multiple users to work on the repository at the same time.
+The Linux kernel was initially developed without source control. Linus Torvalds shared source code as tarballs and received changes as patches.
 
-However, in December 1999, the Linux PowerPC project began using BitKeeper, a proprietary distributed version control system which became available in 1998. Linus began to consider adopting BitKeeper for maintaining the kernel. Eventually, in February 2002, Linus adopted BitKeeper, describing it as "the best tool for the job," despite not being an open source product.
+In December 1999, the Linux PowerPC project adopted BitKeeper, a proprietary DVCS. Linus embraced it in February 2002, despite it not being open source, calling it the best tool. It was the first widely used DVCS, built on SCCS, allowing users to treat changes as first-class objects.
 
-BitKeeper was the first widely used distributed version control system, and it was built on top of SCCS. A layer on top of SCCS which allows users to treat deltas, or changes against a particular revision, as first-class domain objects.
-
-Following BitKeeper, a number of open source DVCS projects started. The first of these was Arch, begun by Tom Lord in 2001. Arch is no longer maintained, and has been superseded by Bazaar.
-
-The most popular and feature-rich of DVCSs are Git (created by Linus Torvalds to maintain the Linux kernel and used by many other projects), Mercurial (used by the Mozilla Foundation, OpenSolaris, and OpenJDK), and Bazaar (used by Ubuntu). Other open source DVCSs under active development include Darcs and Monotone.
+After that, open source DVCS projects emerged. Popular DVCSs include Git (created by Linus Torvalds to maintain the Linux kernel and used by many other projects), Mercurial (by Mozilla, OpenSolaris, and OpenJDK), and Bazaar (by Ubuntu).
 
 ------
-### Git Server on Ubuntu
-You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.org/how-to-setup-git-server-on-ubuntu/))
+### Setup a Remote Git Repository on Ubuntu
+You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.org/how-to-setup-git-server-on-ubuntu/)):
 
 - Installing Git:
 
@@ -157,16 +167,19 @@ You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.
 
 ------
 ### Distributed Version Control Systems in Corporate Environments
-Apart from general conservatism, there are three obvious objections to the use of DVCSs in companies:
-- Unlike centralized version control systems, which only store a single version of the repository on the user’s computer, anyone who makes a copy of the local repository of a DVCS has its entire history.
-- Auditing and workflow are more slippery concepts in the realm of DVCS. Centralized version control systems require users to check all their changes into a central repository. DVCSs allow users to send changes to each other, and even to change history in their local repository, without these changes being tracked in the central system.
-- Git actually does allow you to change history. This may well be a red line in corporate environments subject to regulatory regimes, who will have to back up their repository regularly in order to keep a record of everything that has happened. Although, you can disable it on most Version Control Repository Hosting Platforms (GitLab, GitHub, BitBucket, Azure DevOps, etc.).
+Apart from conservatism, there are some objections to the use of DVCSs in companies:
+- Unlike centralized systems, DVCS stores the entire history with local copies.
+- Auditing and workflow are less defined in DVCS
+  - Centralized systems require users to check changes into a central repository.
+  - In DVCS, users can send changes to each other and alter local history without central tracking.
+- Git actually allows to change history, which can be problematic in regulated corporate environments. 
+  - Although, you can disable it on most VC Repository Hosting Platforms (GitLab, GitHub, BitBucket, Azure DevOps, etc.).
 
-As soon as you designate a central repository, all of the properties of a centralized version control system are available.
+Once a central repository is designated, all of the properties of a centralized version control system are available.
 
 ------
 ### Using Distributed Version Control Systems
-The main difference between distributed and centralized version control systems is that when you commit, you are committing to your local copy of the repository-effectively, to your own branch. In order to share your changes with others, there is an additional set of steps you need to perform. To do this, DVCSs have two new operations: pulling changes from a remote repository and pushing changes to it:
+The key difference between distributed and centralized VCSs is that in DVCS, when you commit, it's to your local copy or branch. To share changes, you must perform two extra actions: pulling changes from a remote repository and pushing changes to it:
 
 <table>
   <tr>
@@ -185,7 +198,7 @@ The main difference between distributed and centralized version control systems 
     </td>
     <td>
       <ol>
-        <li>hg pull - Get the latest updates from the remote repository into your local repository.</li>
+        <li>hg pull - Get the updates from the remote repository into your local one.</li>
         <li>hg co - Update your local working copy from your local repository.</li>
         <li>Write some code.</li>
         <li>hg ci - Save your changes to your local repository.</li>
@@ -199,9 +212,24 @@ The main difference between distributed and centralized version control systems 
   </tr>
 </table>
 
-You can repeat steps 1-8 as many times as you like before executing step 9 to send your changes to the continuous integration build. You can even use a great feature available in Mercurial and Git known as rebasing. You can rebase and send all of your changes to the master repository as a single commit.
+You can repeat steps 1-8 (in DVCs) before moving to step 9 for sending your changes to the CI build. In Mercurial and Git, there's a feature called "rebasing" to consolidate changes into a single commit for the master repository.
 
-<img src="assets/hg-workflow.png">
+------
+### Conitunued: Using Distributed Version Control Systems
+DVCS workflow:
+
+<table>
+  <tr>
+    <td>
+      Mercurial
+      <img src="assets/hg-workflow.png" width="600">
+    </td>
+    <td>
+      Git
+      <img src="assets/git-commands.png">
+    </td>
+  </tr>
+</table>
 
 ---
 ## Stream-Based Version Control Systems
@@ -216,28 +244,28 @@ With stream-based version control, you simply promote the change in your branch 
   <td><img src="assets/stream-based-development-2.png"></td>
 </table>
 
-Making changes to one stream won’t affect any other stream, unless those changes are promoted. Once promoted, they will be visible to every other stream that inherits from the original stream.
+Making changes to one stream won't affect any other stream, unless those changes are promoted. Once promoted, they will be visible to every other stream that inherits from the original stream.
 
 How do you apply that bugfix to all other branches of your code at the same time? Without stream-based tools, the answer is to manually merge it.
 
 One of the problems with the stream model of development is that promotion is done at the source level, not the binary level. As a result, every time you promote a change to a higher stream, you have to check out source and rebuild the binary (this problem also exists with similar branching models such as branch by team).
 
-The Linux kernel development team uses a process (but, using Git and branches) very similar to that described above, but each branch has an owner whose job it is to keep that stream stable, and of course the "release stream" is maintained by Linus Torvalds who is very choosy about what he pulls in to his stream. The way the Linux kernel team works, there is a hierarchy of streams with Linus’ at the top, and changes are pulled by the stream owners, rather than pushed up to them.
+The Linux kernel development team uses a process (but, using Git and branches) very similar to that described above, but each branch has an owner whose job it is to keep that stream stable, and of course the "release stream" is maintained by Linus Torvalds who is very choosy about what he pulls in to his stream. The way the Linux kernel team works, there is a hierarchy of streams with Linus' at the top, and changes are pulled by the stream owners, rather than pushed up to them.
 
 ---
 ## Branching Patterns
-In the following sections, we’ll look at various patterns for branching and merging, their various advantages and disadvantages, and the circumstances under which they are appropriate.
+In the following sections, we'll look at various patterns for branching and merging, their various advantages and disadvantages, and the circumstances under which they are appropriate.
 
 ------
 ### Develop on Mainline
 In this pattern, developers almost always check in to mainline. Branches are used only rarely. The benefits of developing on mainline include:
 - Ensuring that all code is continuously integrated
-- Ensuring developers pick up each others’ changes immediately
+- Ensuring developers pick up each others' changes immediately
 - Avoiding "merge hell" and "integration hell" at the end of the project
 
 ------
 ### Branch for Release
-The one situation when it’s always acceptable to create a branch is shortly before a release. Once the branch is created, testing and validation of the release is done from code on the branch, while new development is performed on mainline.
+The one situation when it's always acceptable to create a branch is shortly before a release. Once the branch is created, testing and validation of the release is done from code on the branch, while new development is performed on mainline.
 
 By creating a release branch, developers can keep checking in to mainline, while changes to the release branch are made for critical bugfixes only:
 
@@ -249,15 +277,15 @@ In this pattern:
 - Only fixes for critical defects are committed on branches, and they are merged into mainline immediately.
 - When you perform an actual release, this branch is optionally tagged.
 
-Once you achieve a certain frequency of releases, around once a week or so, it no longer makes sense to branch for release. In this scenario, it’s cheaper and easier to simply put out a new version of the software instead of patching on the release branch. Instead, your deployment pipeline keeps a record of which releases were performed (along with tagging on released commit), when, and what revision in version control they came from (**Release-Ready** Mainline pattern).
+Once you achieve a certain frequency of releases, around once a week or so, it no longer makes sense to branch for release. In this scenario, it's cheaper and easier to simply put out a new version of the software instead of patching on the release branch. Instead, your deployment pipeline keeps a record of which releases were performed (along with tagging on released commit), when, and what revision in version control they came from (**Release-Ready** Mainline pattern).
 
 ------
 ### Branch by Feature
 In this pattern, every story or feature is developed on a separate branch. Only after a story is accepted by testers, it is merged to mainline so as to ensure that mainline is always releasable.
 
-This pattern is generally motivated by the desire to keep the trunk always releasable, and therefore do all of the development on a branch so you don’t interfere with other developers or teams.
+This pattern is generally motivated by the desire to keep the trunk always releasable, and therefore do all of the development on a branch so you don't interfere with other developers or teams.
 
-Many developers don’t like to have their work exposed and publicly available until they are completely done.
+Many developers don't like to have their work exposed and publicly available until they are completely done.
 
 In addition, it makes version control history more semantically rich if each commit represent a complete feature or a complete bugfix (using Squash merging).
 
@@ -267,7 +295,7 @@ There are some prerequisites for this pattern to work at all, let alone well:
 - The number of active branches that exist at any time must be limited to the number of stories in play. Nobody should start a new branch unless the branch representing their previous story is merged back to mainline.
 - Consider having testers accept stories before they are merged. Only allow developers to merge to trunk once a story has been accepted.
 - Refactorings must be merged immediately to minimize merge conflicts. This constraint is important but can be painful, and further limits the utility of this pattern.
-- Part of the technical lead’s role is to be responsible for keeping the trunk releasable. The tech lead should review all merges, perhaps in patch form. The tech lead has the right to reject patches that may potentially break the trunk.
+- Part of the technical lead's role is to be responsible for keeping the trunk releasable. The tech lead should review all merges, perhaps in patch form. The tech lead has the right to reject patches that may potentially break the trunk.
 
 Open source projects that use GitHub (for example) can achieve large gains in development speed by making it easy for users to branch a repository to add a feature and then make the branch available to a committer to pull from. However, there are some key attributes of open source projects that make them especially suitable for this pattern:
 - Although many people can contribute to them, they are managed by a relatively small team of experienced developers who have the ultimate power to accept or reject patches.
@@ -304,7 +332,7 @@ From a CI perspective, this strategy has this drawback which the unit of work un
 
 The Linux kernel development team uses a version of this pattern, keeping logical branches for different parts of the operating system-the scheduler and the networking stack, for example-in independent repositories.
 
-If merges aren’t sufficiently frequent, this pattern suffers from the same drawback as every pattern where the whole team does not check in directly to trunk: True continuous integration is compromised. For this reason, Kniberg recommends that every team merges to trunk whenever a story is completed, and merges from trunk every day.
+If merges aren't sufficiently frequent, this pattern suffers from the same drawback as every pattern where the whole team does not check in directly to trunk: True continuous integration is compromised. For this reason, Kniberg recommends that every team merges to trunk whenever a story is completed, and merges from trunk every day.
 
 In practice, this pattern is not dissimilar to branch by feature. Its advantage is that there are fewer branches, so integration happens more frequently-at the team level at least. Its disadvantage is that branches diverge much more rapidly, because a whole team is checking in to each branch.
 
