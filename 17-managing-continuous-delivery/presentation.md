@@ -351,9 +351,9 @@ Although almost anything could go wrong with your project, some things are more 
 
 It is usually quite hard to work out what is actually going wrong with your project-all you have is symptoms. When things do go wrong, work out how that could have been spotted early, and ensure that these symptoms are monitored.
 
-Once you have observed the symptoms, you need to discover the root cause. Any given symptom can be a manifestation of a number of possible underlying causes. To do this, we use a technique called “root cause analysis":
-- When confronted with a set of symptoms, simply behave like a small child and repeatedly ask the team, “Why?”
-- It is recommended that you ask “Why?” at least five times.
+Once you have observed the symptoms, you need to discover the root cause. Any given symptom can be a manifestation of a number of possible underlying causes. To do this, we use a technique called "root cause analysis":
+- When confronted with a set of symptoms, simply behave like a small child and repeatedly ask the team, "Why?"
+- It is recommended that you ask "Why?" at least five times.
 
 ------
 ### Infrequent or Buggy Deployments
@@ -395,7 +395,7 @@ Essential causes:
 
 Detailed causes:
 - Testers do not collaborate with developers during development of features.
-- Stories or features are marked as “done” without comprehensive automated tests written, without being signed off by testers, or without being showcased to users from a production-like environment.
+- Stories or features are marked as "done" without comprehensive automated tests written, without being signed off by testers, or without being showcased to users from a production-like environment.
 - Defects are routinely entered into a backlog without being fixed on the spot with an automated test to detect regression problems.
 - The developers or testers don't have sufficient experience developing automated test suites.
 - The team does not understand the most effective types of tests to write for the technology or platform that they are working on.
@@ -450,7 +450,7 @@ Many large companies are required to comply with legally binding regulations tha
 Many such regulatory regimes require audit trails that make it possible to identify, for every change in a production environment, what were the lines of code that it came from, who touched them, and who approved the steps in the process. Such regulations are common in many industries from finance to health care.
 
 Common strategies employed for enforcing these kinds of regulations:
-- Locking down who is able to access “privileged” environments.
+- Locking down who is able to access "privileged" environments.
 - Creating and maintaining an effective and efficient change management process for making changes to privileged environments.
 - Requiring approvals from management before deployments can be performed.
 - Requiring every process, from building to release, to be documented.
@@ -493,7 +493,7 @@ We have promoted open and free communication and collaboration between and withi
 Some regulatory regimes make such cross-functional teams difficult to establish. If you are in a more siloed organization, the processes and techniques described throughout this book—in particular, implementing a deployment pipeline—help to prevent these silos from making the delivery process inefficient. However, the most important solution is communication between silos from the beginning of a project:
 - Everybody involved in the delivery of a project, including somebody from each of the silos, should meet at the beginning of every project. We'll call this group of people the release working group, because their job is to keep the release process working. Their task should be to put together a release strategy for the project.
 - The release working group should meet regularly throughout the project. They should run a retrospective on the project since the last time they met, plan how to improve things, and execute the plan. Use the Deming cycle: plan, do, check, act.
-- Even if it has no users yet, the software should be released as often as pos- sible—this means at least every iteration—to a production-like environment. Some teams practice continuous deployment, which means releasing every change that passes all the stages in your pipeline. This is an application of the principle: “If it hurts, do it more frequently.” We can't stress enough how important this practice is.
+- Even if it has no users yet, the software should be released as often as pos- sible—this means at least every iteration—to a production-like environment. Some teams practice continuous deployment, which means releasing every change that passes all the stages in your pipeline. This is an application of the principle: "If it hurts, do it more frequently." We can't stress enough how important this practice is.
 - Project status and dashboard, should be available to everyone involved in the build, deploy, test, and release process, preferably on big monitors that everybody can see.
 
 ------
@@ -508,7 +508,7 @@ If your organization has a problem meeting its service levels due to uncontrolle
 - Establish an automated change request management system that can be used to raise a change request and manage approvals. Anyone should be able to see the status of each change request and who has approved it.
 - Any time anybody wants to make a change to an environment, whether deploying a new version of an application, creating a new virtual environment, or making a configuration change, it must be done through a change request.
 - Require a remediation strategy, such as the ability to back out, for every change.
-- Have acceptance criteria for the success of a change. Ideally, create an automated test that now fails but will pass once the change is successful. Put an indicator on your operations management dashboard with the status of the test (see the “Behavior-Driven Monitoring” section on page 323).
+- Have acceptance criteria for the success of a change. Ideally, create an automated test that now fails but will pass once the change is successful. Put an indicator on your operations management dashboard with the status of the test (see the "Behavior-Driven Monitoring" section on page 323).
 - Have an automated process for applying changes, so that whenever the change is approved, it can be performed by pressing a button (or clicking a link, or whatever).
 
 Three more principles that should be followed when implementing and managing a change approval process:
