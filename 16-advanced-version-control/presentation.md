@@ -1,9 +1,14 @@
 ## Continuous Delivery: Advanced Version Control
 #### <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies</span>
 
-<img src="assets/gitflow.png" width="650"/>
+<table>
+  <tr>
+    <td><img src="assets/feature-branch-development.webp"></td>
+    <td><img src="assets/trunk-based-development.webp"></td>
+  </tr>
+</table>
 
-<small><strong>Time to Read:</strong> ? Minutes</small>, <small><strong>Time to Present:</strong> ? Minutes</small>
+<small><strong>Time to Read:</strong> 13 Minutes</small>, <small><strong>Time to Present:</strong> 60 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -232,92 +237,138 @@ DVCS workflow:
 </table>
 
 ---
-## Stream-Based Version Control Systems
-Stream-based version control systems such as ClearCase and AccuRev are designed to ameliorate the merge problem by making it possible to apply sets of changes to multiple branches at once.
+## Stream-Based VCSs
+Stream-based VCSs like ClearCase and AccuRev aim to ease merging by allowing applying changes to multiple branches at once.
 
-In the stream paradigm, branches are replaced by the more powerful concept of streams, which have the crucial distinction that they can inherit from each other. Thus, if you apply a change to a given stream, all of its descendent streams will inherit those changes:
+Streams replace branches and can inherit changes. When you modify a stream, all its descendant streams inherit those changes.
 
-With stream-based version control, you simply promote the change in your branch to the common ancestor of all the branches that need the change. Consumers of these branches can then update to get these changes, and create a new build which includes the fix.
+You promote the change in your branch to the common ancestor of branches needing the change. Consumers then update to receive these changes and create a new build with the change.
 
 <table>
-  <td><img src="assets/stream-based-development.png"></td>
+  <td><img src="assets/stream-based-development.png" width="470"></td>
   <td><img src="assets/stream-based-development-2.png"></td>
 </table>
 
-Making changes to one stream won't affect any other stream, unless those changes are promoted. Once promoted, they will be visible to every other stream that inherits from the original stream.
+------
+### Continued: Stream-Based VCSs
+Changes in one stream don't affect other streams until promoted. Once promoted, they become visible to all inheriting streams.
 
-How do you apply that bugfix to all other branches of your code at the same time? Without stream-based tools, the answer is to manually merge it.
+Without stream-based tools, you must merge a bugfix manually to apply it to all other branches simultaneously.
 
-One of the problems with the stream model of development is that promotion is done at the source level, not the binary level. As a result, every time you promote a change to a higher stream, you have to check out source and rebuild the binary (this problem also exists with similar branching models such as branch by team).
+In the stream development model, promotion occurs at the source level, not the binary level. As a result, each promotion requires checking out the source and rebuilding the binary (the problem exists with other branching models like branch by team).
 
-The Linux kernel development team uses a process (but, using Git and branches) very similar to that described above, but each branch has an owner whose job it is to keep that stream stable, and of course the "release stream" is maintained by Linus Torvalds who is very choosy about what he pulls in to his stream. The way the Linux kernel team works, there is a hierarchy of streams with Linus' at the top, and changes are pulled by the stream owners, rather than pushed up to them.
+The Linux kernel developers use a similar process with Git and branches. Each branch has an owner responsible for stability, and Linus Torvalds oversees the "release stream". In this hierarchy, changes are pulled by stream owners, not pushed to them.
+
+<img src="assets/linux-kernel-development-hierarchy-2.ppm" width="800">
 
 ---
-## Branching Patterns
-In the following sections, we'll look at various patterns for branching and merging, their various advantages and disadvantages, and the circumstances under which they are appropriate.
+## Branching/Merging/Integration Patterns
+In this section, we'll explore different branching/merging patterns, their pros and cons, and when to use them.
+
+Some information is from Martin Fowler's highly recommended post on [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html):
+
+<img src="assets/martin-fowler-branching-patterns.png" width="630">
 
 ------
-### Develop on Mainline
-In this pattern, developers almost always check in to mainline. Branches are used only rarely. The benefits of developing on mainline include:
+### Develop on Mainline (aka Mainline Integration)
+In this pattern, developers almost always check in to mainline. Branches are used only rarely. The benefits include:
 - Ensuring that all code is continuously integrated
 - Ensuring developers pick up each others' changes immediately
 - Avoiding "merge hell" and "integration hell" at the end of the project
 
+<img src="assets/mainline-integration-integrate.png">
+
 ------
-### Branch for Release
-The one situation when it's always acceptable to create a branch is shortly before a release. Once the branch is created, testing and validation of the release is done from code on the branch, while new development is performed on mainline.
+### &#9733; Continuous Integration [to Mainline]
+If you the mainline integration continuously, it becomes the **Continuous Integration** pattern:
 
-By creating a release branch, developers can keep checking in to mainline, while changes to the release branch are made for critical bugfixes only:
+> Developers do mainline integration as soon as they have a healthy commit they can share, usually less than a day's work
 
-<img src="assets/release-branching-strategy.png">
+<table>
+  <tr>
+    <td>
+      Low Frequency<br>
+      <img src="assets/low-freq-conflict.png">
+    </td>
+    <td>
+      High Frequency<br>
+      <img src="assets/high-freq-conflict.png">
+    </td>
+  </tr>
+</table>
+
+------
+### Branch for Release (aka Release Branch)
+The time it's okay to create a branch is just before a release. After creating the release branch, testing, validation, and bugfixes of the release is done, while new development continues on the mainline:
+
+<table>
+  <tr>
+    <td><img src="assets/release-branching-strategy.png" width="1000"></td>
+    <td><img src="assets/apply-to-release.png"></td>
+  </tr>
+</table>
 
 In this pattern:
-- Features are always developed on mainline.
-- A branch is created when your code is feature-complete for a particular release and you want to start working on new features.
-- Only fixes for critical defects are committed on branches, and they are merged into mainline immediately.
+- Features are developed on the mainline.
+- A branch is created when code is feature-complete for a release, and work on new features begins.
+- Only critical defect fixes are committed on branches and merged into the mainline right away.
 - When you perform an actual release, this branch is optionally tagged.
 
-Once you achieve a certain frequency of releases, around once a week or so, it no longer makes sense to branch for release. In this scenario, it's cheaper and easier to simply put out a new version of the software instead of patching on the release branch. Instead, your deployment pipeline keeps a record of which releases were performed (along with tagging on released commit), when, and what revision in version control they came from (**Release-Ready** Mainline pattern).
+------
+### &#9733; Release-Ready Mainline (Mixed Mainline and Healthy Branch Patterns)
+With a high release frequency, around once a week, branching for releases may no longer be necessary:
+- Releasing a new software version is cheaper and easier than patching the release branch.
+- The deployment pipeline, with commit tags, tracks release history.
+
+So, keep mainline sufficiently healthy that the head of mainline can always be put directly into production:
+
+<img src="assets/mainline-release.png" width="600">
 
 ------
-### Branch by Feature
-In this pattern, every story or feature is developed on a separate branch. Only after a story is accepted by testers, it is merged to mainline so as to ensure that mainline is always releasable.
+### Branch by Feature (aka Feature Branching)
+An old joke says that if you fall off a tall building, the falling isn't going to hurt you, but the landing will.
 
-This pattern is generally motivated by the desire to keep the trunk always releasable, and therefore do all of the development on a branch so you don't interfere with other developers or teams.
+In this pattern, stories/features are developed on separate branches, and upon passing tests, they merge into the mainline.
 
-Many developers don't like to have their work exposed and publicly available until they are completely done.
+This pattern aims to keep the mainline always releasable, so development occurs on branches to avoid interference with other developers or teams.
 
-In addition, it makes version control history more semantically rich if each commit represent a complete feature or a complete bugfix (using Squash merging).
+Some developers prefer to keep their work private until it's fully completed.
 
-There are some prerequisites for this pattern to work at all, let alone well:
-- Any changes from mainline must be merged onto every branch on a daily basis.
-- Branches must be short-lived, ideally less than a few days, never more than an iteration.
-- The number of active branches that exist at any time must be limited to the number of stories in play. Nobody should start a new branch unless the branch representing their previous story is merged back to mainline.
-- Consider having testers accept stories before they are merged. Only allow developers to merge to trunk once a story has been accepted.
-- Refactorings must be merged immediately to minimize merge conflicts. This constraint is important but can be painful, and further limits the utility of this pattern.
-- Part of the technical lead's role is to be responsible for keeping the trunk releasable. The tech lead should review all merges, perhaps in patch form. The tech lead has the right to reject patches that may potentially break the trunk.
+Additionally, it enriches VC history when each commit represents a whole feature/bugfix (using Squash merging).
 
-Open source projects that use GitHub (for example) can achieve large gains in development speed by making it easy for users to branch a repository to add a feature and then make the branch available to a committer to pull from. However, there are some key attributes of open source projects that make them especially suitable for this pattern:
-- Although many people can contribute to them, they are managed by a relatively small team of experienced developers who have the ultimate power to accept or reject patches.
-- Release dates are relatively flexible, allowing the committers of open source projects a wide degree of latitude in rejecting suboptimal patches. While this can also be true of commercial products, it is not the norm.
+For this pattern to be effective, several prerequisites are essential:
+- Daily merging of mainline changes into all branches.
+- Short-lived branches, ideally lasting a few days, never more than an iteration.
+- Limited active branches, matching the number of ongoing stories.
+- Testing and acceptance of stories before merging.
+- Immediate merging of refactorings to minimize conflicts.
+- The tech lead is responsible for a releasable trunk (by reviewing and rejecting disruptive changes).
 
-Therefore, in the open source world this pattern can be very effective. It can also work for commercial projects where the core development team is small and experienced. It can work in larger projects, but only where the following conditions apply:
-- The codebase is modular and well factored.
-- The delivery team is split into several small teams, each with experienced leaders.
-- The whole team is committed to checking in and integrating with mainline frequently.
-- The delivery team is not subject to unduer pressure to release which might lead to suboptimal decision making.
+------
+### Continued: Branch by Feature (aka Feature Branching)
+Open source projects on platforms like GitHub speed up development through user-created feature branches. This works because:
+- Managed by a small team of experienced developers with authority to accept or reject patches.
+- Flexible release dates, giving committers the freedom to reject suboptimal patches (less common in commercial products).
 
-We have seen even small, experienced, ninja-level agile teams mess this pattern up, so there is little hope for the rest of us. You should always start with the "develop on mainline" pattern and then, if you want to try branching by feature, proceed rigidly according to the rules above.
+This pattern is effective in open-source world and can apply to small, experienced core teams in commercial projects. But, for larger projects, it works when:
+- Codebase is modular and well-structured.
+- Delivery team is divided into small, with experienced leaders.
+- Whole team is committed to frequent mainline integration.
+- The delivery team isn't rushed to release, so they can make better decisions.
+
+Even ninja-level agile teams can struggle with this, so it's better to begin with the "develop on mainline" approach, then, if you want to try branching by feature, stick to the rules.
 
 However, be aware that you are "running with scissors" when you adopt this pattern.
 
+<img src="assets/running-with-scissors.png" width="200">
+
 ------
-### Branch by Team
-This pattern is an attempt to address the problem of having **a large team of developers** working on multiple work streams while still maintaining a mainline that can always be released (similar to branch by feature pattern).
+### Branch by Team (aka Team Integration Branch)
+This pattern tackles the issue of managing a large developer team across multiple work streams while maintaining a releasable mainline (like branch by feature pattern).
 
-A branch is created for every team, and merged into trunk only when the branch is stable. Every merge to any given branch should immediately be pulled into every other branch:
+Branches are created for teams, merging into the trunk only when stable. Merges to one branch should promptly update all others:
 
-<img src="assets/branch-by-team.png">
+<img src="assets/branch-by-team.png" width="800">
 
 Here is the workflow for branching by team:
 1. Create small teams, each working on its own branch.
@@ -326,43 +377,59 @@ Here is the workflow for branching by team:
 4. Unit and acceptance tests are run on every check-in on the branch.
 5. All tests, including integration tests, are run on trunk every time a branch is merged into it.
 
-This pattern works when you have several small, relatively independent teams working on functionally independent areas of the system. Crucially, every branch needs to have an owner responsible for defining and maintaining its policy, including governing who checks in to the branch.
+------
+### Continued: Branch by Team (aka Team Integration Branch)
+This pattern is effective when multiple small, relatively independent teams work on separate areas of the system. Each branch should have an owner responsible for setting and managing its policies, including controlling who can check in to the branch.
 
-From a CI perspective, this strategy has this drawback which the unit of work under this strategy is scoped to a whole branch, not just a particular change.
+From a CI perspective, this approach's drawback is that the unit of work is an entire branch, not just an individual change.
 
-The Linux kernel development team uses a version of this pattern, keeping logical branches for different parts of the operating system-the scheduler and the networking stack, for example-in independent repositories.
+The Linux kernel team uses this pattern; separate repositories (logical branches) for various parts (e.g. scheduler and networking).
 
-If merges aren't sufficiently frequent, this pattern suffers from the same drawback as every pattern where the whole team does not check in directly to trunk: True continuous integration is compromised. For this reason, Kniberg recommends that every team merges to trunk whenever a story is completed, and merges from trunk every day.
+Infrequent merges can affect this pattern, compromising CI. So, teams should merge to the trunk after each story and daily from it.
 
-In practice, this pattern is not dissimilar to branch by feature. Its advantage is that there are fewer branches, so integration happens more frequently-at the team level at least. Its disadvantage is that branches diverge much more rapidly, because a whole team is checking in to each branch.
+In practice, this pattern is like branch by feature but with:
+- +Pros: There are fewer branches, so integration happens more frequently-at the team level at least.
+- -Cons: Brranches diverge much more rapidly, because a whole team is checking in to each branch.
 
 ------
-### Other Branching Patterns
-This section and the whole next sections are retrieved from Martin Fowler post about [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html). It's very valuable to read it.
-
-Some branching patterns:
-
-- Maturity Branch
+### Other Patterns
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Maturity Branch
   - A branch whose head marks the latest version of a level of maturity of the code base.
-- Environment Branch
+  - <table>
+      <tr>
+        <td><img src="assets/production-branch.png"></td>
+        <td>
+          Variation: Long Lived Release Branch<br>
+          <img src="assets/long-running-release.png">
+        </td>
+      </tr>
+    </table>
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Environment Branch
   - Configure a product to run in a new environment by applying a source code commit.
-- Hotfix Branch
+  - <table>
+      <tr>
+        <td><img src="assets/environment-branch.png"></td>
+        <td><img src="assets/environments-branch-3.png"></td>
+      </tr>
+    </table>
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Hotfix Branch
   - A branch to capture work to fix an urgent production defect.
-- Experimental Branch
+  - <img src="assets/hotfix-branch.png">
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Experimental Branch
   - Collects together experimental work on a code base, that's not expected to be merged directly into the product.
-- Future Branch
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Future Branch
   - A single branch used for changes that are too invasive to be handled with other approaches.
-- Collabration Branch
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Collabration Branch
   - A branch created for a developer to share work with other members of the team without formal integration.
-- Team Integration Branch
-  - Allow a sub-team to integrate with each other, before integrating with mainline.
-
-Some other patterns:
-- Realease-Ready Mainline
-  - Keep mainline sufficiently healthy that the head of mainline can always be put directly into production
-  - <img src="assets/mainline-release.png">
-- Pre-Integration Review
+  - A collaboration branch is usually temporary and closed off once the work in integrated into mainline.
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Pre-Integration Review
   - Every commit to mainline is peer-reviewed before the commit is accepted.
+
+------
+### SCM Patterns Perspective
+Some of SCM patterns and their relationships (from [here](https://www.bradapp.com/acme/branching/scm-pats-intro.html)):
+
+<img src="assets/scm-patterns.gif" width="600">
 
 ---
 ## Popular Branching Policies
@@ -374,38 +441,37 @@ Lots of branching approaches have been described over the years. But, there are 
 
 ------
 ### Gitflow
-Gitflow has become one of the most common branching policies which was written by Vincent Driessen in 2010.
+[Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) has become one of the most common branching policies which was written by Vincent Driessen in 2010.
 
-Gitflow uses **Mainline**, (calling it “develop”) in a single "origin" repository. It uses **Feature Branching** to coordinate multiple developers. Developers are encouraged to use their personal repositories as **Collaboration Branch** to coordinate with other developers working in similar work.
+Gitflow uses **Mainline** (referred to as "develop") in a single "origin" repository, **Feature Branching** to coordinate developers, and encourages personal repositories as **Collaboration Branches** for coordination on similar work.
 
-The traditionally named core branch of git is "master", in git-flow, master is used as a Production **Maturity Branch**. Gitflow uses a **Release Branch** so that work passes from "develop" through the release branch to "master". Hotfixes are organized through a Hotfix Branch.
+In traditional Git, the core branch is named "master". In Gitflow, "master" serves as a Production **Maturity Branch**. Gitflow also uses a **Release Branch** for transitioning work from "develop" to "master". Hotfixes are managed through **Hotfix Branch**es.
 
-Gitflow doesn't say anything about the length of feature branches, hence nor the expected integration frequency. It's also silent on whether mainline should be a Healthy Branch and if so what level of health is needed. The presence of release branches implies it isn't a Release-Ready Mainline.
+Gitflow doesn't specify feature branch length or integration frequency. It doesn't specify if the mainline should be a **Healthy Branch** or not. The presence of release branches suggests it **isn't** a **Release-Ready Mainline**.
 
 <img src="assets/gitflow.png">
 
 ------
 ### GitHub Flow
-It's common to find people who say they are using gitflow are actually doing something quite different. Often their actual approach is closer to GitHub Flow.
+Many who claim to use Gitflow often follow a different approach. In reality, their practice aligns more closely with GitHub Flow.
 
-GitHub Flow assumes a single version in production with high-frequency integration onto a **Release-Ready Mainline**. With that context, **Release Branch** isn't needed. Production issues are fixed in the same way as regular features, so there's no need for **Hotfix Branch**.
+GitHub Flow assumes one version in production, frequently integrating onto a **Release-Ready Mainline**. The **Release Branch** and **Hotfix Branch** are **unnecessary** and the production issues are fixed in the same way as regular features.
 
 <img src="assets/github-flow.png">
 
-Being GitHub, the pull-request mechanism is part of Mainline Integration and uses **Pre-Integration Review**.
+In GitHub, the pull-request mechanism is a part of **Mainline Integration**, involving **Pre-Integration Review**.
 
 ---
 ## Summary
-Effective control of the assets that you create and depend upon in the course of software development is essential for the success of a project of any size.
+Controlling assets in software development is crucial for project success, regardless of its size.
 
-The reason we spend so much time on this arguably tangential topic is twofold:
-- Version control patterns are central to the way you design your deployment pipeline.
-- It has been our experience that poor version control practices are one of the most common barriers to fast, low-risk releases.
+We focus on version control patterns for two reasons:
+1. They are integral to designing your deployment pipeline.
+2. Poor version control practices often hinder fast, low-risk releases.
 
-We have spent some time comparing different version control system paradigms:
+We've invested time in comparing various version control system paradigms:
 - Centralized model
 - Distributed model
 - Stream-based model
 
-There is a fundamental tension between the desire for continuous integration and the desire to branch. Every time you make a decision to branch in a CI-based development system, you compromise to some degree.
->>>>>>> 48716bf1dc0f64621e230246acd1706655720440
+There's a fundamental tension between CI and branching. Each branching decision involves some compromise.
