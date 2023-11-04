@@ -1,9 +1,9 @@
 ## Continuous Delivery: Managing Continuous Delivery
-#### Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
+#### Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes), Compliance and Auditing
 
 <img src="assets/cd-pipeline.png"/>
 
-<small><strong>Time to Read:</strong> ? Minutes</small>, <small><strong>Time to Present:</strong> ? Minutes</small>
+<small><strong>Time to Read:</strong> 15 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
 <small><strong>Created By:</strong> Alireza Roshanzamir</small>
 <br>
@@ -347,60 +347,66 @@ To analyze a project effectively, consider these questions (this list has worked
 
 ---
 ## Common Delivery Problems - Symptoms and Causes
-Although almost anything could go wrong with your project, some things are more likely to go wrong than others.
+While anything can go wrong with your project, some issues are more probable than others.
 
-It is usually quite hard to work out what is actually going wrong with your project-all you have is symptoms. When things do go wrong, work out how that could have been spotted early, and ensure that these symptoms are monitored.
+Identifying what's truly wrong with your project can be challenging, as you may only have symptoms.
 
-Once you have observed the symptoms, you need to discover the root cause. Any given symptom can be a manifestation of a number of possible underlying causes. To do this, we use a technique called "root cause analysis":
-- When confronted with a set of symptoms, simply behave like a small child and repeatedly ask the team, "Why?"
-- It is recommended that you ask "Why?" at least five times.
+After noticing symptoms, find the root cause. Symptoms can have multiple underlying causes. We use "root cause analysis" for this:
+- When faced with symptoms, act like a child and keep asking the team, "Why?"
+- It's advised to ask "Why?" at least five times.
 
 ------
 ### Infrequent or Buggy Deployments
 It takes a long time to deploy the build, and the deployment process is brittle.
 
-Symptomps:
-- It takes a long time for bugs to be closed by testers. Note that this symptom may not be exclusively caused by infrequent deployments, but it is one possible root cause.
-- It takes a long time for stories to be tested or signed off by the customer.
-- Testers are finding bugs that developers fixed a long time ago.
-- Nobody trusts the UAT, performance, or CI environments, and people are skeptical as to when a release will be available.
-- Showcases rarely happen.
-- The application can rarely be demonstrated to be working.
-- The team's velocity (rate of progress) is slower than expected.
+Symptoms:
+- Slow bug resolution by testers, possibly due to infrequent deployments.
+- Delayed testing and customer sign-off for stories.
+- Testers finding old already fixed bugs.
+- Lack of trust in UAT, performance, and CI environments, leading to skepticism about release dates.
+- Infrequent showcases.
+- Rare [truely] working application.
+- Slower team progress than expected.
 
 Common causes:
-- The deployment process is not automated.
-- There is not enough hardware available.
-- The hardware and operating system's configuration are not managed correctly.
-- The deployment process depends on systems outside the team's control.
-- Not enough people understand the build and deployment process.
-- Testers, developers, analysts, and operations personnel are not collaborating sufficiently during development.
-- Developers are not being disciplined about keeping the application working by making small, incremental changes, and so frequently break existing functionality.
+- Manual deployment process.
+- Insufficient hardware resources.
+- Mismanaged hardware and OS configurations.
+- External (outside of team's control) dependencies in deployment.
+- Lack of understanding of the build and deployment process.
+- Insufficient collaboration among team members.
+- Developers lacking discipline in making small, incremental changes, leading to frequent functionality issues.
 
 ------
 ### Poor Application Quality
 Delivery teams are failing to implement an effective testing strategy.
 
 Symptoms:
-- Regression bugs keep popping up.
-- The number of defects keeps increasing even when your team spends most of its time fixing them (of course this symptom will only be manifested if you have an effective testing process).
-- Customers complain of a poor-quality product.
-- Developers groan and look horrified whenever a new feature request arrives.
-- Developers complain about the maintainability of the code, but nothing ever gets better.
-- It takes an ever-increasing amount of time to implement new functionality, and the team starts falling behind.
+- Frequent regression bugs and increasing defects despite extensive time spent fixing them.
+- Customer complaints about product quality.
+- Developers' reluctance to new feature requests.
+- Persistent code maintainability complaints.
+- Increases in the time required to implement new functionality, causing the team to fall behind.
 
 Essential causes:
-- Ineffective collaboration between testers and the rest of the delivery team
-- Poorly implemented or inadequate automated tests
+- Poor collaboration between testers and the rest of delivery team.
+- Inadequate or poorly executed automated tests.
 
 Detailed causes:
-- Testers do not collaborate with developers during development of features.
-- Stories or features are marked as "done" without comprehensive automated tests written, without being signed off by testers, or without being showcased to users from a production-like environment.
+- Lack of collaboration between testers and developers during feature development.
+- Stories marked "done" without full automated tests, tester approval, or user showcasing in a production-like environment.
+- Defects are routinely entered into a backlog without automated test-driven fixes.
+- Inadequate experience in developing automated test suites among developers and testers.
+- Lack of understanding about effective test types for the technology or platform.
+- Insufficient test coverage due to project management time constraints.
+- The system is considered a prototype (some systems initially developed as prototypes and never abandoned).
+
+Detailed causes:
 - Defects are routinely entered into a backlog without being fixed on the spot with an automated test to detect regression problems.
 - The developers or testers don't have sufficient experience developing automated test suites.
 - The team does not understand the most effective types of tests to write for the technology or platform that they are working on.
 - The developers are working without sufficient test coverage, perhaps because their project management doesn't allow them time to implement automated testing.
-- The system is a prototype that will be discarded (though we have come across a few important production systems that were originally developed as prototypes but were never discarded).
+- The system is considered a prototype (we've encountered systems that were developed as prototypes and never abandoned).
 
 ------
 ### Poorly Managed Continuous Integration Process
@@ -441,80 +447,78 @@ incidents.
 - Insufficient instrumentation and logging built into applications.
 - Insufficient testing of the nonfunctional requirements of applications.
 
-------
-### Compliance and Auditing
+---
+## Compliance and Auditing
 Many large companies are required to comply with legally binding regulations that govern their industry:
-- US health care companies -> HIPPA
-- Systems that deal with credit card information -> PCI DSS Standard
+- US health care companies &rArr; HIPPA
+- Systems that deal with credit card information &rArr; PCI DSS Standard
 
-Many such regulatory regimes require audit trails that make it possible to identify, for every change in a production environment, what were the lines of code that it came from, who touched them, and who approved the steps in the process. Such regulations are common in many industries from finance to health care.
+Regulatory rules often need audit trails to track code changes in production, including code origins, contributors, and approval. They are common across various industries like finance and healthcare.
 
-Common strategies employed for enforcing these kinds of regulations:
+Common strategies for enforcing these regulations include:
 - Locking down who is able to access "privileged" environments.
-- Creating and maintaining an effective and efficient change management process for making changes to privileged environments.
+- Establishing an efficient change management process for privileged environments.
 - Requiring approvals from management before deployments can be performed.
 - Requiring every process, from building to release, to be documented.
-- Creating authorization barriers to ensure that the people who create the software are not able to deploy it into production environments, as a protection against potential malicious interventions.
-- Requiring every deployment to be audited to see exactly what changes are being made.
+- Set authorization barriers to prevent unauthorized software deployment.
+- Audit every deployment to track changes accurately.
 
-Deployment pipeline makes it possible to enforce these strategies fairly easily while enabling an efficient delivery process.
+Deployment pipeline simplifies enforcing these strategies while enabling an efficient delivery process.
 
-In this section, we present some principles and practices to ensure compliance with such regulatory regimes while maintaining short cycle times.
+This section outlines principles and practices for regulatory compliance with short cycle times.
 
 ------
 ### Automation over Documentation
 A piece of paper that says you did something in a certain way is no guarantee that you actually did that thing.
 
-Documentation also has a nasty habit of going out of date. The more detailed a document is, the more quickly it is likely to go out of date. When it does so, people don't usually bother to update it.
+Documentation can become outdated, especially when it's overly detailed. When that happens, people often neglect to update it.
 
 Typical Dev and Ops conversation:
 - Operator:
   - I followed the deployment process you emailed me last month, but it doesn't work.
 - Developer:
   - Oh, we changed the way deployment works. You need to copy this new set of files over and set permission x.
-  - Or, That's strange, let me take a look . . .
+  - Or, That's strange, let me take a look ...
 
-Automation solves all of these problems. Automated scripts are the documentation of your processes that must work. By enforcing their use, you ensure both that they are up-to-date and that the process has been performed precisely as you intend.
+Automated scripts tackle these issues, serving as up-to-date, and precise process documentation that must function correctly.
 
 ------
 ### Enforcing Traceability
-It is often necessary to be able to trace the history of changes, from what is in production to the source control versions that produced it:
+Tracing change history from production to source control versions is often necessary.
 
-Practices:
-- Only create binaries once, and deploy the same binaries into production that you created in the first stage of your build process. You can ensure that the binaries are the same by taking a hash of them (using MD5 or SHA1, for example), and storing them in a secure database. Many tools will do this for you automatically.
-- Use a fully automated process to take your binaries through the deployment, test, and release process which records who did what when. Again, there are several tools on the market that can help with this.
+Best practices:
+- Create binaries only once and deploy the same ones in production, ensuring their integrity by hashing.
+- Create an automated process for testing and deploying (releasing) binaries while maintaining records of who did what when.
 
 ------
 ### Working in Silos
-It is often the case that large organizations have separate departments for different functions and independent teams for development, test, operations, configuration management, architecture, and data management.
+Large organizations may have separate teams/departments for development, testing, operations, architecture, and data.
 
-We have promoted open and free communication and collaboration between and within teams, however, there are some responsibilities that should clearly belong in one group and not another. In regulated environments, many important activities are subject to review by auditors and security teams, whose job it is to ensure that the organization is not exposed to legal risks or security breaches of any kind.
+We promote open communication and collaboration, but some responsibilities must be clearly assigned to specific groups. In regulated environments, some tasks should be reviewed by auditors and security teams to avoid legal issues and breaches.
 
-Some regulatory regimes make such cross-functional teams difficult to establish. If you are in a more siloed organization, the processes and techniques described throughout this book—in particular, implementing a deployment pipeline—help to prevent these silos from making the delivery process inefficient. However, the most important solution is communication between silos from the beginning of a project:
-- Everybody involved in the delivery of a project, including somebody from each of the silos, should meet at the beginning of every project. We'll call this group of people the release working group, because their job is to keep the release process working. Their task should be to put together a release strategy for the project.
-- The release working group should meet regularly throughout the project. They should run a retrospective on the project since the last time they met, plan how to improve things, and execute the plan. Use the Deming cycle: plan, do, check, act.
-- Even if it has no users yet, the software should be released as often as pos- sible—this means at least every iteration—to a production-like environment. Some teams practice continuous deployment, which means releasing every change that passes all the stages in your pipeline. This is an application of the principle: "If it hurts, do it more frequently." We can't stress enough how important this practice is.
-- Project status and dashboard, should be available to everyone involved in the build, deploy, test, and release process, preferably on big monitors that everybody can see.
+Some regulatory regimes make such cross-functional teams difficult to establish. In such siloed organizations, methods like a deployment pipeline can prevent delivery inefficiencies. Still, the key solution is early communication among these silos:
+- At the project's start, all stakeholders from various departments should gather to form the "release working group", shaping the project's release strategy.
+- The release working group should meet regularly during the project, holding retrospectives, planning, and implementing using the PDCA cycle.
+- Even if it has no users yet, release software frequently. This follows the principle: "If it hurts, do it more often".
+- Provide project status and a dashboard to all teams members, ideally displayed on large monitors.
 
 ------
 ### Change Management
-In regulated environments, it is often essential for parts of the build, deploy, test, and release process to require approval.
+In regulated environments, approval is often required for parts of the build, deploy, test, and release process.
 
-In particular, manual testing environments, staging, and production should always be under strict access control so that changes to them can only be made through the organization's change management process. This may seem unnecessarily bureaucratic, but in fact research has demonstrated that organizations which do this have lower mean time between failures (MTBF) and mean time to repair (MTTR).
+Specifically, UAT, staging, and production environments need strict access control via the organization's change management process. It seems bureaucratic, but research shows it reduce mean time between failures (MTBF) and mean time to repair (MTTR).
 
-If your organization has a problem meeting its service levels due to uncontrolled changes to testing and production environments, we suggest the following process for managing approvals:
-- Create a Change Advisory Board with representatives from your development team, operations team, security team, change management team, and the business.
-- Decide which environments fall under the purview of the change management process. Ensure that these environments are access-controlled so that changes can only be made through this process.
-- Establish an automated change request management system that can be used to raise a change request and manage approvals. Anyone should be able to see the status of each change request and who has approved it.
-- Any time anybody wants to make a change to an environment, whether deploying a new version of an application, creating a new virtual environment, or making a configuration change, it must be done through a change request.
+If your organization faces service level issues from uncontrolled production environment changes, consider this approval process:
+- Form a Change Advisory Board (CAB) with members from all stakeholder teams (e.g development, security, and business).
+- Define the environments governed by the change management process, ensuring strict access control.
+- Implement an automated change request management system for raising and tracking change requests, visible to all.
+- Require all changes, from deploying new applications to configuration adjustments, to go through a change request.
 - Require a remediation strategy, such as the ability to back out, for every change.
-- Have acceptance criteria for the success of a change. Ideally, create an automated test that now fails but will pass once the change is successful. Put an indicator on your operations management dashboard with the status of the test (see the "Behavior-Driven Monitoring" section on page 323).
-- Have an automated process for applying changes, so that whenever the change is approved, it can be performed by pressing a button (or clicking a link, or whatever).
-
-Three more principles that should be followed when implementing and managing a change approval process:
-- Keep metrics on the system and make them visible. How long does it take for a change to be approved? How many changes are waiting for approval? What proportion of changes are denied?
-- Keep metrics that validate the success of the system and make them visible. What's the MTBF and MTTR? What is the cycle time for a change? There is a more complete list of metrics defined in the ITIL literature.
-- Hold regular retrospectives on the system, inviting representatives from each of your organization's units, and work to improve the system based on feedback from these retrospectives.
+- Set success criteria for changes, ideally with an automated test that initially fails, then passes after the change (see Behavior-Driven Monitoring).
+- Have an automated process for applying changes, enabling approved changes to be applied with a simple button press.
+- Maintain and display metrics on the system, including approval duration, pending changes, and denial rates.
+- Track and make visible success-validation metrics, such as MTBF, MTTR, and change cycle time, as defined in ITIL literature.
+- Hold regular retrospectives with representatives from all units to enhance the system based on their feedback.
 
 ---
 ## Summary
