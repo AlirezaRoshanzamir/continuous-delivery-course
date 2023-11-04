@@ -349,7 +349,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 ------
 ### Branch by Feature (aka Feature Branching)
-<img src="assets/falling-down-joke-meme.gif" class="fragment start">
+<img src="assets/falling-down-joke-meme.jpg" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->In this pattern, **stories/features** are developed on **separate branches**, and upon passing tests, they **merge into the mainline**.
 
