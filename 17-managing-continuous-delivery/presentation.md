@@ -231,7 +231,7 @@ Software projects vary, but common elements can be abstracted.
 
 ------
 ### Initiation
-<img src="assets/initiation-.png" width="700" class="fragment end">
+<img src="assets/initiation-meme.png" width="700" class="fragment end">
 
 &shy;<!-- .element: class="fragment fade-in-with-next" -->In this phase, set up the **initial project infrastructure**, which usually takes **one or two weeks**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensuring the team has the necessary hardware and software.
