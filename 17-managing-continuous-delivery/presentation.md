@@ -196,7 +196,7 @@ Software projects vary, but common elements can be abstracted.
 ### Identification
 <img src="assets/identification-meme.jpg" width="700" class="fragment end">
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->Medium and large organizations have a **governance strategy**. They define **strategic objectives**, identify **programs** to achieve them, and break these programs into **projects**:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Medium and large organizations have a **governance strategy**. They define **strategic objectives**, identify **programs** to achieve them, and break these programs into **projects**:
 
 <img src="assets/strategy-program-project.jpg">
 
@@ -236,7 +236,7 @@ Software projects vary, but common elements can be abstracted.
 ### Initiation
 <img src="assets/initiation-meme.png" width="700" class="fragment end">
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->In this phase, set up the **initial project infrastructure**, which usually takes **one or two weeks**:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->In this phase, set up the **initial project infrastructure**, which usually takes **one or two weeks**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensuring the team has the necessary hardware and software.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Establishing basic infrastructure: internet connection, whiteboard, supplies, printer, food, and drinks.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Creating email accounts and granting resource access permissions.
@@ -279,7 +279,7 @@ There are various iterative incremental methodologies, with **Scrum** being a po
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Ignoring good engineering**: Neglecting technical practices like TDD, refactoring, and CI can lead to issues. Scrum alone can't fix a poorly managed codebase.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Adapting until the process is no longer an agile one**: People may modify agile processes for their organization but unintentionally lose their agility. Start by the original process before adapting it to your organization.
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->This last point was so troubling that **Nokia** created a **test to check** if their teams were **truly following Scrum**:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->This last point was so troubling that **Nokia** created a **test to check** if their teams were **truly following Scrum**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Are you doing **iterative development**?
   - Iterations must be time-boxed to less than four weeks.
   - Software features must be tested and working at the end of each iteration.
@@ -352,7 +352,7 @@ In terms of the **project lifecycle** model, the risk management process should:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Showcasing working software** in a production-like environment at the end of each iteration is a clear sign of progress.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Team velocity**, gauging code production and deployment speed, reliably reflects progress, regardless of estimate accuracy.
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->To **analyze a project** effectively, consider these questions (this list has worked well on **several** projects):
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->To **analyze a project** effectively, consider these questions (this list has worked well on **several** projects):
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->How are you **tracking progress**?
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->How are you **preventing, discovering, and tracking defects**?
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->How do you know a **story is finished**?
@@ -372,7 +372,7 @@ While anything can go wrong with your project, **some issues are more probable**
 
 &shy;<!-- .element: class="fragment fade-in" -->Identifying what's **truly wrong** with your project can be challenging, as you may **only have symptoms**.
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->After noticing symptoms, perform **"root cause analysis"** to find underlying causes;
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->After noticing symptoms, perform **"root cause analysis"** to find underlying causes;
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->When faced with symptoms, act like a child and **keep asking the team, "Why?"**
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->It's advised to ask "Why?" **at least five times**.
 

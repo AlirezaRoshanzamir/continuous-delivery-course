@@ -548,7 +548,7 @@ Usually, components should have **binary rather than source-level dependencies**
 ## Summary
 <img src="assets/summary-meme.jpeg" class="fragment start">
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->The principle is to ensure teams get **fast feedback** on the **effect of their changes** on the **production-readiness of the application**:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->The principle is to ensure teams get **fast feedback** on the **effect of their changes** on the **production-readiness of the application**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensure **every change** is **broken down into small**, **incremental steps** which are checked into mainline.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Break** your application down into **components**.
 
