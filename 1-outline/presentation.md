@@ -263,7 +263,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Database Scripting, Incremental Change, Rolling Back Databases and Zero-Downtime Releases, Managing Test Data, Data Management and the Deployment Pipeline
             </small>
         </td>
-        <td>45'</td>
+        <td>50'</td>
     </tr>
     <tr>
         <td>
@@ -273,17 +273,17 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Keeping Application Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
             </small>
         </td>
-        <td>45'</td>
+        <td>75'</td>
     </tr>
     <tr>
         <td>
             Advanced Version Control
             <br>
             <small>
-                <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies</span>
+                <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies (Gitflow, GitHub Flow, Trunk-Based Development)</span>
             </small>
         </td>
-        <td>45'</td>
+        <td>60'</td>
     </tr>
     <tr>
         <td>
@@ -293,6 +293,6 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
                 Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
             </small>
         </td>
-        <td>60'</td>
+        <td>75'</td>
     </tr>
 </table>
