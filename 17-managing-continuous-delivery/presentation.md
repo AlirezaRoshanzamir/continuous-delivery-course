@@ -1,7 +1,7 @@
 ## Continuous Delivery: Managing Continuous Delivery
 #### Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes), Compliance and Auditing
 
-<img src="assets/cd-pipeline.png"/>
+<img src="assets/cd-pipeline.webp"/>
 
 <small><strong>Time to Read:</strong> 15 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
@@ -22,8 +22,8 @@ This chapter guides **implementing CD** in your organization.
 
 <table>
   <tr>
-    <td><img src="assets/corporate-governance.jpg"></td>
-    <td><img src="assets/conformance-performance-tradeoff.png"></td>
+    <td><img src="assets/corporate-governance.webp"></td>
+    <td><img src="assets/conformance-performance-tradeoff.webp"></td>
   </tr>
 </table>
 
@@ -55,13 +55,13 @@ When discussing **governance**, having a clear view of **organizational change o
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Check**: Evaluate and measure the results to determine if they align with the goals.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Act (Adjust)**: Take corrective actions based on the evaluation to improve the process.
 
-<img src="assets/pdca-process.png">
+<img src="assets/pdca-process.webp">
 
 ------
 ### Jez Humble Maturity Model
-<img src="assets/jez-humble-maturity-levels-meme.jpeg" class="fragment start">
+<img src="assets/jez-humble-maturity-levels-meme.webp" class="fragment start">
 
-<img src="assets/jez-humble-maturity-model.png" class="fragment fade-in">
+<img src="assets/jez-humble-maturity-model.webp" class="fragment fade-in">
 
 &shy;<!-- .element: class="fragment fade-in" -->The main advice is to **make incremental changes** and **measure their impact**. Attempting a full transition from **level -1 to level 3** across the organization at once can **lead to failure**. Changing large organizations **takes years**.
 
@@ -84,7 +84,7 @@ When discussing **governance**, having a clear view of **organizational change o
 
 ------
 ### Continued: Qualitic Maturity Model (QMM)
-<img src="assets/qmm-levels-meme.jpg" class="fragment start">
+<img src="assets/qmm-levels-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Items are categorized as **T**est, **E**nvironment, **B**uild/CI, or **D**elivery (Deployment Frequency, Lead Time, Time to Restore, Change Failure Rate):
 - <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 1 (test cov., scripts in VCS, no red tests)
@@ -144,13 +144,13 @@ When discussing **governance**, having a clear view of **organizational change o
 
 ------
 ### Google Test Certified Ladder (TC Ladder)
-<img src="assets/tc-ladder-levels-meme.jpeg" width="430" class="fragment start">
+<img src="assets/tc-ladder-levels-meme.webp" width="430" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->The [Test Certified](https://mike-bland.com/2011/10/18/test-certified) program was instrumental in getting the **developer-testing culture** ingrained at **Google**.
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Test Certified began as a **contest** to **encourage developers to value testing**. By recognizing those who adopt effective practices and attain notable results, we established a "certified" status with a **badge system**, allowing them to showcase their achievements:
 
-<img src="assets/test-certified-badges.png" width="600">
+<img src="assets/test-certified-badges.webp" width="600">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Levels:
 - <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 1
@@ -182,7 +182,7 @@ When discussing **governance**, having a clear view of **organizational change o
   - Total test coverage should be at least 60%.
   - Test coverage from small tests alone should be at least 40%.
 
-<img src="assets/badges-meme.jpeg" class="fragment end">
+<img src="assets/badges-meme.webp" class="fragment end">
 
 ---
 ## Project Lifecycle
@@ -190,15 +190,15 @@ Software projects vary, but common elements can be abstracted.
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Every piece of software goes through several phases:
 
-<img src="assets/project-lifecycle.png">
+<img src="assets/project-lifecycle.webp">
 
 ------
 ### Identification
-<img src="assets/identification-meme.jpg" width="700" class="fragment end">
+<img src="assets/identification-meme.webp" width="700" class="fragment end">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Medium and large organizations have a **governance strategy**. They define **strategic objectives**, identify **programs** to achieve them, and break these programs into **projects**:
 
-<img src="assets/strategy-program-project.jpg">
+<img src="assets/strategy-program-project.webp">
 
 &shy;<!-- .element: class="fragment fade-in" -->Before gathering requirements, it's crucial to have a **list of stakeholders**, with the **business sponsor** being the most important.
 
@@ -211,7 +211,7 @@ Software projects vary, but common elements can be abstracted.
 
 ------
 ### Inception
-<img src="assets/inception-meme.jpg" class="fragment end">
+<img src="assets/inception-meme.webp" class="fragment end">
 
 &shy;<!-- .element: class="fragment fade-in" -->This phase comes **before coding**. It includes **gathering and analyzing requirements** and **loose scoping and planning** (with a **3 to 6 months horizon**). After inception, we decide whether to **continue or not** (based on project value, costs, and risks).
 
@@ -234,7 +234,7 @@ Software projects vary, but common elements can be abstracted.
 
 ------
 ### Initiation
-<img src="assets/initiation-meme.png" width="700" class="fragment end">
+<img src="assets/initiation-meme.webp" width="700" class="fragment end">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->In this phase, set up the **initial project infrastructure**, which usually takes **one or two weeks**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensuring the team has the necessary hardware and software.
@@ -292,7 +292,7 @@ There are various iterative incremental methodologies, with **Scrum** being a po
 
 ------
 ### Operation
-<img src="assets/operation-meme.jpg" class="fragment end">
+<img src="assets/operation-meme.webp" class="fragment end">
 
 &shy;<!-- .element: class="fragment fade-in" -->Most projects **don't stop after the first release** and keep adding new features.
 
@@ -315,7 +315,7 @@ Risk management ensures:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A **dashboard for program managers** to **monitor project status**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Periodic external audits** to ensure effective risk management.
 
-<img src="assets/failing-to-plan-meme.png" class="fragment end">
+<img src="assets/failing-to-plan-meme.webp" class="fragment end">
 
 ------
 ### Risk Management 101
@@ -323,13 +323,13 @@ Risk management ensures:
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->A common risk management model classifies risks based on their **Impact** (the potential damage like financial) and **Likelihood**:
 
-<img src="assets/risk-management-101.png" width="355">
+<img src="assets/risk-management-101.webp" width="355">
 
 &shy;<!-- .element: class="fragment fade-in" -->This simplifies risk mitigation decisions: If the **strategy costs more than the risk's impact**, it might **not be worth** implementing.
 
 ------
 ### Risk Management Timeline
-<img src="assets/risk-response-plan-meme.png" width="400" class="fragment start">
+<img src="assets/risk-response-plan-meme.webp" width="400" class="fragment start">
 
 In terms of the **project lifecycle** model, the risk management process should:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Begin at the end of Inception
@@ -346,7 +346,7 @@ In terms of the **project lifecycle** model, the risk management process should:
 
 ------
 ### How to Do a Risk-Management Exercise
-<img src="assets/risk-management-meme.png" class="fragment start">
+<img src="assets/risk-management-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->It's vital to identify **potential project failure** early. In iterative development:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Showcasing working software** in a production-like environment at the end of each iteration is a clear sign of progress.
@@ -376,7 +376,7 @@ While anything can go wrong with your project, **some issues are more probable**
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->When faced with symptoms, act like a child and **keep asking the team, "Why?"**
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->It's advised to ask "Why?" **at least five times**.
 
-<img src="assets/5whys-example.png" width="590" class="fragment fade-in">
+<img src="assets/5whys-example.webp" width="590" class="fragment fade-in">
 
 ------
 ### Infrequent or Buggy Deployments
@@ -487,7 +487,7 @@ incidents.
 
 ------
 ### Automation over Documentation
-<img src="assets/document-documentation-meme.jpg" class="fragment start">
+<img src="assets/document-documentation-meme.webp" width="600" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->A piece of paper that says you did something in a certain way is **no guarantee** that you actually did that thing.
 
@@ -504,7 +504,7 @@ incidents.
 
 ------
 ### Enforcing Traceability
-<img src="assets/root-cause-meme.jpg" class="fragment start">
+<img src="assets/root-cause-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->Tracing **change history** from **production to source control** versions is often necessary.
 
@@ -514,7 +514,7 @@ incidents.
 
 ------
 ### Working in Silos
-<img src="assets/silos-meme.jpeg" class="fragment start">
+<img src="assets/silos-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->Large organizations may have **separate teams/departments** for development, testing, operations, architecture, and data.
 
@@ -528,7 +528,7 @@ incidents.
 
 ------
 ### Change Management
-<img src="assets/final-patch-meme.jpg" class="fragment start">
+<img src="assets/final-patch-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->In regulated environments, **approval** is often required for parts of the build, deploy, test, and release process.
 
@@ -548,7 +548,7 @@ incidents.
 
 ---
 ## Summary
-<img src="assets/compromise-meme.jpg" class="fragment start">
+<img src="assets/compromise-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->Good management creates **efficient software delivery** processes while **managing risks** and **adhering to regulatory requirements**.
 
@@ -558,4 +558,4 @@ incidents.
 
 &shy;<!-- .element: class="fragment fade-in" -->We've shown that **iterative delivery** with **automated software development, deployment, testing, and release** within the **deployment pipeline** is highly effective for meeting **conformance** and **performance** objectives.
 
-<img src="assets/crying-man-meme.jpg" width="450" class="fragment fade-in">
+<img src="assets/crying-man-meme.webp" width="450" class="fragment fade-in">

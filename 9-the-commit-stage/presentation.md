@@ -35,7 +35,7 @@ Mention the preflight, pretested, pull-request, merge request builds.
 
 ---
 ## Principles and Practices
-<img src="assets/commit-stage-first-rule-meme.jpeg" class="fragment start">
+<img src="assets/commit-stage-first-rule-meme.webp" class="fragment start">
 
 Some principles and practices that make for an effective commit stage:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Provide Fast, Useful Feedback  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -101,7 +101,7 @@ Some principles and practices that make for an effective commit stage:  <!-- .el
 
 ---
 ## Summary
-<img src="assets/commit-stage-meme.jpeg" class="fragment start">
+<img src="assets/commit-stage-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->The commit stage's main aim is to **quickly** spot **common failures** due to changes and notify developers for quick fixes.
 
