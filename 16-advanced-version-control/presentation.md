@@ -18,23 +18,29 @@
 
 ---
 ## Introduction
-&shy;<!-- .element class="fragment fade-in" -->Version control systems (aka source control, revision control systems) keep a full **history of changes** and help teams **collaborate** on different application parts while preserving the definitive codebase.
+Version control systems (aka source control, revision control systems) keep a full **history of changes** and help teams **collaborate** on different application parts while preserving the definitive codebase.
 
 &shy;<!-- .element class="fragment fade-in" -->The aim of this chapter is to examine how teams can **work productively with version control**.
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->In short, in our opinion, there are three **acceptable reasons to branch** your code:
-- &shy;<!-- .element: class="fragment insides-fade-in" -->**Releasing a new version** of your application.
-  - &shy;<!-- .element: class="fragment highlight-current-blue" -->Lets **developers work on new features** without impacting the stable public release.
-  - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Bugs are fixed** in the relevant **public release branch first** and **then applied to the mainline**.
-- &shy;<!-- .element: class="fragment insides-fade-in" -->When you need to **spike out** a new **feature/refactoring**.
-  - &shy;<!-- .element: class="fragment highlight-current-blue" -->The spike branch gets **thrown away** and is **never merged**.
-- &shy;<!-- .element: class="fragment insides-fade-in" -->**Short-lived** branch for **large changes** to the application that **can't be done using other methods like branch by abstraction**.
-  - &shy;<!-- .element: class="fragment highlight-current-blue" -->An **extremely rare** scenario if your codebase is well structured.
-  - &shy;<!-- .element: class="fragment highlight-current-blue" -->The sole purpose is to get the code to a state that **make incremental changes or branch by abstraction possible**.
+1. &shy;<!-- .element: class="fragment insides-fade-in" -->**Releasing a new version** of your application.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->Lets **developers work on new features** without impacting the stable public release.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Bugs are fixed** in the relevant **public release branch first** and **then applied to the mainline**.
+2. &shy;<!-- .element: class="fragment insides-fade-in" -->When you need to **spike out** a new **feature/refactoring**.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->The spike branch gets **thrown away** and is **never merged**.
+3. &shy;<!-- .element: class="fragment insides-fade-in" -->**Short-lived** branch for **large changes** to the application that **can't be done using other methods like branch by abstraction**.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->An **extremely rare** scenario if your codebase is well structured.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->The sole purpose is to get the code to a state that **make incremental changes or branch by abstraction possible**.
+   - &shy;<!-- .element: class="fragment highlight-current-blue" -->Mandatory for manual **Pull-Request** (or Merge-Request) review in some tools.
 
 ---
 ## Brief History
 <img src="assets/vcs-history.png">
+
+<details>
+  <summary>Note:</summary>
+  Mention Pessimistic Locking.
+</details>
 
 ---
 ## Branching and Merging
@@ -54,9 +60,9 @@
 
 ------
 ### Merging
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Merging takes time, but **VCS tools** can help when dealing with **conflicting** branch changes:
+Merging takes time, but **VCS tools** can help when dealing with **conflicting** branch changes:
 
-<img src="assets/merge-conflict-resolution-tool.png" width="1000">
+<img src="assets/merge-conflict-resolution-tool.png">
 
 &shy;<!-- .element: class="fragment fade-in" -->Resolving conflicts from **long merge gaps** may need extensive **code rewrites** and **discussions**, **weeks after the code** was written.
 
@@ -87,7 +93,7 @@ The **longer you delay merging** and involve **more people**, the **more challen
 
 &shy;<!-- .element: class="fragment fade-in" -->There is a **tension** between using **branches and CI**.
 
-&shy;<!-- .element: class="fragment fade-in" -->Some argue that branch work is **waste**, in the lean sense, **waste-inventory** that is not yet used in the final product.
+&shy;<!-- .element: class="fragment fade-in" -->Some argue that branch work is **waste**, in the **lean** sense, **waste-inventory** that is not yet used in the final product.
 
 <table class="fragment fade-in">
   <tr>
@@ -121,7 +127,7 @@ In DVCS, **each user** has a **standalone repository** on their computer, and a 
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Efficient patch handling**: Propagating patches among users for approval/rejection (aka cherry-picking).
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Offline work**: Commit changes without internet access.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Incremental commits**: Safely save incomplete work locally without affecting others.
-- &shy;<!-- .element: class="fragment highlight-current-blue" -->**Flexible commit management**: Rearrange and batching commits (aka rebasing).
+- &shy;<!-- .element: class="fragment highlight-current-blue" -->**Flexible commit management**: Rearrange and batching commits (aka rebasing and squashing).
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Easy experimentation**: Try ideas without creating a branch in central repos.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Scalability**: Central repo is less burdened.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**High availability**: Establish and sync local proxy repos.
@@ -231,14 +237,9 @@ The key difference between distributed and centralized VCSs is that in DVCS, whe
   </tr>
 </table>
 
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can **repeat steps 1-8** (in DVCs) **before moving to step 9** for sending your changes to the CI build. In **Mercurial** and **Git**, there's a feature called **"rebasing"** to **consolidate changes into a single commit for the master repository**.
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can **repeat steps 1-8** (in DVCs) **before moving to step 9** for sending your changes to the CI build. In **Mercurial** and **Git**, there's a feature called **"rebasing/merging and squashing"** to **consolidate changes into a single commit for the master repository**.
 
-<table>
-  <tr>
-    <td><img src="assets/git-merge.jpg" width="550"></td>
-    <td><img src="assets/git-rebase.jpg" width="550"></td>
-  </tr>
-</table>
+<img src="assets/git-rebase-squash.png">
 
 ------
 ### Conitunued: Using Distributed Version Control Systems
@@ -272,7 +273,7 @@ Stream-based VCSs like ClearCase and AccuRev aim to ease merging by allowing **a
 
 ------
 ### Continued: Stream-Based VCS
-&shy;<!-- .element: class="fragment fade-in" -->Changes in one stream don't affect other streams **until promoted**. Once promoted, they become **visible to all inheriting streams**.
+Changes in one stream don't affect other streams **until promoted**. Once promoted, they become **visible to all inheriting streams**.
 
 &shy;<!-- .element: class="fragment fade-in" -->Without stream-based tools, you must **merge a bugfix manually** to apply it to all other branches simultaneously.
 
@@ -349,7 +350,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 ------
 ### Branch by Feature (aka Feature Branching)
-<img src="assets/falling-down-joke-meme.jpg" class="fragment start">
+<img src="assets/falling-down-joke-meme.jpeg" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->In this pattern, **stories/features** are developed on **separate branches**, and upon passing tests, they **merge into the mainline**.
 
@@ -379,9 +380,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Whole team is **committed to frequent mainline integration**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->The delivery team **isn't rushed to release**, so they can make better decisions.
 
-&shy;<!-- .element: class="fragment fade-in" -->Even **ninja-level agile** teams can **struggle** with this, so it's better to **begin** with the **"develop on mainline" approach**, then, if you want to try branching by feature, **stick to the rules**.
-
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->However, be aware that you are **"running with scissors"** when you adopt this pattern.
+&shy;<!-- .element: class="fragment fade-in-with-next" -->Even **ninja-level agile** teams can **struggle** with this, so it's better to **begin** with the **"develop on mainline" approach**, then, if you want to try branching by feature, **stick to the rules**  (don't **run with scissors**).
 
 <img src="assets/running-with-scissors.png" width="200">
 
@@ -445,7 +444,9 @@ This pattern is **effective** when:
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Experimental Branch
   - Collects together experimental work on a code base, that's not expected to be merged directly into the product.
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Future Branch
+  - Very **RARE** pattern.
   - A single branch used for changes that are too invasive to be handled with other approaches.
+  - Future Branch vs Feature Branch: There's only one Future Branch.
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Collabration Branch
   - A branch created for a developer to share work with other members of the team without formal integration.
   - A collaboration branch is usually temporary and closed off once the work in integrated into mainline.
@@ -469,17 +470,17 @@ Lots of branching approaches have been described over the years. But, there are 
 ### Gitflow
 [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) has become one of the most common branching policies which was written by Vincent Driessen in 2010.
 
-&shy;<!-- .element: class="fragment fade-in" -->Gitflow uses **Mainline** (referred to as "develop") in a single "origin" repository, **Feature Branching** to coordinate developers, and encourages personal repositories as **Collaboration Branches** for coordination on similar work.
+&shy;<!-- .element: class="fragment fade-in" -->Gitflow uses **Mainline** (referred to as "develop") in a single "origin" repository, **Feature Branching** to coordinate developers.
 
-&shy;<!-- .element: class="fragment fade-in" -->In traditional Git, the core branch is named "master". In Gitflow, "master" serves as a Production **Maturity Branch**. Gitflow also uses a **Release Branch** for transitioning work from "develop" to "master". Hotfixes are managed through **Hotfix Branch**es.
+&shy;<!-- .element: class="fragment fade-in" -->The "master" (adapted from the traditional Git core branch) serves as a Production **Maturity Branch**. Gitflow also uses a **Release Branch** for transitioning work from "develop" to "master". Hotfixes are managed through **Hotfix Branch**es.
 
-&shy;<!-- .element: class="fragment fade-in" -->Gitflow doesn't specify feature branch length or integration frequency. It doesn't specify if the mainline should be a **Healthy Branch** or not. The presence of release branches suggests it **isn't** a **Release-Ready Mainline**.
+&shy;<!-- .element: class="fragment fade-in" -->Gitflow doesn't specify **feature branch length** or **integration frequency**. It doesn't specify if the mainline should be a **Healthy Branch** or not. The presence of release branches suggests it **isn't** a **Release-Ready Mainline**.
 
 <img src="assets/gitflow.png">
 
 ------
 ### GitHub Flow
-Many who claim to use Gitflow often follow a different approach. In reality, their practice aligns more closely with GitHub Flow.
+Many who **claim to use Gitflow** often follow a different approach. In reality, their practice aligns **more closely with GitHub Flow**.
 
 &shy;<!-- .element: class="fragment fade-in" -->GitHub Flow assumes one version in production, frequently integrating onto a **Release-Ready Mainline**. The **Release Branch** and **Hotfix Branch** are **unnecessary** and the production issues are fixed in the same way as regular features.
 
@@ -491,29 +492,29 @@ Many who claim to use Gitflow often follow a different approach. In reality, the
 ### Trunk-Based Development
 We have talked a lot about its practices (**incremental changes**, **branch by abstraction**, etc.) in the **previous sessions**.
 
-&shy;<!-- .element: class="fragment highlight-current-blue" -->Trunk-based development (from [here](https://trunkbaseddevelopment.com/))
+&shy;<!-- .element: class="fragment highlight-current-blue" -->Trunk-based development (from [here](https://trunkbaseddevelopment.com/)):
 <table>
   <tr>
     <td>
-      Without feature branching (for smaller teams):
+      <strong>Without Feature Branching</strong> (for smaller teams):
       <br>
       <img src="assets/trunk-based-development-for-small-teams.png" width="800">
     </td>
     <td>
-      With short-lived feature branching (Scaled):
+      With <strong>Short-lived Feature Branching</strong> (Scaled):
       <br>
       <img src="assets/trunk-based-development-at-scale.png" width="800">
     </td>
   </tr>
 </table>
 
-&shy;<!-- .element: class="fragment highlight-current-blue" -->You may use short-lived **Feature Branching** and **Release Branch** or **Release-Ready Mainline**.
+&shy;<!-- .element: class="fragment highlight-current-blue" -->Using **Release-Ready Mainline** pattern (instead of **Release Branching**) is recommended.
 
 ---
 ## Summary
 Controlling assets in software development is crucial for **project success**, **regardless of its size**.
 
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->In GitHub, the pull-request mechanism is a part of **Mainline Integration**, involving **Pre-Integration Review**.We focus on version control patterns for two reasons:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->We focus on **version control patterns** for two reasons:
 1. They are integral to designing your **deployment pipeline**.
 2. **Poor** version control practices often **hinder fast, low-risk releases**.
 
