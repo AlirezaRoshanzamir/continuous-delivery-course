@@ -279,7 +279,7 @@ Changes in one stream don't affect other streams **until promoted**. Once promot
 
 &shy;<!-- .element: class="fragment fade-in" -->In the stream development model, **promotion occurs at the source level, not the binary level**. As a result, each promotion requires checking out the source and **rebuilding the binary** (the problem exists with other branching models like branch by team).
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->The Linux kernel developers use a similar process with **Git and branches**. Each branch has an **owner responsible for stability**, and **Linus Torvalds** oversees the **"release stream"**. In this hierarchy, changes are **pulled** by stream owners, **not pushed** to them:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->The Linux kernel developers use a similar process with **Git and branches**. Each branch has an **owner responsible for stability**, and **Linus Torvalds** oversees the **"release stream"**. In this hierarchy, changes are **pulled** by stream owners, **not pushed** to them:
 
 <img src="assets/linux-kernel-development-hierarchy-2.ppm" width="800">
 
@@ -360,7 +360,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 <img src="assets/squash-vs-merge.jpeg" width="800">
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->For this pattern **to be effective**, several **prerequisites** are essential:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->For this pattern **to be effective**, several **prerequisites** are essential:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Daily merging** of **mainline** changes **into all branches**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Short-lived** branches, ideally lasting a **few days**, **never more than an iteration**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Limited active branches**, matching the number of ongoing stories.
@@ -380,7 +380,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Whole team is **committed to frequent mainline integration**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->The delivery team **isn't rushed to release**, so they can make better decisions.
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->Even **ninja-level agile** teams can **struggle** with this, so it's better to **begin** with the **"develop on mainline" approach**, then, if you want to try branching by feature, **stick to the rules**  (don't **run with scissors**).
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->Even **ninja-level agile** teams can **struggle** with this, so it's better to **begin** with the **"develop on mainline" approach**, then, if you want to try branching by feature, **stick to the rules**  (don't **run with scissors**).
 
 <img src="assets/running-with-scissors.png" width="200">
 
@@ -411,7 +411,7 @@ This pattern is **effective** when:
 
 &shy;<!-- .element: class="fragment fade-in" -->Infrequent merges can harm this pattern, compromising CI. So, teams should **merge to the trunk after each story** and **daily from it**.
 
-&shy;<!-- .element: class="fragment fade-in-with-next" -->In practice, this pattern is like branch by feature but with:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->In practice, this pattern is like branch by feature but with:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**+Pros**: There are **fewer branches**, so integration happens **more frequently**-at the team level at least.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**-Cons**: Brranches **diverge much more rapidly**, because a whole team is checking in to each branch.
 
