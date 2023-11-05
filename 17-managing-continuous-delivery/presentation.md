@@ -29,7 +29,7 @@ This chapter guides **implementing CD** in your organization.
 
 &shy;<!-- .element: class="fragment fade-in" -->The **deployment pipeline** boosts **performance** with **continuous feedback on production readiness** and ensures **conformance** through **transparent delivery processes**.
 
-&shy;<!-- .element: class="fragment fade-in" -->With CD practices, large organizations with complex applications can rapidly and reliably deliver software. This leads to a faster return on investment, reduced risks, and avoids the opportunity cost of long development cycles or delivering not fit software.
+&shy;<!-- .element: class="fragment fade-in" -->With **CD practices**, large organizations with complex applications can **rapidly** and **reliably** deliver software. This leads to a faster **return on investment**, **reduced risks**, and avoids the opportunity **cost of long development cycles** or delivering **not fit software**.
 
 &shy;<!-- .element: class="fragment fade-in" -->According to **Lean**, infrequent software delivery is like **stored inventory** - incurring production costs but lacking revenue, while also incurring storage expenses.
 
@@ -87,12 +87,12 @@ When discussing **governance**, having a clear view of **organizational change o
 <img src="assets/qmm-levels-meme.jpg" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Items are categorized as **T**est, **E**nvironment, **B**uild/CI, or **D**elivery (Deployment Frequency, Lead Time, Time to Restore, Change Failure Rate):
-- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 1
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 1 (test cov., scripts in VCS, no red tests)
   - [T001](https://maturity.qualitic.ir/catalog/test/T001): Test coverage is measured at the commit stage
   - [B001](https://maturity.qualitic.ir/catalog/build_ci/B001): All CI/CD scripts are kept in version control
   - [T016](https://maturity.qualitic.ir/catalog/test/T016): No release with red tests
 
-- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 2
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 2 (acceptance tests, code style, dependencies in VCS, low delivery metrics)
   - [T002](https://maturity.qualitic.ir/catalog/test/T002): Commit stage test coverage > 10%
   - [T007](https://maturity.qualitic.ir/catalog/test/T007): Classify tests as commit, acceptance, and performance
   - [T011](https://maturity.qualitic.ir/catalog/test/T011): There are acceptance tests for at least one feature upon main use cases
@@ -105,7 +105,7 @@ When discussing **governance**, having a clear view of **organizational change o
   - [D009](https://maturity.qualitic.ir/catalog/delivery/D009): Time to restore service is less than one month
   - [D013](https://maturity.qualitic.ir/catalog/delivery/D013): Change failure rate is less than 60%
 
-- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 3
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 3 (analysis tools, automated deployment, configs in VCS, medium delivery metrics)
   - [T003](https://maturity.qualitic.ir/catalog/test/T003): Commit stage test coverage > 20%
   - [B005](https://maturity.qualitic.ir/catalog/build_ci/B005): Available analysis tools on new code are actively used, as submit gate (50% sonar-way, zero issue, incremental)
   - [T013](https://maturity.qualitic.ir/catalog/test/T013): "Requirement - Acceptance Test" mapping coverage > 5%
@@ -119,7 +119,7 @@ When discussing **governance**, having a clear view of **organizational change o
   - [D014](https://maturity.qualitic.ir/catalog/delivery/D014): Change failure rate is less than 45%
   - [E010](https://maturity.qualitic.ir/catalog/environment/E010): Same process (scripts) to deploy to every environment
 
-- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 4
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 4 (infra. automation, transitive dependencies, daily deploy, high delivery metrics)
   - [T004](https://maturity.qualitic.ir/catalog/test/T004): Commit stage test coverage > 50%
   - [T014](https://maturity.qualitic.ir/catalog/test/T014): "Requirement - Acceptance Test" mapping coverage > 20%
   - [B006](https://maturity.qualitic.ir/catalog/build_ci/B006): Available analysis tools are actively used on new code (80% of sonar-way)
@@ -134,7 +134,7 @@ When discussing **governance**, having a clear view of **organizational change o
   - [D011](https://maturity.qualitic.ir/catalog/delivery/D011): Time to restore service is less than one day
   - [D015](https://maturity.qualitic.ir/catalog/delivery/D015): Change failure rate less than 15%
 
-- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 5
+- <!-- .element: class="fragment insides-fade-in-then-out custom" -->Level 5 (on-demand deploy and delivery, data migration rollback)
   - [T015](https://maturity.qualitic.ir/catalog/test/T015): "Requirement - Acceptance Test" mapping coverage > 50%
   - [E008](https://maturity.qualitic.ir/catalog/environment/E008): Data migrations are tested
   - [D004](https://maturity.qualitic.ir/catalog/delivery/D004): Deployment is on-demand (multiple deploys per day)
@@ -200,11 +200,14 @@ Software projects vary, but common elements can be abstracted.
 
 <img src="assets/strategy-program-project.jpg">
 
-&shy;<!-- .element: class="fragment fade-in" -->Requirements gathering is challenging, and prioritizing them is difficult without a business case. Even with one, the final product may differ significantly from the initial concept.
-
 &shy;<!-- .element: class="fragment fade-in" -->Before gathering requirements, it's crucial to have a **list of stakeholders**, with the **business sponsor** being the most important.
 
 &shy;<!-- .element: class="fragment fade-in" -->Each **project** should have **only one business sponsor** to prevent **political conflicts**. This role is referred to as the **product owner in Scrum** and as the customer in other agile methods.
+
+<details>
+  <summary>Note:</summary>
+  In summary, strategies (objectives) set the overall direction and vision for an organization, programs group together related projects to achieve specific goals, and projects are temporary efforts with well-defined scopes and deliverables. Each level of governance plays a crucial role in driving an organization toward its desired outcomes.
+</details>
 
 ------
 ### Inception
@@ -212,16 +215,16 @@ Software projects vary, but common elements can be abstracted.
 
 &shy;<!-- .element: class="fragment fade-in" -->This phase comes **before coding**. It includes **gathering and analyzing requirements** and **loose scoping and planning** (with a **3 to 6 months horizon**). After inception, we decide whether to **continue or not** (based on project value, costs, and risks).
 
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->It yields different deliverables based on methodology and project type, but most should include:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->It yields different **deliverables** based on methodology and project type, but most should include:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A business case with the project's estimated value.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->High-level functional/nonfunctional requirements, addressing capacity, availability, continuity, and security (enough for estimation and planning).
-- &shy;<!-- .element: class="fragment highlight-current-blue" -->A release plan with work schedule and project cost, involving requirements size estimation, coding effort, risk, and staffing.
+- &shy;<!-- .element: class="fragment highlight-current-blue" -->Work schedule and project cost, involving requirements size estimation, coding effort, risk, and staffing.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A testing strategy.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A release strategy.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->An architectural evaluation to decide on platforms and frameworks.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A risk and issue log.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A description of the development lifecycle.
-- &shy;<!-- .element: class="fragment highlight-current-blue" -->A plan to execute this list.
+- &shy;<!-- .element: class="fragment highlight-current-blue" -->A description of the plan to execute this list.
 
 &shy;<!-- .element: class="fragment fade-in" -->The key to a success is uniting **stakeholders in face-to-face meetings**, including developers, customers, operations, and management. The discussions, leading to a shared problem understanding and solution, are the main deliverables.
 
@@ -265,13 +268,13 @@ Software projects vary, but common elements can be abstracted.
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Use an iterative process for these **reasons**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Prioritizing high-value features** means your software becomes **useful early**, even if it's not launched immediately.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Regular feedback from customers** helps **refine requirements** as nobody knows exactly what they want at the project's start.
-- &shy;<!-- .element: class="fragment highlight-current-blue" -->Completion occurs when the **customer approves** the work during regular showcases, which is the best way to track progress.
+- &shy;<!-- .element: class="fragment highlight-current-blue" -->**"Done"** occurs when the **customer approves** the work during showcases, which is the best way to **track progress**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Keeping the software working** all the time instills discipline and **prevents problems like lengthy integration phases**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Iterative methods emphasize having **production-ready code** after each iteration, offering a **unique measure of progress**.
 
 ------
 ### Continued: Development and Release
-There are various iterative incremental methodologies, with Scrum being a popular one. However, it can fail for various reasons:
+There are various iterative incremental methodologies, with **Scrum** being a popular one. However, it can **fail for various reasons**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Lack of commitment**: Switching to Scrum can be scary for leaders. Agile values transparency, collaboration, discipline, and ongoing enhancement, which may reveal issues which should be fixed promptly.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Ignoring good engineering**: Neglecting technical practices like TDD, refactoring, and CI can lead to issues. Scrum alone can't fix a poorly managed codebase.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Adapting until the process is no longer an agile one**: People may modify agile processes for their organization but unintentionally lose their agility. Start by the original process before adapting it to your organization.
@@ -306,7 +309,7 @@ Risk management ensures:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Implementing strategies to **manage them**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Ongoing** risk identification and management throughout the project.
 
-&shy;<!-- .element: class="fragment fade-in-with-next custom" -->A good risk management process includes:
+&shy;<!-- .element: class="fragment fade-in-with-next custom" -->A **good risk management process** includes:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Standardized **status reporting** structure for project teams.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Regular team updates** on progress.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A **dashboard for program managers** to **monitor project status**.
