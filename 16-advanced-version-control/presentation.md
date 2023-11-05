@@ -1,5 +1,5 @@
 ## Continuous Delivery: Advanced Version Control
-#### <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies</span>
+#### <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies (Gitflow, GitHub Flow, Trunk-Based Development)</span>
 
 <table>
   <tr>
