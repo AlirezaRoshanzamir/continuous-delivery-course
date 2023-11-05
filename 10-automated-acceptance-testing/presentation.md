@@ -39,7 +39,7 @@ Automating acceptance tests ensures your application meets  **business acceptanc
 1. **No other type of test** proves that the application, running similarly to production, **delivers the business value** to users.
 2. Unit and component tests **don't test user scenarios**, so they **can't find** defects that **arise as users interact** with the application through a **series of states**.
 
-<img src="assets/user-interaction-meme.jpg" width="220" class="fragment fade-in">
+<img src="assets/user-interaction-meme.webp" width="220" class="fragment fade-in">
 
 ------
 ### How to Create Maintainable Acceptance Test Suites: INVEST
@@ -116,7 +116,7 @@ Automating acceptance tests ensures your application meets  **business acceptanc
 
 ------
 ### How to Create Maintainable Acceptance Test Suites: Layering
-<img src="assets/layering-meme.jpg" class="fragment start">
+<img src="assets/layering-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Automated acceptance tests should be layered:
 
@@ -124,7 +124,7 @@ Automating acceptance tests ensures your application meets  **business acceptanc
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Tests that **directly use** the **application's API** or **UI** are **brittle** and **minor UI changes** can **break all such tests**. They often result from **record-and-playback-style test** automation tools, one of the main reasons automated acceptance tests are perceived as expensive.
 
-<img src="assets/test-record-and-playback-tool.png" width="530" style="border: 1px solid lightgray">
+<img src="assets/test-record-and-playback-tool.webp" width="530" style="border: 1px solid lightgray">
 
 ------
 ### Testing against the GUI
@@ -349,7 +349,7 @@ public void shouldDeductPaymentFromAccountBalance() {
 
 ---
 ## Implementing Acceptance Tests
-<img src="assets/following-course-advice-meme.jpeg" class="fragment start">
+<img src="assets/following-course-advice-meme.webp" class="fragment start">
 
 There is more to the implementation of acceptance tests than layering:  <!-- .element: class="fragment fade-in-with-next custom" -->
 - Putting the application in a particular state, performing several actions on it, and verifying the results.  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -395,10 +395,10 @@ Tips for the acceptance test stage:  <!-- .element: class="fragment fade-in-with
 
 ---
 ## Summary
-<img src="assets/not-writing-acceptance-tests-meme.jpeg" class="fragment start" width="500">
+<img src="assets/not-writing-acceptance-tests-meme.webp" class="fragment start" width="500">
 
 &shy;<!-- .element class="fragment fade-in" -->Automated acceptance tests are typically **more complex** than unit tests. They require more maintenance and are **likely to be broken more often**.
 
 &shy;<!-- .element class="fragment fade-in" -->The use of automated acceptance testing will **pay for itself** many times over; **we have never regretted their use**.
 
-<img src="assets/skipping-acceptance-tests-meme.jpeg" class="fragment fade-in">
+<img src="assets/skipping-acceptance-tests-meme.webp" class="fragment fade-in">

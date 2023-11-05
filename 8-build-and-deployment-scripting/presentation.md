@@ -23,7 +23,7 @@
 
 ---
 ## An Overview of Build Tools
-<img src="assets/modern-software-development-meme.jpeg" class="fragment start">
+<img src="assets/modern-software-development-meme.webp" width="500" class="fragment start">
 
 Build tools have a common core: **modeling dependencies**:  <!-- .element class="fragment fade-in-with-next custom" -->
 
@@ -90,7 +90,7 @@ Some shortcomings:  <!-- .element: class="fragment fade-in-with-next custom" -->
 
 ------
 ### An Overview of Build Tools: Maven
-<img src="assets/maven-meme.jpg" class="fragment start">
+<img src="assets/maven-meme.webp" width="500" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Maven simplifies Ant files by **assuming certain Java project layouts**. By favoring **"convention over configuration"**, it can handle various tasks like **build**, **deploy**, **test**, and **release** with just **one command**, often needing minimal XML configuration:
 <table>

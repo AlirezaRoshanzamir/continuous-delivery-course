@@ -35,7 +35,7 @@ Version control systems (aka source control, revision control systems) keep a fu
 
 ---
 ## Brief History
-<img src="assets/vcs-history.png">
+<img src="assets/vcs-history.webp">
 
 <details>
   <summary>Note:</summary>
@@ -44,11 +44,11 @@ Version control systems (aka source control, revision control systems) keep a fu
 
 ---
 ## Branching and Merging
-<img src="assets/branch-merge-meme.jpeg" class="fragment start" width="650">
+<img src="assets/branch-merge-meme.webp" class="fragment start" width="650">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Creating branches (or streams) in a codebase is a **first-class** feature of every VCS, allowing **concurrent work without interference**:
 
-<img src="assets/git-branch.png">
+<img src="assets/git-branch.webp">
 
 &shy;<!-- .element: class="fragment fade-in" -->Teams use branches for many reasons, often overlapping: **Physical**, **Functional**, **Environmental**, **Organizational**, and **Procedural**.
 
@@ -62,7 +62,7 @@ Version control systems (aka source control, revision control systems) keep a fu
 ### Merging
 Merging takes time, but **VCS tools** can help when dealing with **conflicting** branch changes:
 
-<img src="assets/merge-conflict-resolution-tool.png">
+<img src="assets/merge-conflict-resolution-tool.webp">
 
 &shy;<!-- .element: class="fragment fade-in" -->Resolving conflicts from **long merge gaps** may need extensive **code rewrites** and **discussions**, **weeks after the code** was written.
 
@@ -72,7 +72,7 @@ Merging takes time, but **VCS tools** can help when dealing with **conflicting**
 ### Continued: Merging
 The **longer you delay merging** and involve **more people**, the **more challenging** it becomes:
 
-<img src="assets/leroy-branch.jpg">
+<img src="assets/leroy-branch.webp">
 
 ------
 ### Early/Deferred Branching
@@ -89,7 +89,7 @@ The **longer you delay merging** and involve **more people**, the **more challen
 
 ------
 ### Branches, Streams, and Continuous Integration
-<img src="assets/lean-inventory-waste.jpg" class="fragment start" width="900">
+<img src="assets/lean-inventory-waste.webp" class="fragment start" width="900">
 
 &shy;<!-- .element: class="fragment fade-in" -->There is a **tension** between using **branches and CI**.
 
@@ -102,10 +102,10 @@ The **longer you delay merging** and involve **more people**, the **more challen
   </tr>
   <tr>
     <td>
-      <img src="assets/poorly-controlled-branching.png" width="700">
+      <img src="assets/poorly-controlled-branching.webp" width="700">
     </td>
     <td>
-      <img src="assets/release-branching-strategy.png" width="700">
+      <img src="assets/release-branching-strategy.webp" width="700">
     </td>
   </tr>
 </table>
@@ -114,7 +114,7 @@ The **longer you delay merging** and involve **more people**, the **more challen
 
 ---
 ## Distributed Version Control Systems (DVCS)
-<img src="assets/centralization-here-i-meme.jpg" class="fragment start">
+<img src="assets/centralization-here-i-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->Several open-source DVCSs, like **Git** and **Mercurial**, are available. In this section, we'll explore their unique features and usage.
 
@@ -139,11 +139,11 @@ In DVCS, **each user** has a **standalone repository** on their computer, and a 
 ### Continued: What Is a Distributed Version Control System?
 It's a paradigm shift. Instead of **sending patches to a project owner**, people publish their versions for **experimentation**. This speeds up project evolution and accelerates feature/bugfix delivery. Clever ideas become usable, **reducing commit access bottlenecks**.
 
-<img src="assets/dvcs-repository-tree.png" width="900">
+<img src="assets/dvcs-repository-tree.webp" width="900">
 
 ------
 ### A Brief History of Distributed Version Control Systems
-<img src="assets/linus-torvalds-git-meme.jpeg" class="fragment start">
+<img src="assets/linus-torvalds-git-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->The **Linux kernel** was initially developed **without VCS**. Linus Torvalds shared code as **tarballs** and received changes as **patches**.
 
@@ -188,7 +188,7 @@ You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.
 
 ------
 ### Distributed Version Control Systems in Corporate Environments
-<img src="assets/svn-to-git-meme.jpeg" class="fragment start">
+<img src="assets/svn-to-git-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Besides being **conservative**, some people have **concerns** about using DVCSs in companies:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Unlike centralized systems, DVCS stores the **entire history with local copies**.
@@ -200,7 +200,7 @@ You can setup a remote Git repository by (from [here](https://www.geeksforgeeks.
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Once a **central repository is designated**, **all** of the properties of a centralized version control system are **available**:
 
-<img src="assets/centralized-vs-decentralized-vcs.jpg">
+<img src="assets/centralized-vs-decentralized-vcs.webp">
 
 ------
 ### Using Distributed Version Control Systems
@@ -239,7 +239,7 @@ The key difference between distributed and centralized VCSs is that in DVCS, whe
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can **repeat steps 1-8** (in DVCs) **before moving to step 9** for sending your changes to the CI build. In **Mercurial** and **Git**, there's a feature called **"rebasing/merging and squashing"** to **consolidate changes into a single commit for the master repository**.
 
-<img src="assets/git-rebase-squash.png">
+<img src="assets/git-rebase-squash.webp">
 
 ------
 ### Conitunued: Using Distributed Version Control Systems
@@ -249,11 +249,11 @@ DVCS workflow:
   <tr>
     <td>
       Mercurial
-      <img src="assets/hg-workflow.png" width="600">
+      <img src="assets/hg-workflow.webp" width="600">
     </td>
     <td>
       Git
-      <img src="assets/git-commands.png">
+      <img src="assets/git-commands.webp">
     </td>
   </tr>
 </table>
@@ -267,8 +267,8 @@ Stream-based VCSs like ClearCase and AccuRev aim to ease merging by allowing **a
 &shy;<!-- .element: class="fragment fade-in" -->You **promote** the change in your branch to the common **ancestor** of branches needing the change. **Consumers** then update to receive these changes and create a new build with the change.
 
 <table>
-  <td><img src="assets/stream-based-development.png" width="470"></td>
-  <td><img src="assets/stream-based-development-2.png"></td>
+  <td><img src="assets/stream-based-development.webp" width="470"></td>
+  <td><img src="assets/stream-based-development-2.webp"></td>
 </table>
 
 ------
@@ -289,7 +289,7 @@ In this section, we'll explore different branching/merging patterns, their pros 
 
 Some information is from Martin Fowler's highly recommended post on [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html):
 
-<img src="assets/martin-fowler-branching-patterns.png" width="630">
+<img src="assets/martin-fowler-branching-patterns.webp" width="630">
 
 ------
 ### Develop on Mainline (aka Mainline Integration)
@@ -298,7 +298,7 @@ In this pattern, developers almost always **check in to mainline**. Branches are
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensuring developers **pick up each others' changes immediately**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Avoiding "merge hell"** and "integration hell" at the end of the project.
 
-<img src="assets/mainline-integration-integrate.png">
+<img src="assets/mainline-integration-integrate.webp">
 
 ------
 ### &#9733; Continuous Integration [to Mainline]
@@ -310,11 +310,11 @@ If you do the **Mainline Integration** continuously, it becomes the **Continuous
   <tr>
     <td>
       Low Frequency<br>
-      <img src="assets/low-freq-conflict.png">
+      <img src="assets/low-freq-conflict.webp">
     </td>
     <td>
       High Frequency<br>
-      <img src="assets/high-freq-conflict.png">
+      <img src="assets/high-freq-conflict.webp">
     </td>
   </tr>
 </table>
@@ -325,8 +325,8 @@ The time it's okay to create a branch is **just before a release**. After creati
 
 <table>
   <tr>
-    <td><img src="assets/release-branching-strategy.png" width="1000"></td>
-    <td><img src="assets/apply-to-release.png"></td>
+    <td><img src="assets/release-branching-strategy.webp" width="1000"></td>
+    <td><img src="assets/apply-to-release.webp"></td>
   </tr>
 </table>
 
@@ -344,13 +344,13 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 &shy;<!-- .element: class="fragment fade-in" -->So, **keep mainline sufficiently healthy** that the **head of mainline** can always be put **directly into production**.
 
-<img src="assets/mainline-release.png" width="600">
+<img src="assets/mainline-release.webp" width="600">
 
-<img src="assets/healthy-mainline-meme.jpeg" class="fragment end">
+<img src="assets/healthy-mainline-meme.webp" class="fragment end">
 
 ------
 ### Branch by Feature (aka Feature Branching)
-<img src="assets/falling-down-joke-meme.jpeg" class="fragment start">
+<img src="assets/falling-down-joke-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->In this pattern, **stories/features** are developed on **separate branches**, and upon passing tests, they **merge into the mainline**.
 
@@ -358,7 +358,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Additionally, it **enriches VC history** when each **commit** represents a **whole feature/bugfix** (using **Squash merging**).
 
-<img src="assets/squash-vs-merge.jpeg" width="800">
+<img src="assets/squash-vs-merge.webp" width="800">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->For this pattern **to be effective**, several **prerequisites** are essential:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Daily merging** of **mainline** changes **into all branches**.
@@ -382,7 +382,7 @@ With a **high release frequency**, around once a week, branching for releases ma
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Even **ninja-level agile** teams can **struggle** with this, so it's better to **begin** with the **"develop on mainline" approach**, then, if you want to try branching by feature, **stick to the rules**  (don't **run with scissors**).
 
-<img src="assets/running-with-scissors.png" width="200">
+<img src="assets/running-with-scissors.webp" width="200">
 
 ------
 ### Branch by Team (aka Team Integration Branch)
@@ -390,7 +390,7 @@ This pattern tackles the issue of managing a **large developer team** across **m
 
 Branches are created for **teams**, merging into the trunk only when **stable**. Merges to one branch should **promptly update all others**:
 
-<img src="assets/branch-by-team.png" width="800">
+<img src="assets/branch-by-team.webp" width="800">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Here is the workflow for branching by team:
 1. &shy;<!-- .element: class="fragment highlight-current-blue" -->Create small teams, each working on its own branch.
@@ -417,16 +417,16 @@ This pattern is **effective** when:
 
 ------
 ### Other Patterns
-<img src="assets/patterns-meme.jpg" class="fragment start">
+<img src="assets/patterns-meme.webp" class="fragment start">
 
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Maturity Branch
   - A branch whose head marks the latest version of a level of maturity of the code base.
   - <table>
       <tr>
-        <td><img src="assets/production-branch.png"></td>
+        <td><img src="assets/production-branch.webp"></td>
         <td>
           Variation: Long Lived Release Branch<br>
-          <img src="assets/long-running-release.png">
+          <img src="assets/long-running-release.webp">
         </td>
       </tr>
     </table>
@@ -434,13 +434,13 @@ This pattern is **effective** when:
   - Configure a product to run in a new environment by applying a source code commit.
   - <table>
       <tr>
-        <td><img src="assets/environment-branch.png"></td>
-        <td><img src="assets/environments-branch-3.png"></td>
+        <td><img src="assets/environment-branch.webp"></td>
+        <td><img src="assets/environments-branch-3.webp"></td>
       </tr>
     </table>
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Hotfix Branch
   - A branch to capture work to fix an urgent production defect.
-  - <img src="assets/hotfix-branch.png">
+  - <img src="assets/hotfix-branch.webp">
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Experimental Branch
   - Collects together experimental work on a code base, that's not expected to be merged directly into the product.
 - <!-- .element: class="fragment insides-fade-in-then-out custom highlight-current-blue" -->Future Branch
@@ -476,7 +476,7 @@ Lots of branching approaches have been described over the years. But, there are 
 
 &shy;<!-- .element: class="fragment fade-in" -->Gitflow doesn't specify **feature branch length** or **integration frequency**. It doesn't specify if the mainline should be a **Healthy Branch** or not. The presence of release branches suggests it **isn't** a **Release-Ready Mainline**.
 
-<img src="assets/gitflow.png">
+<img src="assets/gitflow.webp">
 
 ------
 ### GitHub Flow
@@ -486,7 +486,7 @@ Many who **claim to use Gitflow** often follow a different approach. In reality,
 
 &shy;<!-- .element: class="fragment fade-in" -->In GitHub, the pull-request mechanism is a part of **Mainline Integration**, involving **Pre-Integration Review**.
 
-<img src="assets/github-flow.png">
+<img src="assets/github-flow.webp">
 
 ------
 ### Trunk-Based Development
@@ -498,12 +498,12 @@ We have talked a lot about its practices (**incremental changes**, **branch by a
     <td>
       <strong>Without Feature Branching</strong> (for smaller teams):
       <br>
-      <img src="assets/trunk-based-development-for-small-teams.png" width="800">
+      <img src="assets/trunk-based-development-for-small-teams.webp" width="800">
     </td>
     <td>
       With <strong>Short-lived Feature Branching</strong> (Scaled):
       <br>
-      <img src="assets/trunk-based-development-at-scale.png" width="800">
+      <img src="assets/trunk-based-development-at-scale.webp" width="800">
     </td>
   </tr>
 </table>

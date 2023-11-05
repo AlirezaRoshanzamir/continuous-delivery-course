@@ -23,7 +23,7 @@
 
 ---
 ## Creating a Release Strategy
-<img src="assets/disaster-recovery-meme.jpeg" class="fragment start">
+<img src="assets/disaster-recovery-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->The key aspect of forming a release strategy is for the **stakeholders to gather during project planning**. They should consider:
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Parties in charge** of deployments to **each environment**, as well as in charge of the release.
@@ -46,7 +46,7 @@
 
 ------
 ### The Release Plan
-<img src="assets/strategy-vs-planning.png" class="fragment start" width="900">
+<img src="assets/strategy-vs-planning.webp" class="fragment start" width="900">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->The **first release** is typically the **riskiest** and requires **careful planning**. The outcomes of this planning may involve **automated scripts**, **documentation**, and **procedures** for **reliable** and **repeatable** production deployment. It includes:
 - Deploy steps  <!-- .element class="fragment fade-in-then-semi-out" -->
@@ -102,7 +102,7 @@ Promoting builds across environments involves these considerations:  <!-- .eleme
 - What the required gates or approval are  <!-- .element class="fragment highlight-current-blue" -->
 - For each gate, who has the authority to approve a build passing through that gate  <!-- .element class="fragment highlight-current-blue" -->
 
-<img src="assets/release-process-diagram.png">
+<img src="assets/release-process-diagram.webp">
 
 ------
 ### Orchestration
@@ -222,7 +222,7 @@ The images are downloaded from <a href="https://www.linkedin.com/posts/brijpande
 
 ---
 ## Emergency Fixes
-<img src="assets/emergency-fix-meme.jpeg" class="fragment start">
+<img src="assets/emergency-fix-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->There comes a moment when a **critical defect** is discovered and has to be **fixed as soon as possible**:
 - &shy;<!-- .element class="fragment fade-in-then-semi-out" -->**Never bypass your process**, such as logging directly into production environments and making uncontrolled changes.
@@ -236,7 +236,7 @@ The images are downloaded from <a href="https://www.linkedin.com/posts/brijpande
 
 ---
 ## Continuous Deployment
-<img src="assets/continuous-delivery-and-deployment-meme.png" class="fragment start">
+<img src="assets/continuous-delivery-and-deployment-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->The **extreme approach** is to automatically **deploy every change** that **passes your automated tests** to production. This technique is called continuous deployment **[to production]**.
 

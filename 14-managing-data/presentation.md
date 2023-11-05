@@ -1,7 +1,7 @@
 ## Continuous Delivery: Managing Data
 #### Database Scripting, Incremental Change, Rolling Back Databases and Zero-Downtime Releases, Managing Test Data, Data Management and the Deployment Pipeline
 
-<img src="assets/database-migration.jpg"/>
+<img src="assets/database-migration.webp"/>
 
 <small><strong>Time to Read:</strong> 12 Minutes</small>, <small><strong>Time to Present:</strong> 50 Minutes</small>
 <br>
@@ -27,7 +27,7 @@
 
 ---
 ## Database Scripting
-<img src="assets/database-affected-rows-meme.jpg" class="fragment start">
+<img src="assets/database-affected-rows-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->Database **initialization** and **migrations** need to be stored as **scripts in version control**.
 
@@ -48,7 +48,7 @@
 
 ------
 ### Versioning Your Database
-<img src="assets/db-up-down-meme.jpeg" class="fragment start">
+<img src="assets/db-up-down-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->To **automate data migration**, begin by **versioning your database**. Create a **version table** and generate **two scripts** for each change:
 - **Roll-forward (Up)**: Moves the database from version x to x + 1.
@@ -58,11 +58,11 @@
 
 <table class="fragment fade-in">
   <tr>
-    <td><img src="assets/ef-migration-scripts.png"></td>
-    <td><img src="assets/ef-migration-script.png" width="500"></td>
+    <td><img src="assets/ef-migration-scripts.webp"></td>
+    <td><img src="assets/ef-migration-script.webp" width="500"></td>
     <td>
-      <img src="assets/ef-migration-table.png">
-      <img src="assets/ef-migration-table-content.png" width="500">
+      <img src="assets/ef-migration-table.webp">
+      <img src="assets/ef-migration-table-content.webp" width="500">
     </td>
   </tr>
 </table>
@@ -73,7 +73,7 @@
 ### Managing Orchestrated Changes
 In many organizations, they **integrate all applications** through a **single database** (although **SOA is recommended instead**):
 
-<img src="assets/shared-database.png" width="500">
+<img src="assets/shared-database.webp" width="500">
 
 &shy;<!-- .element class="fragment fade-in" -->So, **modifying the database** can **affect other applications**. **Test** these changes in an **orchestrated environment** similar to production, including the **other applications** (Systems Integration Testing - SIT environment).
 
@@ -83,7 +83,7 @@ In many organizations, they **integrate all applications** through a **single da
 
 ---
 ## Rolling Back Databases and Zero-Downtime Releases
-<img src="assets/zero-downtime-drake-meme.jpeg" class="fragment start">
+<img src="assets/zero-downtime-drake-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->Two **common requirements** that add **extra constraints** to a production deployment are:
 - &shy;<!-- .element class="fragment highlight-current-blue" -->The ability to **roll back without losing transactions** performed **since the upgrade**.
@@ -113,10 +113,10 @@ In many organizations, they **integrate all applications** through a **single da
 
 ------
 ### Decoupling Application Deployment from Database Migration
-<img src="assets/app-multiple-db-version-support-meme.jpeg" class="fragment start">
+<img src="assets/app-multiple-db-version-support-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->A third approach for managing hot deployments is that you **don't** have to **migrate your database with every app release**:
-<img src="assets/decoupling-database-migration-from-application-deployment.png" width="1000">
+<img src="assets/decoupling-database-migration-from-application-deployment.webp" width="1000">
 
 &shy;<!-- .element class="fragment fade-in" -->This helps when database **rollback is hard** (e.g. due to **big schema changes**). It **prevents data loss** and aids going back to an older software version. **Deploy** the **new app version**, ensure it **works** with the **old schema**, then **make database changes** confidently.
 
@@ -126,7 +126,7 @@ In many organizations, they **integrate all applications** through a **single da
 
 ---
 ## Managing Test Data
-<img src="assets/using-production-data-dump-for-testing-meme.jpeg" class="fragment start">
+<img src="assets/using-production-data-dump-for-testing-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->Which data simulates **typical system interactions**? What data covers **edge cases**? What data **triggers errors** to assess the application's responses?
 
@@ -139,11 +139,11 @@ In many organizations, they **integrate all applications** through a **single da
 
 ------
 ### Faking the Database for Unit Tests
-<img src="assets/using-fake-db-for-unit-tests-meme.jpeg" class="fragment start">
+<img src="assets/using-fake-db-for-unit-tests-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->In unit tests, **replace services that talk to databases with test doubles**. If not possible (e.g., for testing these services):
 - Replace your database access code with a test double (**Repository Pattern**)
-  - <img src="assets/repository-pattern.png" width="350">
+  - <img src="assets/repository-pattern.webp" width="350">
 - &shy;<!-- .element class="fragment fade-in" -->Use in-memory relational database (e.g. H2, SqlLite, or JavaDB)
   - **Encourages more decoupled code**, **capable** of working with **two different database implementations**.
   - **Future changes** to a **newer version** or **different RDBMS** will be **easier**.
@@ -164,7 +164,7 @@ For test data, each test needs a **known starting state** for **comparison after
 
 ------
 ### <span style="color: green">Test Isolation</span>
-<img src="assets/isolation-meme.jpg" class="fragment start">
+<img src="assets/isolation-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->Test isolation ensures tests are **atomic**, **independent**, and **not influenced by the others** [success/failure]. This can be achieved by:
 - &shy;<!-- .element class="fragment highlight-current-blue" -->**Resetting** the database to its **initial state** **before each test**
@@ -178,13 +178,13 @@ Well-isolated tests usually **need a setup** stage to **populate relevant test d
 - A **new transaction** that's **rolled back** after the test.
 - By **inserting test-specific records**.
 
-<img src="assets/test-setup-teardown.png" width="300">
+<img src="assets/test-setup-teardown.webp" width="300">
 
 &shy;<!-- .element class="fragment fade-in" -->**Adaptive tests** should assess the **data environment** in order to **establish the known starting position at startup**.
 
 ------
 ### <span style="color: red">Coherent Test Scenarios</span>
-<img src="assets/coherent-test-scenarios-meme.jpeg" class="fragment start">
+<img src="assets/coherent-test-scenarios-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->There's a temptation to create a **"story" for tests** to **maintain coherent data**, **reducing setup and teardown**:
 - &shy;<!-- .element class="fragment highlight-current-blue" -->**Simplifies each test**, as it **doesn't** need to **handle** its **test data**.

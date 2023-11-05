@@ -47,7 +47,7 @@ NFRs tend to **conflict**: High security may affect ease of use, extreme flexibi
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can find more information about the **architectural views and perspectives** in the following references:
 <table>
   <tr>
-    <td><img src="assets/software-systems-architecture-book-cover-image.jpg" width="100"/></td>
+    <td><img src="assets/software-systems-architecture-book-cover-image.webp" width="100"/></td>
     <td>
       Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives
       <br />
@@ -55,7 +55,7 @@ NFRs tend to **conflict**: High security may affect ease of use, extreme flexibi
     </td>
   </tr>
   <tr>
-    <td><img src="assets/4+1-viewmodel.png" width="100"/></td>
+    <td><img src="assets/4+1-viewmodel.webp" width="100"/></td>
     <td>
       Architectural Blueprints-The "4+1" View Model of Software Architecture
       <br />

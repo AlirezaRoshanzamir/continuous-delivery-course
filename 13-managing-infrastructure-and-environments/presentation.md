@@ -2,7 +2,7 @@
 #### Understanding Operation Team, Modeling and Managing Infrastructure, Managing Server Provisioning and Configuration, Managing the Configuration of Middleware, Managing Infrastructure Services, Virtualization, <span style="color: purple">Cloud Computing</span>, <span style="color: purple">Monitoring Infrastructure and Applications</span>
 
 <img
-  src="assets/cloud-architecture-layers.png"
+  src="assets/cloud-architecture-layers.webp"
   alt="https://www.researchgate.net/publication/263297688_Middleware_and_Methods_for_Customizable_SaaS" width="500"
 />
 
@@ -45,7 +45,7 @@ In this session, we will talk about the following:
 
 ---
 ## Understanding Operation Team
-<img src="assets/operation-team-qos-explain-meme.jpeg" class="fragment start">
+<img src="assets/operation-team-qos-explain-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->Most projects **fail** because of **people problems**, **not technical issues**.
 
@@ -57,7 +57,7 @@ In this session, we will talk about the following:
 
 ------
 ### Operation Team Concerns
-<img src="assets/dev-ops-meme.jpeg" class="fragment start">
+<img src="assets/dev-ops-meme.webp" class="fragment start">
 
 Here are some of the most important **high-level** concerns of operations teams:
 - Documentation and Auditing  <!-- .element: class="fragment insides-fade-in-then-out" -->
@@ -88,7 +88,7 @@ Here are some of the most important **high-level** concerns of operations teams:
 ## Modeling and Managing Infrastructure
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Types of servers, divided up by **level of abstraction**:
 
-<img src="assets/types-of-servers-and-their-configuration.png" width="1000">
+<img src="assets/types-of-servers-and-their-configuration.webp" width="1000">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You must address each of the following **questions**:
 - How will we **provision** our infrastructure?
@@ -103,7 +103,7 @@ Here are some of the most important **high-level** concerns of operations teams:
 
 ------
 ### Controlling Access to Your Infrastructure
-<img src="assets/access-control-meme.jpeg" class="fragment start">
+<img src="assets/access-control-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->If you have a system that's **not well controlled**, you'll need to figure out how to **regain control**. This involves three steps:
 - Controlling access to **prevent** anyone from **making a change without approval**.
@@ -140,7 +140,7 @@ Provisioning and configuring servers is often **neglected** in small to medium-s
 
 An example of automated provisioning and configuration of servers:  <!-- .element class="fragment fade-in-with-next custom" -->
 
-<img src="assets/automated-provisioning-and-configuration-of-servers.png">
+<img src="assets/automated-provisioning-and-configuration-of-servers.webp">
 
 ------
 ### Provisioning Servers
@@ -155,8 +155,8 @@ There are several ways to create **operating system baselines**:
 
   <table>
     <tr>
-      <td><img src="assets/pxe.png" width="500"></td>
-      <td><img src="assets/wds.png" width="500"></td>
+      <td><img src="assets/pxe.webp" width="500"></td>
+      <td><img src="assets/wds.webp" width="500"></td>
     </tr>
   </table>
 - <!-- .element class="fragment highlight-current-blue" --> Virtualization: We will discuss this later.
@@ -181,8 +181,8 @@ After installing the OS, it's essential to **prevent uncontrolled configuration 
 ### Ongoing Management of Servers: SCCM and CfEngine
 <table>
   <tr>
-    <td><img src="assets/sccm.png"></td>
-    <td><img src="assets/cfengine.png"></td>
+    <td><img src="assets/sccm.webp"></td>
+    <td><img src="assets/cfengine.webp"></td>
   </tr>
 </table>
 
@@ -198,7 +198,7 @@ Each machine has the **Puppet agent (puppetd)**, **communicates** with the serve
 
 When a **configuration changes**, the **master updates the clients**, **installs/configures new software**, and **restarts servers as needed**.
 
-<img src="assets/puppet.png">
+<img src="assets/puppet.webp">
 
 **Declarative configuration** defines the **desired server state**, **applicable from any starting points**, including fresh VM copies or newly provisioned machines.
 
@@ -287,7 +287,7 @@ Managing Configuration:  <!-- .element class="fragment fade-in-with-next custom"
   - **At some point** we would strongly recommend adopting an **alternate technology** which is **more tractable**.
   - Many organizations **hesitate to switch software platforms** due to the **money already invested (sunk cost fallacy)**. But this ignores the potential benefits of adopting better technology.
 
-<img src="assets/sunk-cost-fallacy.jpg" class="fragment end" width="600">
+<img src="assets/sunk-cost-fallacy.webp" class="fragment end" width="600">
 
 ---
 ## Managing Infrastructure Services
@@ -305,11 +305,11 @@ It's common for **infrastructure services** (like routers and directory services
 
 ------
 ### Managing Infrastructure Services: Multihomed Systems
-<img src="assets/multihomed-servers.png" width="600">
+<img src="assets/multihomed-servers.webp" width="600">
 
 ---
 ## Virtualization
-<img src="assets/virtualization-meme.png" class="fragment start" width="1100">
+<img src="assets/virtualization-meme.webp" class="fragment start" width="1100">
 
 Virtualization, in essence, adds a **layer of abstraction to computer resources**.
 
@@ -334,11 +334,11 @@ A crucial **feature** of VMMs is that a virtual machine image is a **single file
   <tr>
     <td>
       <small>Creating virtual environments from templates</small>
-      <img src="assets/creating-virtual-environments-from-templates.png" width="550">
+      <img src="assets/creating-virtual-environments-from-templates.webp" width="550">
     </td>
     <td>
       <small>Creating VM templates</small>
-      <img src="assets/creating-vm-templates.png" width="420">
+      <img src="assets/creating-vm-templates.webp" width="420">
     </td>
   </tr>
 </table>
@@ -349,7 +349,7 @@ A crucial **feature** of VMMs is that a virtual machine image is a **single file
 
 ---
 ## Cloud Computing
-<img src="assets/cloud-computing-meme.jpeg" class="fragment start">
+<img src="assets/cloud-computing-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->In cloud computing, **information is stored on the internet** and **accessed** and **managed** through **online software services**.
 
@@ -365,7 +365,7 @@ Cloud types:  <!-- .element class="fragment fade-in-with-next custom" -->
 
 ------
 ## Cloud Computing: Google App Engine
-<img src="assets/google-app-engine.png">
+<img src="assets/google-app-engine.webp">
 
 ---
 ## Monitoring Infrastructure and Applications
@@ -399,26 +399,26 @@ Monitoring data can come from the following **sources**:
 
 ------
 ### Collecting Data: SNMP
-<img src="assets/snmp-not-my-problem-meme.jpg" class="fragment start">
+<img src="assets/snmp-not-my-problem-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->SNMP is a widely adopted and long-standing **monitoring standard** which has three main components:
 - **Managed Devices** (physical systems such as servers, switches, firewalls, and so forth)
 - **Agents** (talk to the individual applications or devices that you want to monitor and manage via SNMP)
 - **Network Management System** (monitors and controls managed devices)
 
-<img src="assets/snmp-architecture.png" width="700">
+<img src="assets/snmp-architecture.webp" width="700">
 
 ------
 ### Continued: Collecting Data: SNMP
 SNMP relies on **variables**. **Monitoring** involves **observing these variables**, while **control** means **modifying them**. Details about **available variables**, including **descriptions**, **types**, and **read/write status**, are documented in a **MIB (Management Information Base)**, which is an extensible database format.
 
-<img src="assets/mib-file-example.jpg">
+<img src="assets/mib-file-example.webp">
 
 &shy;<!-- .element class="fragment fade-in" -->Each **vendor defines MIBs** for the systems it **provides SNMP agents for**, and the IANA maintains a central registry.
 
 &shy;<!-- .element class="fragment fade-in" -->Most operating systems, middlewares (Apache, WebLogic, and Oracle, for example), devices have **SNMP built-in**.
 
-<img src="assets/snmp-meme.jpg" class="fragment end">
+<img src="assets/snmp-meme.webp" class="fragment end">
 
 ------
 ### Logging
@@ -428,7 +428,7 @@ SNMP relies on **variables**. **Monitoring** involves **observing these variable
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Pay attention to **log levels** but ensure **configurability at runtime/deployment** to show different levels when debugging is needed:
 
-<img src="assets/log-levels.png" width="800">
+<img src="assets/log-levels.webp" width="800">
 
 &shy;<!-- .element class="fragment fade-in" -->The operations team is the **main consumer of log files**.
 
@@ -438,7 +438,7 @@ The operations team needs a **big display** to quickly **check for any incidents
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->Many open source and commercial tools provide this feature, including **historical trend** viewing and **reporting** capabilities:
 
-<img src="assets/nagios-dashboard.png" width="500">
+<img src="assets/nagios-dashboard.webp" width="500">
 
 &shy;<!-- .element class="fragment fade-in" -->**Plan ahead** to prevent your operations dashboard from becoming **too noisy**. Create a **list of risks** **categorized** by their **probability** and **impact**.
 
@@ -486,7 +486,7 @@ The operations team needs a **big display** to quickly **check for any incidents
     Then I should see "www.wikipedia.org"
 </code></pre>
     </td>
-    <td style="min-width: 500px"><img src="assets/cucumber-nagios.png"></td>
+    <td style="min-width: 500px"><img src="assets/cucumber-nagios.webp"></td>
   </tr>
 </table>
 

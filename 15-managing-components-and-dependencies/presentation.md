@@ -1,7 +1,7 @@
 ## Continuous Delivery: Managing Components and Dependencies
 #### Keeping Application Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
 
-<img src="assets/integration-pipeline.png" width="950"/>
+<img src="assets/integration-pipeline.webp" width="950"/>
 
 <small><strong>Time to Read:</strong> 16 Minutes</small>, <small><strong>Time to Present:</strong> 75 Minutes</small>
 <br>
@@ -46,7 +46,7 @@ In CD, you should maintain a **releasable application** even during **major refa
 
 ------
 ### Hide New Functionality Until It Is Finished
-<img src="assets/hide-new-functionality-meme.png" class="fragment start">
+<img src="assets/hide-new-functionality-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->What if a feature (a set of features) takes a **long time to develop**?
 - **- Branching**: Start development on a new branch and integrate when the functionality is complete to avoid disrupting ongoing system work, which could delay its release.
@@ -64,7 +64,7 @@ In CD, you should maintain a **releasable application** even during **major refa
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->**Branching** claims that developers can make large, high-level changes, break the application, and reconnect later to work faster. However, **in practice**, **reintegration can be challenging**, especially with **concurrent team work** and **larger changes**:
 
-<img src="assets/leroy-branch.jpg">
+<img src="assets/leroy-branch.webp">
 
 &shy;<!-- .element class="fragment fade-in" -->**Breaking large changes** into **small**, **incremental** ones can be **tough**, but it ensures that the **application works**, prevents future pains, and allows for flexibility to **stop at any point if necessary**, avoiding the sunk cost of abandoning a big change midway.
 
@@ -86,8 +86,8 @@ In CD, you should maintain a **releasable application** even during **major refa
 ### Continued: Branch by Abstraction
 <table>
   <tr>
-    <td><img src="assets/potemkin-village-2.jpg" width="600"></td>
-    <td><img src="assets/sweep-under-the-rug-meme.png" width="600"></td>
+    <td><img src="assets/potemkin-village-2.webp" width="600"></td>
+    <td><img src="assets/sweep-under-the-rug-meme.webp" width="600"></td>
   </tr>
 </table>
 
@@ -99,7 +99,7 @@ It's ideal for moving from a **messy monolithic to a modular one**. **Pick the p
 
 ---
 ## Dependencies
-<img src="assets/dependencies-meme.png" width="470" class="fragment start">
+<img src="assets/dependencies-meme.webp" width="470" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->A dependency occurs when one software piece **depends** on another to **build** or **run**.
 
@@ -115,7 +115,7 @@ It's ideal for moving from a **messy monolithic to a modular one**. **Pick the p
 
 ------
 ### Dependency Hell (DLL Hell)
-<img src="assets/dependency-hell-meme.jpeg" width="800" class="fragment start">
+<img src="assets/dependency-hell-meme.webp" width="800" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->Dependency hell occurs when an application **depends on one version** but is **deployed** with a **different version or none** at all.
 
@@ -140,7 +140,7 @@ It's ideal for moving from a **messy monolithic to a modular one**. **Pick the p
   - &shy;<!-- .element class="fragment highlight-current-blue" -->Over time, the repository may grow large and messy.
   - &shy;<!-- .element class="fragment highlight-current-blue" -->Managing transitive dependencies across projects is painful, while package managers aim to address this issue.
 - <!-- .element: class="fragment insides-fade-in-then-out custom" -->Declare and use tools like Maven or Ivy to download libraries from the Internet or (preferably) your organization's repository
-  - <img src="assets/maven-dependency-pom.png" width="600">
+  - <img src="assets/maven-dependency-pom.webp" width="600">
   - &shy;<!-- .element class="fragment highlight-current-blue" -->Transitively resolving dependencies on other projects and avoiding inconsistencies in the project dependency graph.
   - &shy;<!-- .element class="fragment highlight-current-blue" -->Local caching.
   - &shy;<!-- .element class="fragment highlight-current-blue" -->Try to maintain your own artifact repository (Nexus, JFrog, etc.).
@@ -191,7 +191,7 @@ empty=annotationProcessor</code></pre>
   </tr>
 </table>
 
-<img src="assets/removed-image-meme.jpeg" class="fragment end">
+<img src="assets/removed-image-meme.webp" class="fragment end">
 
 <details>
   <summary>Note</summary>
@@ -272,7 +272,7 @@ playwright</code></pre>
 
 ---
 ## Components
-<img src="assets/component-meme.jpeg" class="fragment start">
+<img src="assets/component-meme.webp" class="fragment start">
 
 &shy;<!-- .element class="fragment fade-in" -->Software systems include various components. These components **may** be **DLL**s, **JAR**s, **OSGi bundle**s, **Perl module**s, and etc.
 
@@ -311,7 +311,7 @@ We **avoid assigning teams to components** as **requirements often don't divide 
 
 &shy;<!-- .element class="fragment fade-in-with-next custom" -->Split teams to focus on **specific story streams** with a common theme and access necessary components to complete their tasks:
 - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Organize teams by **functional area** rather than by component.
-  - &shy;<!-- .element: class="fragment complete-fade-out custom" --><img src="assets/component-vs-feature-teams.png" width="700">
+  - &shy;<!-- .element: class="fragment complete-fade-out custom" --><img src="assets/component-vs-feature-teams.webp" width="700">
 - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Everybody** has the **right to change** any part of the codebase.
 - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->**Rotate** people between teams regularly.
 - &shy;<!-- .element: class="fragment fade-in-then-semi-out" -->Ensure that there is good communication between teams.
@@ -356,13 +356,13 @@ Conway's Law:
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can find more information in the following books and articles:
 <table>
   <tr>
-    <td><img src="assets/clean-architecture-cover-book.jpg" width="100"/></td>
+    <td><img src="assets/clean-architecture-cover-book.webp" width="100"/></td>
     <td>
       Clean Architecture: A Craftsman's Guide to Software Structure and Design
       <br />
       <small>by Robert Cecil Martin</small>
     </td>
-    <td><img src="assets/principles-of-package-design-cover-book.jpg" width="100"/></td>
+    <td><img src="assets/principles-of-package-design-cover-book.webp" width="100"/></td>
     <td>
       Principles of Package Design: Creating Reusable Software Components
       <br />
@@ -370,7 +370,7 @@ Conway's Law:
     </td>
   </tr>
   <tr>
-    <td><img src="assets/mirroring.png" width="100"/></td>
+    <td><img src="assets/mirroring.webp" width="100"/></td>
     <td colspan="3">
       Exploring the <strong>Duality</strong> between Product and Organizational Architectures: A Test of the "<strong>Mirroring</strong>" Hypothesis
       <br />
@@ -405,7 +405,7 @@ The integration pipeline:
 3. &shy;<!-- .element: class="fragment highlight-current-blue" -->**Deploys** the app in a **production-like environment**, running **smoke tests** to quickly spot **basic integration issues (fail fast)**.
 4. &shy;<!-- .element: class="fragment highlight-current-blue" -->Proceeds to **conventional acceptance test stage**, running whole application acceptance tests as usual.
 
-<img src="assets/integration-pipeline.png" width="1000">
+<img src="assets/integration-pipeline.webp" width="1000">
 
 ------
 ### Continued: The Integration Pipeline
@@ -421,8 +421,8 @@ An example of triggering downstream pipelines in GitLab:  <!-- .element: class="
 
 <table>
   <tr>
-    <td><img src="assets/gitlab-parent-child-pipelines.jpg" width="490"></td>
-    <td><img src="assets/gitlab-parent-child-pipelines-2.png" width="680"></td>
+    <td><img src="assets/gitlab-parent-child-pipelines.webp" width="490"></td>
+    <td><img src="assets/gitlab-parent-child-pipelines-2.webp" width="680"></td>
   </tr>
 </table>
 
@@ -447,7 +447,7 @@ An example of triggering downstream pipelines in GitLab:  <!-- .element: class="
 ### Building Dependency Graphs
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->In the diagram, **left is "upstream"** and **right is "downstream"** dependency (CDS pricing library is third-party):
 
-<img src="assets/dependency-graph.png" width="700">
+<img src="assets/dependency-graph.webp" width="700">
 
 &shy;<!-- .element: class="fragment fade-in" -->Each component **may** have **its own pipeline**. When it **changes**, **triggers a recursive rebuild/test** of **itself and all downstream components** respectively. If any **immediate/intermediate upstream fail**, **downstreams are not initiated**.
 
@@ -457,15 +457,15 @@ An example of triggering downstream pipelines in GitLab:  <!-- .element: class="
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->The **key constraint** is the **portfolio app** should use **one framework version**. **Avoid** **pricing engine with one version** and **settlement engine with another**, which causes the **diamond dependency, build-time analgue of the runtime "dependency hell"**:
 
-<img src="assets/dependency-diamond.png">
+<img src="assets/dependency-diamond.webp">
 
-<img src="assets/diamond-meme.png" class="fragment end">
+<img src="assets/diamond-meme.webp" class="fragment end">
 
 ------
 ### Pipelining Dependency Graphs
 The pipelines should provide **rapid feedback on breakages** and **follow the dependency building rules**:
 
-<img src="assets/component-pipeline.png" width="1000">
+<img src="assets/component-pipeline.webp" width="1000">
 
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->To **speed up** feedback, **dependent projects trigger** when the **commit stage** of each project's pipeline finishes.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**All triggers are automatic**, except for deployments to manual testing and production environments.
@@ -477,11 +477,11 @@ Teams must be able to **trace the origins** of the components in a particular bu
 <table>
   <td>
     Visualizing upstream dependencies
-    <img src="assets/visualizing-upstream-dependencies.png">
+    <img src="assets/visualizing-upstream-dependencies.webp">
   </td>
   <td>
     Visualizing downstream dependencies
-    <img src="assets/visualizing-downstream-dependencies.png">
+    <img src="assets/visualizing-downstream-dependencies.webp">
   </td>
 </table>
 
@@ -499,20 +499,20 @@ The discussed examples **assume** triggering new builds with **any upstream chan
 
 ------
 ### Cautious Optimism
-<img src="assets/cautious-optimism-meme.png" class="fragment start">
+<img src="assets/cautious-optimism-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->This model suggests three **"static"**, **"guarded"**, or **"fluid"** states for **upstream dependencies** in dependency graph:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Changes** in **static** upstream dependencies **do not trigger** new builds.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->**Changes** in **fluid** upstream dependencies **always trigger** new builds. If a **fluid dependency update fails**, it **becomes guarded** and the **component sticks to the known-good version of the upstream dependency**.
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->A **guarded** upstream dependency is **similar to a static** one, not accepting new changes. However, **it signals an issue** that the development team needs to address with the upstream dependency.
 
-<img src="assets/cautious-optimisim-triggering.png" width="900">
+<img src="assets/cautious-optimisim-triggering.webp" width="900">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can begin with an **"informed pessimism" strategy** where **triggers are set to static**, but **notify developers** of **new upstream dependency versions**.
 
 ------
 ### Circular Dependencies
-<img src="assets/hen-egg-meme.png" width="400" class="fragment start">
+<img src="assets/hen-egg-meme.webp" width="400" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in" -->The **worst dependency problem** is the circular dependency, when **component A depends on component B, and B depends on A**.
 
@@ -520,7 +520,7 @@ The discussed examples **assume** triggering new builds with **any upstream chan
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->You can manage this issue if necessary, though it's **not recommended**. You need **a version of A to build B**, then **use the new B to build the new A**, forming a **"build ladder"**:
 
-<img src="assets/circular-dependency-build-ladder.png" width="380">
+<img src="assets/circular-dependency-build-ladder.webp" width="380">
 
 &shy;<!-- .element: class="fragment fade-in" -->Build systems **don't naturally** handle this, so you'll need to tweak your toolchain. You **should only** use the build ladder as a **temporary fix** until you resolve the issue.
 
@@ -540,13 +540,13 @@ Usually, components should have **binary rather than source-level dependencies**
   </td>
   <td>
     Nexus
-    <img src="assets/nexus-repository-formats.png" width="700">
+    <img src="assets/nexus-repository-formats.webp" width="700">
   </td>
 </table>
 
 ---
 ## Summary
-<img src="assets/summary-meme.jpeg" class="fragment start">
+<img src="assets/summary-meme.webp" class="fragment start">
 
 &shy;<!-- .element: class="fragment fade-in-with-next custom" -->The principle is to ensure teams get **fast feedback** on the **effect of their changes** on the **production-readiness of the application**:
 - &shy;<!-- .element: class="fragment highlight-current-blue" -->Ensure **every change** is **broken down into small**, **incremental steps** which are checked into mainline.
