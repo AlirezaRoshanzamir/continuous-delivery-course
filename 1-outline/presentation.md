@@ -24,9 +24,9 @@
             <br>
             Professional Experience:
             <ul>
-                <li>Team Leader and Python Developer, <i>Mahsan</i> | <small>2020 - Present</small></li>
-                <li>C++ Developer, <i>Mahsan</i> | <small>2018 - 2020</small></li>
-                <li>Web and Mobile Developer, <i>Resaa</i> | <small>2016 - 2018</small></li>
+                <li>Team Leader and Python Developer, <i>Mahsan</i></li>
+                <li>C++ Developer, <i>Mahsan</i></li>
+                <li>C# Developer (Web, Mobile), <i>Resaa</i></li>
             </ul>
             <br>
             Education:
