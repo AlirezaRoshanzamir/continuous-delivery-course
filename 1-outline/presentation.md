@@ -267,7 +267,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     </tr>
     <tr>
         <td>
-            Managing Components and Dependencies
+            <a href="../15-managing-components-and-dependencies" target="_blank">Managing Components and Dependencies</a>
             <br>
             <small>
                 Keeping Application Releasable, <span style="color: purple">Dependencies</span>, <span style="color: purple">Components</span>, Managing Dependency Graph, <span style="color: purple">Managing Binaries</style>
@@ -277,7 +277,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     </tr>
     <tr>
         <td>
-            Advanced Version Control
+            <a href="../16-advanced-version-control" target="_blank">Advanced Version Control</a>
             <br>
             <small>
                 <span style="color: purple">Brief history</span>, Branching and Merging, Distributed Version Control Systems (DVCS), Stream-Based Version Control Systems, <span style="color: purple">Branching Patterns</span>, <span style="color: brown">Popular Branching Policies (Gitflow, GitHub Flow, Trunk-Based Development)</span>
@@ -287,7 +287,7 @@ Black: From the CD book, <span style="color: purple">Purple: Mostly from the CD 
     </tr>
     <tr>
         <td>
-            Managing Continuous Delivery
+            <a href="../17-managing-continuous-delivery" target="_blank">Managing Continuous Delivery</a>
             <br>
             <small>
                 Maturity Models (Jez Humble Maturity Model, <span style="color: brown">Qualitic Maturity Model</span>, <span style="color: brown">Google Test Certified Ladder</span>), Project Lifecycle, Risk Management Process, Common Delivery Problem (Symptoms and Causes)
